@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7440CGNDDQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7440CGNDDQ');
+    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROS™ Family Edition — Member Access</title>
+<style>
+:root{--blue:#1E5B99;--gold:#C8A832;--ivory:#F8F5ED;--dark:#1a2a3a;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--ivory);color:var(--dark);min-height:100vh;}
+.header{background:var(--blue);padding:20px 24px;}
+.header-logo{color:var(--gold);font-weight:900;font-size:18px;letter-spacing:.5px;}
+.header-sub{color:rgba(255,255,255,.7);font-size:13px;}
+.gate{max-width:440px;margin:80px auto;padding:0 24px;}
+.gate-card{background:#fff;border-radius:12px;padding:40px;box-shadow:0 2px 20px rgba(0,0,0,.08);text-align:center;}
+.gate-tag{display:inline-block;background:var(--gold);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:20px;}
+.gate-card h1{font-size:22px;color:var(--blue);margin-bottom:8px;}
+.gate-card p{color:#666;font-size:14px;margin-bottom:28px;line-height:1.6;}
+.gate-card input{width:100%;padding:14px 16px;border:2px solid #e0e0e0;border-radius:8px;font-size:15px;outline:none;transition:border-color .2s;margin-bottom:12px;}
+.gate-card input:focus{border-color:var(--blue);}
+.gate-card button{width:100%;background:var(--blue);color:#fff;border:none;padding:14px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;}
+.gate-card button:hover{opacity:.9;}
+.error{color:#c0392b;font-size:13px;margin-top:8px;display:none;}
+.content{max-width:860px;margin:0 auto;padding:40px 24px;display:none;}
+.welcome{background:var(--blue);border-radius:12px;padding:36px;color:#fff;margin-bottom:32px;}
+.welcome .tier-tag{display:inline-block;background:var(--gold);color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:16px;}
+.welcome h1{font-size:26px;font-weight:900;margin-bottom:8px;}
+.welcome p{color:rgba(255,255,255,.8);font-size:15px;line-height:1.6;}
+.section-title{font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-bottom:32px;}
+.resource-card{background:#fff;border-radius:10px;padding:24px;box-shadow:0 1px 8px rgba(0,0,0,.06);border-left:4px solid var(--blue);}
+.resource-card h3{font-size:15px;font-weight:700;color:var(--blue);margin-bottom:6px;}
+.resource-card p{font-size:13px;color:#666;line-height:1.5;margin-bottom:14px;}
+.resource-card a{display:inline-block;background:var(--blue);color:#fff;padding:8px 16px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;}
+.resource-card a:hover{opacity:.9;}
+.resource-card a.placeholder{background:#ccc;cursor:not-allowed;pointer-events:none;}
+.resource-card.highlight{border-left-color:var(--gold);}
+.resource-card.highlight h3{color:var(--gold);}
+.support-box{background:#fff;border-radius:10px;padding:24px;box-shadow:0 1px 8px rgba(0,0,0,.06);border-left:4px solid var(--gold);}
+.support-box h3{font-size:15px;font-weight:700;margin-bottom:6px;}
+.support-box p{font-size:13px;color:#666;line-height:1.6;}
+.support-box a{color:var(--blue);font-weight:600;}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-logo">Global Systems Studio</div>
+  <div class="header-sub">Member Access Portal</div>
+</div>
+
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="gate-tag">ROS™ Family Edition</div>
+    <h1>Welcome to Your Dashboard</h1>
+    <p>Enter the access password from your confirmation email to unlock your ROS™ resources.</p>
+    <input type="password" id="pw" placeholder="Enter your access password" onkeydown="if(event.key==='Enter')checkPw()">
+    <button onclick="checkPw()">Unlock Access →</button>
+    <div class="error" id="err">Incorrect password. Check your confirmation email or contact <a href="mailto:info@globalsystemsstudio.com">info@globalsystemsstudio.com</a>.</div>
+  </div>
+</div>
+
+<div class="content" id="content">
+  <div class="welcome">
+    <div class="tier-tag">ROS™ Family Edition</div>
+    <h1>Welcome — you're in.</h1>
+    <p>You have 9-month dual dashboard access (2 users). All your resources are below. Bookmark this page and use your password to return anytime.</p>
+  </div>
+
+  <div class="section-title">Your Resources</div>
+  <div class="resources-grid">
+    <div class="resource-card">
+      <h3>📍 Destination Intelligence Library</h3>
+      <p>133-country ROS™ profiles including family-relevant data on schools, healthcare, and safety.</p>
+      <a href="#" class="placeholder">Coming Soon</a>
+    </div>
+    <div class="resource-card">
+      <h3>✈️ Visa Pathway Guide</h3>
+      <p>Visa options by destination with family eligibility and dependent requirements.</p>
+      <a href="#" class="placeholder">Coming Soon</a>
+    </div>
+    <div class="resource-card">
+      <h3>🏠 Housing Guide</h3>
+      <p>Finding family-appropriate housing abroad — space, neighborhood, and school proximity.</p>
+      <a href="#" class="placeholder">Coming Soon</a>
+    </div>
+    <div class="resource-card">
+      <h3>🏦 Banking Setup Guide</h3>
+      <p>Opening accounts abroad as a US person — what works, what doesn't, what to open first.</p>
+      <a href="#" class="placeholder">Coming Soon</a>
+    </div>
+    <div class="resource-card">
+      <h3>🎯 Destination Matching Guide</h3>
+      <p>Narrowing down destinations based on your family's priorities, budget, and lifestyle.</p>
+      <a href="#" class="placeholder">Coming Soon</a>
+    </div>
+    <div class="resource-card">
+      <h3>✅ Master Relocation Checklist</h3>
+      <p>The complete pre-departure and post-arrival checklist — adapted for families.</p>
+      <a href="#" class="placeholder">Coming Soon</a>
+    </div>
+    <div class="resource-card highlight">
+      <h3>🏫 School & Childcare Research Guide</h3>
+      <p>International schools, local schools, childcare options, and enrollment processes by destination.</p>
+      <a href="#" class="placeholder">Coming Soon</a>
+    </div>
+    <div class="resource-card highlight">
+      <h3>🏡 Family Housing Checklist</h3>
+      <p>What to look for, what to avoid, and how to negotiate as a family renting abroad.</p>
+      <a href="#" class="placeholder">Coming Soon</a>
+    </div>
+    <div class="resource-card highlight">
+      <h3>👨‍👩‍👧 Family Destination Profiles</h3>
+      <p>Destination deep-dives curated specifically for families — quality of life, schooling, and community.</p>
+      <a href="#" class="placeholder">Coming Soon</a>
+    </div>
+    <div class="resource-card">
+      <h3>💬 Async Q&A Session</h3>
+      <p>Your included async consultation — email your questions for written GSS guidance.</p>
+      <a href="mailto:info@globalsystemsstudio.com?subject=Async Q%26A — ROS™ Family Edition">Submit Questions →</a>
+    </div>
+    <div class="resource-card">
+      <h3>🤖 AI Document Review</h3>
+      <p>AI-assisted review on leases, contracts, and enrollment documents.</p>
+      <a href="#" class="placeholder">Coming Soon</a>
+    </div>
+    <div class="resource-card">
+      <h3>💬 Community Access</h3>
+      <p>Join The Departure Lounge — your GSS community of fellow movers and expats.</p>
+      <a href="https://discord.com/channels/1521911114122924102/1521911114793746655" target="_blank">Join Discord →</a>
+    </div>
+  </div>
+
+  <div class="support-box">
+    <h3>Priority support included</h3>
+    <p>Reach us at <a href="mailto:info@globalsystemsstudio.com">info@globalsystemsstudio.com</a> for priority email support.</p>
+  </div>
+</div>
+
+<script>
+var PW='family-6273';
+if(sessionStorage.getItem('gss-family')==='1'){show();}
+function checkPw(){
+  if(document.getElementById('pw').value===PW){sessionStorage.setItem('gss-family','1');show();}
+  else{document.getElementById('err').style.display='block';}
+}
+function show(){document.getElementById('gate').style.display='none';document.getElementById('content').style.display='block';}
+</script>
+</body>
+</html>
