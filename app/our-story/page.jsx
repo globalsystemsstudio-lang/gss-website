@@ -68,7 +68,31 @@ export default function OurStoryPage() {
               <p>You don't have to figure this out alone. The questions are real. The answers exist. And we don't stop until we find them.</p>
               <p>That's what we're here for.</p>
 
-              <div style={{display:'flex', flexDirection:'column', gap:'12px', marginTop:'48px'}}>
+              <h2>Two Tools to Start With</h2>
+              <p>Before you talk to anyone or buy anything, run the numbers and run the quiz. Both are free, take minutes, and will tell you more about your actual situation than hours of social media research.</p>
+
+              <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'20px', marginTop:'32px', marginBottom:'40px'}}>
+                <Link href="/cost-of-living-calculator" className="tool-card-link">
+                  <div className="tool-card">
+                    <div style={{fontSize:'32px', marginBottom:'12px'}}>🌍</div>
+                    <div style={{fontSize:'12px', fontWeight:'700', textTransform:'uppercase', letterSpacing:'0.07em', color:'var(--text-light)', marginBottom:'8px'}}>Free Tool</div>
+                    <div style={{fontSize:'18px', fontWeight:'800', color:'var(--primary)', marginBottom:'10px'}}>Cost of Living Calculator</div>
+                    <p style={{fontSize:'14px', lineHeight:'1.6', color:'var(--text-light)', margin:'0 0 16px'}}>Enter your monthly budget. Choose a country. See your estimated costs, monthly surplus, and purchasing power across 90+ destinations.</p>
+                    <span style={{fontSize:'14px', fontWeight:'700', color:'var(--primary)'}}>Run the numbers →</span>
+                  </div>
+                </Link>
+                <Link href="/relocation-readiness-quiz" className="tool-card-link">
+                  <div className="tool-card">
+                    <div style={{fontSize:'32px', marginBottom:'12px'}}>✈️</div>
+                    <div style={{fontSize:'12px', fontWeight:'700', textTransform:'uppercase', letterSpacing:'0.07em', color:'var(--text-light)', marginBottom:'8px'}}>Free Tool</div>
+                    <div style={{fontSize:'18px', fontWeight:'800', color:'var(--primary)', marginBottom:'10px'}}>Relocation Readiness Quiz</div>
+                    <p style={{fontSize:'14px', lineHeight:'1.6', color:'var(--text-light)', margin:'0 0 16px'}}>12 questions across financial compliance and practical logistics. Find out where you stand — and exactly what to address before you leave.</p>
+                    <span style={{fontSize:'14px', fontWeight:'700', color:'var(--primary)'}}>Take the quiz →</span>
+                  </div>
+                </Link>
+              </div>
+
+              <div style={{display:'flex', flexDirection:'column', gap:'12px', marginTop:'8px'}}>
                 <Link href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" className="btn btn-gold" style={{display:'inline-block', alignSelf:'flex-start'}}>Book a Free 15-Minute Discovery Call →</Link>
                 <Link href="/who-its-for" className="btn btn-gold" style={{display:'inline-block', alignSelf:'flex-start'}}>Find Your Tier →</Link>
                 <Link href="/work-with-me" className="btn btn-gold" style={{display:'inline-block', alignSelf:'flex-start'}}>Get the ROS™ Book →</Link>

@@ -1297,3 +1297,16 @@ section { padding: 80px 0; }
 
 .step-item h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
 .step-item p { font-size: 14px; color: var(--text-light); margin: 0; line-height: 1.6; }
+
+/* Tool cards on Our Story page */
+.tool-card-link { text-decoration: none; display: block; }
+.tool-card {
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  height: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+.tool-card-link:hover .tool-card { border-color: var(--primary); }

@@ -6,8 +6,8 @@ const QUICK_REPLIES = [
   'What is ROS™?',
   'How much does it cost?',
   'Is this right for me?',
-  'How do I get started?',
-  'What are the 7 modules?',
+  'Cost of living calculator',
+  'Am I ready to relocate?',
 ];
 
 function getBethResponse(input) {
@@ -130,6 +130,22 @@ function getBethResponse(input) {
     return {
       text: "The Departure Lounge is our private Discord community for people actively planning or navigating an international relocation.\n\n💬 **Price: $97/month**\n\nYou get ongoing peer support, a community of people navigating the same decisions alongside you, and monthly live Q&A with our team.\n\nIt's not just a forum — it's an ongoing resource for the questions that don't stop once you've started planning.",
       link: { href: '/work-with-me', label: 'Join The Departure Lounge →' },
+    };
+  }
+
+  // Cost of living calculator
+  if (q.match(/cost.?of.?living|calculator|how much.*(live|cost|afford).*abroad|compare.*cost|living.*(cheap|expens|afford)/)) {
+    return {
+      text: "We have a free Cost of Living Calculator that shows you exactly how far your U.S. income goes in 90+ countries.\n\nEnter your monthly budget, pick a destination, and you'll see:\n\n💰 **Estimated monthly cost** in your destination\n📈 **Monthly surplus** (what's left over)\n🌍 **Purchasing power equivalent** (what that income feels like locally)\n📊 **Category breakdown** — housing, food, healthcare, transport, and more\n\nIt takes about 30 seconds and gives you real numbers to work with instead of guesses.",
+      link: { href: '/cost-of-living-calculator', label: 'Try the calculator →' },
+    };
+  }
+
+  // Readiness quiz
+  if (q.match(/quiz|readiness|ready|am i ready|how prepared|prepared to (move|relocate)|should i (go|move|leave)/)) {
+    return {
+      text: "The Relocation Readiness Quiz is a free 3-minute assessment across the two areas where most people discover they're less prepared than they thought: **Financial & Compliance** and **Practical Logistics**.\n\n12 questions. Topics include FEIE eligibility, FBAR-compliant banking, visa pathways, healthcare coverage abroad, medication availability, and your 90-day housing plan.\n\nAt the end, you get a score out of 24 and a recommendation for exactly which ROS™ resource matches where you are right now.",
+      link: { href: '/relocation-readiness-quiz', label: 'Take the quiz →' },
     };
   }
 
