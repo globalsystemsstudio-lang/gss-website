@@ -4,3 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/blog/fbar-taxes-before-relocating-abroad/"
+  to = "/financial-planning-international-relocation/"
+  status = 301
+  force = true
