@@ -1,0 +1,1 @@
+$(cat /home/claude/rebuild/jsx_out/services-index/page.jsx)
