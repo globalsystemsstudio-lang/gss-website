@@ -31,3 +31,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# geo-scraper toolkit (scripts/geo-scraper) — Python venv, real target list, and
+# scraped snapshots are local working state, not something we commit.
+scripts/geo-scraper/.venv
+scripts/geo-scraper/venv
+scripts/geo-scraper/config.yaml
+scripts/geo-scraper/data/
+**/__pycache__/
+*.pyc

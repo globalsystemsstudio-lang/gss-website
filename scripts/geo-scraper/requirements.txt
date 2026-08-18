@@ -1,0 +1,7 @@
+# GSS competitor / GEO scraping toolkit
+# Core scraping engine — Scrapling (adaptive fetchers + parsing)
+# https://github.com/D4Vinci/Scrapling
+scrapling[fetchers]>=0.4.14
+
+# Config + CLI + output
+PyYAML>=6.0

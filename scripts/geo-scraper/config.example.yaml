@@ -1,0 +1,31 @@
+# Copy this file to config.yaml and fill in real URLs.
+# config.yaml is gitignored — it's expected to hold your working target list,
+# which may change often and shouldn't need a commit every time.
+
+# GSS's own site — used by `geo_scraper audit` to score GEO-readiness
+# (AI-answer-engine readiness) of our own pages.
+own_site:
+  name: "Global Systems Studio"
+  urls:
+    - "https://www.globalsystemsstudio.com/"
+    - "https://www.globalsystemsstudio.com/what-is-ros/"
+    - "https://www.globalsystemsstudio.com/who-its-for/"
+    - "https://www.globalsystemsstudio.com/international-relocation-consultancy/"
+
+# Competitor / peer sites to track for `geo_scraper scan`.
+# Add relocation-consultancy, expat-advisory, and adjacent competitor
+# domains here. Each entry needs a name and one or more URLs to fetch.
+competitors:
+  - name: "Example Competitor"
+    urls:
+      - "https://example.com/"
+      - "https://example.com/services/"
+
+# Fetch behavior
+fetch:
+  # Seconds to wait between requests to the same domain — be polite.
+  delay_seconds: 2.0
+  # Use the stealth (headless-browser) fetcher for JS-rendered pages.
+  # Leave false to use the fast static fetcher unless a site needs it.
+  use_stealth_by_default: false
+  user_agent: "Mozilla/5.0 (compatible; GSS-GEO-Scan/1.0; +https://www.globalsystemsstudio.com)"
