@@ -135,6 +135,57 @@ export default function BlogPage() {
               <p>Your children are in the U.S. Your grandchildren are in the U.S. The grief of leaving that behind is real — and nobody talks about it honestly.</p>
               <span className="blog-card-link">Read →</span>
             </Link>
+            <Link href="/blog/relocation-myths-taxes-vanuatu-mail" className="blog-card">
+              <span className="blog-card-tag">Relocation Reality</span>
+              <h3>What Most People Get Wrong About Relocating Abroad</h3>
+              <p>Fact-checking the FEIE and Vanuatu citizenship claims going viral right now, plus the mail-forwarding gap nobody mentions.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* DESTINATION GUIDES */}
+      <section style={{background:'var(--bg)', padding:'80px 0'}}>
+        <div className="container">
+          <h2>Destination Guides</h2>
+          <div className="blog-grid" style={{marginTop:'32px'}}>
+            <Link href="/blog/paraguay-5500-residency-real-cost" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Paraguay Keeps Coming Up. Let's Actually Talk About What It Takes.</h3>
+              <p>The $5,500 residency deposit is real. What a realistic move budget actually looks like on top of it.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/costa-rica-first-200-meters-beachfront" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>The First 200 Meters: Buying Beachfront in Costa Rica</h3>
+              <p>The maritime zone rules most "beachfront property" listings never mention — and why they matter before you sign anything.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/turkey-relocation-guide-all-tiers" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Turkey Is One of the Most Underrated Relocation Markets Right Now</h3>
+              <p>Mediterranean affordability, a real Digital Nomad Certificate, and the most accessible Citizenship-by-Investment program in the G20.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/ireland-non-dom-tax-position-guide" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Ireland's Non-Dom Tax Position — If You Structure It Correctly</h3>
+              <p>One of the most sophisticated residency and tax frameworks in the English-speaking world, and why almost nobody leads with it.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/malaysia-relocation-guide-mm2h-pvip" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Malaysia Is One of the Most Underrated Markets in Southeast Asia</h3>
+              <p>MM2H and PVIP compared, tier by tier — and a tax exemption on foreign income locked in through 2036.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/mexico-relocation-guide-which-city" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Which Mexico? The US Citizen's Real Guide to Mexico Relocation</h3>
+              <p>City-by-city costs and visa pathways, plus the state-level travel advisories most relocation content leaves out.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
           </div>
         </div>
       </section>
