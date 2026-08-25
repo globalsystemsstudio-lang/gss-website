@@ -1,7 +1,7 @@
 import RelocationReadinessQuiz from '../../components/RelocationReadinessQuiz';
 
 export const metadata = {
-  title: 'Relocation Readiness Quiz — Are You Ready to Move Abroad? | Global Systems Studio',
+  title: 'Relocation Readiness Quiz — Are You Ready to Move Abroad?',
   description:
     '12 questions across financial compliance and practical logistics. Find out where you stand before you leave — and exactly what to do about the gaps.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/relocation-readiness-quiz/' },

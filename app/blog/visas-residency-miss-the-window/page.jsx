@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import Faq from '../../../components/Faq';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Visas, Residency, and What Happens If You Miss the Window | Global Systems Studio',
+  title: 'Visas, Residency, and What Happens If You Miss the Window',
   description: 'The difference between arriving legally and staying legally. The residency conversion timeline most countries don\'t advertise — and what happens if you miss it.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/visas-residency-miss-the-window/' },
 };
@@ -9,6 +12,22 @@ export const metadata = {
 export default function VisasResidencyPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/visas-residency-miss-the-window/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-07-23',
+            dateModified: '2026-07-23',
+            section: 'Legal & Documentation',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/visas-residency-miss-the-window/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Legal &amp; Documentation</span>
@@ -106,20 +125,16 @@ export default function VisasResidencyPage() {
               </div>
 
               <h2>Frequently Asked Questions</h2>
-              <div className="faq-simple">
-                {[
+              <Faq
+                path="/blog/visas-residency-miss-the-window/"
+                items={[
                   { q: 'Can I just leave and re-enter to reset my tourist visa?', a: 'In some countries and some circumstances, yes — this practice is sometimes called a "visa run." However, many countries have closed this loophole, and immigration officials can and do deny re-entry to people who are clearly living in the country on tourist status long-term. It is not a substitute for legal residency and carries real risk.' },
                   { q: 'Do I need an attorney for the residency application, or can I do it myself?', a: 'You can do it yourself in most countries, but the complexity and the stakes make legal guidance strongly advisable. An immigration attorney familiar with your destination country will know the current processing times, the documentation requirements, and the common mistakes that cause applications to be delayed or rejected. The cost of the attorney is typically far less than the cost of an error.' },
                   { q: 'What if my residency application is rejected?', a: 'Rejection doesn\'t necessarily mean permanent ineligibility. Most countries have an appeals process, and rejections are often due to documentation errors or missing information rather than fundamental ineligibility. Your attorney should review the rejection notice and advise on next steps.' },
                   { q: 'Does my spouse automatically get residency if I get it?', a: 'In many countries, spouses and minor children can be included as dependents on a primary applicant\'s residency application. However, this is not automatic — they must be named in the application and meet the applicable requirements. Confirm the spousal and dependent rules for your specific destination and visa category.' },
                   { q: 'Will getting residency abroad affect my U.S. citizenship?', a: 'U.S. citizenship is not affected by obtaining legal residency in another country. You can hold legal residency abroad and retain your U.S. citizenship indefinitely. Obtaining citizenship of another country may trigger reporting requirements and, in rare circumstances, could raise questions about intent — but the bar for involuntary loss of U.S. citizenship is extremely high. Consult with a U.S. attorney familiar with expatriate matters if this is a concern.' },
-                ].map((item) => (
-                  <div key={item.q} className="faq-simple-item">
-                    <h3>{item.q}</h3>
-                    <p>{item.a}</p>
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Your visa and residency timeline is the backbone of your entire relocation plan.</h2>

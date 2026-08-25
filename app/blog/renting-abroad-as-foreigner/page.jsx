@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import Faq from '../../../components/Faq';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'What Nobody Told Me About Renting Abroad as a Foreigner | Global Systems Studio',
+  title: 'What Nobody Told Me About Renting Abroad as a Foreigner',
   description: 'Pricing opacity, the foreigner premium, what landlords don\'t advertise, and how to navigate the rental market in a country that wasn\'t built for you.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/renting-abroad-as-foreigner/' },
 };
@@ -9,6 +12,22 @@ export const metadata = {
 export default function RentingAbroadPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/renting-abroad-as-foreigner/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-07-23',
+            dateModified: '2026-07-23',
+            section: 'Relocation Strategy',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/renting-abroad-as-foreigner/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Relocation Strategy</span>
@@ -110,19 +129,15 @@ export default function RentingAbroadPage() {
               </div>
 
               <h2>Frequently Asked Questions</h2>
-              <div className="faq-simple">
-                {[
+              <Faq
+                path="/blog/renting-abroad-as-foreigner/"
+                items={[
                   { q: 'How do I negotiate rent as a foreigner without giving away that I have no idea what the market rate is?', a: 'Research first — extensively. Use local platforms, talk to people in expat groups, ask the agent what comparable units are renting for. Enter the negotiation with data, not just a desire to pay less. Starting with a counter-offer that is 10–15% below asking is normal in many markets. Being willing to walk away is the most powerful negotiating tool you have.' },
                   { q: 'Should I rent furnished or unfurnished?', a: 'For your first 6–12 months, furnished almost always makes more sense. You don\'t know exactly where you want to be long-term, you don\'t want to ship or purchase furniture before you know the market, and you need flexibility. Unfurnished rentals are typically cheaper per month but require an upfront investment and a longer-term commitment. Once you know the city and have decided where you want to be, unfurnished becomes worth considering.' },
                   { q: 'Can I use a U.S. credit card or PayPal to pay rent internationally?', a: 'Most formal long-term leases require payment through a local bank account or bank transfer. Some landlords who cater to foreigners will accept international payment methods, but this is the exception rather than the rule — and often comes with the foreigner premium built in. Opening a local bank account quickly after arrival is important for many reasons, and housing payment is one of them.' },
                   { q: 'What if the landlord doesn\'t speak English and I don\'t speak the local language?', a: 'Use a trusted bilingual intermediary — a local attorney, a bilingual real estate agent, or a community member who can vouch for both sides. Do not rely on machine translation for legal documents. The cost of a professional translation or legal review is far less than the cost of a misunderstood lease term.' },
-                ].map((item) => (
-                  <div key={item.q} className="faq-simple-item">
-                    <h3>{item.q}</h3>
-                    <p>{item.a}</p>
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Housing is Module 4 in ROS™ — and one of the most underplanned parts of the move.</h2>

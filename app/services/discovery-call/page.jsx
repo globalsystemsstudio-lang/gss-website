@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, service, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Free Discovery Call | Global Systems Studio',
+  title: 'Free Discovery Call',
   description: 'A free 15-minute call to find out where you are in the relocation process and whether ROS™ — and which tier — fits your situation. No pitch, no pressure.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/services/discovery-call/' },
 };
@@ -9,6 +11,18 @@ export const metadata = {
 export default function DiscoveryCallPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          service({
+            path: '/services/discovery-call/',
+            name: 'Free Discovery Call',
+            description: metadata.description,
+            price: 0,
+            serviceType: 'Relocation consulting discovery call',
+          }),
+          breadcrumbs([{ name: 'Services', path: '/services/' }], { name: 'Free Discovery Call', path: '/services/discovery-call/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>Free Consultation</p>

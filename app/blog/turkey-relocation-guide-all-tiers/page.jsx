@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
   title: 'Turkey Relocation Guide: Costs, Visas, and CBI by ROS™ Tier',
@@ -9,6 +11,22 @@ export const metadata = {
 export default function TurkeyPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/turkey-relocation-guide-all-tiers/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-08-22',
+            dateModified: '2026-08-22',
+            section: 'Destination Guide',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/turkey-relocation-guide-all-tiers/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Destination Guide</span>

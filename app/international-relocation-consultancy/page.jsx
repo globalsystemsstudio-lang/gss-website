@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import Faq from '../../components/Faq';
 
 export const metadata = {
-  title: 'How to Choose an International Relocation Consultancy | Global Systems Studio',
+  title: 'How to Choose an International Relocation Consultancy',
   description: 'What most searches surface vs. what U.S. persons actually need. A guide to the types of relocation firms, questions to ask any provider, and how ROS™ compares.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/international-relocation-consultancy/' },
 };
@@ -99,8 +100,9 @@ export default function InternationalRelocationConsultancyPage() {
               <p>The framework exists because the most common reason U.S. persons encounter problems after relocating is not that they made bad choices — it's that they made choices in the wrong order, or didn't know what they didn't know until after the problem was already created.</p>
 
               <h2 id="faq">Frequently Asked Questions</h2>
-              <div className="faq-simple">
-                {[
+              <Faq
+                path="/international-relocation-consultancy/"
+                items={[
                   {
                     q: 'What does an international relocation consultancy do?',
                     a: 'A relocation consultancy helps individuals or organizations navigate the process of moving to a new country. Services vary widely: corporate-focused firms handle employer logistics, destination services, and policy compliance. Individual-focused firms like Global Systems Studio address legal residency, financial compliance, healthcare access, housing, banking, and cultural integration — specific to the person\'s citizenship and destination country.'
@@ -121,13 +123,8 @@ export default function InternationalRelocationConsultancyPage() {
                     q: 'Do I need an international relocation consultancy or can I do it myself?',
                     a: 'Most U.S. persons who attempt international relocation without guidance encounter at least one of three costly errors: choosing the wrong visa category, failing to set up FBAR-compliant banking before departure, or purchasing PFIC-qualifying foreign investments. The cost of correcting these errors typically exceeds the cost of professional guidance. For destinations with complex residency requirements or U.S. citizens with significant assets, professional guidance is strongly recommended.'
                   },
-                ].map((item) => (
-                  <div key={item.q} className="faq-simple-item">
-                    <h3>{item.q}</h3>
-                    <p>{item.a}</p>
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
 
               <Link href="/financial-planning-international-relocation" className="internal-link-block" style={{marginTop:'48px', display:'inline-flex'}}>
                 → Read our guide to key financial considerations for U.S. persons moving abroad

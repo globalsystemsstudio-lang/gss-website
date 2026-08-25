@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, service, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Family Edition Pathway — $1197 | Global Systems Studio',
+  title: 'Family Edition Pathway — $1197',
   description: 'ROS™ Family Edition Pathway — 9 months of dual-access, full-system relocation guidance built for families, covering school enrollment, family visas, healthcare, housing, and estate planning across borders.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/services/ros-family-edition-pathway/' },
 };
@@ -9,6 +11,18 @@ export const metadata = {
 export default function FamilyEditionPathwayPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          service({
+            path: '/services/ros-family-edition-pathway/',
+            name: 'ROS™ Family Edition Pathway',
+            description: metadata.description,
+            price: 1197,
+            serviceType: 'International relocation program',
+          }),
+          breadcrumbs([{ name: 'Services', path: '/services/' }], { name: 'ROS™ Family Edition Pathway', path: '/services/ros-family-edition-pathway/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>ROS™ Pathway · $1,197 · 9-Month Dual Access</p>

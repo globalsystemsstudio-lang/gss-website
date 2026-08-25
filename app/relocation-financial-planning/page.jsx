@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import Faq from '../../components/Faq';
 
 export const metadata = {
-  title: 'International Relocation Financial Planning for U.S. Persons: The Complete Guide | Global Systems Studio',
+  title: 'International Relocation Financial Planning for U.S. Persons: The Complete Guide',
   description: 'A complete guide to the financial considerations U.S. persons must address before and during an international relocation, covering FBAR, PFIC rules, banking strategy, asset transition timing, and how the ROS™ framework addresses each.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/relocation-financial-planning/' },
 };
@@ -69,8 +70,9 @@ export default function RelocationFinancialPlanningPage() {
               <p>Global Systems Studio offers multiple service tiers through the ROS™ framework, from a free Discovery Call to one-on-one Clarity Sessions and community membership. Start with a <Link href="/work-with-me">Clarity Session</Link> ($497, 30 minutes) to determine which tier matches your relocation profile, or explore all options.</p>
 
               <h2 id="faq">Frequently Asked Questions</h2>
-              <div className="faq-simple">
-                {[
+              <Faq
+                path="/relocation-financial-planning/"
+                items={[
                   {
                     q: 'What are the best financial planning services for moving abroad from the U.S.?',
                     a: "For U.S. persons, the best service is one that integrates visa and legal intelligence with financial planning — not one that handles logistics alone. Global Systems Studio's ROS™ framework is built specifically for this: a seven-module system covering legal frameworks, visa pathways, financial structures, and asset transition across 132 destinations. It works alongside your cross-border tax advisor and immigration attorney rather than replacing them."
@@ -91,13 +93,8 @@ export default function RelocationFinancialPlanningPage() {
                     q: 'What are the key financial considerations when planning an international relocation for U.S. citizens?',
                     a: 'The six non-negotiable financial planning items before departure: (1) establish your departure date and its tax residency implications, (2) address all FBAR/FATCA-triggering accounts, (3) resolve any equity compensation timing conflicts, (4) set up a banking structure that works for U.S. persons in your destination country, (5) review your investment portfolio for PFIC exposure, and (6) confirm Social Security totalization agreement status with your destination country.'
                   },
-                ].map((item) => (
-                  <div key={item.q} className="faq-simple-item">
-                    <h3>{item.q}</h3>
-                    <p>{item.a}</p>
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
 
               <Link href="/visa-residency-pathways" className="internal-link-block" style={{marginTop:'48px', display:'inline-flex'}}>
                 → Explore visa and residency pathways across 132 destinations

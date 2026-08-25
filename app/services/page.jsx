@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../components/JsonLd';
+import { graph, collection, breadcrumbs } from '../../lib/schema';
 
 export const metadata = {
-  title: 'Work With Us | Services & Offerings | Global Systems Studio',
+  title: 'Work With Us | Services & Offerings',
   description: 'Every way to work with Global Systems Studio — from a free discovery call to full ROS™ Pathway system access. Find the entry point built for where you are right now.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/services/' },
 };
@@ -46,6 +48,17 @@ function OfferGrid({ items }) {
 export default function ServicesIndexPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          collection({
+            path: '/services/',
+            name: 'Services & Offerings',
+            description: metadata.description,
+            type: 'CollectionPage',
+          }),
+          breadcrumbs([], { name: 'Services', path: '/services/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <h1>Every Way to Work With Us</h1>

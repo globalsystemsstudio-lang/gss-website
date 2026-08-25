@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
   title: 'Buying Beachfront in Costa Rica: The Maritime Zone Rules',
@@ -9,6 +11,22 @@ export const metadata = {
 export default function CostaRicaBeachfrontPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/costa-rica-first-200-meters-beachfront/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-08-22',
+            dateModified: '2026-08-22',
+            section: 'Destination Guide',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/costa-rica-first-200-meters-beachfront/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Destination Guide</span>

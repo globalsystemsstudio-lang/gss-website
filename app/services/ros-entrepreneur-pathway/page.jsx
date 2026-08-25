@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, service, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Entrepreneur Pathway — $1597 | Global Systems Studio',
+  title: 'Entrepreneur Pathway — $1597',
   description: 'ROS™ Entrepreneur Pathway — 9 months of full-system access for business owners relocating abroad, covering business visas, cross-border entity setup, tax strategy, and international banking.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/services/ros-entrepreneur-pathway/' },
 };
@@ -9,6 +11,18 @@ export const metadata = {
 export default function EntrepreneurPathwayPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          service({
+            path: '/services/ros-entrepreneur-pathway/',
+            name: 'ROS™ Entrepreneur Pathway',
+            description: metadata.description,
+            price: 1597,
+            serviceType: 'International relocation program',
+          }),
+          breadcrumbs([{ name: 'Services', path: '/services/' }], { name: 'ROS™ Entrepreneur Pathway', path: '/services/ros-entrepreneur-pathway/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>ROS™ Pathway · $1,597 · 9-Month Access</p>

@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'The Disconnection Nobody Prepares You For | Global Systems Studio',
+  title: 'The Disconnection Nobody Prepares You For',
   description: 'Your children are in the U.S. Your grandchildren are in the U.S. The grief of leaving that behind is real — and nobody in the relocation space talks about it honestly.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/disconnection-nobody-prepares-you-for/' },
 };
@@ -9,6 +11,22 @@ export const metadata = {
 export default function DisconnectionPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/disconnection-nobody-prepares-you-for/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-07-23',
+            dateModified: '2026-07-23',
+            section: 'The Human Side',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/disconnection-nobody-prepares-you-for/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">The Human Side</span>

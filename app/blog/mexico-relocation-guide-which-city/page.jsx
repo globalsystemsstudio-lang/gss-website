@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
   title: 'Which Mexico? A City-by-City Relocation Guide for US Citizens',
@@ -9,6 +11,22 @@ export const metadata = {
 export default function MexicoPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/mexico-relocation-guide-which-city/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-08-22',
+            dateModified: '2026-08-22',
+            section: 'Destination Guide',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/mexico-relocation-guide-which-city/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Destination Guide</span>

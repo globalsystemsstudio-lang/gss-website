@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, product, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Across Streets & Seas — $47 | Global Systems Studio',
+  title: 'Across Streets & Seas — $47',
   description: 'Across Streets & Seas — the deeper companion for serious movers. Legal, financial, housing, healthcare, and logistics for making an international move actually work.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/shop/across-streets-and-seas/' },
 };
@@ -9,6 +11,17 @@ export const metadata = {
 export default function AcrossStreetsPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          product({
+            path: '/shop/across-streets-and-seas/',
+            name: 'Across Streets & Seas',
+            description: metadata.description,
+            price: 47,
+          }),
+          breadcrumbs([{ name: 'Guides & Books', path: '/shop/' }], { name: 'Across Streets & Seas', path: '/shop/across-streets-and-seas/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>Digital Download · $47</p>

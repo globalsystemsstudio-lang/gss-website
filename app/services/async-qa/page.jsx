@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, service, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Async Q&A — $97 | Global Systems Studio',
+  title: 'Async Q&A — $97',
   description: 'Submit up to three relocation questions and get a thorough written response built around your specific situation — delivered within 48 business hours, no scheduling required.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/services/async-qa/' },
 };
@@ -9,6 +11,18 @@ export const metadata = {
 export default function AsyncQAPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          service({
+            path: '/services/async-qa/',
+            name: 'Async Q&A',
+            description: metadata.description,
+            price: 97,
+            serviceType: 'Written relocation Q&A',
+          }),
+          breadcrumbs([{ name: 'Services', path: '/services/' }], { name: 'Async Q&A', path: '/services/async-qa/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>Written Response · $97</p>

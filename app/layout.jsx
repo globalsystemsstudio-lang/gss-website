@@ -1,5 +1,7 @@
 import Script from 'next/script';
 import './globals.css';
+import JsonLd from '../components/JsonLd';
+import { graph, organization, website } from '../lib/schema';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import BethChat from '../components/BethChat';
@@ -46,6 +48,9 @@ export default function RootLayout({ children }) {
         `}} />
       </head>
       <body>
+        {/* Sitewide identity. Page-level schema references these by @id. */}
+        <JsonLd data={graph(organization, website)} />
+
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7440CGNDDQ"

@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, product, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'New Roots — $27 | Global Systems Studio',
+  title: 'New Roots — $27',
   description: 'New Roots — the foundational guide for anyone beginning the international relocation journey. Where to start, what to prioritize, and how to think about the move before you can know what to ask next.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/shop/new-roots/' },
 };
@@ -9,6 +11,17 @@ export const metadata = {
 export default function NewRootsPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          product({
+            path: '/shop/new-roots/',
+            name: 'New Roots',
+            description: metadata.description,
+            price: 27,
+          }),
+          breadcrumbs([{ name: 'Guides & Books', path: '/shop/' }], { name: 'New Roots', path: '/shop/new-roots/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>Digital Download · $27</p>

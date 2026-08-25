@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import Faq from '../../../components/Faq';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'What Is an Apostille and Why Does It Matter? | Global Systems Studio',
+  title: 'What Is an Apostille and Why Does It Matter?',
   description: 'The document authentication step most people discover too late. What an apostille is, which documents need one, how long it takes, and how to avoid the scramble.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/what-is-apostille/' },
 };
@@ -9,6 +12,22 @@ export const metadata = {
 export default function ApostillePage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/what-is-apostille/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-07-23',
+            dateModified: '2026-07-23',
+            section: 'Legal & Documentation',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/what-is-apostille/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Legal &amp; Documentation</span>
@@ -108,20 +127,16 @@ export default function ApostillePage() {
               </div>
 
               <h2>Frequently Asked Questions</h2>
-              <div className="faq-simple">
-                {[
+              <Faq
+                path="/blog/what-is-apostille/"
+                items={[
                   { q: 'Do I need a new apostille for every country I might move to?', a: 'No. An apostille is not country-specific — it is a universal authentication recognized by all Hague Convention member countries. However, if your destination is not a member of the Hague Convention, apostille may not be accepted and you will need to go through a different legalization process.' },
                   { q: 'How long is an apostille valid?', a: 'The apostille itself does not expire. However, the receiving authority — a government office, a consulate, a school — may require that the underlying document (and therefore the apostille) be recent. Many residency applications specify that documents must have been issued within the last 3 or 6 months. Check the requirements for your specific application.' },
                   { q: 'Can I get an apostille if I was born in a different state from where I live now?', a: 'Yes. The apostille for a birth certificate must come from the Secretary of State of the state where the birth certificate was issued — not where you currently live. You would need to contact that state\'s vital records office and Secretary of State directly.' },
                   { q: 'Do I need to hire an apostille service or can I do this myself?', a: 'You can do it yourself. The process is a matter of sending your certified documents to the correct government office with the appropriate fee and instructions. Apostille services are faster (and more expensive) because they handle the logistics and often have relationships with state offices. If time is not a constraint, doing it yourself is straightforward.' },
                   { q: 'What if my document is in English but the destination country requires it in another language?', a: 'Apostille certifies the authenticity of the document — not the language. You will likely need both: an apostille on the original English document, and a certified translation into the destination country\'s language. Some countries require the translation itself to also be apostilled. Confirm the exact requirements with your immigration attorney.' },
-                ].map((item) => (
-                  <div key={item.q} className="faq-simple-item">
-                    <h3>{item.q}</h3>
-                    <p>{item.a}</p>
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Document authentication is one of the first things ROS™ covers.</h2>

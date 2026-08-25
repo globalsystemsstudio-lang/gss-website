@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, service, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Legacy Pathway — $1997 | Global Systems Studio',
+  title: 'Legacy Pathway — $1997',
   description: 'ROS™ Legacy Pathway — 12 months of full-system access for later-in-life international relocation, covering Social Security strategy, retirement income, healthcare, and cross-border estate planning.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/services/ros-legacy-pathway/' },
 };
@@ -9,6 +11,18 @@ export const metadata = {
 export default function LegacyPathwayPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          service({
+            path: '/services/ros-legacy-pathway/',
+            name: 'ROS™ Legacy Pathway',
+            description: metadata.description,
+            price: 1997,
+            serviceType: 'International relocation program',
+          }),
+          breadcrumbs([{ name: 'Services', path: '/services/' }], { name: 'ROS™ Legacy Pathway', path: '/services/ros-legacy-pathway/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>ROS™ Pathway · $1,997 · 12-Month Access</p>

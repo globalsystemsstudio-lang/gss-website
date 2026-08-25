@@ -10,3 +10,22 @@
   to = "/financial-planning-international-relocation/"
   status = 301
   force = true
+
+# Next emits the generated OG image as an extensionless file (/opengraph-image),
+# so Netlify can't infer its type. Social scrapers reject it without this.
+[[headers]]
+  for = "/opengraph-image"
+  [headers.values]
+    Content-Type = "image/png"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/icon"
+  [headers.values]
+    Content-Type = "image/png"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"

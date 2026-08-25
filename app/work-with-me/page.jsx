@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import Faq from '../../components/Faq';
 
 export const metadata = {
-  title: 'Work With Me — ROS™ Offers & Pricing | Global Systems Studio',
+  title: 'Work With Me — ROS™ Offers & Pricing',
   description: 'Six ways to work with ROS™: Free Discovery Call, Clarity Session ($497), books from $27, Async Q&A ($97), and six Pathway tiers from $697 to $2,497.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/work-with-me/' },
 };
@@ -271,21 +272,18 @@ export default function WorkWithMePage() {
       <section style={{background:'var(--bg)', padding:'80px 0'}}>
         <div className="container">
           <h2>Frequently Asked Questions</h2>
-          <div className="faq-simple" style={{marginTop:'32px', maxWidth:'760px'}}>
-            {[
+          <Faq
+            path="/work-with-me/"
+            style={{marginTop:'32px', maxWidth:'760px'}}
+            items={[
               { q: 'Is the Clarity Session recorded?', a: 'Yes. You\'ll receive a recording of the call along with a written summary within 48 hours.' },
               { q: 'What\'s the difference between the Clarity Session and the Async Q&A?', a: 'The Clarity Session is a live 30-minute video call — real-time conversation, follow-up questions, and immediate back-and-forth. The Async Q&A is a written exchange — you submit your questions and receive a detailed written response. Same expertise, different format.' },
               { q: 'Do I need to read the book before booking a Clarity Session?', a: 'No — but it helps. If you come to the session having read New Roots, you\'ll have more targeted questions and get more out of the 30 minutes.' },
               { q: 'What is Across Streets & Seas and how is it different from New Roots?', a: 'New Roots is the systematic guide — the full ROS™ framework, modules, tiers, and step-by-step infrastructure. Across Streets & Seas goes deeper into the human side: the mindset, the decisions that don\'t fit on a checklist, and the real story of what this process looks like from the inside. They complement each other, which is why the Library bundle exists.' },
               { q: 'How do I know which Pathway tier is right for me?', a: 'Book a free Discovery Call. In 15 minutes, the founder will tell you exactly which tier applies to your situation — no guessing, no pressure.' },
               { q: 'Does the Clarity Session include legal or tax advice?', a: 'No. Global Systems Studio provides strategic relocation guidance — the system, the sequence, the questions to ask. For legal, tax, and financial advice, ROS™ connects you with vetted professionals who specialize in international relocation.' },
-            ].map((item) => (
-              <div key={item.q} className="faq-simple-item">
-                <h3>{item.q}</h3>
-                <p>{item.a}</p>
-              </div>
-            ))}
-          </div>
+            ]}
+          />
         </div>
       </section>
 

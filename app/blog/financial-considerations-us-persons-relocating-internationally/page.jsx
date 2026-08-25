@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import Faq from '../../../components/Faq';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Key Financial Considerations for U.S. Persons Relocating Internationally | Global Systems Studio',
+  title: 'Key Financial Considerations for U.S. Persons Relocating Internationally',
   description: 'FBAR, FATCA, PFIC rules, retirement accounts, banking strategy, cost of living, and estate planning — the essential financial checklist for U.S. persons moving abroad.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/financial-considerations-us-persons-relocating-internationally/' },
 };
@@ -9,6 +12,22 @@ export const metadata = {
 export default function FinancialConsiderationsPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/financial-considerations-us-persons-relocating-internationally/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-07-23',
+            dateModified: '2026-07-23',
+            section: 'Financial Planning',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/financial-considerations-us-persons-relocating-internationally/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Financial Planning</span>
@@ -172,20 +191,16 @@ export default function FinancialConsiderationsPage() {
               </div>
 
               <h2>Frequently Asked Questions</h2>
-              <div className="faq-simple">
-                {[
+              <Faq
+                path="/blog/financial-considerations-us-persons-relocating-internationally/"
+                items={[
                   { q: 'Can I use the FEIE if I work remotely for a U.S. company while living abroad?', a: 'Yes, provided your tax home is in a foreign country and you meet either the bona fide residence test or the physical presence test (330 days in a foreign country during any 12-month period). Working remotely for a U.S. employer does not disqualify you. However, U.S.-source self-employment income may still be subject to self-employment tax even when excluded from income tax via FEIE.' },
                   { q: 'Do I need to file a U.S. tax return if I live abroad and earn below the FEIE threshold?', a: 'Yes. You are required to file a U.S. federal tax return if your gross income exceeds the standard filing threshold, even if all of it is excludable under FEIE. The FEIE is not automatic — it must be elected on Form 2555. Failure to file can result in penalties and loss of the exclusion election.' },
                   { q: 'Will my U.S. Social Security benefits be affected by living abroad?', a: 'Generally no. The U.S. has Totalization Agreements with 30+ countries that prevent double social security taxation and allow you to receive U.S. Social Security benefits while living abroad. Benefits can typically be paid to foreign bank accounts. Some countries do tax Social Security benefits locally, which your cross-border tax advisor should analyze.' },
                   { q: 'What is the exit tax and who does it apply to?', a: 'The exit tax (IRC §877A) applies to "covered expatriates" who renounce U.S. citizenship or surrender a long-term green card. A covered expatriate generally has net worth above $2 million, or an average annual U.S. tax liability exceeding a specified threshold. If it applies, you are treated as having sold all worldwide assets at fair market value on the day before expatriation.' },
                   { q: 'How much should I budget for cross-border financial and legal fees when relocating?', a: 'For a complete cross-border financial planning engagement covering financial, tax, and legal work, budget $5,000–$15,000 in the first year depending on asset complexity and the countries involved. Ongoing cross-border tax compliance typically runs $2,000–$6,000 per year for moderate complexity situations.' },
-                ].map((item) => (
-                  <div key={item.q} className="faq-simple-item">
-                    <h3>{item.q}</h3>
-                    <p>{item.a}</p>
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Ready to plan your international move?</h2>

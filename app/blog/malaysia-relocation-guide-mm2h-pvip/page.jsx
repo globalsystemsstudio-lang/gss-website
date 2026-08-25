@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
   title: 'Malaysia Relocation Guide: MM2H, PVIP, and Real Costs',
@@ -9,6 +11,22 @@ export const metadata = {
 export default function MalaysiaPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/malaysia-relocation-guide-mm2h-pvip/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-08-22',
+            dateModified: '2026-08-22',
+            section: 'Destination Guide',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/malaysia-relocation-guide-mm2h-pvip/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Destination Guide</span>

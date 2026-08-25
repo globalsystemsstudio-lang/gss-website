@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import Faq from '../../../components/Faq';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Opening a Business Abroad: What You Need to Know Before You Start | Global Systems Studio',
+  title: 'Opening a Business Abroad: What You Need to Know Before You Start',
   description: 'Legal registration requirements, tax structure, banking, and what operating as a foreign national business owner actually looks like in practice.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/opening-business-abroad/' },
 };
@@ -9,6 +12,22 @@ export const metadata = {
 export default function OpeningBusinessAbroadPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/opening-business-abroad/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-07-23',
+            dateModified: '2026-07-23',
+            section: 'Career & Income',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/opening-business-abroad/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Career &amp; Income</span>
@@ -106,19 +125,15 @@ export default function OpeningBusinessAbroadPage() {
               </div>
 
               <h2>Frequently Asked Questions</h2>
-              <div className="faq-simple">
-                {[
+              <Faq
+                path="/blog/opening-business-abroad/"
+                items={[
                   { q: 'Can I just keep my U.S. LLC and operate it from abroad?', a: 'You can continue operating a U.S. entity from abroad in many cases, but there are important caveats. If you are physically present in another country performing services, that country may argue you have a taxable presence there — a "permanent establishment" — regardless of where the business is registered. If you are hiring local employees or serving local customers, additional obligations may apply. Confirm the local rules with an attorney in your destination country.' },
                   { q: 'Do I need to register as self-employed in the destination country if I\'m just doing consulting for U.S. clients?', a: 'Possibly. Many countries require anyone earning income while physically present to register with local tax authorities, even if the income source is foreign. The threshold and requirements vary. Working with a local accountant in your destination country is the most reliable way to determine your specific obligations.' },
                   { q: 'What is a "permanent establishment" and why does it matter?', a: 'A permanent establishment (PE) is a tax concept that means your business has a taxable presence in a country — typically triggered by having a fixed place of business, employees, or agents there. If your U.S. business creates a PE in your destination country, the local government may assess corporate taxes on the income attributable to that presence, independent of your personal income tax situation.' },
                   { q: 'Is it better to form the business before or after I establish residency?', a: 'In most cases, establishing legal residency first — or at least simultaneously — gives you better access to banking, reduces the documentation hurdle, and ensures your business activities are legally permitted under your status. In some countries, the business formation itself is tied to a specific investor or entrepreneur visa, which means forming the business and applying for residency happen together as part of the same process. Your attorney should advise on the sequence for your specific destination.' },
-                ].map((item) => (
-                  <div key={item.q} className="faq-simple-item">
-                    <h3>{item.q}</h3>
-                    <p>{item.a}</p>
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Business formation is one of the most legally complex parts of international relocation.</h2>

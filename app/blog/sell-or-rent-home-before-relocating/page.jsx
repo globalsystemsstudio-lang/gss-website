@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import Faq from '../../../components/Faq';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Should You Sell or Rent Your Home Before Relocating Internationally? | Global Systems Studio',
+  title: 'Should You Sell or Rent Your Home Before Relocating Internationally?',
   description: 'The capital gains exclusion window, what property management actually costs, and the tax math that changes depending on how long you wait.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/sell-or-rent-home-before-relocating/' },
 };
@@ -9,6 +12,22 @@ export const metadata = {
 export default function SellOrRentPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/sell-or-rent-home-before-relocating/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-07-23',
+            dateModified: '2026-07-23',
+            section: 'Money & Financial Planning',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/sell-or-rent-home-before-relocating/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Money &amp; Financial Planning</span>
@@ -118,19 +137,15 @@ export default function SellOrRentPage() {
               </div>
 
               <h2>Frequently Asked Questions</h2>
-              <div className="faq-simple">
-                {[
+              <Faq
+                path="/blog/sell-or-rent-home-before-relocating/"
+                items={[
                   { q: 'Can I still claim the capital gains exclusion if I rent my home for a year before selling?', a: 'Possibly. The §121 exclusion requires that you have owned and used the home as your primary residence for at least 2 of the last 5 years. If you rent it for 1 year and sell within the 5-year window, you may still qualify — but the math depends on your specific dates. Consult a tax advisor with your exact timeline before making this assumption.' },
                   { q: 'What if I still have a mortgage on the home?', a: 'A mortgage does not prevent you from renting the home, but you should review your mortgage agreement — some loans have owner-occupancy requirements that limit rental use. Notify your lender and insurance provider before renting. Your homeowner\'s insurance policy will need to be converted to a landlord policy.' },
                   { q: 'Does renting my U.S. home affect my visa or residency status abroad?', a: 'Generally no, but this depends on the destination country. Some countries require proof that you are not maintaining a primary residence in the U.S. as part of residency applications. Your immigration attorney should review your specific situation.' },
                   { q: 'Can I deduct my home office from my rental income if I work remotely?', a: 'No. Once a property is converted to a rental, the home office deduction for personal use no longer applies. You can deduct business-related expenses from your business income separately, but not from the rental property income.' },
-                ].map((item) => (
-                  <div key={item.q} className="faq-simple-item">
-                    <h3>{item.q}</h3>
-                    <p>{item.a}</p>
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>This decision has long-term tax consequences either way.</h2>

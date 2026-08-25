@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import Faq from '../../../components/Faq';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'What Happens to Your Professional Skills in a New Country? | Global Systems Studio',
+  title: 'What Happens to Your Professional Skills in a New Country?',
   description: 'Licensing requirements that don\'t transfer, markets that don\'t recognize your credentials, and how to evaluate your options before you move.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/professional-skills-new-country/' },
 };
@@ -9,6 +12,22 @@ export const metadata = {
 export default function ProfessionalSkillsPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/professional-skills-new-country/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-07-23',
+            dateModified: '2026-07-23',
+            section: 'Career & Income',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/professional-skills-new-country/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Career &amp; Income</span>
@@ -92,19 +111,15 @@ export default function ProfessionalSkillsPage() {
               </div>
 
               <h2>Frequently Asked Questions</h2>
-              <div className="faq-simple">
-                {[
+              <Faq
+                path="/blog/professional-skills-new-country/"
+                items={[
                   { q: 'Can I continue practicing my U.S.-licensed profession abroad while waiting for local recognition?', a: 'Generally, no. Practicing a regulated profession without local authorization is illegal in most countries, regardless of your U.S. credentials. There are sometimes temporary or provisional practice arrangements, but these are exception rather than rule and require formal application.' },
                   { q: 'How long does credential recognition typically take?', a: 'It varies widely. Some countries have streamlined processes that take a few months. Others — particularly for healthcare professions — can take 1–3 years and may require passing national exams. Research your specific profession and destination before building a timeline.' },
                   { q: 'What if my destination country doesn\'t recognize my credentials at all?', a: 'This happens, particularly for very specialized or U.S.-specific credentials. Options include: pursuing recognition in a neighboring country with better agreements, restructuring your work as consulting rather than licensed practice, pursuing remote work for non-local clients, or investing in additional local credentialing if the destination market is important enough to justify it.' },
                   { q: 'Do international schools typically accept U.S. teaching credentials?', a: 'International schools that follow U.S. or international curricula often do accept U.S. credentials, though they have their own hiring processes and requirements. Local public schools in most countries require locally recognized qualifications.' },
-                ].map((item) => (
-                  <div key={item.q} className="faq-simple-item">
-                    <h3>{item.q}</h3>
-                    <p>{item.a}</p>
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Your income strategy is part of your relocation plan.</h2>

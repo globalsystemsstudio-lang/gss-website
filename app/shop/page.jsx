@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../components/JsonLd';
+import { graph, collection, breadcrumbs } from '../../lib/schema';
 
 export const metadata = {
-  title: 'Guides & Planners | Global Systems Studio',
+  title: 'Guides & Planners',
   description: 'Structured planning tools built on the ROS™ framework — from your first five questions to pathway-specific workbooks for every type of international move.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/shop/' },
 };
@@ -44,6 +46,17 @@ function ProductCard({ p }) {
 export default function ShopIndexPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          collection({
+            path: '/shop/',
+            name: 'Guides & Books',
+            description: metadata.description,
+            type: 'CollectionPage',
+          }),
+          breadcrumbs([], { name: 'Guides & Books', path: '/shop/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <h1>Guides & Planners</h1>

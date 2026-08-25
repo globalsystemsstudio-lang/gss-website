@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, service, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Digital Nomad Pathway — $697 | Global Systems Studio',
+  title: 'Digital Nomad Pathway — $697',
   description: 'ROS™ Digital Nomad Pathway — 6 months of full-system access for U.S. remote workers relocating abroad, covering nomad visas, FBAR, banking, healthcare, and long-term residency strategy.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/services/ros-digital-nomad-pathway/' },
 };
@@ -19,6 +21,18 @@ const modules = [
 export default function DigitalNomadPathwayPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          service({
+            path: '/services/ros-digital-nomad-pathway/',
+            name: 'ROS™ Digital Nomad Pathway',
+            description: metadata.description,
+            price: 697,
+            serviceType: 'International relocation program',
+          }),
+          breadcrumbs([{ name: 'Services', path: '/services/' }], { name: 'ROS™ Digital Nomad Pathway', path: '/services/ros-digital-nomad-pathway/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>ROS™ Pathway · $697 · 6-Month Access</p>

@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, product, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Relocation Library Bundle — $64 | Global Systems Studio',
+  title: 'Relocation Library Bundle — $64',
   description: 'The Relocation Library — New Roots and Across Streets & Seas together at a bundled price. The complete book foundation for your international relocation, from the first decision through execution.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/shop/relocation-library/' },
 };
@@ -9,6 +11,17 @@ export const metadata = {
 export default function RelocationLibraryPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          product({
+            path: '/shop/relocation-library/',
+            name: 'The Relocation Library Bundle',
+            description: metadata.description,
+            price: 64,
+          }),
+          breadcrumbs([{ name: 'Guides & Books', path: '/shop/' }], { name: 'The Relocation Library Bundle', path: '/shop/relocation-library/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>Both Books Bundled · $64 · Digital Download</p>

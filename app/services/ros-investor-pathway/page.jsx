@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, service, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Investor Pathway — $2497 | Global Systems Studio',
+  title: 'Investor Pathway — $2497',
   description: 'ROS™ Investor Pathway — 12 months of full-system access for relocating capital across borders, covering investment visas, FBAR/FATCA, exit tax exposure, and international banking and estate planning.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/services/ros-investor-pathway/' },
 };
@@ -9,6 +11,18 @@ export const metadata = {
 export default function InvestorPathwayPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          service({
+            path: '/services/ros-investor-pathway/',
+            name: 'ROS™ Investor Pathway',
+            description: metadata.description,
+            price: 2497,
+            serviceType: 'International relocation program',
+          }),
+          breadcrumbs([{ name: 'Services', path: '/services/' }], { name: 'ROS™ Investor Pathway', path: '/services/ros-investor-pathway/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>ROS™ Pathway · $2,497 · 12-Month Access</p>

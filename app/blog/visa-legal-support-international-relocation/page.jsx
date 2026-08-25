@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import Faq from '../../../components/Faq';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Visa and Legal Support for International Relocation: A Complete Guide for U.S. Persons | Global Systems Studio',
+  title: 'Visa and Legal Support for International Relocation: A Complete Guide for U.S. Persons',
   description: 'The six visa categories used by U.S. persons relocating abroad, the legal support required at each stage, and how to evaluate visa service providers.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/visa-legal-support-international-relocation/' },
 };
@@ -9,6 +12,22 @@ export const metadata = {
 export default function VisaLegalSupportPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/visa-legal-support-international-relocation/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-07-23',
+            dateModified: '2026-07-23',
+            section: 'Legal & Documentation',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/visa-legal-support-international-relocation/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Legal & Documentation</span>
@@ -233,28 +252,16 @@ export default function VisaLegalSupportPage() {
 
               <h2>Frequently asked questions</h2>
 
-              <div className="faq-simple">
-                <div className="faq-simple-item">
-                  <h3>Do I need an attorney to apply for a foreign residency visa?</h3>
-                  <p>Not always. Straightforward applications (digital nomad, passive income) are often manageable with a reputable visa processing agency. Complex cases — investor visas, citizenship by descent, cases with prior denials, or applications in countries with opaque bureaucratic processes — benefit significantly from local immigration counsel.</p>
-                </div>
-                <div className="faq-simple-item">
-                  <h3>Can I lose my U.S. citizenship by obtaining foreign residency?</h3>
-                  <p>Foreign residency alone does not affect U.S. citizenship. Only voluntary renunciation (a formal legal act done before a U.S. consular officer) terminates U.S. citizenship. Obtaining foreign citizenship also does not automatically terminate U.S. citizenship, though U.S. law requires reporting of foreign citizenship acquisition.</p>
-                </div>
-                <div className="faq-simple-item">
-                  <h3>What if my visa application is denied?</h3>
-                  <p>Most countries have an appeals process for visa denials. An immigration attorney in the destination country can advise on whether appeal is advisable, and on alternative visa categories that may be available. Reapplication without addressing the grounds for denial typically results in a second denial.</p>
-                </div>
-                <div className="faq-simple-item">
-                  <h3>How long does a typical residency visa application take?</h3>
-                  <p>Processing times range from 4 weeks (some digital nomad programs) to 18+ months (some citizenship by descent and investor visa programs). Government timelines are estimates only and are frequently extended. Plan with a conservative timeline and build buffer before irrevocable commitments.</p>
-                </div>
-                <div className="faq-simple-item">
-                  <h3>Does the ROS™ framework include visa support?</h3>
-                  <p>Yes. The ROS™ framework covers visa pathway identification, documentation checklist preparation, apostille coordination, and timeline management as part of the structured relocation process. For cases requiring legal representation, ROS™ clients are connected to vetted immigration attorneys in their target destinations.</p>
-                </div>
-              </div>
+              <Faq
+                path="/blog/visa-legal-support-international-relocation/"
+                items={[
+                  { q: 'Do I need an attorney to apply for a foreign residency visa?', a: 'Not always. Straightforward applications (digital nomad, passive income) are often manageable with a reputable visa processing agency. Complex cases — investor visas, citizenship by descent, cases with prior denials, or applications in countries with opaque bureaucratic processes — benefit significantly from local immigration counsel.' },
+                  { q: 'Can I lose my U.S. citizenship by obtaining foreign residency?', a: 'Foreign residency alone does not affect U.S. citizenship. Only voluntary renunciation (a formal legal act done before a U.S. consular officer) terminates U.S. citizenship. Obtaining foreign citizenship also does not automatically terminate U.S. citizenship, though U.S. law requires reporting of foreign citizenship acquisition.' },
+                  { q: 'What if my visa application is denied?', a: 'Most countries have an appeals process for visa denials. An immigration attorney in the destination country can advise on whether appeal is advisable, and on alternative visa categories that may be available. Reapplication without addressing the grounds for denial typically results in a second denial.' },
+                  { q: 'How long does a typical residency visa application take?', a: 'Processing times range from 4 weeks (some digital nomad programs) to 18+ months (some citizenship by descent and investor visa programs). Government timelines are estimates only and are frequently extended. Plan with a conservative timeline and build buffer before irrevocable commitments.' },
+                  { q: 'Does the ROS™ framework include visa support?', a: 'Yes. The ROS™ framework covers visa pathway identification, documentation checklist preparation, apostille coordination, and timeline management as part of the structured relocation process. For cases requiring legal representation, ROS™ clients are connected to vetted immigration attorneys in their target destinations.' },
+                ]}
+              />
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Need help identifying the right visa pathway?</h2>

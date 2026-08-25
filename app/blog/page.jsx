@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import JsonLd from '../../components/JsonLd';
+import { graph, collection, breadcrumbs } from '../../lib/schema';
 
 export const metadata = {
   title: 'Blog — Real Questions. Real Answers. No Highlight Reel.',
@@ -9,6 +11,17 @@ export const metadata = {
 export default function BlogPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          collection({
+            path: '/blog/',
+            name: 'Global Systems Studio Blog',
+            description: metadata.description,
+            type: 'Blog',
+          }),
+          breadcrumbs([], { name: 'Blog', path: '/blog/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <h1>Real Questions. Real Answers. No Highlight Reel.</h1>

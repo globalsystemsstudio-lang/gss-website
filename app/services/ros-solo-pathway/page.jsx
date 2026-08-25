@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, service, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Solo Relocator Pathway — $897 | Global Systems Studio',
+  title: 'Solo Relocator Pathway — $897',
   description: 'ROS™ Solo Relocator Pathway — 6 months of full-system access built around moving internationally on your own, covering legal, financial, housing, healthcare, income, and community for solo relocators.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/services/ros-solo-pathway/' },
 };
@@ -9,6 +11,18 @@ export const metadata = {
 export default function SoloPathwayPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          service({
+            path: '/services/ros-solo-pathway/',
+            name: 'ROS™ Solo Relocator Pathway',
+            description: metadata.description,
+            price: 897,
+            serviceType: 'International relocation program',
+          }),
+          breadcrumbs([{ name: 'Services', path: '/services/' }], { name: 'ROS™ Solo Relocator Pathway', path: '/services/ros-solo-pathway/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>ROS™ Pathway · $897 · 6-Month Access</p>

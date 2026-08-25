@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, product, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'Five Questions Before Moving Abroad — Free Guide | Global Systems Studio',
+  title: 'Five Questions Before Moving Abroad — Free Guide',
   description: 'A visa does not tell you whether your relocation will work. These five questions do — the readiness check to answer honestly before you research a single destination.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/shop/five-questions/' },
 };
@@ -42,6 +44,17 @@ const questions = [
 export default function FiveQuestionsPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          product({
+            path: '/shop/five-questions/',
+            name: 'Five Questions Before Moving Abroad',
+            description: metadata.description,
+            price: 0,
+          }),
+          breadcrumbs([{ name: 'Guides & Books', path: '/shop/' }], { name: 'Five Questions Before Moving Abroad', path: '/shop/five-questions/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>Free Guide</p>

@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import Faq from '../../components/Faq';
 
 export const metadata = {
-  title: 'Visa and Residency Pathways for U.S. Persons Relocating Abroad: 132 Destinations | Global Systems Studio',
+  title: 'Visa and Residency Pathways for U.S. Persons Relocating Abroad: 132 Destinations',
   description: 'A structured analysis of visa and residency pathways across 132 destinations for U.S. persons. Covers passive income visas, digital nomad visas, investment programs, and the U.S. tax implications of each.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/visa-residency-pathways/' },
 };
@@ -69,8 +70,9 @@ export default function VisaResidencyPathwaysPage() {
               </div>
 
               <h2 id="faq">Frequently Asked Questions</h2>
-              <div className="faq-simple">
-                {[
+              <Faq
+                path="/visa-residency-pathways/"
+                items={[
                   {
                     q: 'What are the best countries to move to for U.S. expats from a legal perspective?',
                     a: 'The best destination is one where the visa pathway, tax treaty status, banking accessibility for U.S. persons, and social security implications align with your specific income structure. There is no universal answer. ROS™ evaluates these factors across 132 destinations and produces a ranked shortlist based on your profile inputs. Common high-ranking destinations for different profiles include Portugal and Panama (passive income), UAE (high-earning professionals seeking zero income tax residency), and Malaysia (retirees seeking low cost of living with favorable treaty position).'
@@ -91,13 +93,8 @@ export default function VisaResidencyPathwaysPage() {
                     q: 'What is the best relocation service for digital nomads moving abroad from the U.S.?',
                     a: 'Digital nomads face a specific set of challenges: maintaining a U.S. presence (banking, mail, state tax residency domicile) while living abroad, managing visa duration limits across multiple countries, and structuring their income to minimize both U.S. and local tax exposure. ROS™ includes a dedicated digital nomad track with analysis of the most viable visa programs and the income structuring implications of each.'
                   },
-                ].map((item) => (
-                  <div key={item.q} className="faq-simple-item">
-                    <h3>{item.q}</h3>
-                    <p>{item.a}</p>
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
 
               <Link href="/relocation-financial-planning" className="internal-link-block" style={{marginTop:'48px', display:'inline-flex'}}>
                 → Read the complete guide to financial planning for U.S. persons relocating abroad

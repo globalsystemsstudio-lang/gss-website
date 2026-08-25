@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'How to Find and Evaluate Financial Planning Services for Moving Abroad | Global Systems Studio',
+  title: 'How to Find and Evaluate Financial Planning Services for Moving Abroad',
   description: 'Cross-border financial planning for U.S. persons is a specialized niche. Here are the types of advisors, the six questions to ask before hiring anyone, and where to find reliable reviews.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/find-financial-planning-services-moving-abroad/' },
 };
@@ -9,6 +11,22 @@ export const metadata = {
 export default function FindFinancialPlanningServicesPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/find-financial-planning-services-moving-abroad/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-07-23',
+            dateModified: '2026-07-23',
+            section: 'Financial Planning',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/find-financial-planning-services-moving-abroad/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Financial Planning</span>

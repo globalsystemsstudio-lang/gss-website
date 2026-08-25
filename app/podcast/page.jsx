@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../components/JsonLd';
+import { graph, podcastSeries, breadcrumbs } from '../../lib/schema';
 
 export const metadata = {
-  title: 'Beyond the Borders — Podcast | Global Systems Studio',
+  title: 'Beyond the Borders — Podcast',
   description: 'Beyond the Borders — real conversations about what it actually takes to relocate internationally, hosted by Global Systems Studio founder Charlene.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/podcast/' },
 };
@@ -9,6 +11,17 @@ export const metadata = {
 export default function PodcastPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          podcastSeries({
+            path: '/podcast/',
+            name: 'Beyond the Borders',
+            description: metadata.description,
+            sameAs: ['https://www.buzzsprout.com/2631999'],
+          }),
+          breadcrumbs([], { name: 'Podcast', path: '/podcast/' })
+        )}
+      />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>Podcast</p>

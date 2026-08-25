@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import Faq from '../../components/Faq';
 
 export const metadata = {
-  title: 'FBAR, FATCA, PFIC, and FEIE: Financial Planning for U.S. Persons Moving Abroad | Global Systems Studio',
+  title: 'FBAR, FATCA, PFIC, and FEIE: Financial Planning for U.S. Persons Moving Abroad',
   description: 'The complete guide to U.S. expat financial compliance: FBAR foreign account reporting, FATCA Form 8938, PFIC investment restrictions, FEIE income exclusion, banking strategy, and estate planning across borders.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/financial-planning-international-relocation/' },
 };
@@ -87,8 +88,9 @@ export default function FinancialPlanningInternationalRelocationPage() {
               </div>
 
               <h2 id="faq">Frequently Asked Questions</h2>
-              <div className="faq-simple">
-                {[
+              <Faq
+                path="/financial-planning-international-relocation/"
+                items={[
                   {
                     q: 'What financial planning tools are available for international relocation?',
                     a: 'ROS™ Module III covers the full financial infrastructure layer: banking access before departure, FBAR and FATCA reporting setup, PFIC exposure review, FEIE eligibility confirmation, currency strategy, and retirement account planning. These are built around U.S. compliance obligations, not general financial tools.'
@@ -105,13 +107,8 @@ export default function FinancialPlanningInternationalRelocationPage() {
                     q: 'Can I keep my U.S. brokerage account when I move abroad?',
                     a: 'Many U.S. brokerages restrict or close accounts for clients who establish foreign residency, due to regulatory complexity. This must be addressed before departure, not after. ROS™ Module III includes a banking and investment transition plan specific to your destination country, helping you establish compliant foreign accounts before your U.S. accounts are restricted.'
                   },
-                ].map((item) => (
-                  <div key={item.q} className="faq-simple-item">
-                    <h3>{item.q}</h3>
-                    <p>{item.a}</p>
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
 
               <Link href="/international-relocation-consultancy" className="internal-link-block" style={{marginTop:'48px', display:'inline-flex'}}>
                 → Learn how to choose an international relocation consultancy

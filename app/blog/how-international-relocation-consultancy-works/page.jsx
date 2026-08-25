@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import JsonLd from '../../../components/JsonLd';
+import { graph, blogPosting, breadcrumbs } from '../../../lib/schema';
 
 export const metadata = {
-  title: 'How International Relocation Consultancy Works: A Complete Guide for U.S. Persons | Global Systems Studio',
+  title: 'How International Relocation Consultancy Works: A Complete Guide for U.S. Persons',
   description: 'What international relocation consultancy actually covers, how it differs from a moving company or visa agency, and why sequencing is the core value of a structured consultancy methodology.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/how-international-relocation-consultancy-works/' },
 };
@@ -9,6 +11,22 @@ export const metadata = {
 export default function HowConsultancyWorksPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          blogPosting({
+            path: '/blog/how-international-relocation-consultancy-works/',
+            headline: metadata.title,
+            description: metadata.description,
+            datePublished: '2026-07-23',
+            dateModified: '2026-07-23',
+            section: 'Relocation Strategy',
+          }),
+          breadcrumbs([{ name: 'Blog', path: '/blog/' }], {
+            name: metadata.title,
+            path: '/blog/how-international-relocation-consultancy-works/',
+          })
+        )}
+      />
       <section className="article-blog-hero">
         <div className="container">
           <span className="article-blog-tag">Relocation Strategy</span>
