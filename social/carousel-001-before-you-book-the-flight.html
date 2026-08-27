@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<title>Before You Book The Flight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --page:#EDE8DC; --page-ink:#1B2026; --page-mute:#5F6B77; --page-line:#D6CFC0;
+  --ivory:#F8F5ED; --ink:#14181C; --blue:#1E5B99; --navy:#10314F;
+  --gold:#C8A832; --slate:#5F6B77; --hair:#DCD5C6; --card:#FFFDF8; --s:1;
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --page:#12161B; --page-ink:#ECE6DA; --page-mute:#93A0AD; --page-line:#26303A; }
+}
+:root[data-theme="dark"]{ --page:#12161B; --page-ink:#ECE6DA; --page-mute:#93A0AD; --page-line:#26303A; }
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  background:var(--page); color:var(--page-ink);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  padding:40px 20px 72px;
+}
+
+/* ── page chrome ───────────────────────────────────────── */
+.wrap{ max-width:1180px; margin:0 auto; display:flex; flex-direction:column; gap:34px; }
+.masthead{ display:flex; flex-direction:column; gap:10px; padding-bottom:22px; border-bottom:1px solid var(--page-line); }
+.masthead .kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:12px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--page-mute);
+}
+.masthead h1{ font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(26px,4.4vw,38px); letter-spacing:-.02em; text-wrap:balance; }
+.masthead p{ max-width:64ch; font-size:15px; line-height:1.65; color:var(--page-mute); }
+.specs{ display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
+.specs span{
+  font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+  border:1px solid var(--page-line); border-radius:999px; padding:5px 11px; color:var(--page-mute);
+}
+.deck{ display:flex; flex-direction:column; gap:34px; align-items:center; }
+.slot{ width:calc(1080px * var(--s)); height:calc(1350px * var(--s)); position:relative; }
+
+/* ── slide ─────────────────────────────────────────────── */
+.slide{
+  position:absolute; top:0; left:0; width:1080px; height:1350px;
+  transform:scale(var(--s)); transform-origin:top left;
+  background:var(--ivory); color:var(--ink);
+  padding:70px 72px 60px; display:flex; flex-direction:column; gap:34px;
+  overflow:hidden;
+}
+body.export{ padding:0; background:var(--ivory); }
+body.export .wrap{ max-width:none; gap:0; }
+body.export .masthead,body.export .sheet{ display:none; }
+body.export .deck{ gap:0; }
+body.export .slot{ width:1080px; height:1350px; }
+body.export .slide{ transform:none; }
+
+/* dotted field, top-right — the only decorative element */
+.slide::after{
+  content:""; position:absolute; top:-60px; right:-60px; width:420px; height:420px;
+  background-image:radial-gradient(var(--hair) 1.6px, transparent 1.6px);
+  background-size:22px 22px; opacity:.9; pointer-events:none;
+}
+
+.top{ display:flex; align-items:center; justify-content:space-between; gap:24px; position:relative; z-index:2; }
+.pill{
+  display:inline-flex; align-items:center; gap:12px;
+  border:2px solid var(--blue); border-radius:999px; padding:12px 24px 12px 16px;
+  font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:19px;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--blue); background:var(--ivory);
+}
+.pill .tick{ width:12px; height:12px; border-radius:2px; background:var(--gold); flex:none; }
+.meta{
+  font-family:'IBM Plex Mono',monospace; font-size:19px; letter-spacing:.15em;
+  text-transform:uppercase; color:var(--slate); white-space:nowrap;
+}
+
+.head{ display:flex; align-items:flex-start; gap:32px; position:relative; z-index:2; }
+h2{
+  font-family:'Archivo',sans-serif; font-weight:800; font-size:78px; line-height:1.04;
+  letter-spacing:-.03em; color:var(--ink); flex:1; text-wrap:balance;
+}
+h2 em{ font-style:normal; color:var(--blue); }
+h2.sm{ font-size:66px; }
+
+.ring{ width:150px; height:150px; flex:none; margin-top:6px; }
+.ring .rim{ fill:none; stroke:var(--hair); stroke-width:2; }
+.ring .spoke{ stroke:var(--hair); stroke-width:2; }
+.ring .dots circle{ fill:#B9C6D4; r:6; }
+.ring[data-a="1"] .dots circle:nth-child(1),
+.ring[data-a="2"] .dots circle:nth-child(2),
+.ring[data-a="3"] .dots circle:nth-child(3),
+.ring[data-a="4"] .dots circle:nth-child(4),
+.ring[data-a="5"] .dots circle:nth-child(5),
+.ring[data-a="6"] .dots circle:nth-child(6),
+.ring[data-a="7"] .dots circle:nth-child(7){ fill:var(--gold); r:13; }
+.ring[data-a="0"] .dots circle{ fill:var(--blue); r:8; }
+
+/* ── worksheet card ────────────────────────────────────── */
+.card{
+  flex:1; min-height:0; background:var(--card); border:2px solid var(--ink);
+  display:flex; flex-direction:column; position:relative; z-index:2;
+  box-shadow:14px 14px 0 rgba(16,49,79,.10);
+}
+.card-top{
+  background:var(--navy); color:#fff; padding:18px 26px;
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+  font-family:'IBM Plex Mono',monospace; font-size:19px; letter-spacing:.14em; text-transform:uppercase;
+}
+.card-top b{ font-weight:600; }
+.card-top span{ color:var(--gold); font-weight:500; }
+.rows{ flex:1; display:flex; flex-direction:column; justify-content:center; padding:8px 26px; }
+.row{ display:flex; align-items:flex-start; gap:18px; padding:17px 0; border-bottom:1px solid var(--hair); }
+.row:last-child{ border-bottom:0; }
+.box{ width:26px; height:26px; border:2px solid var(--blue); flex:none; margin-top:4px; position:relative; }
+.row.done .box{ background:var(--blue); }
+.row.done .box::after{
+  content:""; position:absolute; inset:0; margin:auto; width:12px; height:6px;
+  border-left:3px solid #fff; border-bottom:3px solid #fff; transform:rotate(-45deg) translate(1px,-3px);
+}
+.row p{ font-size:27px; line-height:1.42; font-weight:500; color:var(--ink); }
+.row p small{ display:block; font-family:'IBM Plex Mono',monospace; font-size:19px; letter-spacing:.1em; text-transform:uppercase; color:var(--slate); margin-top:5px; font-weight:500; }
+.row .tag{
+  margin-left:auto; font-family:'IBM Plex Mono',monospace; font-size:17px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--slate); border:1px solid var(--hair); padding:4px 10px; white-space:nowrap; margin-top:3px;
+}
+.card-foot{
+  border-top:2px solid var(--ink); padding:18px 26px; display:flex; gap:14px; align-items:baseline;
+  font-family:'IBM Plex Mono',monospace; font-size:20px; line-height:1.45; color:var(--ink);
+}
+.card-foot b{ color:var(--blue); font-weight:600; letter-spacing:.1em; text-transform:uppercase; white-space:nowrap; }
+
+/* ── navy band ─────────────────────────────────────────── */
+.band{
+  background:var(--navy); color:#fff; padding:30px 34px; display:flex; align-items:center; gap:26px;
+  position:relative; z-index:2;
+}
+.band.plain{ padding-left:38px; }
+.band.plain::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:10px; background:var(--gold); }
+.band .idx{
+  width:66px; height:66px; flex:none; border-radius:50%; background:var(--gold); color:var(--navy);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Archivo',sans-serif; font-weight:800; font-size:28px; letter-spacing:-.02em;
+}
+.band p{ font-family:'Archivo',sans-serif; font-weight:700; font-size:31px; line-height:1.28; letter-spacing:-.01em; }
+.band p span{ color:var(--gold); }
+
+.foot{
+  display:flex; align-items:center; justify-content:space-between;
+  font-family:'IBM Plex Mono',monospace; font-size:20px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); position:relative; z-index:2;
+}
+.foot .cnt{ color:var(--ink); font-weight:600; }
+
+/* cover-specific */
+.slide.cover h2{ font-size:84px; }
+.slide.cover .row{ padding:15px 0; }
+.slide.cover .rows{ justify-content:center; }
+
+/* recap-specific */
+.slide.recap .row p{ font-size:26px; font-weight:600; }
+.cta{
+  font-family:'Archivo',sans-serif; font-weight:800; font-size:30px; color:var(--blue);
+  letter-spacing:-.01em;
+}
+
+/* ── caption sheet under each slide (screen only) ──────── */
+.sheet{ width:min(100%,760px); margin:0 auto; }
+.sheet h3{ font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--page-mute); margin-bottom:8px; }
+.sheet p{ font-size:15px; line-height:1.7; color:var(--page-ink); }
+.sheet p + p{ margin-top:10px; }
+.sheet .tagline{ font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--page-mute); letter-spacing:.04em; }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="kicker">Global Systems Studio · Carousel 001</div>
+    <h1>Before You Book the Flight</h1>
+    <p>A seven-slide carousel in the ROS™ format: one cover, five items, one recap. Each item is a real pre-departure question, mapped to the module that owns it. The ring in the corner marks which of the seven ROS™ modules the slide belongs to.</p>
+    <div class="specs">
+      <span>1080 × 1350 · 4:5</span><span>Archivo / Inter / IBM Plex Mono</span>
+      <span>Ivory F8F5ED</span><span>Coastal Blue 1E5B99</span><span>Gold C8A832</span>
+    </div>
+  </header>
+
+  <div class="deck">
+
+  <!-- ══ 1 / 7 — COVER ══ -->
+  <div class="slot"><article class="slide cover">
+    <div class="top">
+      <span class="pill"><i class="tick"></i>What nobody tells you</span>
+      <span class="meta">ROS™ · 7 modules</span>
+    </div>
+    <div class="head">
+      <h2>5 things that decide your move <em>before you book the flight</em></h2>
+      <svg class="ring" data-a="0" viewBox="0 0 140 140" aria-hidden="true">
+        <circle class="rim" cx="70" cy="70" r="54"></circle>
+        <g class="dots">
+          <circle cx="70" cy="16"></circle><circle cx="112.2" cy="36.3"></circle>
+          <circle cx="122.6" cy="82"></circle><circle cx="93.4" cy="118.7"></circle>
+          <circle cx="46.6" cy="118.7"></circle><circle cx="17.4" cy="82"></circle>
+          <circle cx="27.8" cy="36.3"></circle>
+        </g>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-top"><b>Pre-departure · open items</b><span>ROS™ worksheet</span></div>
+      <div class="rows">
+        <div class="row"><i class="box"></i><p>Legal &amp; Documentation</p><span class="tag">Open</span></div>
+        <div class="row"><i class="box"></i><p>Family &amp; Social Integration</p><span class="tag">Open</span></div>
+        <div class="row"><i class="box"></i><p>Financial Structure</p><span class="tag">Open</span></div>
+        <div class="row"><i class="box"></i><p>Healthcare &amp; Wellness</p><span class="tag">Open</span></div>
+        <div class="row"><i class="box"></i><p>Business &amp; Income</p><span class="tag">Open</span></div>
+      </div>
+      <div class="card-foot"><b>Status</b><span>Five items that reliably surface too late. One per slide.</span></div>
+    </div>
+    <div class="band plain">
+      <p>You've already decided. What you need now is <span>the order of operations.</span></p>
+    </div>
+    <div class="foot"><span>globalsystemsstudio.com</span><span class="cnt">1 / 7</span></div>
+  </article></div>
+  <div class="sheet">
+    <h3>Slide 1 · cover</h3>
+    <p class="tagline">Hook: names the state the reader is already in, then promises a sequence rather than encouragement.</p>
+  </div>
+
+  <!-- ══ 2 / 7 — LEGAL ══ -->
+  <div class="slot"><article class="slide">
+    <div class="top">
+      <span class="pill"><i class="tick"></i>Legal &amp; documentation</span>
+      <span class="meta">ROS™ · module 01 / 07</span>
+    </div>
+    <div class="head">
+      <h2>The visa that can only be <em>filed from here</em></h2>
+      <svg class="ring" data-a="1" viewBox="0 0 140 140" aria-hidden="true">
+        <circle class="rim" cx="70" cy="70" r="54"></circle>
+        <g class="dots">
+          <circle cx="70" cy="16"></circle><circle cx="112.2" cy="36.3"></circle>
+          <circle cx="122.6" cy="82"></circle><circle cx="93.4" cy="118.7"></circle>
+          <circle cx="46.6" cy="118.7"></circle><circle cx="17.4" cy="82"></circle>
+          <circle cx="27.8" cy="36.3"></circle>
+        </g>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-top"><b>Module 01 · questions to answer</b><span>ROS™ worksheet</span></div>
+      <div class="rows">
+        <div class="row"><i class="box"></i><p>Must this category be applied for from inside the U.S.?</p></div>
+        <div class="row"><i class="box"></i><p>Which consulate holds jurisdiction over your state, and how far out are appointments?</p></div>
+        <div class="row"><i class="box"></i><p>Which documents need an apostille, and who issues it in your state?</p></div>
+        <div class="row"><i class="box"></i><p>Can a tourist entry be converted in-country, or does it foreclose the application?</p></div>
+      </div>
+      <div class="card-foot"><b>Verify with</b><span>The consulate with jurisdiction over your state. Not a forum thread.</span></div>
+    </div>
+    <div class="band">
+      <span class="idx">01</span>
+      <p>Some categories close the moment you land as a tourist. <span>Check before the ticket, not after.</span></p>
+    </div>
+    <div class="foot"><span>globalsystemsstudio.com</span><span class="cnt">2 / 7</span></div>
+  </article></div>
+  <div class="sheet">
+    <h3>Slide 2 · item 01</h3>
+    <p class="tagline">The single most expensive sequencing error in the category: buying the flight before confirming where the application has to originate.</p>
+  </div>
+
+  <!-- ══ 3 / 7 — FAMILY ══ -->
+  <div class="slot"><article class="slide">
+    <div class="top">
+      <span class="pill"><i class="tick"></i>Family &amp; integration</span>
+      <span class="meta">ROS™ · module 06 / 07</span>
+    </div>
+    <div class="head">
+      <h2 class="sm">School enrollment closes <em>before you've decided</em></h2>
+      <svg class="ring" data-a="6" viewBox="0 0 140 140" aria-hidden="true">
+        <circle class="rim" cx="70" cy="70" r="54"></circle>
+        <g class="dots">
+          <circle cx="70" cy="16"></circle><circle cx="112.2" cy="36.3"></circle>
+          <circle cx="122.6" cy="82"></circle><circle cx="93.4" cy="118.7"></circle>
+          <circle cx="46.6" cy="118.7"></circle><circle cx="17.4" cy="82"></circle>
+          <circle cx="27.8" cy="36.3"></circle>
+        </g>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-top"><b>Module 06 · questions to answer</b><span>ROS™ worksheet</span></div>
+      <div class="rows">
+        <div class="row"><i class="box"></i><p>When does the application window open and close for your child's entry year?</p></div>
+        <div class="row"><i class="box"></i><p>Is there a waitlist, and where would you sit on it applying today?</p></div>
+        <div class="row"><i class="box"></i><p>What form must U.S. transcripts and immunization records arrive in?</p></div>
+        <div class="row"><i class="box"></i><p>Does the grade placement hold, or does your child repeat a year?</p></div>
+      </div>
+      <div class="card-foot"><b>Verify with</b><span>The school's admissions office, in writing. Availability in March is not availability in August.</span></div>
+    </div>
+    <div class="band">
+      <span class="idx">02</span>
+      <p>Enrollment can close a school year ahead of the move. <span>Every mistake here multiplies.</span></p>
+    </div>
+    <div class="foot"><span>globalsystemsstudio.com</span><span class="cnt">3 / 7</span></div>
+  </article></div>
+  <div class="sheet">
+    <h3>Slide 3 · item 02</h3>
+    <p class="tagline">Written for the Family tier: the fear is not the move, it's that the timeline for the kids ran out before the adults started.</p>
+  </div>
+
+  <!-- ══ 4 / 7 — FINANCIAL ══ -->
+  <div class="slot"><article class="slide">
+    <div class="top">
+      <span class="pill"><i class="tick"></i>Financial structure</span>
+      <span class="meta">ROS™ · module 02 / 07</span>
+    </div>
+    <div class="head">
+      <h2>The account that won't open <em>for a U.S. person</em></h2>
+      <svg class="ring" data-a="2" viewBox="0 0 140 140" aria-hidden="true">
+        <circle class="rim" cx="70" cy="70" r="54"></circle>
+        <g class="dots">
+          <circle cx="70" cy="16"></circle><circle cx="112.2" cy="36.3"></circle>
+          <circle cx="122.6" cy="82"></circle><circle cx="93.4" cy="118.7"></circle>
+          <circle cx="46.6" cy="118.7"></circle><circle cx="17.4" cy="82"></circle>
+          <circle cx="27.8" cy="36.3"></circle>
+        </g>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-top"><b>Module 02 · questions to answer</b><span>ROS™ worksheet</span></div>
+      <div class="rows">
+        <div class="row"><i class="box"></i><p>Which local banks currently onboard U.S. citizens at all?</p></div>
+        <div class="row"><i class="box"></i><p>Do they require proof of address you can't have until you've signed a lease?</p></div>
+        <div class="row"><i class="box"></i><p>Do your foreign accounts trigger an FBAR filing, and by what date?<small>FinCEN Form 114</small></p></div>
+        <div class="row"><i class="box"></i><p>How do you pay for month one before local banking exists?</p></div>
+      </div>
+      <div class="card-foot"><b>Verify with</b><span>A cross-border CPA. GSS names the question; a licensed professional answers it.</span></div>
+    </div>
+    <div class="band">
+      <span class="idx">03</span>
+      <p>The lease wants a local account. The bank wants a local address. <span>Sequence it before you fly.</span></p>
+    </div>
+    <div class="foot"><span>globalsystemsstudio.com</span><span class="cnt">4 / 7</span></div>
+  </article></div>
+  <div class="sheet">
+    <h3>Slide 4 · item 03</h3>
+    <p class="tagline">Names the deadlock without asserting a threshold. The form number is checkable; the number belongs to the CPA.</p>
+  </div>
+
+  <!-- ══ 5 / 7 — HEALTHCARE ══ -->
+  <div class="slot"><article class="slide">
+    <div class="top">
+      <span class="pill"><i class="tick"></i>Healthcare &amp; wellness</span>
+      <span class="meta">ROS™ · module 04 / 07</span>
+    </div>
+    <div class="head">
+      <h2 class="sm">The prescription that has <em>a different name there</em></h2>
+      <svg class="ring" data-a="4" viewBox="0 0 140 140" aria-hidden="true">
+        <circle class="rim" cx="70" cy="70" r="54"></circle>
+        <g class="dots">
+          <circle cx="70" cy="16"></circle><circle cx="112.2" cy="36.3"></circle>
+          <circle cx="122.6" cy="82"></circle><circle cx="93.4" cy="118.7"></circle>
+          <circle cx="46.6" cy="118.7"></circle><circle cx="17.4" cy="82"></circle>
+          <circle cx="27.8" cy="36.3"></circle>
+        </g>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-top"><b>Module 04 · questions to answer</b><span>ROS™ worksheet</span></div>
+      <div class="rows">
+        <div class="row"><i class="box"></i><p>Is the molecule available there, and under which brand name?</p></div>
+        <div class="row"><i class="box"></i><p>Is it a controlled substance for import, and what paperwork travels with it?</p></div>
+        <div class="row"><i class="box"></i><p>How large a supply may you legally carry in?</p></div>
+        <div class="row"><i class="box"></i><p>Who writes the local prescription, and what do they need from your U.S. doctor?</p></div>
+      </div>
+      <div class="card-foot"><b>Verify with</b><span>The destination's health ministry and a local pharmacist, before the last U.S. refill.</span></div>
+    </div>
+    <div class="band">
+      <span class="idx">04</span>
+      <p>Refill continuity is a paperwork problem. <span>It starts months before you leave.</span></p>
+    </div>
+    <div class="foot"><span>globalsystemsstudio.com</span><span class="cnt">5 / 7</span></div>
+  </article></div>
+  <div class="sheet">
+    <h3>Slide 5 · item 04</h3>
+    <p class="tagline">Charlene's own terrain — a spouse's condition managed through a move. Written as procedure, not as story.</p>
+  </div>
+
+  <!-- ══ 6 / 7 — BUSINESS ══ -->
+  <div class="slot"><article class="slide">
+    <div class="top">
+      <span class="pill"><i class="tick"></i>Business &amp; income</span>
+      <span class="meta">ROS™ · module 05 / 07</span>
+    </div>
+    <div class="head">
+      <h2>The license that <em>stops at the border</em></h2>
+      <svg class="ring" data-a="5" viewBox="0 0 140 140" aria-hidden="true">
+        <circle class="rim" cx="70" cy="70" r="54"></circle>
+        <g class="dots">
+          <circle cx="70" cy="16"></circle><circle cx="112.2" cy="36.3"></circle>
+          <circle cx="122.6" cy="82"></circle><circle cx="93.4" cy="118.7"></circle>
+          <circle cx="46.6" cy="118.7"></circle><circle cx="17.4" cy="82"></circle>
+          <circle cx="27.8" cy="36.3"></circle>
+        </g>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-top"><b>Module 05 · questions to answer</b><span>ROS™ worksheet</span></div>
+      <div class="rows">
+        <div class="row"><i class="box"></i><p>Does your credential transfer, or does it require re-examination locally?</p></div>
+        <div class="row"><i class="box"></i><p>Does your visa permit the work you actually intend to do?</p></div>
+        <div class="row"><i class="box"></i><p>Can you keep invoicing U.S. clients from a foreign address, and through which entity?</p></div>
+        <div class="row"><i class="box"></i><p>How many days on the ground make you a local tax resident?</p></div>
+      </div>
+      <div class="card-foot"><b>Verify with</b><span>The licensing body and an attorney in-country. Structure mistakes are expensive to unwind.</span></div>
+    </div>
+    <div class="band">
+      <span class="idx">05</span>
+      <p>Working remotely is not a neutral act abroad. <span>The visa decides what you may earn.</span></p>
+    </div>
+    <div class="foot"><span>globalsystemsstudio.com</span><span class="cnt">6 / 7</span></div>
+  </article></div>
+  <div class="sheet">
+    <h3>Slide 6 · item 05</h3>
+    <p class="tagline">Covers Digital Nomad and Entrepreneur in one slide: the laptop is not the question, the permission is.</p>
+  </div>
+
+  <!-- ══ 7 / 7 — RECAP ══ -->
+  <div class="slot"><article class="slide recap">
+    <div class="top">
+      <span class="pill"><i class="tick"></i>Save this</span>
+      <span class="meta">ROS™ · 7 modules</span>
+    </div>
+    <div class="head">
+      <h2>Five items. <em>One sequence.</em></h2>
+      <svg class="ring" data-a="0" viewBox="0 0 140 140" aria-hidden="true">
+        <circle class="rim" cx="70" cy="70" r="54"></circle>
+        <g class="dots">
+          <circle cx="70" cy="16"></circle><circle cx="112.2" cy="36.3"></circle>
+          <circle cx="122.6" cy="82"></circle><circle cx="93.4" cy="118.7"></circle>
+          <circle cx="46.6" cy="118.7"></circle><circle cx="17.4" cy="82"></circle>
+          <circle cx="27.8" cy="36.3"></circle>
+        </g>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-top"><b>Pre-departure · handled</b><span>ROS™ worksheet</span></div>
+      <div class="rows">
+        <div class="row done"><i class="box"></i><p>Where the visa must be filed from<small>Module 01 · Legal &amp; Documentation</small></p></div>
+        <div class="row done"><i class="box"></i><p>The school's real enrollment window<small>Module 06 · Family &amp; Integration</small></p></div>
+        <div class="row done"><i class="box"></i><p>A bank that will take a U.S. person<small>Module 02 · Financial Structure</small></p></div>
+        <div class="row done"><i class="box"></i><p>The prescription, under its local name<small>Module 04 · Healthcare &amp; Wellness</small></p></div>
+        <div class="row done"><i class="box"></i><p>What your visa lets you earn<small>Module 05 · Business &amp; Income</small></p></div>
+      </div>
+      <div class="card-foot"><b>Next</b><span class="cta">Book your free 15-minute discovery call →</span></div>
+    </div>
+    <div class="band plain">
+      <p>All five live inside ROS™, with the other two modules. <span>Not inspiration. Infrastructure.</span></p>
+    </div>
+    <div class="foot"><span>globalsystemsstudio.com</span><span class="cnt">7 / 7</span></div>
+  </article></div>
+  <div class="sheet">
+    <h3>Slide 7 · recap</h3>
+    <p class="tagline">Same five rows, now checked. The only CTA in the deck, in the site's own arrow-terminated style.</p>
+  </div>
+
+  </div>
+</div>
+
+<script>
+(function(){
+  function fit(){
+    var slot = document.querySelector('.slot');
+    if(!slot) return;
+    var avail = slot.parentElement.clientWidth;
+    var s = Math.min(1, avail / 1080);
+    document.documentElement.style.setProperty('--s', s.toFixed(4));
+  }
+  fit();
+  window.addEventListener('resize', fit);
+})();
+</script>
+
+</body>
+</html>
