@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'How to Choose an International Relocation Consultancy | Global Systems Studio',
+  title: 'How to Choose an International Relocation Consultancy',
   description: 'What most searches surface vs. what U.S. persons actually need. A guide to the types of relocation firms, questions to ask any provider, and how ROS™ compares.',
   alternates: { canonical: 'https://www.globalsystemsstudio.com/international-relocation-consultancy/' },
 };
