@@ -124,6 +124,10 @@ export default function RelocationReadinessQuiz() {
   const [answers, setAnswers] = useState({});
   const [currentQ, setCurrentQ] = useState(0);
   const [showWhy, setShowWhy] = useState(false);
+  const [captureEmail, setCaptureEmail] = useState('');
+  const [captureName, setCaptureName] = useState('');
+  const [captureStatus, setCaptureStatus] = useState('idle'); // idle | submitting | error
+  const [captureError, setCaptureError] = useState('');
 
   const q = ALL_QUESTIONS[currentQ];
   const progress = ((currentQ + 1) / TOTAL) * 100;
@@ -135,7 +139,7 @@ export default function RelocationReadinessQuiz() {
     if (currentQ < TOTAL - 1) {
       setCurrentQ(currentQ + 1);
     } else {
-      setPhase('results');
+      setPhase('capture');
     }
   };
 
@@ -153,6 +157,8 @@ export default function RelocationReadinessQuiz() {
     setAnswers({});
     setCurrentQ(0);
     setShowWhy(false);
+    setCaptureStatus('idle');
+    setCaptureError('');
     setPhase('intro');
   };
 
@@ -183,7 +189,8 @@ export default function RelocationReadinessQuiz() {
           </h2>
           <p style={{ fontSize: '17px', lineHeight: '1.65', color: 'var(--text-light)', marginBottom: '32px' }}>
             This assessment covers the two areas where most people discover they're not as ready as they thought:
-            financial compliance and practical logistics. Takes about 3 minutes. No email required.
+            financial compliance and practical logistics. Takes about 3 minutes — we'll email you your
+            personalized results and section-by-section breakdown at the end.
           </p>
 
           <div
@@ -251,149 +258,246 @@ export default function RelocationReadinessQuiz() {
               marginBottom: '10px',
             }}
           >
-            <span
-              style={{
-                fontSize: '13px',
-                fontWeight: '700',
-                textTransform: 'uppercase',
-                letterSpacing: '0.07em',
-                color: 'var(--primary)',
-              }}
-            >
+            <span style={{ fontSize: '13px', fontWeight: '700', color: 'var(--text-light)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               {sectionLabel}
             </span>
-            <span style={{ fontSize: '13px', color: 'var(--text-light)', fontWeight: '600' }}>
-              {currentQ + 1} of {TOTAL}
+            <span style={{ fontSize: '13px', fontWeight: '700', color: 'var(--text-light)' }}>
+              {currentQ + 1} / {TOTAL}
             </span>
           </div>
-          <div
-            style={{
-              height: '6px',
-              background: 'var(--border)',
-              borderRadius: '99px',
-              overflow: 'hidden',
-            }}
-          >
+          <div style={{ height: '8px', background: 'var(--border)', borderRadius: '4px', overflow: 'hidden' }}>
             <div
               style={{
                 height: '100%',
                 width: `${progress}%`,
                 background: 'var(--primary)',
-                borderRadius: '99px',
+                borderRadius: '4px',
                 transition: 'width 0.3s ease',
               }}
             />
           </div>
         </div>
 
-        {/* Question card */}
+        {/* Question */}
         <div
           style={{
             background: '#fff',
             border: '2px solid var(--border)',
             borderRadius: '12px',
             padding: '36px',
-            marginBottom: '24px',
           }}
         >
-          <p
+          <h3
             style={{
-              fontSize: '19px',
+              fontSize: '20px',
               fontWeight: '700',
-              color: 'var(--text)',
-              lineHeight: '1.5',
+              color: 'var(--primary)',
+              marginBottom: '28px',
               marginTop: 0,
-              marginBottom: '32px',
+              lineHeight: '1.4',
             }}
           >
             {q.text}
-          </p>
+          </h3>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '28px' }}>
-            {ANSWERS.map((ans) => (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '20px' }}>
+            {ANSWERS.map((a) => (
               <button
-                key={ans.value}
-                onClick={() => handleAnswer(ans.value)}
+                key={a.label}
+                onClick={() => handleAnswer(a.value)}
                 style={{
-                  padding: '14px 20px',
+                  padding: '16px 20px',
                   border: '2px solid var(--border)',
                   borderRadius: '8px',
                   background: '#fff',
-                  textAlign: 'left',
                   fontSize: '16px',
                   fontWeight: '600',
                   color: 'var(--text)',
+                  textAlign: 'left',
                   cursor: 'pointer',
-                  transition: 'all 0.15s ease',
+                  transition: 'border-color 0.15s, background 0.15s',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = 'var(--primary)';
-                  e.currentTarget.style.background = 'rgba(30,91,153,0.06)';
+                  e.currentTarget.style.background = 'var(--bg)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = 'var(--border)';
                   e.currentTarget.style.background = '#fff';
                 }}
               >
-                {ans.label}
+                {a.label}
               </button>
             ))}
           </div>
 
-          {/* Why this matters toggle */}
           <button
             onClick={() => setShowWhy(!showWhy)}
             style={{
               background: 'none',
               border: 'none',
               color: 'var(--text-light)',
-              fontSize: '13px',
-              fontWeight: '600',
+              fontSize: '14px',
               cursor: 'pointer',
-              padding: 0,
               textDecoration: 'underline',
+              padding: 0,
             }}
           >
-            {showWhy ? '▲ Hide' : '▼ Why does this matter?'}
+            {showWhy ? 'Hide' : 'Why does this matter?'}
           </button>
 
           {showWhy && (
-            <div
+            <p
               style={{
-                marginTop: '16px',
-                padding: '16px',
-                background: 'var(--bg)',
-                borderRadius: '8px',
                 fontSize: '14px',
-                lineHeight: '1.65',
+                lineHeight: '1.6',
                 color: 'var(--text-light)',
-                borderLeft: '3px solid var(--primary)',
+                marginTop: '14px',
+                marginBottom: 0,
+                background: 'var(--bg)',
+                padding: '16px',
+                borderRadius: '8px',
               }}
             >
               {q.why}
-            </div>
+            </p>
           )}
         </div>
+      </div>
+    );
+  }
 
-        {/* Back button */}
-        {currentQ > 0 && (
-          <button
-            onClick={() => {
-              setCurrentQ(currentQ - 1);
-              setShowWhy(false);
-            }}
+  /* ── CAPTURE ── */
+  if (phase === 'capture') {
+    const handleCaptureSubmit = async (e) => {
+      e.preventDefault();
+      if (!captureEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(captureEmail)) {
+        setCaptureStatus('error');
+        setCaptureError('Enter a valid email address.');
+        return;
+      }
+      setCaptureStatus('submitting');
+      setCaptureError('');
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: captureEmail,
+            name: captureName || undefined,
+            source: 'quiz',
+            fields: {
+              quiz_score: `${totalScore}/${MAX_SCORE} (${bucket.label})`,
+            },
+          }),
+        });
+        if (!res.ok) throw new Error('Request failed');
+        setPhase('results');
+      } catch (err) {
+        setCaptureStatus('error');
+        setCaptureError("Something went wrong on our end — please try again, or email us directly at hello@globalsystemsstudio.com.");
+      }
+    };
+
+    return (
+      <div style={{ maxWidth: '560px' }}>
+        <div
+          style={{
+            background: bucket.bg,
+            border: `2px solid ${bucket.color}`,
+            borderRadius: '12px',
+            padding: '40px 36px',
+            textAlign: 'center',
+          }}
+        >
+          <div
             style={{
-              background: 'none',
-              border: 'none',
-              color: 'var(--text-light)',
-              fontSize: '14px',
-              cursor: 'pointer',
-              padding: 0,
+              fontSize: '13px',
+              fontWeight: '700',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              color: bucket.color,
+              marginBottom: '8px',
             }}
           >
-            ← Previous question
-          </button>
-        )}
+            You scored
+          </div>
+          <div
+            style={{
+              fontSize: '40px',
+              fontWeight: '900',
+              color: bucket.color,
+              letterSpacing: '-0.02em',
+              marginBottom: '4px',
+            }}
+          >
+            {totalScore} / {MAX_SCORE}
+          </div>
+          <div style={{ fontSize: '22px', fontWeight: '800', color: bucket.color, marginBottom: '20px' }}>
+            {bucket.label}
+          </div>
+          <p style={{ fontSize: '16px', lineHeight: '1.65', color: 'var(--text)', marginBottom: '28px' }}>
+            Enter your email to see your full section-by-section breakdown, the reasoning behind each
+            question, and your personalized recommendation.
+          </p>
+
+          <form onSubmit={handleCaptureSubmit} style={{ textAlign: 'left' }}>
+            <input
+              type="text"
+              placeholder="First name (optional)"
+              value={captureName}
+              onChange={(e) => setCaptureName(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '13px 16px',
+                border: '2px solid var(--border)',
+                borderRadius: '8px',
+                fontSize: '16px',
+                marginBottom: '12px',
+                boxSizing: 'border-box',
+                background: '#fff',
+              }}
+            />
+            <input
+              type="email"
+              required
+              placeholder="you@email.com"
+              value={captureEmail}
+              onChange={(e) => setCaptureEmail(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '13px 16px',
+                border: '2px solid var(--border)',
+                borderRadius: '8px',
+                fontSize: '16px',
+                marginBottom: '12px',
+                boxSizing: 'border-box',
+                background: '#fff',
+              }}
+            />
+            {captureStatus === 'error' && (
+              <p style={{ color: '#C0392B', fontSize: '14px', marginBottom: '12px' }}>{captureError}</p>
+            )}
+            <button
+              type="submit"
+              disabled={captureStatus === 'submitting'}
+              className="btn btn-gold"
+              style={{
+                width: '100%',
+                padding: '14px',
+                fontSize: '17px',
+                cursor: captureStatus === 'submitting' ? 'default' : 'pointer',
+                border: 'none',
+                opacity: captureStatus === 'submitting' ? 0.7 : 1,
+              }}
+            >
+              {captureStatus === 'submitting' ? 'Sending…' : 'Show My Full Results →'}
+            </button>
+          </form>
+          <p style={{ fontSize: '13px', color: 'var(--text-light)', marginTop: '16px' }}>
+            No spam. Just your results and occasional relocation guidance. Unsubscribe anytime.
+          </p>
+        </div>
       </div>
     );
   }
@@ -472,130 +576,91 @@ export default function RelocationReadinessQuiz() {
               key={sec.title}
               style={{
                 background: '#fff',
-                border: '2px solid var(--border)',
+                border: '1px solid var(--border)',
                 borderRadius: '10px',
-                padding: '20px 24px',
+                padding: '20px',
               }}
             >
-              <div style={{ fontSize: '13px', fontWeight: '700', color: 'var(--text-light)', marginBottom: '8px' }}>
+              <div style={{ fontSize: '13px', fontWeight: '700', color: 'var(--text-light)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>
                 {sec.title}
               </div>
-              <div
-                style={{
-                  fontSize: '24px',
-                  fontWeight: '800',
-                  color: 'var(--primary)',
-                  marginBottom: '10px',
-                }}
-              >
+              <div style={{ fontSize: '22px', fontWeight: '800', color: 'var(--primary)' }}>
                 {sec.score} / {sec.max}
               </div>
-              <div
-                style={{
-                  height: '6px',
-                  background: 'var(--border)',
-                  borderRadius: '99px',
-                  overflow: 'hidden',
-                }}
-              >
-                <div
-                  style={{
-                    height: '100%',
-                    width: `${pct}%`,
-                    background: pct >= 75 ? '#2E7D52' : pct >= 50 ? 'var(--accent)' : '#C0392B',
-                    borderRadius: '99px',
-                  }}
-                />
+              <div style={{ height: '6px', background: 'var(--border)', borderRadius: '3px', marginTop: '10px', overflow: 'hidden' }}>
+                <div style={{ height: '100%', width: `${pct}%`, background: 'var(--primary)', borderRadius: '3px' }} />
               </div>
             </div>
           );
         })}
       </div>
 
-      {/* Question-by-question review */}
+      {/* Question-by-question breakdown */}
       <div
         style={{
           background: '#fff',
-          border: '2px solid var(--border)',
+          border: '1px solid var(--border)',
           borderRadius: '12px',
-          overflow: 'hidden',
+          padding: '8px',
           marginBottom: '32px',
         }}
       >
-        <div style={{ padding: '18px 24px', borderBottom: '1px solid var(--border)', background: 'var(--bg)' }}>
-          <h3
-            style={{
-              margin: 0,
-              fontSize: '14px',
-              fontWeight: '700',
-              textTransform: 'uppercase',
-              letterSpacing: '0.07em',
-              color: 'var(--primary)',
-            }}
-          >
-            Your Answers
-          </h3>
-        </div>
-        {ALL_QUESTIONS.map((q, i) => {
-          const val = answers[q.id] ?? 0;
-          const label = ANSWERS.find((a) => a.value === val)?.label || 'Not yet';
+        {ALL_QUESTIONS.map((question, i) => {
+          const val = answers[question.id];
+          const answerObj = ANSWERS.find((a) => a.value === val);
           const color = val === 2 ? '#2E7D52' : val === 1 ? '#C8A832' : '#C0392B';
           return (
             <div
-              key={q.id}
+              key={question.id}
               style={{
-                padding: '14px 24px',
-                borderTop: i > 0 ? '1px solid var(--border)' : 'none',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
-                gap: '16px',
+                padding: '16px 20px',
+                borderBottom: i < ALL_QUESTIONS.length - 1 ? '1px solid var(--border)' : 'none',
               }}
             >
-              <span style={{ fontSize: '14px', lineHeight: '1.5', flex: 1, color: 'var(--text)' }}>
-                {q.text}
-              </span>
-              <span
-                style={{
-                  fontSize: '13px',
-                  fontWeight: '700',
-                  color,
-                  whiteSpace: 'nowrap',
-                  flexShrink: 0,
-                }}
-              >
-                {label}
-              </span>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '16px' }}>
+                <p style={{ margin: 0, fontSize: '14.5px', color: 'var(--text)', lineHeight: '1.5', flex: 1 }}>
+                  {question.text}
+                </p>
+                <span
+                  style={{
+                    fontSize: '12px',
+                    fontWeight: '700',
+                    color,
+                    whiteSpace: 'nowrap',
+                    padding: '4px 10px',
+                    borderRadius: '99px',
+                    background: `${color}15`,
+                  }}
+                >
+                  {answerObj ? answerObj.label : '—'}
+                </span>
+              </div>
+              {val !== 2 && (
+                <p style={{ margin: '8px 0 0', fontSize: '13px', color: 'var(--text-light)', lineHeight: '1.55' }}>
+                  {question.why}
+                </p>
+              )}
             </div>
           );
         })}
       </div>
 
-      {/* Retake */}
-      <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', paddingBottom: '48px' }}>
+      <div style={{ textAlign: 'center' }}>
         <button
           onClick={handleRetake}
           style={{
-            padding: '12px 28px',
-            border: '2px solid var(--primary)',
-            borderRadius: '6px',
-            background: '#fff',
-            color: 'var(--primary)',
-            fontWeight: '700',
+            background: 'none',
+            border: '2px solid var(--border)',
+            borderRadius: '8px',
+            padding: '12px 24px',
             fontSize: '15px',
+            fontWeight: '600',
+            color: 'var(--text)',
             cursor: 'pointer',
           }}
         >
-          Retake the Quiz
+          Retake the Assessment
         </button>
-        <a
-          href="https://calendar.app.google/5GiW8EZKoyB7SqEKA"
-          className="btn btn-gold"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Book a Free Discovery Call →
-        </a>
       </div>
     </div>
   );
