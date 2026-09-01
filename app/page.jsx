@@ -120,9 +120,9 @@ export default function HomePage() {
             {[
               { num: '1', name: 'Legal & Documentation', desc: 'Visas, residency permits, apostilles, international notarization, citizenship pathways. Every document you need and every step to make it valid abroad.' },
               { num: '2', name: 'Financial Structure', desc: 'Banking, FBAR compliance, capital gains timing, foreign income tax, currency planning, Social Security strategy, and the financial decisions that must be made before you leave.' },
-              { num: '3', name: 'Housing & Lifestyle', desc: 'Finding and securing housing in a foreign market — without overpaying, signing the wrong lease, or missing communications you didn\'t know to watch for.' },
+              { num: '3', name: 'Housing & Logistics', desc: 'Finding and securing housing in a foreign market — without overpaying, signing the wrong lease, or missing communications you didn\'t know to watch for. And the physical move itself: customs, shipping, and getting everything you own to where you\'re actually going.' },
               { num: '4', name: 'Healthcare & Wellness', desc: 'Insurance abroad, prescription continuity, specialist care access, and the healthcare questions that must be answered for anyone with ongoing medical needs.' },
-              { num: '5', name: 'Business & Income', desc: 'Whether you\'re working remotely, joining the local job market, or opening a business in your destination country — this module covers the legal, tax, and operational structure you need.' },
+              { num: '5', name: 'Business & Income', desc: 'Your income keeps working, even when you don\'t live where you earn it. Whether you\'re working remotely, joining the local job market, or opening a business in your destination country — this module covers the legal, tax, and operational structure you need.' },
               { num: '6', name: 'Family & Social Integration', desc: 'School enrollment timelines, cultural adjustment, community building, and the emotional and relational dimensions of leaving everything you know.' },
               { num: '7', name: 'Long-Term Stability', desc: 'Estate planning, re-entry options, Social Security strategy, retirement income planning, and what sustainable life abroad actually requires beyond year one.' },
             ].map((mod) => (
