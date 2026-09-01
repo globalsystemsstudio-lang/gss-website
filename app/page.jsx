@@ -170,7 +170,7 @@ export default function HomePage() {
       </section>
 
       {/* 05 — DESTINATION INTELLIGENCE */}
-      <section style={{background:'var(--bg)', padding:'80px 0'}}>
+      <section id="destinations" style={{background:'var(--bg)', padding:'80px 0'}}>
         <div className="container">
           <span className="section-tag">Destination Intelligence 🌍</span>
           <h2>Where Are You Thinking of Going?</h2>
@@ -189,7 +189,7 @@ export default function HomePage() {
       </section>
 
       {/* 06 — THE DECISION ROOM */}
-      <section style={{background:'var(--white)', padding:'80px 0'}}>
+      <section id="decision-room" style={{background:'var(--white)', padding:'80px 0'}}>
         <div className="container">
           <span className="section-tag">The Decision Room 🎲</span>
           <h2>You're 58. $200K Saved. Panama Is Calling. Would You Move?</h2>
