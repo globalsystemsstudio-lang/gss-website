@@ -91,37 +91,6 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* RESOURCE GUIDES */}
-      <section style={{background:'var(--bg)', padding:'80px 0'}}>
-        <div className="container">
-          <h2>Member Resource Guides</h2>
-          <p style={{maxWidth:'640px', marginTop:'16px', color:'var(--text-light)'}}>These downloadable guides are available to ROS™ community members through The Departure Lounge. Join the community to access the full library.</p>
-          <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))', gap:'24px', marginTop:'40px'}}>
-            {[
-              {
-                title: 'International Job Search Guide',
-                desc: 'Where U.S. professionals actually look for work abroad — the platforms, the country-specific norms, and what your experience does and doesn\'t transfer.',
-                status: 'Available to members',
-              },
-              {
-                title: "International Driver's License Guide",
-                desc: "Country-by-country breakdown of driver's license recognition, conversion requirements, and what you need to do before your U.S. license stops being valid abroad.",
-                status: 'Available to members',
-              },
-            ].map((guide) => (
-              <div key={guide.title} style={{background:'var(--white)', border:'1px solid var(--border)', borderRadius:'12px', padding:'28px'}}>
-                <h3 style={{color:'var(--primary)', marginBottom:'12px'}}>{guide.title}</h3>
-                <p style={{color:'var(--text-light)', fontSize:'15px', lineHeight:'1.6', marginBottom:'16px'}}>{guide.desc}</p>
-                <span style={{fontSize:'12px', fontWeight:'700', color:'var(--accent)', textTransform:'uppercase', letterSpacing:'0.08em'}}>{guide.status}</span>
-              </div>
-            ))}
-          </div>
-          <div style={{marginTop:'36px'}}>
-            <Link href="/work-with-me" className="btn btn-gold">Join The Departure Lounge to Access All Guides →</Link>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="cta-section">
         <div className="container">
