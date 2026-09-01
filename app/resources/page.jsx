@@ -58,6 +58,39 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      {/* FREE TOOLS */}
+      <section style={{background:'var(--white)', padding:'0 0 80px'}}>
+        <div className="container">
+          <h2>Free Interactive Tools</h2>
+          <p style={{maxWidth:'640px', marginTop:'16px', color:'var(--text-light)'}}>Before you read another guide, run your own numbers. Both take a few minutes.</p>
+          <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))', gap:'24px', marginTop:'40px'}}>
+            {[
+              {
+                href: '/cost-of-living-calculator',
+                emoji: '🌍',
+                title: 'Cost of Living Calculator',
+                desc: 'Compare your budget against 90+ countries and see your purchasing power, category by category.',
+                cta: 'Run the numbers →',
+              },
+              {
+                href: '/relocation-readiness-quiz',
+                emoji: '✈️',
+                title: 'Relocation Readiness Quiz',
+                desc: '12 questions across financial compliance and practical logistics. Find out exactly where your gaps are.',
+                cta: 'Take the quiz →',
+              },
+            ].map((tool) => (
+              <Link key={tool.href} href={tool.href} style={{display:'block', background:'var(--bg)', border:'1px solid var(--border)', borderRadius:'12px', padding:'28px', textDecoration:'none', color:'inherit'}}>
+                <div style={{fontSize:'28px', marginBottom:'10px'}}>{tool.emoji}</div>
+                <h3 style={{color:'var(--primary)', marginBottom:'12px', fontSize:'18px'}}>{tool.title}</h3>
+                <p style={{color:'var(--text-light)', fontSize:'15px', lineHeight:'1.6', marginBottom:'16px'}}>{tool.desc}</p>
+                <span style={{fontWeight:'700', color:'var(--primary)', fontSize:'14px'}}>{tool.cta}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* RESOURCE GUIDES */}
       <section style={{background:'var(--bg)', padding:'80px 0'}}>
         <div className="container">
