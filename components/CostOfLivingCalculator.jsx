@@ -129,6 +129,9 @@ function parseBudget(raw) {
 export default function CostOfLivingCalculator() {
   const [budgetRaw, setBudgetRaw] = useState('');
   const [countryKey, setCountryKey] = useState('');
+  const [capEmail, setCapEmail] = useState('');
+  const [capStatus, setCapStatus] = useState('idle'); // idle | submitting | success | error
+  const [capError, setCapError] = useState('');
 
   const budget = parseBudget(budgetRaw);
 
@@ -142,6 +145,35 @@ export default function CostOfLivingCalculator() {
 
   const isCheaper = selected && selected.index < 85;
 
+  const handleCalcCapture = async (e) => {
+    e.preventDefault();
+    if (!capEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(capEmail)) {
+      setCapStatus('error');
+      setCapError('Enter a valid email address.');
+      return;
+    }
+    setCapStatus('submitting');
+    setCapError('');
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: capEmail,
+          source: 'calculator',
+          fields: {
+            calculator_country: selected ? selected.name : '',
+          },
+        }),
+      });
+      if (!res.ok) throw new Error('Request failed');
+      setCapStatus('success');
+    } catch (err) {
+      setCapStatus('error');
+      setCapError('Something went wrong — please try again, or email us directly at hello@globalsystemsstudio.com.');
+    }
+  };
+
   return (
     <div style={{ maxWidth: '820px' }}>
       {/* Inputs */}
@@ -154,23 +186,11 @@ export default function CostOfLivingCalculator() {
         }}
       >
         <div>
-          <label
-            htmlFor="budget"
-            style={{ display: 'block', fontWeight: '600', marginBottom: '8px', color: 'var(--primary)' }}
-          >
+          <label htmlFor="budget" style={{ display: 'block', fontWeight: '600', marginBottom: '8px', color: 'var(--primary)' }}>
             Your Monthly Budget (USD)
           </label>
           <div style={{ position: 'relative' }}>
-            <span
-              style={{
-                position: 'absolute',
-                left: '14px',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                color: 'var(--text-light)',
-                fontWeight: '600',
-              }}
-            >
+            <span style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-light)', fontWeight: '600' }}>
               $
             </span>
             <input
@@ -202,10 +222,7 @@ export default function CostOfLivingCalculator() {
         </div>
 
         <div>
-          <label
-            htmlFor="country"
-            style={{ display: 'block', fontWeight: '600', marginBottom: '8px', color: 'var(--primary)' }}
-          >
+          <label htmlFor="country" style={{ display: 'block', fontWeight: '600', marginBottom: '8px', color: 'var(--primary)' }}>
             Destination Country
           </label>
           <select
@@ -228,23 +245,20 @@ export default function CostOfLivingCalculator() {
             onBlur={(e) => (e.target.style.borderColor = 'var(--border)')}
           >
             <option value="">Select a country…</option>
-            {REGIONS.map((region) => (
-              <optgroup key={region.name} label={region.name}>
-                {region.countries.map((c) => (
-                  <option key={c.name} value={c.name}>
+            {REGIONS.map((r) => (
+              <optgroup label={r.name} key={r.name}>
+                {r.countries.map((c) => (
+                  <option value={c.name} key={c.name}>
                     {c.name}
                   </option>
                 ))}
               </optgroup>
             ))}
           </select>
-          <p style={{ fontSize: '13px', color: 'var(--text-light)', marginTop: '6px' }}>
-            90+ countries across 7 regions
-          </p>
+          <p style={{ fontSize: '13px', color: 'var(--text-light)', marginTop: '6px' }}>90+ countries across 7 regions</p>
         </div>
       </div>
 
-      {/* Placeholder state */}
       {(!budget || !selected) && (
         <div
           style={{
@@ -267,10 +281,8 @@ export default function CostOfLivingCalculator() {
         </div>
       )}
 
-      {/* Results */}
       {budget && selected && (
         <>
-          {/* Headline metrics */}
           <div
             style={{
               background: isCheaper ? 'var(--primary)' : '#fff',
@@ -295,40 +307,16 @@ export default function CostOfLivingCalculator() {
                 Living in {selected.name} on {fmt(budget)}/month
               </span>
             </div>
-
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
               <div>
-                <div
-                  style={{
-                    fontSize: '13px',
-                    fontWeight: '600',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.06em',
-                    opacity: 0.75,
-                    marginBottom: '6px',
-                  }}
-                >
+                <div style={{ fontSize: '13px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.06em', opacity: 0.75, marginBottom: '6px' }}>
                   Est. Monthly Cost
                 </div>
-                <div style={{ fontSize: '32px', fontWeight: '800', letterSpacing: '-0.02em' }}>
-                  {fmt(destCost)}
-                </div>
-                <div style={{ fontSize: '13px', opacity: 0.75, marginTop: '4px' }}>
-                  in {selected.name}
-                </div>
+                <div style={{ fontSize: '32px', fontWeight: '800', letterSpacing: '-0.02em' }}>{fmt(destCost)}</div>
+                <div style={{ fontSize: '13px', opacity: 0.75, marginTop: '4px' }}>in {selected.name}</div>
               </div>
-
               <div>
-                <div
-                  style={{
-                    fontSize: '13px',
-                    fontWeight: '600',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.06em',
-                    opacity: 0.75,
-                    marginBottom: '6px',
-                  }}
-                >
+                <div style={{ fontSize: '13px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.06em', opacity: 0.75, marginBottom: '6px' }}>
                   Monthly Surplus
                 </div>
                 <div
@@ -342,35 +330,18 @@ export default function CostOfLivingCalculator() {
                   {surplus >= 0 ? '+' : ''}
                   {fmt(surplus)}
                 </div>
-                <div style={{ fontSize: '13px', opacity: 0.75, marginTop: '4px' }}>
-                  after estimated expenses
-                </div>
+                <div style={{ fontSize: '13px', opacity: 0.75, marginTop: '4px' }}>after estimated expenses</div>
               </div>
-
               <div>
-                <div
-                  style={{
-                    fontSize: '13px',
-                    fontWeight: '600',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.06em',
-                    opacity: 0.75,
-                    marginBottom: '6px',
-                  }}
-                >
+                <div style={{ fontSize: '13px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.06em', opacity: 0.75, marginBottom: '6px' }}>
                   Purchasing Power
                 </div>
-                <div style={{ fontSize: '32px', fontWeight: '800', letterSpacing: '-0.02em' }}>
-                  {fmt(purchasingPower)}
-                </div>
-                <div style={{ fontSize: '13px', opacity: 0.75, marginTop: '4px' }}>
-                  U.S. equivalent lifestyle
-                </div>
+                <div style={{ fontSize: '32px', fontWeight: '800', letterSpacing: '-0.02em' }}>{fmt(purchasingPower)}</div>
+                <div style={{ fontSize: '13px', opacity: 0.75, marginTop: '4px' }}>U.S. equivalent lifestyle</div>
               </div>
             </div>
           </div>
 
-          {/* Category breakdown */}
           <div
             style={{
               background: '#fff',
@@ -381,131 +352,57 @@ export default function CostOfLivingCalculator() {
             }}
           >
             <div style={{ padding: '20px 24px', borderBottom: '1px solid var(--border)' }}>
-              <h3
-                style={{
-                  margin: 0,
-                  fontSize: '16px',
-                  fontWeight: '700',
-                  color: 'var(--primary)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.06em',
-                }}
-              >
+              <h3 style={{ margin: 0, fontSize: '16px', fontWeight: '700', color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                 Monthly Breakdown by Category
               </h3>
             </div>
-
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <thead>
                 <tr style={{ background: 'var(--bg)' }}>
-                  <th
-                    style={{
-                      textAlign: 'left',
-                      padding: '12px 24px',
-                      fontSize: '12px',
-                      fontWeight: '700',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.06em',
-                      color: 'var(--text-light)',
-                    }}
-                  >
+                  <th style={{ textAlign: 'left', padding: '12px 24px', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--text-light)' }}>
                     Category
                   </th>
-                  <th
-                    style={{
-                      textAlign: 'right',
-                      padding: '12px 16px',
-                      fontSize: '12px',
-                      fontWeight: '700',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.06em',
-                      color: 'var(--text-light)',
-                    }}
-                  >
+                  <th style={{ textAlign: 'right', padding: '12px 16px', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--text-light)' }}>
                     U.S. Cost
                   </th>
-                  <th
-                    style={{
-                      textAlign: 'right',
-                      padding: '12px 16px',
-                      fontSize: '12px',
-                      fontWeight: '700',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.06em',
-                      color: 'var(--text-light)',
-                    }}
-                  >
+                  <th style={{ textAlign: 'right', padding: '12px 16px', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--text-light)' }}>
                     {selected.name}
                   </th>
-                  <th
-                    style={{
-                      textAlign: 'right',
-                      padding: '12px 24px',
-                      fontSize: '12px',
-                      fontWeight: '700',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.06em',
-                      color: 'var(--text-light)',
-                    }}
-                  >
+                  <th style={{ textAlign: 'right', padding: '12px 24px', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--text-light)' }}>
                     Savings
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {CATEGORIES.map((cat, i) => {
-                  const usCost = Math.round(budget * cat.weight);
+                {CATEGORIES.map((c, i) => {
+                  const usCost = Math.round(budget * c.weight);
                   const destCatCost = Math.round(usCost * ratio);
-                  const catSavings = usCost - destCatCost;
+                  const savings = usCost - destCatCost;
                   return (
-                    <tr
-                      key={cat.name}
-                      style={{
-                        borderTop: '1px solid var(--border)',
-                        background: i % 2 === 0 ? '#fff' : 'rgba(248,245,237,0.5)',
-                      }}
-                    >
-                      <td style={{ padding: '14px 24px', fontWeight: '500' }}>{cat.name}</td>
-                      <td style={{ padding: '14px 16px', textAlign: 'right', color: 'var(--text-light)' }}>
-                        {fmt(usCost)}
-                      </td>
-                      <td style={{ padding: '14px 16px', textAlign: 'right', fontWeight: '600' }}>
-                        {fmt(destCatCost)}
-                      </td>
+                    <tr key={c.name} style={{ borderTop: '1px solid var(--border)', background: i % 2 === 0 ? '#fff' : 'rgba(248,245,237,0.5)' }}>
+                      <td style={{ padding: '14px 24px', fontWeight: '500' }}>{c.name}</td>
+                      <td style={{ padding: '14px 16px', textAlign: 'right', color: 'var(--text-light)' }}>{fmt(usCost)}</td>
+                      <td style={{ padding: '14px 16px', textAlign: 'right', fontWeight: '600' }}>{fmt(destCatCost)}</td>
                       <td
                         style={{
                           padding: '14px 24px',
                           textAlign: 'right',
                           fontWeight: '700',
-                          color: catSavings > 0 ? '#2E7D52' : catSavings < 0 ? '#C0392B' : 'var(--text-light)',
+                          color: savings > 0 ? '#2E7D52' : savings < 0 ? '#C0392B' : 'var(--text-light)',
                         }}
                       >
-                        {catSavings >= 0 ? '+' : ''}
-                        {fmt(catSavings)}
+                        {savings >= 0 ? '+' : ''}
+                        {fmt(savings)}
                       </td>
                     </tr>
                   );
                 })}
                 <tr style={{ borderTop: '2px solid var(--primary)', background: 'rgba(30,91,153,0.06)' }}>
                   <td style={{ padding: '14px 24px', fontWeight: '800', color: 'var(--primary)' }}>Total</td>
-                  <td
-                    style={{
-                      padding: '14px 16px',
-                      textAlign: 'right',
-                      fontWeight: '700',
-                      color: 'var(--primary)',
-                    }}
-                  >
+                  <td style={{ padding: '14px 16px', textAlign: 'right', fontWeight: '700', color: 'var(--primary)' }}>
                     {fmt(budget)}
                   </td>
-                  <td
-                    style={{
-                      padding: '14px 16px',
-                      textAlign: 'right',
-                      fontWeight: '800',
-                      color: 'var(--primary)',
-                    }}
-                  >
+                  <td style={{ padding: '14px 16px', textAlign: 'right', fontWeight: '800', color: 'var(--primary)' }}>
                     {fmt(destCost)}
                   </td>
                   <td
@@ -531,6 +428,70 @@ export default function CostOfLivingCalculator() {
             housing choice, and individual circumstances. This calculator does not account for taxes, currency
             fluctuation, healthcare premiums, or one-time relocation costs. Use it as a starting point — not a
             budget.
+          </div>
+
+          {/* Email capture */}
+          <div
+            style={{
+              background: 'var(--bg)',
+              border: '2px solid var(--border)',
+              borderRadius: '12px',
+              padding: '28px 32px',
+              marginBottom: '32px',
+            }}
+          >
+            {capStatus === 'success' ? (
+              <p style={{ margin: 0, fontSize: '16px', fontWeight: '600', color: '#2E7D52' }}>
+                ✓ Sent. Check your inbox — and check spam if it doesn't show up in a few minutes.
+              </p>
+            ) : (
+              <>
+                <p style={{ margin: '0 0 16px', fontSize: '16px', fontWeight: '700', color: 'var(--primary)' }}>
+                  Want this breakdown emailed to you?
+                </p>
+                <form
+                  onSubmit={handleCalcCapture}
+                  style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'flex-start' }}
+                >
+                  <input
+                    type="email"
+                    required
+                    placeholder="you@email.com"
+                    value={capEmail}
+                    onChange={(e) => setCapEmail(e.target.value)}
+                    style={{
+                      flex: '1 1 240px',
+                      padding: '12px 14px',
+                      border: '2px solid var(--border)',
+                      borderRadius: '8px',
+                      fontSize: '16px',
+                      boxSizing: 'border-box',
+                      background: '#fff',
+                    }}
+                  />
+                  <button
+                    type="submit"
+                    disabled={capStatus === 'submitting'}
+                    className="btn btn-gold"
+                    style={{
+                      padding: '12px 24px',
+                      fontSize: '15px',
+                      cursor: capStatus === 'submitting' ? 'default' : 'pointer',
+                      border: 'none',
+                      opacity: capStatus === 'submitting' ? 0.7 : 1,
+                    }}
+                  >
+                    {capStatus === 'submitting' ? 'Sending…' : 'Email Me This'}
+                  </button>
+                </form>
+                {capStatus === 'error' && (
+                  <p style={{ color: '#C0392B', fontSize: '14px', margin: '10px 0 0' }}>{capError}</p>
+                )}
+                <p style={{ fontSize: '13px', color: 'var(--text-light)', margin: '10px 0 0' }}>
+                  No spam. Just this breakdown and occasional relocation guidance. Unsubscribe anytime.
+                </p>
+              </>
+            )}
           </div>
 
           {/* CTAs */}
