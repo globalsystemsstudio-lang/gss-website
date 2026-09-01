@@ -21,6 +21,7 @@ export default function MobileNavToggle() {
           <li><Link href="/our-story" onClick={() => setOpen(false)}>Our Story</Link></li>
           <li><Link href="/who-its-for" onClick={() => setOpen(false)}>Who It's For</Link></li>
           <li><Link href="/why-you-need-this" onClick={() => setOpen(false)}>Why You Need This</Link></li>
+          <li><Link href="/tools" onClick={() => setOpen(false)}>Free Tools</Link></li>
           <li><Link href="/work-with-me" onClick={() => setOpen(false)}>Work With Me</Link></li>
           <li><Link href="/resources" onClick={() => setOpen(false)}>Resources</Link></li>
           <li><Link href="/blog" onClick={() => setOpen(false)}>Blog</Link></li>
