@@ -8,16 +8,14 @@ export default function Nav() {
         <div className="nav-inner">
           <Link href="/" className="nav-logo">Global Systems Studio</Link>
           <ul className="nav-links">
-            <li><Link href="/what-is-ros">What is ROS™</Link></li>
-            <li><Link href="/our-story">Our Story</Link></li>
-            <li><Link href="/who-its-for">Who It's For</Link></li>
-            <li><Link href="/why-you-need-this">Why You Need This</Link></li>
-            <li><Link href="/tools">Free Tools</Link></li>
-            <li><Link href="/work-with-me">Work With Me</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/what-is-ros">The System</Link></li>
+            <li><Link href="/who-its-for">Pathways</Link></li>
+            <li><Link href="/#episodes">Episodes 🎬</Link></li>
+            <li><Link href="/#destinations">Destinations 🌍</Link></li>
+            <li><Link href="/#decision-room">Decision Room 🎲</Link></li>
             <li><Link href="/resources">Resources</Link></li>
-            <li><Link href="/blog">Blog</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-            <li><Link href="/work-with-me" className="nav-cta-link">Book a Call</Link></li>
+            <li><Link href="/shop/new-roots/" className="nav-cta-link">Start Here</Link></li>
           </ul>
           <MobileNavToggle />
         </div>
