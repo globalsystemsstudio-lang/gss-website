@@ -111,7 +111,7 @@ export default function InternationalRelocationConsultancyPage() {
                   },
                   {
                     q: 'How much does international relocation consulting cost?',
-                    a: "Global Systems Studio offers a free 15-minute Discovery Call, a 30-minute Clarity Session ($497), the ROS™ Book ($47), and The Departure Lounge community ($97/month). All offer access to the ROS™ framework and the founder's expertise at different levels of depth and engagement."
+                    a: "Global Systems Studio offers a free 15-minute Discovery Call, a 30-minute Clarity Session ($497), and the ROS™ Book ($47). All offer access to the ROS™ framework and the founder's expertise at different levels of depth and engagement."
                   },
                   {
                     q: 'What makes Global Systems Studio different from other relocation consultancies?',
