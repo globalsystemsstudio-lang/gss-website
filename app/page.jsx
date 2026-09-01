@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RelocationReadinessQuiz from '../components/RelocationReadinessQuiz';
 
 export const metadata = {
   title: 'Global Systems Studio | ROS™ — Relocation Operating System',
@@ -6,19 +7,74 @@ export const metadata = {
   alternates: { canonical: 'https://www.globalsystemsstudio.com/' },
 };
 
+const PATHWAYS = [
+  { icon: '🌐', title: 'The Digital Nomad', desc: 'You work remotely and want the freedom to live anywhere — legally, financially smart, and without losing your mind in the process.', href: '/who-its-for' },
+  { icon: '🧳', title: 'The Solo Relocator', desc: "You're making this move on your own — by choice or by circumstance — and you're determined to get it right.", href: '/who-its-for' },
+  { icon: '👨‍👩‍👧', title: 'The Family', desc: "You're moving with people who depend on you and getting it wrong isn't an option.", href: '/who-its-for' },
+  { icon: '💼', title: 'The Entrepreneur', desc: 'You own a business or are building something new in a foreign market and need your legal and financial structure to work across borders.', href: '/who-its-for' },
+  { icon: '🏡', title: 'The Legacy Mover', desc: "You've worked your whole life for this. Now you want to spend your next chapter somewhere that gives you more — on a budget that actually works.", href: '/who-its-for' },
+  { icon: '📈', title: 'The Investor', desc: "You're moving capital, not just yourself — and you need the legal and financial infrastructure to do it right in a new country.", href: '/who-its-for' },
+];
+
+const MODULES = [
+  { num: '1', name: 'Legal', desc: 'Visas, residency permits, apostilles, citizenship pathways — your legal standing, secured before you need it.' },
+  { num: '2', name: 'Financial', desc: 'Banking, FBAR compliance, capital gains timing, Social Security strategy — the money decisions that must be made before you leave.' },
+  { num: '3', name: 'Healthcare', desc: 'Insurance abroad, prescription continuity, specialist access — answered before an emergency forces the question.' },
+  { num: '4', name: 'Housing & Logistics', desc: "Finding and securing housing without overpaying or signing the wrong lease. And the physical move itself: customs, shipping, getting everything you own to where you're actually going." },
+  { num: '5', name: 'Business & Income', desc: "Your income keeps working, even when you don't live where you earn it. Verified income, compliant work status, and a business structure built to survive the move." },
+  { num: '6', name: 'Family & Legacy', desc: 'School enrollment, cultural adjustment, estate and capital continuity for the retiree tier — the people who depend on you, accounted for.' },
+  { num: '7', name: 'Life After Arrival', desc: 'Establishment, integration, and what sustainable life abroad actually requires beyond year one.' },
+];
+
+const DESTINATIONS = [
+  { name: 'Paraguay', tag: '$5,500 Residency', desc: 'The real cost of one of the fastest, cheapest residency pathways available to U.S. persons — not the marketing number.', href: '/blog/paraguay-5500-residency-real-cost' },
+  { name: 'Costa Rica', tag: 'Beachfront Reality', desc: 'What the first 200 meters from the beach actually means for foreign buyers, before you fall in love with a listing.', href: '/blog/costa-rica-first-200-meters-beachfront' },
+  { name: 'Turkey', tag: 'All Six Tiers', desc: 'A relocation guide built around every ROS™ pathway — Solo through Investor — for one of the most flexible destinations on the board.', href: '/blog/turkey-relocation-guide-all-tiers' },
+  { name: 'Ireland', tag: 'Non-Dom Tax Position', desc: 'The tax position that makes or breaks an Irish move for U.S. persons — explained before it becomes a filing-season surprise.', href: '/blog/ireland-non-dom-tax-position-guide' },
+  { name: 'Malaysia', tag: 'MM2H & PVIP', desc: 'Two very different visa pathways, compared honestly — so you apply for the one that actually fits your situation.', href: '/blog/malaysia-relocation-guide-mm2h-pvip' },
+  { name: 'Mexico', tag: 'Which City', desc: "Mexico isn't one relocation decision — it's dozens of different ones depending on the city. Here's how to actually choose.", href: '/blog/mexico-relocation-guide-which-city' },
+];
+
+const EPISODES = [
+  { ep: 'EP.01', title: 'Not Another List', desc: "Why another checklist won't save you from the questions that actually derail a move." },
+  { ep: 'EP.02', title: 'A Checklist Is Not a Plan', desc: 'The difference between knowing what to do and knowing what order to do it in.' },
+  { ep: 'EP.03', title: 'The Undo Button', desc: "What happens when you find out — after you've already moved — that a decision can't be reversed." },
+  { ep: 'EP.04', title: 'Where Do I Even Start?', desc: 'The honest answer to the question everyone asks first, in the order that actually works.' },
+];
+
 export default function HomePage() {
   return (
     <>
-      {/* HERO */}
+      {/* 01 — HERO */}
       <section className="hero">
         <div className="container">
-          <h1>You've Made the Decision. Now You Need a System.</h1>
+          <h1>A Plane Ticket Is Not a Relocation Plan.</h1>
           <p className="answer-capsule">
-            ROS™ — the Relocation Operating System — is the step-by-step infrastructure built for people who are serious about moving internationally and need real answers, not a highlight reel.
+            You've made the decision. Now comes the part nobody warns you about — the legal standing, the financial structure, the thousand small questions that don't have a Google answer. ROS™ is the step-by-step infrastructure built for people who are serious about moving internationally and need real answers, not a highlight reel.
           </p>
           <div className="hero-ctas">
-            <Link href="/who-its-for" className="btn btn-gold">Find Your Tier →</Link>
-            <Link href="/our-story" className="btn btn-outline-white">Read Our Story →</Link>
+            <Link href="/shop/new-roots/" className="btn btn-gold">Get New Roots — $27 →</Link>
+            <Link href="#episodes" className="btn btn-outline-white">Watch the Trailer →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 02 — WHAT KIND OF MOVER ARE YOU */}
+      <section className="who-its-for">
+        <div className="container">
+          <span className="section-tag">Who It's For</span>
+          <h2>What Kind of Mover Are You?</h2>
+          <p className="section-intro">Six doors. Find yours, and everything past it is built around your specific situation — not a generic relocator's.</p>
+          <div className="profiles-grid">
+            {PATHWAYS.map((tier) => (
+              <Link key={tier.title} href={tier.href} className="tool-card-link">
+                <div className="profile-card">
+                  <div className="profile-icon">{tier.icon}</div>
+                  <h3>{tier.title}</h3>
+                  <p>{tier.desc}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -36,20 +92,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHAT IS ROS */}
-      <section className="what-is-ros">
+      {/* 03 — THE ROS SYSTEM */}
+      <section className="modules">
         <div className="container">
           <span className="section-tag">The System</span>
-          <h2>The System That Covers What Everyone Else Leaves Out</h2>
-          <p className="section-intro">
-            ROS™ stands for the <strong>Relocation Operating System</strong> — a structured infrastructure of organized tasks and decisions built to guide you through every phase of an international move.
-          </p>
-          <p style={{maxWidth:'760px', marginTop:'20px', color:'var(--text-light)'}}>
-            Seven modules. Six tiers built around your specific life stage. Real answers to the questions that keep you up at night — legal, financial, housing, healthcare, business, family, and long-term stability.
-          </p>
-          <p style={{maxWidth:'760px', marginTop:'12px', fontWeight:'700', fontSize:'18px', color:'var(--primary)'}}>
-            Not inspiration. Infrastructure.
-          </p>
+          <h2>Seven Systems. One Seamless Plan.</h2>
+          <p className="modules-intro">ROS™ walks you through seven areas — the same seven areas where international relocations fall apart when there's no system in place.</p>
+          <div className="icon-cards" style={{gridTemplateColumns:'repeat(4, 1fr)'}}>
+            {MODULES.map((mod) => (
+              <div key={mod.num} className="icon-card">
+                <div className="icon-card-num">{mod.num}</div>
+                <h3>{mod.name}</h3>
+                <p>{mod.desc}</p>
+              </div>
+            ))}
+          </div>
           <div style={{marginTop:'32px'}}>
             <Link href="/what-is-ros" className="btn btn-gold">Learn exactly how ROS™ works →</Link>
           </div>
@@ -57,7 +114,7 @@ export default function HomePage() {
       </section>
 
       {/* FOUNDER MOMENT */}
-      <section style={{background:'var(--white)', padding:'80px 0'}}>
+      <section style={{background:'var(--bg)', padding:'80px 0'}}>
         <div className="container">
           <div className="about-grid">
             <div className="about-copy">
@@ -82,61 +139,70 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHO IS ROS FOR */}
-      <section className="who-its-for">
+      {/* 04 — BEFORE YOU BOARD */}
+      <section id="episodes" style={{background:'var(--white)', padding:'80px 0'}}>
         <div className="container">
-          <span className="section-tag">Who It's For</span>
-          <h2>Find Yourself Here</h2>
-          <p className="section-intro">ROS™ isn't built for a generic relocator. It's built for you — wherever you are in life, whatever brought you to this decision.</p>
-          <div className="profiles-grid">
-            {[
-              { icon: '🌐', title: 'The Digital Nomad', desc: 'You work remotely and want the freedom to live anywhere — legally, financially smart, and without losing your mind in the process.' },
-              { icon: '🧳', title: 'The Solo Relocator', desc: "You're making this move on your own — by choice or by circumstance — and you're determined to get it right." },
-              { icon: '👨‍👩‍👧', title: 'The Family', desc: "You're moving with people who depend on you and getting it wrong isn't an option." },
-              { icon: '💼', title: 'The Entrepreneur', desc: 'You own a business or are building something new in a foreign market and need your legal and financial structure to work across borders.' },
-              { icon: '🏡', title: 'The Legacy Mover', desc: "You've worked your whole life for this. Now you want to spend your next chapter somewhere that gives you more — on a budget that actually works." },
-              { icon: '📈', title: 'The Investor', desc: "You're moving capital, not just yourself — and you need the legal and financial infrastructure to do it right in a new country." },
-            ].map((tier) => (
-              <div key={tier.title} className="profile-card">
-                <div className="profile-icon">{tier.icon}</div>
-                <h3>{tier.title}</h3>
-                <p>{tier.desc}</p>
+          <span className="section-tag">Before You Board 🎬</span>
+          <h2>The Questions Everyone Asks — Answered on Camera</h2>
+          <p className="section-intro">Four short episodes. The same questions that come up on every discovery call, answered before you have to ask them.</p>
+          <div className="blog-grid" style={{gridTemplateColumns:'repeat(4, 1fr)', marginTop:'40px'}}>
+            {EPISODES.map((e) => (
+              <div key={e.ep} className="blog-card" style={{cursor:'default'}}>
+                <span className="blog-card-tag">{e.ep}</span>
+                <h3>{e.title}</h3>
+                <p>{e.desc}</p>
               </div>
             ))}
           </div>
+
+          {/* Episode CTA panel — on-site only, video narration itself stays untouched and closes on /tools/ */}
+          <div style={{marginTop:'48px', background:'var(--bg)', border:'1px solid var(--border)', borderRadius:'14px', padding:'40px', textAlign:'center'}}>
+            <h3 style={{fontSize:'24px', marginBottom:'12px'}}>Know What's Actually Missing? Start Here.</h3>
+            <div style={{marginTop:'20px'}}>
+              <Link href="/shop/new-roots/" className="btn btn-gold">Get New Roots — $27 →</Link>
+            </div>
+            <p style={{fontSize:'14px', color:'var(--text-light)', marginTop:'12px', marginBottom:'0'}}>The full ROS™ system, in reading order. See what's missing before you talk to anyone.</p>
+            <div style={{marginTop:'20px'}}>
+              <Link href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" className="blog-card-link" style={{fontSize:'14px'}}>Already know your gaps? Book a free Discovery Call →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 05 — DESTINATION INTELLIGENCE */}
+      <section style={{background:'var(--bg)', padding:'80px 0'}}>
+        <div className="container">
+          <span className="section-tag">Destination Intelligence 🌍</span>
+          <h2>Where Are You Thinking of Going?</h2>
+          <p className="section-intro">Six destinations, fully researched. More are added as each one gets the same treatment — real numbers, real tax positions, no travel-blog gloss.</p>
+          <div className="blog-grid" style={{marginTop:'40px'}}>
+            {DESTINATIONS.map((d) => (
+              <Link key={d.name} href={d.href} className="blog-card">
+                <span className="blog-card-tag">{d.tag}</span>
+                <h3>{d.name}</h3>
+                <p>{d.desc}</p>
+                <span className="blog-card-link">Read →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 06 — THE DECISION ROOM */}
+      <section style={{background:'var(--white)', padding:'80px 0'}}>
+        <div className="container">
+          <span className="section-tag">The Decision Room 🎲</span>
+          <h2>You're 58. $200K Saved. Panama Is Calling. Would You Move?</h2>
+          <p className="section-intro" style={{maxWidth:'760px'}}>
+            Real relocation decisions don't come with a syllabus — they come as a scenario, all at once, with real stakes attached. Before you answer, run the same readiness check we use with every client. Twelve questions, two sections, and an honest score for exactly where you stand.
+          </p>
           <div style={{marginTop:'40px'}}>
-            <Link href="/who-its-for" className="btn btn-gold">See the full breakdown for your tier →</Link>
+            <RelocationReadinessQuiz />
           </div>
         </div>
       </section>
 
-      {/* 7 MODULES */}
-      <section className="modules">
-        <div className="container">
-          <span className="section-tag">The System</span>
-          <h2>Seven Modules. Every Decision Covered.</h2>
-          <p className="modules-intro">ROS™ walks you through seven areas — the same seven areas where international relocations fall apart when there's no system in place.</p>
-          <div className="module-list">
-            {[
-              { num: '1', name: 'Legal & Documentation', desc: 'Visas, residency permits, apostilles, international notarization, citizenship pathways. Every document you need and every step to make it valid abroad.' },
-              { num: '2', name: 'Financial Structure', desc: 'Banking, FBAR compliance, capital gains timing, foreign income tax, currency planning, Social Security strategy, and the financial decisions that must be made before you leave.' },
-              { num: '3', name: 'Housing & Logistics', desc: 'Finding and securing housing in a foreign market — without overpaying, signing the wrong lease, or missing communications you didn\'t know to watch for. And the physical move itself: customs, shipping, and getting everything you own to where you\'re actually going.' },
-              { num: '4', name: 'Healthcare & Wellness', desc: 'Insurance abroad, prescription continuity, specialist care access, and the healthcare questions that must be answered for anyone with ongoing medical needs.' },
-              { num: '5', name: 'Business & Income', desc: 'Your income keeps working, even when you don\'t live where you earn it. Whether you\'re working remotely, joining the local job market, or opening a business in your destination country — this module covers the legal, tax, and operational structure you need.' },
-              { num: '6', name: 'Family & Social Integration', desc: 'School enrollment timelines, cultural adjustment, community building, and the emotional and relational dimensions of leaving everything you know.' },
-              { num: '7', name: 'Long-Term Stability', desc: 'Estate planning, re-entry options, Social Security strategy, retirement income planning, and what sustainable life abroad actually requires beyond year one.' },
-            ].map((mod) => (
-              <div key={mod.num} className="module-row">
-                <div className="module-num">{mod.num}</div>
-                <div className="module-name">{mod.name}</div>
-                <div className="module-desc">{mod.desc}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT CAN GO WRONG */}
+      {/* 07 — TRUST + PROOF */}
       <section style={{background:'var(--bg)', padding:'80px 0'}}>
         <div className="container">
           <span className="section-tag">What's at Stake</span>
@@ -151,24 +217,22 @@ export default function HomePage() {
             <li>Discovering your professional credentials don't automatically transfer — after you've already made the move</li>
             <li>Finding out your documents needed an apostille, not just a notary — at the moment you needed to submit them</li>
           </ul>
-          <div style={{marginTop:'36px'}}>
-            <Link href="/why-you-need-this" className="btn btn-gold">Read the full breakdown — and how ROS™ addresses every one →</Link>
-          </div>
+          <p style={{maxWidth:'720px', marginTop:'32px', fontWeight:'700', color:'var(--primary)', fontSize:'18px'}}>Real stories. Real questions. Real consequences.</p>
         </div>
       </section>
 
-      {/* WORK WITH ME */}
+      {/* 08 — PRODUCTS BECOME ENTRY POINTS */}
       <section className="pricing" style={{background:'var(--white)'}}>
         <div className="container">
-          <span className="section-tag">Work With Me</span>
-          <h2>Ready to Build Your System?</h2>
-          <p style={{maxWidth:'640px', marginTop:'16px', color:'var(--text-light)'}}>Start free, go deep, or get the books. Every entry point leads to the same place — a plan that actually works for your situation.</p>
+          <span className="section-tag">Choose Your Next Move</span>
+          <h2>Every Entry Point Leads to the Same Place</h2>
+          <p style={{maxWidth:'640px', marginTop:'16px', color:'var(--text-light)'}}>A plan that actually works for your situation — start wherever makes sense right now.</p>
           <div className="pricing-grid-4" style={{marginTop:'48px'}}>
             {[
-              { name: 'Free Discovery Call', price: 'FREE', access: '15-Minute Video Call', desc: "Not sure if ROS™ is right for you? Let's talk first. No pressure, no pitch.", cta: 'Book Your Free Call', href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA' },
-              { name: 'Clarity Session', price: '$497', access: '45-Minute 1:1 Call', desc: 'Your situation, your questions, your next steps. Walk away with a clear picture of what to do and in what order.', cta: 'Book a Clarity Session', href: 'https://calendar.app.google/GqshRNZbP1LTvwKJ9' },
-              { name: 'ROS™ Pathways', price: 'From $697', access: 'Full System Access', desc: 'Six tiers built around your life stage — Digital Nomad through Investor. The complete infrastructure for your move.', cta: 'Find Your Tier', href: '/work-with-me' },
-              { name: 'Books & Guides', price: 'From $27', access: 'Digital Download', desc: 'New Roots ($27) and Across Streets & Seas ($47) — or both bundled at $64. Start building your foundation today.', cta: 'Get the Books', href: '/work-with-me' },
+              { name: '🟢 Explore Free', price: 'FREE', access: 'Assessments, Tools, Episodes', desc: 'The free 15-minute Discovery Call, the readiness quiz above, the cost calculator, and every episode.', cta: 'Book Your Free Call', href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA' },
+              { name: '🟡 Build Your Plan', price: 'From $27', access: 'New Roots & ROS™ Pathways', desc: 'New Roots ($27) gets you the full system in reading order. Six ROS™ Pathways from $697 for guided, done-with-you support.', cta: 'Get New Roots', href: '/shop/new-roots/' },
+              { name: '🔵 Get Personal Guidance', price: '$497', access: '45-Minute 1:1 Call', desc: 'Your situation, your questions, your next steps. Walk away with a clear picture of what to do and in what order.', cta: 'Book a Clarity Session', href: 'https://calendar.app.google/GqshRNZbP1LTvwKJ9' },
+              { name: '🟣 Go Deeper', price: 'From $47', access: 'Destination Intelligence & Books', desc: 'Across Streets & Seas ($47), the full Relocation Library ($64), and the destination research behind every recommendation.', cta: 'Explore the Library', href: '/shop/new-roots/' },
             ].map((offer) => (
               <div key={offer.name} className="pricing-card">
                 <div className="pricing-tier-name">{offer.name}</div>
@@ -239,12 +303,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FOOTER CTA */}
+      {/* 09 — THE FINAL MOMENT */}
       <section className="cta-section">
         <div className="container">
-          <h2>You Don't Have to Figure This Out Alone.</h2>
+          <h2>Your Move. Your Life. Your System.</h2>
           <p>The questions are real. The stakes are real. And the answers exist — you just need the right system to find them.</p>
-          <Link href="/work-with-me" className="btn btn-gold">Start Here →</Link>
+          <div style={{display:'flex', gap:'20px', justifyContent:'center', flexWrap:'wrap'}}>
+            <Link href="/shop/new-roots/" className="btn btn-gold">Get New Roots — $27 →</Link>
+            <Link href="/what-is-ros" className="btn btn-outline-white">Explore the System →</Link>
+          </div>
         </div>
       </section>
     </>
