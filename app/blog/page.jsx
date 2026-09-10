@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Blog — Real Questions. Real Answers. No Highlight Reel.',
   description: 'The GSS blog covers money, financial planning, career & income abroad, legal & documentation, housing, and the human side of international relocation for U.S. persons.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/' },
 };
 
 export default function BlogPage() {
