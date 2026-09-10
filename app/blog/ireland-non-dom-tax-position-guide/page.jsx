@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Ireland Non-Dom Tax Guide: Structure It Correctly',
   description: 'Ireland\'s non-dom tax regime and STEP entrepreneur pathway make it one of the most structured relocation options in the English-speaking world, if set up correctly.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/ireland-non-dom-tax-position-guide/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/ireland-non-dom-tax-position-guide/' },
 };
 
 export default function IrelandPage() {
