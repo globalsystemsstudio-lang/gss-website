@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Paraguay\'s $5,500 Residency: What It Actually Costs to Move',
   description: 'Paraguay\'s $5,500 residency deposit is real, but it\'s working capital, not the full move budget. What Paraguay relocation actually costs, by ROS™ tier.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/paraguay-5500-residency-real-cost/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/paraguay-5500-residency-real-cost/' },
 };
 
 export default function ParaguayPage() {
