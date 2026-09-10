@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Free Relocation Tools — Cost of Living Calculator & Readiness Quiz',
   description: 'Free interactive tools for U.S. persons planning an international relocation: compare your income to 90+ countries, and find out exactly where your readiness gaps are before you move.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/tools/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/tools/' },
 };
 
 const tools = [
