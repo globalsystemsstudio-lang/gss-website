@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Spain Relocation Reality: What the Golden Visa Exit Means for You in 2026',
   description: 'Spain closed its Golden Visa in April 2025. Here is what the 183-day tax residency rule, the Beckham Law, and the visa pathways that are actually still open mean for a Spain relocation in 2026.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/spain-relocation-guide-golden-visa-exit/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/spain-relocation-guide-golden-visa-exit/' },
 };
 
 export default function SpainRelocationPage() {
