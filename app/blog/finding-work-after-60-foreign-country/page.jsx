@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Finding Work After 60 in a Foreign Country — Where Do You Even Begin? | Global Systems Studio',
   description: 'International job platforms, credential transferability, and the legal parameters of your visa — what you need to know before you look for work abroad.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/finding-work-after-60-foreign-country/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/finding-work-after-60-foreign-country/' },
 };
 
 export default function FindingWorkAfter60Page() {
@@ -86,7 +86,7 @@ export default function FindingWorkAfter60Page() {
               <h2>Frequently Asked Questions</h2>
               <div className="faq-simple">
                 {[
-                  { q: 'Can I collect Social Security while working abroad?', a: 'Yes, in most cases. Working abroad does not affect your eligibility to receive Social Security benefits if you have already begun collecting. If you are working before full retirement age (67 for most), earnings tests may apply. The Social Security Administration pays benefits to most countries, though a handful are restricted. If you are working in a country with a Totalization Agreement with the U.S., you may not have to pay into both countries\' social security systems.' },
+                  { q: 'Can I collect Social Security while working abroad?', a: 'Yes, in most cases. Working abroad does not affect your eligibility to receive Social Security benefits if you have already begun collecting. If you are working before full retirement age (67 for most), earnings tests may apply. The Social Security Administration pays benefits to most countries, though a handful are restricted. If you are working in a country with a Totalization Agreement with the U.S., you may not have to pay into both countries' social security systems.' },
                   { q: 'Will my age make it harder to find work internationally?', a: 'In some markets, yes. Age discrimination exists globally and is less regulated in many countries than in the U.S. However, extensive experience is genuinely valued in consulting and advisory roles, and markets with skill gaps actively seek experienced professionals. The key is positioning your experience as an asset, not defaulting to a traditional job application approach.' },
                   { q: 'Do I need a work permit even if I\'m working remotely for a U.S. company?', a: 'This depends on the country. Some countries — particularly in Europe — are introducing "digital nomad" or "remote worker" visas that formalize the legal status of people working remotely for foreign employers. Without such a visa, you may technically be in a legal gray area. Your immigration attorney should advise on your specific destination.' },
                   { q: 'What if I want to start a small business rather than work for an employer?', a: 'Business formation for foreigners varies dramatically by country. Some require a local partner, minimum capital investment, or specific licensing. See our post on opening a business abroad for a detailed breakdown.' },
