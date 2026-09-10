@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Legacy Pathway — $1997 | Global Systems Studio',
   description: 'ROS™ Legacy Pathway — 12 months of full-system access for later-in-life international relocation, covering Social Security strategy, retirement income, healthcare, and cross-border estate planning.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/services/ros-legacy-pathway/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/services/ros-legacy-pathway/' },
 };
 
 export default function LegacyPathwayPage() {
