@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /access/
 
-Sitemap: https://www.globalsystemsstudio.com/sitemap.xml
+Sitemap: https://globalsystemsstudio.com/sitemap.xml
