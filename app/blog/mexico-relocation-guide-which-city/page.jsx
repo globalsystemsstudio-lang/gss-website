@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Which Mexico? A City-by-City Relocation Guide for US Citizens',
   description: 'Mexico isn\'t one city, it\'s a dozen different lives. City-by-city costs, visa pathways, and the state-level travel advisories most relocation content skips.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/mexico-relocation-guide-which-city/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/mexico-relocation-guide-which-city/' },
 };
 
 export default function MexicoPage() {
