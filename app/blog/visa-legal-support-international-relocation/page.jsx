@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Visa and Legal Support for International Relocation: A Complete Guide for U.S. Persons | Global Systems Studio',
   description: 'The six visa categories used by U.S. persons relocating abroad, the legal support required at each stage, and how to evaluate visa service providers.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/visa-legal-support-international-relocation/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/visa-legal-support-international-relocation/' },
 };
 
 export default function VisaLegalSupportPage() {
