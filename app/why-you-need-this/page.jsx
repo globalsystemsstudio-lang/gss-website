@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: "What Nobody Tells You — Until It's Too Late | Why You Need ROS™",
   description: "Most international relocations don't fail because people made the wrong decision to move. They fail because nobody told them what they were actually walking into.",
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/why-you-need-this/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/why-you-need-this/' },
 };
 
 export default function WhyYouNeedThisPage() {
