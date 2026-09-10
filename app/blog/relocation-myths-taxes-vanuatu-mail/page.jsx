@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Relocation Myths: US Taxes, Vanuatu Citizenship, and Your Mail',
   description: 'Two relocation myths going viral right now, US tax exemption and Vanuatu citizenship, get fact-checked, plus the mail-forwarding gap nobody mentions.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/relocation-myths-taxes-vanuatu-mail/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/relocation-myths-taxes-vanuatu-mail/' },
 };
 
 export default function RelocationMythsPage() {
