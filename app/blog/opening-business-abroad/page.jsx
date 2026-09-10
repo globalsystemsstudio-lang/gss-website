@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Opening a Business Abroad: What You Need to Know Before You Start | Global Systems Studio',
   description: 'Legal registration requirements, tax structure, banking, and what operating as a foreign national business owner actually looks like in practice.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/opening-business-abroad/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/opening-business-abroad/' },
 };
 
 export default function OpeningBusinessAbroadPage() {
