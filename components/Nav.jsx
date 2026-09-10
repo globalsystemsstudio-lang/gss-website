@@ -16,6 +16,7 @@ export default function Nav() {
             <li><Link href="/work-with-me">Work With Me</Link></li>
             <li><Link href="/resources">Resources</Link></li>
             <li><Link href="/blog">Blog</Link></li>
+            <li><Link href="/podcast">Podcast</Link></li>
             <li><Link href="/contact">Contact</Link></li>
             <li><Link href="/work-with-me" className="nav-cta-link">Book a Call</Link></li>
           </ul>
