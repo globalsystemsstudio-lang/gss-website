@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Work With Me — ROS™ Offers & Pricing | Global Systems Studio',
   description: 'Six ways to work with ROS™: Free Discovery Call, Clarity Session ($497), books from $27, Async Q&A ($97), and six Pathway tiers from $697 to $2,497.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/work-with-me/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/work-with-me/' },
 };
 
 export default function WorkWithMePage() {
