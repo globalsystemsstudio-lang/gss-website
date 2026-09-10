@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Solo Relocator Pathway — $897 | Global Systems Studio',
   description: 'ROS™ Solo Relocator Pathway — 6 months of full-system access built around moving internationally on your own, covering legal, financial, housing, healthcare, income, and community for solo relocators.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/services/ros-solo-pathway/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/services/ros-solo-pathway/' },
 };
 
 export default function SoloPathwayPage() {
