@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Entrepreneur Pathway — $1597 | Global Systems Studio',
   description: 'ROS™ Entrepreneur Pathway — 9 months of full-system access for business owners relocating abroad, covering business visas, cross-border entity setup, tax strategy, and international banking.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/services/ros-entrepreneur-pathway/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/services/ros-entrepreneur-pathway/' },
 };
 
 export default function EntrepreneurPathwayPage() {
