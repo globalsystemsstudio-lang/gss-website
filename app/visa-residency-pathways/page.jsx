@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Visa and Residency Pathways for U.S. Persons Relocating Abroad: 132 Destinations | Global Systems Studio',
   description: 'A structured analysis of visa and residency pathways across 132 destinations for U.S. persons. Covers passive income visas, digital nomad visas, investment programs, and the U.S. tax implications of each.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/visa-residency-pathways/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/visa-residency-pathways/' },
 };
 
 export default function VisaResidencyPathwaysPage() {
