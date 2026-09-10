@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Global Systems Studio | ROS™ — Relocation Operating System',
   description: 'The step-by-step infrastructure for U.S. persons relocating internationally. Seven modules. Six tiers. Real answers.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/' },
 };
 
 export default function HomePage() {
