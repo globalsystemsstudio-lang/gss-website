@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Free Discovery Call | Global Systems Studio',
   description: 'A free 15-minute call to find out where you are in the relocation process and whether ROS™ — and which tier — fits your situation. No pitch, no pressure.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/services/discovery-call/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/services/discovery-call/' },
 };
 
 export default function DiscoveryCallPage() {
