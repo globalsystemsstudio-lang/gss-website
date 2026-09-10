@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import BethChat from '../components/BethChat';
 
 export const metadata = {
-  metadataBase: new URL('https://www.globalsystemsstudio.com'),
+  metadataBase: new URL('https://globalsystemsstudio.com'),
   title: {
     default: 'Global Systems Studio | ROS™ — Relocation Operating System',
     template: '%s | Global Systems Studio',
