@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Five Questions Before Moving Abroad — Free Guide | Global Systems Studio',
   description: 'A visa does not tell you whether your relocation will work. These five questions do — the readiness check to answer honestly before you research a single destination.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/shop/five-questions/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/shop/five-questions/' },
 };
 
 const questions = [
