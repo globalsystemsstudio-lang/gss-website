@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'How International Relocation Consultancy Works: A Complete Guide for U.S. Persons | Global Systems Studio',
   description: 'What international relocation consultancy actually covers, how it differs from a moving company or visa agency, and why sequencing is the core value of a structured consultancy methodology.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/how-international-relocation-consultancy-works/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/how-international-relocation-consultancy-works/' },
 };
 
 export default function HowConsultancyWorksPage() {
