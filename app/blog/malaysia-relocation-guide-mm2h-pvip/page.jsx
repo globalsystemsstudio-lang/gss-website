@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Malaysia Relocation Guide: MM2H, PVIP, and Real Costs',
   description: 'Malaysia\'s MM2H and PVIP visas cover every ROS™ tier, with a tax exemption on foreign income locked in through 2036. What a real Malaysia relocation costs.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/malaysia-relocation-guide-mm2h-pvip/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/malaysia-relocation-guide-mm2h-pvip/' },
 };
 
 export default function MalaysiaPage() {
