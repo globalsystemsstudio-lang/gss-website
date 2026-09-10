@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Visas, Residency, and What Happens If You Miss the Window | Global Systems Studio',
   description: 'The difference between arriving legally and staying legally. The residency conversion timeline most countries don\'t advertise — and what happens if you miss it.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/visas-residency-miss-the-window/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/visas-residency-miss-the-window/' },
 };
 
 export default function VisasResidencyPage() {
