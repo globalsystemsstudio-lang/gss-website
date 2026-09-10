@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'What is ROS™ — The Relocation Operating System',
   description: 'ROS™ is a structured infrastructure of organized tasks built to move you through every phase of international relocation — from the first decision to long-term stability.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/what-is-ros/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/what-is-ros/' },
 };
 
 export default function WhatIsRosPage() {
