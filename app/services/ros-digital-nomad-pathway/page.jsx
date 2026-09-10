@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Digital Nomad Pathway — $697 | Global Systems Studio',
   description: 'ROS™ Digital Nomad Pathway — 6 months of full-system access for U.S. remote workers relocating abroad, covering nomad visas, FBAR, banking, healthcare, and long-term residency strategy.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/services/ros-digital-nomad-pathway/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/services/ros-digital-nomad-pathway/' },
 };
 
 const modules = [
