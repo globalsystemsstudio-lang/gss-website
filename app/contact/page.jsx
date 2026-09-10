@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Contact — Our Team, Global Systems Studio',
   description: "Whether you're just starting to think about relocating internationally or deep in the planning process — reach out. Our team reads every message personally.",
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/contact/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/contact/' },
 };
 
 import Link from 'next/link';
