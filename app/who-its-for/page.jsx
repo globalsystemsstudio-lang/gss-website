@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: "Who ROS™ Is For — Find Your Tier",
   description: "ROS™ is organized into six tiers: Digital Nomad, Solo Relocator, Family, Entrepreneur, Legacy Mover, and Investor. Find the tier that fits your life.",
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/who-its-for/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/who-its-for/' },
 };
 
 const tiers = [
