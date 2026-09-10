@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'International Relocation Financial Planning for U.S. Persons: The Complete Guide | Global Systems Studio',
   description: 'A complete guide to the financial considerations U.S. persons must address before and during an international relocation, covering FBAR, PFIC rules, banking strategy, asset transition timing, and how the ROS™ framework addresses each.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/relocation-financial-planning/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/relocation-financial-planning/' },
 };
 
 export default function RelocationFinancialPlanningPage() {
