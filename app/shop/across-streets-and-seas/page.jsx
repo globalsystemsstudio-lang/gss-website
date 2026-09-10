@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Across Streets & Seas — $47 | Global Systems Studio',
   description: 'Across Streets & Seas — the deeper companion for serious movers. Legal, financial, housing, healthcare, and logistics for making an international move actually work.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/shop/across-streets-and-seas/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/shop/across-streets-and-seas/' },
 };
 
 export default function AcrossStreetsPage() {
