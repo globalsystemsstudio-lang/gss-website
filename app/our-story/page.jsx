@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: "The System We Built Because It Didn't Exist — Our Story",
   description: "ROS™ wasn't built in a boardroom or from a business plan. It was built in the middle of a real relocation — from the questions that wouldn't stop and the answers that took too long to find.",
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/our-story/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/our-story/' },
 };
 
 export default function OurStoryPage() {
