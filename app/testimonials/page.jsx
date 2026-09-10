@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Testimonials & Social Proof — Our Team, Global Systems Studio',
   description: "Proof starts with the founder. ROS™ was built by someone living through exactly what you are navigating — and that is the most honest proof that this system works.",
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/testimonials/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/testimonials/' },
 };
 
 export default function TestimonialsPage() {
