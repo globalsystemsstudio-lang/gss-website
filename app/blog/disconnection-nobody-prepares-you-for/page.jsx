@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'The Disconnection Nobody Prepares You For | Global Systems Studio',
   description: 'Your children are in the U.S. Your grandchildren are in the U.S. The grief of leaving that behind is real — and nobody in the relocation space talks about it honestly.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/disconnection-nobody-prepares-you-for/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/disconnection-nobody-prepares-you-for/' },
 };
 
 export default function DisconnectionPage() {
