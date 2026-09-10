@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Cost of Living Calculator — Compare U.S. Income to 90+ Countries',
   description:
     'See exactly how far your U.S. income goes abroad. Compare monthly costs across 90+ countries, get a category-by-category breakdown, and calculate your real purchasing power before you relocate.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/cost-of-living-calculator/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/cost-of-living-calculator/' },
 };
 
 export default function CostOfLivingCalculatorPage() {
