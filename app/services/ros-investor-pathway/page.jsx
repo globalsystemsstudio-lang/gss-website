@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Investor Pathway — $2497 | Global Systems Studio',
   description: 'ROS™ Investor Pathway — 12 months of full-system access for relocating capital across borders, covering investment visas, FBAR/FATCA, exit tax exposure, and international banking and estate planning.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/services/ros-investor-pathway/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/services/ros-investor-pathway/' },
 };
 
 export default function InvestorPathwayPage() {
