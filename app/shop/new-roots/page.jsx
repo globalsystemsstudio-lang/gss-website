@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'New Roots — $27 | Global Systems Studio',
   description: 'New Roots — the foundational guide for anyone beginning the international relocation journey. Where to start, what to prioritize, and how to think about the move before you can know what to ask next.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/shop/new-roots/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/shop/new-roots/' },
 };
 
 export default function NewRootsPage() {
