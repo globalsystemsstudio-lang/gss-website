@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'What Nobody Told Me About Renting Abroad as a Foreigner | Global Systems Studio',
   description: 'Pricing opacity, the foreigner premium, what landlords don\'t advertise, and how to navigate the rental market in a country that wasn\'t built for you.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/renting-abroad-as-foreigner/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/renting-abroad-as-foreigner/' },
 };
 
 export default function RentingAbroadPage() {
