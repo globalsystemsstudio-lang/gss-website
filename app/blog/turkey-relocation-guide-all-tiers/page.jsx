@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Turkey Relocation Guide: Costs, Visas, and CBI by ROS™ Tier',
   description: 'Turkey pairs Mediterranean affordability with the most accessible Citizenship-by-Investment program in the G20. What every ROS™ tier needs to know before moving.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/turkey-relocation-guide-all-tiers/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/turkey-relocation-guide-all-tiers/' },
 };
 
 export default function TurkeyPage() {
