@@ -162,6 +162,12 @@ export default function BlogPage() {
               <p>The maritime zone rules most "beachfront property" listings never mention — and why they matter before you sign anything.</p>
               <span className="blog-card-link">Read →</span>
             </Link>
+            <Link href="/blog/spain-relocation-guide-golden-visa-exit" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Spain Relocation Reality: What the Golden Visa Exit Means for You in 2026</h3>
+              <p>The Golden Visa is gone. Here's what the 183-day tax residency rule, the Beckham Law, and the visa pathways that are actually still open mean for a Spain relocation in 2026.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
             <Link href="/blog/turkey-relocation-guide-all-tiers" className="blog-card">
               <span className="blog-card-tag">Destination Guide</span>
               <h3>Turkey Is One of the Most Underrated Relocation Markets Right Now</h3>
