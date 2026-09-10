@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Buying Beachfront in Costa Rica: The Maritime Zone Rules',
   description: 'Costa Rica\'s maritime zone rules determine what beachfront property you can actually own. The premortem, visa pathways, and tier breakdown most listings skip.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/costa-rica-first-200-meters-beachfront/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/costa-rica-first-200-meters-beachfront/' },
 };
 
 export default function CostaRicaBeachfrontPage() {
