@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'FBAR, FATCA, PFIC, and FEIE: Financial Planning for U.S. Persons Moving Abroad',
   description: 'The complete guide to U.S. expat financial compliance: FBAR foreign account reporting, FATCA Form 8938, PFIC investment restrictions, FEIE income exclusion, banking strategy, and estate planning across borders.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/financial-planning-international-relocation/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/financial-planning-international-relocation/' },
 };
 
 export default function FinancialPlanningInternationalRelocationPage() {
