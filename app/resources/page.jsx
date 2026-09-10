@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Resources — Guides & Articles for U.S. Persons Relocating Internationally',
   description: 'In-depth guides on relocation financial planning, visa and residency pathways, FBAR & FATCA compliance, and how to choose an international relocation consultancy.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/resources/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/resources/' },
 };
 
 export default function ResourcesPage() {
