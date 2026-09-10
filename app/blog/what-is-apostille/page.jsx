@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'What Is an Apostille and Why Does It Matter? | Global Systems Studio',
   description: 'The document authentication step most people discover too late. What an apostille is, which documents need one, how long it takes, and how to avoid the scramble.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/what-is-apostille/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/what-is-apostille/' },
 };
 
 export default function ApostillePage() {
