@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'How to Find and Evaluate Financial Planning Services for Moving Abroad | Global Systems Studio',
   description: 'Cross-border financial planning for U.S. persons is a specialized niche. Here are the types of advisors, the six questions to ask before hiring anyone, and where to find reliable reviews.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/find-financial-planning-services-moving-abroad/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/find-financial-planning-services-moving-abroad/' },
 };
 
 export default function FindFinancialPlanningServicesPage() {
