@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Key Financial Considerations for U.S. Persons Relocating Internationally | Global Systems Studio',
   description: 'FBAR, FATCA, PFIC rules, retirement accounts, banking strategy, cost of living, and estate planning — the essential financial checklist for U.S. persons moving abroad.',
-  alternates: { canonical: 'https://www.globalsystemsstudio.com/blog/financial-considerations-us-persons-relocating-internationally/' },
+  alternates: { canonical: 'https://globalsystemsstudio.com/blog/financial-considerations-us-persons-relocating-internationally/' },
 };
 
 export default function FinancialConsiderationsPage() {
