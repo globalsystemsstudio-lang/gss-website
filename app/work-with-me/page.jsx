@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Work With Me — ROS™ Offers & Pricing | Global Systems Studio',
-  description: 'Six ways to work with ROS™: Free Discovery Call, Clarity Session ($497), books from $27, Async Q&A ($97), and six Pathway tiers from $697 to $2,497.',
+  description: 'Ways to work with ROS™: Free Discovery Call, Clarity Session ($497), Async Q&A ($97), Guides & Workbooks from Free to $97, books from $27, and six Pathway tiers from $697 to $2,497.',
   alternates: { canonical: 'https://globalsystemsstudio.com/work-with-me/' },
 };
 
@@ -95,6 +95,97 @@ export default function WorkWithMePage() {
               <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'28px'}}>Written Response</div>
               <a href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Submit Your Questions →</a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GUIDES & WORKBOOKS */}
+      <section style={{background:'var(--white)', padding:'80px 0'}}>
+        <div className="container">
+          <span className="section-tag">Start Small, Start Now</span>
+          <h2 style={{marginTop:'8px'}}>Guides &amp; Workbooks</h2>
+          <p style={{color:'var(--text-light)', maxWidth:'700px', marginTop:'12px', marginBottom:'48px'}}>Focused, single-topic workbooks for the specific decision in front of you right now. No call required, no waiting. Start for free, or go deeper for $19 to $97.</p>
+
+          <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(260px, 1fr))', gap:'24px'}}>
+            {[
+              {
+                name: 'Five Questions Before Moving Abroad',
+                price: 'Free',
+                description: "A visa does not tell you whether your relocation will work. These five questions do.",
+                link: '/downloads/01_Five_Questions_Before_Moving_Abroad.pdf',
+                cta: 'Get the Free Guide',
+              },
+              {
+                name: 'ROS™ Relocation Readiness Workbook',
+                price: '$27',
+                description: 'Stop collecting relocation information. Start making an organized decision.',
+                link: 'https://www.paypal.com/ncp/payment/BMFEB6UBQLQR6',
+                cta: 'Get the Workbook',
+              },
+              {
+                name: 'ROS™ 90-Day Relocation Action Planner',
+                price: '$47',
+                description: 'Make meaningful relocation progress for the next 90 days, without confusing activity with readiness.',
+                link: 'https://www.paypal.com/ncp/payment/QK7YNJM58LB82',
+                cta: 'Get the Planner',
+              },
+              {
+                name: 'International Relocation Document Organizer',
+                price: '$19',
+                description: "Every relocation runs on paperwork you can't find at the moment you need it. This fixes that.",
+                link: 'https://www.paypal.com/ncp/payment/XYPVH3DPW4BCN',
+                cta: 'Get the Organizer',
+              },
+              {
+                name: 'Country Comparison Decision Matrix',
+                price: '$19',
+                description: 'How to compare countries without comparing apples to mangoes.',
+                link: 'https://www.paypal.com/ncp/payment/X2NL5YEJW3JQE',
+                cta: 'Get the Matrix',
+              },
+              {
+                name: 'Retirement Abroad Decision Workbook',
+                price: '$47',
+                description: 'A qualifying pension check and a beautiful beach town are not the same thing as a plan.',
+                link: 'https://www.paypal.com/ncp/payment/AXJQRQK63V7BS',
+                cta: 'Get the Workbook',
+              },
+              {
+                name: 'Family Relocation Planning Workbook',
+                price: '$47',
+                description: "Your relocation isn't one plan. It's every family member's plan, coordinated into one.",
+                link: 'https://www.paypal.com/ncp/payment/SSXHG4BH7Z6CJ',
+                cta: 'Get the Workbook',
+              },
+              {
+                name: 'Digital Nomad Compliance Planner',
+                price: '$37',
+                description: 'A travel plan and a legally sustainable work-abroad plan are not the same thing. This builds the second one.',
+                link: 'https://www.paypal.com/ncp/payment/VGQ68NR6VYX8L',
+                cta: 'Get the Planner',
+              },
+              {
+                name: 'Entrepreneur Abroad Planning Workbook',
+                price: '$67',
+                description: 'Moving your life and moving your business are two projects wearing one deadline. This keeps them from colliding.',
+                link: 'https://www.paypal.com/ncp/payment/98B2WEW29T4BG',
+                cta: 'Get the Workbook',
+              },
+              {
+                name: 'Investor Relocation Due-Diligence Workbook',
+                price: '$97',
+                description: 'A qualifying investment and a good investment are not the same thing. This workbook makes sure you are not confusing them.',
+                link: 'https://www.paypal.com/ncp/payment/UKQ96QCDSH5F4',
+                cta: 'Get the Workbook',
+              },
+            ].map((item) => (
+              <div key={item.name} style={{background:'var(--bg)', border:'1px solid var(--border)', borderRadius:'16px', padding:'28px', display:'flex', flexDirection:'column'}}>
+                <h3 style={{fontSize:'17px', marginBottom:'10px', lineHeight:'1.3'}}>{item.name}</h3>
+                <p style={{color:'var(--text-light)', fontSize:'14px', lineHeight:'1.6', flexGrow:'1', marginBottom:'20px'}}>{item.description}</p>
+                <div style={{fontSize:'28px', fontWeight:'700', color:'var(--accent)', lineHeight:'1', marginBottom:'16px'}}>{item.price}</div>
+                <a href={item.link} className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">{item.cta} →</a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
