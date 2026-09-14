@@ -13,6 +13,7 @@ export default function Nav() {
             <li><Link href="/who-its-for">Who It's For</Link></li>
             <li><Link href="/why-you-need-this">Why You Need This</Link></li>
             <li><Link href="/tools">Free Tools</Link></li>
+            <li><Link href="/shop">Guides &amp; Workbooks</Link></li>
             <li><Link href="/work-with-me">Work With Me</Link></li>
             <li><Link href="/resources">Resources</Link></li>
             <li><Link href="/blog">Blog</Link></li>
