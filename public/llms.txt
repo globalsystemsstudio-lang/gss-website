@@ -1,0 +1,29 @@
+# Global Systems Studio
+
+> Global Systems Studio is the home of ROS (Relocation Operating System), step-by-step infrastructure for U.S. persons relocating internationally. Seven modules. Six tiers. Real answers. Founded by Charlene L. M. Cupidore Bynoe.
+
+## Main pages
+
+- [Home](https://globalsystemsstudio.com/): Overview of ROS and the Global Systems Studio approach.
+- [Work With Me](https://globalsystemsstudio.com/work-with-me/): Advisory services plus Guides & Workbooks, ten entry-level digital products for people planning an international move.
+- [Free guide: Five Questions Before Moving Abroad](https://globalsystemsstudio.com/shop/five-questions/): Free download for anyone deciding whether a relocation will work.
+- [Blog](https://globalsystemsstudio.com/blog/): Country relocation guides, tax and residency explainers, and answers to common expat questions.
+- [Tools](https://globalsystemsstudio.com/tools/): Planning tools for relocation.
+- [Podcast](https://globalsystemsstudio.com/podcast/): Conversations about relocating internationally.
+
+## Topics covered
+
+- Relocation planning for U.S. persons
+- Residency and visa pathways by country
+- Tax position and compliance considerations for expats
+- Real costs of relocating (Paraguay, Costa Rica, Mexico, Malaysia, Turkey, Ireland and more)
+- Document organization, pets, and digital nomad compliance
+
+## Contact
+
+- Website: https://globalsystemsstudio.com/
+- Sitemap: https://globalsystemsstudio.com/sitemap.xml
+
+## Note
+
+Content is educational and is not legal, tax, or immigration advice.
