@@ -262,6 +262,39 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* RETIREMENT & EXPAT GUIDES (2026) */}
+      <section style={{background:'var(--white)', padding:'80px 0'}}>
+        <div className="container">
+          <h2>Retirement &amp; Expat Guides</h2>
+          <div className="blog-grid" style={{marginTop:'32px'}}>
+            <Link href="/blog/best-countries-americans-retire-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Best countries for Americans to retire abroad in 2026</h3>
+              <p>Mexico, Portugal, Panama, Costa Rica and Spain compared by residence route, healthcare, income access and housing, and how to sequence the move.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/retire-abroad-countries-ranked-cost-of-living-2026" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Countries to retire abroad ranked by cost of living in 2026</h3>
+              <p>Why a country-average cost ranking misleads, five retirement destinations on different decision paths, and how to build your own city-level budget.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/best-european-countries-americans-retire-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Best European countries for Americans to retire abroad in 2026</h3>
+              <p>Portugal, Spain, France, Italy and Greece compared for American retirees, with the residence, healthcare and housing steps in the right order.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/best-expat-financial-advisors-americans-2026" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>Best 7 expat financial advisors for Americans in 2026</h3>
+              <p>Seven advisor types compared by the problem they solve: cross-border planning, U.S. taxes, IRS representation, investments, estate law and relocation preparation.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* SUBSCRIBE */}
       <section style={{background:'var(--primary)', padding:'80px 0'}}>
         <div className="container" style={{textAlign:'center'}}>
