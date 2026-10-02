@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Work With Me — ROS™ Offers & Pricing | Global Systems Studio',
+  title: 'Relocation Coaching & Pricing',
   description: 'Ways to work with ROS™: Free Discovery Call, Clarity Session ($497), Async Q&A ($97), Guides & Workbooks from Free to $97, books from $27, and six Pathway tiers from $697 to $2,497.',
   alternates: { canonical: 'https://globalsystemsstudio.com/work-with-me/' },
 };
@@ -11,8 +11,8 @@ export default function WorkWithMePage() {
     <>
       <section className="page-hero">
         <div className="container">
-          <h1>Where Do You Want to Start?</h1>
-          <p>Not sure if ROS™ is right for you? Start with a free 15-minute Discovery Call. No pressure, no pitch — just a real conversation about where you are and whether we're the right fit.</p>
+          <h1>Relocation Planning for Americans Moving Abroad</h1>
+          <p>You have chosen your destination. ROS™ helps you put legal, financial, housing and healthcare decisions in the right order. It is destination-independent planning and coordination, not country-specific legal, tax, investment or immigration advice. Not sure if ROS™ is right for you? Start with a free 15-minute Discovery Call. No pressure, no pitch — just a real conversation about where you are and whether we're the right fit.</p>
         </div>
       </section>
 
@@ -365,8 +365,8 @@ export default function WorkWithMePage() {
           <div className="faq-simple" style={{marginTop:'32px', maxWidth:'760px'}}>
             {[
               { q: 'Is the Clarity Session recorded?', a: 'Yes. You\'ll receive a recording of the call along with a written summary within 48 hours.' },
-              { q: 'What\'s the difference between the Clarity Session and the Async Q&A?', a: 'The Clarity Session is a live 30-minute video call — real-time conversation, follow-up questions, and immediate back-and-forth. The Async Q&A is a written exchange — you submit your questions and receive a detailed written response. Same expertise, different format.' },
-              { q: 'Do I need to read the book before booking a Clarity Session?', a: 'No — but it helps. If you come to the session having read New Roots, you\'ll have more targeted questions and get more out of the 30 minutes.' },
+              { q: 'What\'s the difference between the Clarity Session and the Async Q&A?', a: 'The Clarity Session is a live 45-minute video call — real-time conversation, follow-up questions, and immediate back-and-forth. The Async Q&A is a written exchange — you submit your questions and receive a detailed written response. Same expertise, different format.' },
+              { q: 'Do I need to read the book before booking a Clarity Session?', a: 'No — but it helps. If you come to the session having read New Roots, you\'ll have more targeted questions and get more out of the 45 minutes.' },
               { q: 'What is Across Streets & Seas and how is it different from New Roots?', a: 'New Roots is the systematic guide — the full ROS™ framework, modules, tiers, and step-by-step infrastructure. Across Streets & Seas goes deeper into the human side: the mindset, the decisions that don\'t fit on a checklist, and the real story of what this process looks like from the inside. They complement each other, which is why the Library bundle exists.' },
               { q: 'How do I know which Pathway tier is right for me?', a: 'Book a free Discovery Call. In 15 minutes, the founder will tell you exactly which tier applies to your situation — no guessing, no pressure.' },
               { q: 'Does the Clarity Session include legal or tax advice?', a: 'No. Global Systems Studio provides strategic relocation guidance — the system, the sequence, the questions to ask. For legal, tax, and financial advice, ROS™ connects you with vetted professionals who specialize in international relocation.' },

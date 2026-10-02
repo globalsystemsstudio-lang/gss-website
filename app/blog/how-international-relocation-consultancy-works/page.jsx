@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'How International Relocation Consultancy Works: A Complete Guide for U.S. Persons | Global Systems Studio',
+  title: 'How Relocation Consulting Works',
   description: 'What international relocation consultancy actually covers, how it differs from a moving company or visa agency, and why sequencing is the core value of a structured consultancy methodology.',
   alternates: { canonical: 'https://globalsystemsstudio.com/blog/how-international-relocation-consultancy-works/' },
 };
@@ -154,7 +154,7 @@ export default function HowConsultancyWorksPage() {
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Ready to plan your international move?</h2>
                 <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>The ROS™ framework covers 132 destinations — with financial, legal, and visa intelligence built in at every stage.</p>
-                <Link href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" className="btn btn-gold">Book a Transition Clarity Session →</Link>
+                <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Transition Clarity Session →</Link>
               </div>
 
             </div>

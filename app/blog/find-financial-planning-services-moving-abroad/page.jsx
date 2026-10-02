@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'How to Find and Evaluate Financial Planning Services for Moving Abroad | Global Systems Studio',
+  title: 'Find an Expat Financial Adviser',
   description: 'Cross-border financial planning for U.S. persons is a specialized niche. Here are the types of advisors, the six questions to ask before hiring anyone, and where to find reliable reviews.',
   alternates: { canonical: 'https://globalsystemsstudio.com/blog/find-financial-planning-services-moving-abroad/' },
 };
@@ -160,7 +160,7 @@ export default function FindFinancialPlanningServicesPage() {
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Ready to plan your international move?</h2>
                 <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>The ROS™ framework covers 132 destinations — with financial, legal, and visa intelligence built in at every stage.</p>
-                <Link href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" className="btn btn-gold">Book a Transition Clarity Session →</Link>
+                <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Transition Clarity Session →</Link>
               </div>
 
             </div>

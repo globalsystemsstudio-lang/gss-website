@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Contact — Our Team, Global Systems Studio',
+  title: 'Contact — Our Team',
   description: "Whether you're just starting to think about relocating internationally or deep in the planning process — reach out. Our team reads every message personally.",
   alternates: { canonical: 'https://globalsystemsstudio.com/contact/' },
 };
@@ -100,8 +100,8 @@ export default function ContactPage() {
                 <div style={{display:'flex', flexDirection:'column', gap:'16px'}}>
                   <div>
                     <strong style={{display:'block', color:'var(--primary)', marginBottom:'6px'}}>Book a Clarity Session</strong>
-                    <p style={{fontSize:'14px', color:'var(--text-light)', margin:'0 0 10px'}}>If you're ready to stop researching and start getting specific answers — a 30-minute 1:1 call is the fastest path there.</p>
-                    <Link href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" style={{fontSize:'14px', color:'var(--primary)', fontWeight:'600'}}>Book Now — $497 →</Link>
+                    <p style={{fontSize:'14px', color:'var(--text-light)', margin:'0 0 10px'}}>If you're ready to stop researching and start getting specific answers — a 45-minute 1:1 call is the fastest path there.</p>
+                    <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" style={{fontSize:'14px', color:'var(--primary)', fontWeight:'600'}}>Book Now — $497 →</Link>
                   </div>
                   <div style={{borderTop:'1px solid var(--border)', paddingTop:'16px'}}>
                     <strong style={{display:'block', color:'var(--primary)', marginBottom:'6px'}}>Get the ROS™ Book</strong>

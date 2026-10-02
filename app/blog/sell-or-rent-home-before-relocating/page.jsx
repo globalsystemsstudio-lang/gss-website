@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Should You Sell or Rent Your Home Before Relocating Internationally? | Global Systems Studio',
+  title: 'Should You Sell or Rent Your Home Before Relocating Internationally?',
   description: 'The capital gains exclusion window, what property management actually costs, and the tax math that changes depending on how long you wait.',
   alternates: { canonical: 'https://globalsystemsstudio.com/blog/sell-or-rent-home-before-relocating/' },
 };

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Work With Us | Services & Offerings | Global Systems Studio',
+  title: 'Work With Us | Services & Offerings',
   description: 'Every way to work with Global Systems Studio — from a free discovery call to full ROS™ Pathway system access. Find the entry point built for where you are right now.',
   alternates: { canonical: 'https://globalsystemsstudio.com/services/' },
 };

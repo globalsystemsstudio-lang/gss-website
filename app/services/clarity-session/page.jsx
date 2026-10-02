@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Clarity Session — $497 | Global Systems Studio',
+  title: 'Clarity Session — $497',
   description: 'A 45-minute 1:1 call built around your specific relocation situation — your top questions answered, a prioritized sequence of next steps, and a written follow-up summary.',
   alternates: { canonical: 'https://globalsystemsstudio.com/services/clarity-session/' },
 };

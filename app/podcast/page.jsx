@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Beyond the Borders — Podcast | Global Systems Studio',
+  title: 'Beyond the Borders — Podcast',
   description: 'Beyond the Borders — real conversations about what it actually takes to relocate internationally, hosted by Global Systems Studio founder Charlene.',
   alternates: { canonical: 'https://globalsystemsstudio.com/podcast/' },
 };

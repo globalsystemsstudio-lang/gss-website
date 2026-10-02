@@ -134,7 +134,7 @@ export default function WhatIsRosPage() {
           <div className="pricing-grid-4" style={{marginTop:'48px'}}>
             {[
               { name: 'Free Discovery Call', price: 'FREE', access: '15-Minute Video Call', desc: "Not sure if ROS™ is right for your situation? Let's talk first. Tell me where you are, I'll tell you what makes sense. No obligation.", cta: 'Book Your Free Call', href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA' },
-              { name: 'Clarity Session', price: '$497', access: '30-Minute 1:1 Call', desc: '30 minutes. Your situation. Real answers and a clear next-step plan built specifically for you.', cta: 'Book a Clarity Session', href: '/work-with-me' },
+              { name: 'Clarity Session', price: '$497', access: '45-Minute 1:1 Call', desc: '45 minutes. Your situation. Real answers and a clear next-step plan built specifically for you.', cta: 'Book a Clarity Session', href: '/work-with-me' },
               { name: 'The ROS™ Book', price: '$47', access: 'Digital Download', desc: 'The complete system in written form. Every module, every tier, every question — organized for you to work through at your own pace.', cta: 'Get the Book', href: '/work-with-me' },
               { name: 'The Departure Lounge', price: '$97/mo', access: 'Discord Community', desc: 'Ongoing support, monthly Q&A with the founder, and a community of people navigating the same decisions alongside you.', cta: 'Join The Departure Lounge', href: '/work-with-me' },
             ].map((offer) => (

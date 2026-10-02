@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Finding Work After 60 in a Foreign Country — Where Do You Even Begin? | Global Systems Studio',
+  title: 'Finding Work After 60 in a Foreign Country — Where Do You Even Begin?',
   description: 'International job platforms, credential transferability, and the legal parameters of your visa — what you need to know before you look for work abroad.',
   alternates: { canonical: 'https://globalsystemsstudio.com/blog/finding-work-after-60-foreign-country/' },
 };

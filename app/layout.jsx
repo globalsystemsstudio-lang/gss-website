@@ -3,6 +3,7 @@ import './globals.css';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import BethChat from '../components/BethChat';
+import BookingTracker from '../components/BookingTracker';
 
 export const metadata = {
   metadataBase: new URL('https://globalsystemsstudio.com'),
@@ -82,6 +83,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <BethChat />
+        <BookingTracker />
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Guides & Planners | Global Systems Studio',
+  title: 'Guides & Planners',
   description: 'Structured planning tools built on the ROS™ framework — from your first five questions to pathway-specific workbooks for every type of international move.',
   alternates: { canonical: 'https://globalsystemsstudio.com/shop/' },
 };

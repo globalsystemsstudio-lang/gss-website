@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Async Q&A — $97 | Global Systems Studio',
+  title: 'Async Q&A — $97',
   description: 'Submit up to three relocation questions and get a thorough written response built around your specific situation — delivered within 48 business hours, no scheduling required.',
   alternates: { canonical: 'https://globalsystemsstudio.com/services/async-qa/' },
 };

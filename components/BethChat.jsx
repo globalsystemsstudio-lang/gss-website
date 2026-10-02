@@ -32,7 +32,7 @@ function getBethResponse(input) {
   // Pricing / cost
   if (q.match(/cost|price|how much|pricing|pay|afford|expensive/)) {
     return {
-      text: "We have four ways to work with us — something for every stage:\n\n🆓 **Free 15-Min Discovery Call** — Not sure if ROS™ is right for you? Let's talk first, no obligation.\n\n📞 **Clarity Session — $497** — 30 minutes, your specific situation, real answers and a next-step plan.\n\n📖 **The ROS™ Book — $47** — The complete system in written form. Every module, every tier, at your own pace.\n\n💬 **The Departure Lounge — $97/month** — Our Discord community with monthly Q&A and ongoing support.",
+      text: "We have four ways to work with us — something for every stage:\n\n🆓 **Free 15-Min Discovery Call** — Not sure if ROS™ is right for you? Let's talk first, no obligation.\n\n📞 **Clarity Session — $497** — 45 minutes, your specific situation, real answers and a next-step plan.\n\n📖 **The ROS™ Book — $47** — The complete system in written form. Every module, every tier, at your own pace.\n\n💬 **The Departure Lounge — $97/month** — Our Discord community with monthly Q&A and ongoing support.",
       link: { href: '/work-with-me', label: 'See all options →' },
     };
   }
@@ -40,7 +40,7 @@ function getBethResponse(input) {
   // How to get started
   if (q.match(/get started|start|begin|first step|where do i start|how do i/)) {
     return {
-      text: "The best first step depends on where you are in your journey:\n\n**Just starting out?** Book a free 15-minute discovery call — we'll tell you exactly what makes sense for your situation.\n\n**Ready to dig in?** The ROS™ Book ($47) gives you the full system to work through at your own pace.\n\n**Need specific answers fast?** A Clarity Session ($497) is 30 minutes focused entirely on your situation.\n\n**Want ongoing community?** Join The Departure Lounge ($97/mo) for monthly Q&A and peer support.",
+      text: "The best first step depends on where you are in your journey:\n\n**Just starting out?** Book a free 15-minute discovery call — we'll tell you exactly what makes sense for your situation.\n\n**Ready to dig in?** The ROS™ Book ($47) gives you the full system to work through at your own pace.\n\n**Need specific answers fast?** A Clarity Session ($497) is 45 minutes focused entirely on your situation.\n\n**Want ongoing community?** Join The Departure Lounge ($97/mo) for monthly Q&A and peer support.",
       link: { href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA', label: 'Book a free call →', external: true },
     };
   }
@@ -120,7 +120,7 @@ function getBethResponse(input) {
   // Clarity session / call / coaching
   if (q.match(/clarity|session|call|consult|coach|appointment|1.?1|one.on.one/)) {
     return {
-      text: "The Clarity Session is a 30-minute 1:1 call focused entirely on your specific situation.\n\n📞 **Price: $497**\n\nYou bring your questions — where you are, what you're trying to figure out, what's blocking you. We build a clear next-step plan around your actual circumstances. No generic advice. No scripts.\n\nIf you're not sure if it's the right fit, start with the free 15-minute discovery call first.",
+      text: "The Clarity Session is a 45-minute 1:1 call focused entirely on your specific situation.\n\n📞 **Price: $497**\n\nYou bring your questions — where you are, what you're trying to figure out, what's blocking you. We build a clear next-step plan around your actual circumstances. No generic advice. No scripts.\n\nIf you're not sure if it's the right fit, start with the free 15-minute discovery call first.",
       link: { href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA', label: 'Book a free discovery call first →', external: true },
     };
   }

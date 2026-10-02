@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Relocation Library Bundle — $64 | Global Systems Studio',
+  title: 'Relocation Library Bundle — $64',
   description: 'The Relocation Library — New Roots and Across Streets & Seas together at a bundled price. The complete book foundation for your international relocation, from the first decision through execution.',
   alternates: { canonical: 'https://globalsystemsstudio.com/shop/relocation-library/' },
 };

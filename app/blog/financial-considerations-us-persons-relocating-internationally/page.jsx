@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Key Financial Considerations for U.S. Persons Relocating Internationally | Global Systems Studio',
+  title: 'Key Financial Considerations for U.S. Persons Relocating Internationally',
   description: 'FBAR, FATCA, PFIC rules, retirement accounts, banking strategy, cost of living, and estate planning — the essential financial checklist for U.S. persons moving abroad.',
   alternates: { canonical: 'https://globalsystemsstudio.com/blog/financial-considerations-us-persons-relocating-internationally/' },
 };
@@ -190,7 +190,7 @@ export default function FinancialConsiderationsPage() {
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Ready to plan your international move?</h2>
                 <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>The ROS™ framework covers 132 destinations — with financial, legal, and visa intelligence built in at every stage.</p>
-                <Link href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" className="btn btn-gold">Book a Transition Clarity Session →</Link>
+                <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Transition Clarity Session →</Link>
               </div>
 
             </div>

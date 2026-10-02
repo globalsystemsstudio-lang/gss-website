@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Family Edition Pathway — $1197 | Global Systems Studio',
+  title: 'Family Edition Pathway — $1197',
   description: 'ROS™ Family Edition Pathway — 9 months of dual-access, full-system relocation guidance built for families, covering school enrollment, family visas, healthcare, housing, and estate planning across borders.',
   alternates: { canonical: 'https://globalsystemsstudio.com/services/ros-family-edition-pathway/' },
 };

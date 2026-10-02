@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Visa and Legal Support for International Relocation: A Complete Guide for U.S. Persons | Global Systems Studio',
+  title: 'Visa and Legal Support for International Relocation: A Complete Guide for U.S. Persons',
   description: 'The six visa categories used by U.S. persons relocating abroad, the legal support required at each stage, and how to evaluate visa service providers.',
   alternates: { canonical: 'https://globalsystemsstudio.com/blog/visa-legal-support-international-relocation/' },
 };
@@ -259,7 +259,7 @@ export default function VisaLegalSupportPage() {
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Need help identifying the right visa pathway?</h2>
                 <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>A Transition Clarity Session maps your income, profile, and target destination to the most viable pathways — before you commit to anything.</p>
-                <Link href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" className="btn btn-gold">Book a Transition Clarity Session →</Link>
+                <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Transition Clarity Session →</Link>
               </div>
 
             </div>

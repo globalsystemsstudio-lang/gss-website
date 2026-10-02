@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'What Happens to Your Professional Skills in a New Country? | Global Systems Studio',
+  title: 'What Happens to Your Professional Skills in a New Country?',
   description: 'Licensing requirements that don\'t transfer, markets that don\'t recognize your credentials, and how to evaluate your options before you move.',
   alternates: { canonical: 'https://globalsystemsstudio.com/blog/professional-skills-new-country/' },
 };

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'International Relocation Financial Planning for U.S. Persons: The Complete Guide | Global Systems Studio',
+  title: 'International Relocation Financial Planning for U.S. Persons: The Complete Guide',
   description: 'A complete guide to the financial considerations U.S. persons must address before and during an international relocation, covering FBAR, PFIC rules, banking strategy, asset transition timing, and how the ROS™ framework addresses each.',
   alternates: { canonical: 'https://globalsystemsstudio.com/relocation-financial-planning/' },
 };
@@ -66,7 +66,7 @@ export default function RelocationFinancialPlanningPage() {
               <p>ROS™ identifies which professionals — immigration attorney, cross-border tax advisor, local banking specialist — you need, in what order, and why. It is the coordinating intelligence layer, not a replacement for those advisors.</p>
 
               <h2 id="service-tiers">Service Tiers</h2>
-              <p>Global Systems Studio offers multiple service tiers through the ROS™ framework, from a free Discovery Call to one-on-one Clarity Sessions and community membership. Start with a <Link href="/work-with-me">Clarity Session</Link> ($497, 30 minutes) to determine which tier matches your relocation profile, or explore all options.</p>
+              <p>Global Systems Studio offers multiple service tiers through the ROS™ framework, from a free Discovery Call to one-on-one Clarity Sessions and community membership. Start with a <Link href="/work-with-me">Clarity Session</Link> ($497, 45 minutes) to determine which tier matches your relocation profile, or explore all options.</p>
 
               <h2 id="faq">Frequently Asked Questions</h2>
               <div className="faq-simple">
