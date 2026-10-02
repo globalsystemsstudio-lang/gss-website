@@ -59,7 +59,7 @@ export default function DominicanRepublicPage() {
               <p>A comfortable single-person lifestyle, covering private accommodation, private healthcare coverage, groceries, transportation, and dining out regularly, typically runs <strong>$1,500–$2,500 USD/month</strong> depending on location and lifestyle choices. Punta Cana and Cap Cana sit at the higher end of that range. Cabarete and Santiago sit at the lower end.</p>
               <p>A family of four can live well on <strong>$3,000–$4,500/month</strong> in most areas, factoring in international schooling.</p>
               <p>For context: Barbados runs $4,000–$6,000/month for a comparable lifestyle. The Bahamas is higher still. Jamaica and Costa Rica are more competitive but come with different infrastructure trade-offs. The DR is the Caribbean option that makes the numbers work for the widest range of income levels, from a remote worker on $2,500/month to a retired couple on $6,000/month. That range is rare in this region.</p>
-              <p>Before you finalize a budget, it&#39;s worth reading our <a href="/blog/banking-before-you-land/">Banking Before You Land</a> guide. The DR has specific NIF and banking sequencing requirements that affect your first 90 days on the ground.</p>
+              <p>Before you finalize a budget, sort out your banking plan. The DR has specific NIF and banking sequencing requirements that affect your first 90 days on the ground.</p>
 
               <h2>Healthcare</h2>
               <p>The DR has a two-track system: public and private.</p>
