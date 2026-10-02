@@ -420,6 +420,48 @@ export default function BlogPage() {
               <p>What drives expat health insurance costs in 2026, the main plan options and how to compare quotes without relying on averages.</p>
               <span className="blog-card-link">Read →</span>
             </Link>
+            <Link href="/blog/life-insurance-after-moving-abroad" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>Is it harder to get life insurance after you move abroad?</h3>
+              <p>Getting new life insurance can be harder after you move abroad. Learn how residency affects eligibility, what to disclose before departure and what to ask insurers.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/keep-medicare-while-living-abroad" className="blog-card">
+              <span className="blog-card-tag">Healthcare Abroad</span>
+              <h3>Can US citizens keep Medicare while living abroad?</h3>
+              <p>Original Medicare generally does not cover routine care abroad. Understand Part B penalties, private plan residence rules and how to plan healthcare before you move.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/buy-or-rent-when-you-first-relocate-abroad" className="blog-card">
+              <span className="blog-card-tag">Housing Abroad</span>
+              <h3>Should you buy or rent when you first relocate abroad?</h3>
+              <p>Rent first when residence approval or neighborhood fit is unresolved. See how to review leases, property purchases and exit terms before committing abroad.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/how-long-does-international-relocation-take" className="blog-card">
+              <span className="blog-card-tag">Relocation Planning</span>
+              <h3>How long does it take to relocate internationally?</h3>
+              <p>Build a realistic relocation timeline from residence route, document dependencies and household constraints, with a delayed-move scenario and a 90-day horizon.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/keep-us-bank-account-while-living-abroad" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>Can I keep my US bank account while living abroad?</h3>
+              <p>Whether you can keep a US bank account abroad depends on your bank's country and account rules. Learn what to ask, how to test access and plan transfers.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/social-security-while-living-abroad" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>Can retirees collect Social Security while living abroad?</h3>
+              <p>Eligible US citizens can generally collect Social Security abroad, subject to country rules. Learn about reporting your address, work rules and payment options.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/bring-pet-when-relocating-internationally" className="blog-card">
+              <span className="blog-card-tag">Housing Abroad</span>
+              <h3>Can you bring your pet when you relocate internationally?</h3>
+              <p>Bringing a pet abroad requires destination entry rules, a USDA-accredited veterinarian and airline acceptance. Plan certificates, timing and pet-friendly housing.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
           </div>
         </div>
       </section>
