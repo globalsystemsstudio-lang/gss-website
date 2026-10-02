@@ -173,7 +173,7 @@ export default function WorkWithMePage() {
                 name: 'Five Questions Before Moving Abroad',
                 price: 'Free',
                 description: "A visa does not tell you whether your relocation will work. These five questions do.",
-                link: '/downloads/01_Five_Questions_Before_Moving_Abroad.pdf',
+                link: '/shop/five-questions/',
                 cta: 'Get the Free Guide',
               },
               {
