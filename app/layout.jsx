@@ -19,6 +19,18 @@ export const metadata = {
   },
 };
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Global Systems Studio',
+  url: 'https://globalsystemsstudio.com',
+  description: 'Global Systems Studio is the home of ROS (Relocation Operating System), step-by-step infrastructure for U.S. persons relocating internationally.',
+  founder: {
+    '@type': 'Person',
+    name: 'Charlene L. M. Cupidore Bynoe',
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -26,6 +38,10 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         {/* Google Translate styles override — hide the ugly top bar */}
         <style dangerouslySetInnerHTML={{__html:`
           .goog-te-banner-frame.skiptranslate,
