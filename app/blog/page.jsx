@@ -295,6 +295,135 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* EXPAT QUESTIONS ANSWERED (2026) */}
+      <section style={{background:'var(--bg)', padding:'80px 0'}}>
+        <div className="container">
+          <h2>Expat Questions Answered</h2>
+          <div className="blog-grid" style={{marginTop:'32px'}}>
+            <Link href="/blog/do-you-still-pay-us-taxes-working-remotely-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>Do you still pay US taxes working remotely from abroad in 2026?</h3>
+              <p>Why living abroad does not end your U.S. filing, which exclusions and credits can reduce the bill, and the reporting that still applies.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/can-digital-nomads-qualify-for-feie-2026" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>Can digital nomads qualify for the Foreign Earned Income Exclusion in 2026?</h3>
+              <p>How the physical presence test works for people who move often, why the tax home matters, and what the exclusion does not cover.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/roth-ira-contributions-while-living-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>Can you still invest in a Roth IRA while living abroad in 2026?</h3>
+              <p>How the FEIE affects IRA eligibility, why the Foreign Tax Credit can change the answer, and the custodian and local tax issues to check first.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/transfer-us-401k-to-foreign-pension-plan-2026" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>Can you transfer a US 401(k) into a foreign pension plan in 2026?</h3>
+              <p>Why a 401(k) generally cannot move tax-free into a foreign pension plan, what the realistic options are and what to check before you change your address.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/how-long-before-you-lose-state-residency-living-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>How long before you lose state residency when living abroad in 2026?</h3>
+              <p>How U.S. state residency works when you move abroad, what ties states look at and the steps that support a clean exit.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/keep-us-llc-if-you-move-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Business Abroad</span>
+              <h3>Can you keep your US-based LLC if you move abroad in 2026?</h3>
+              <p>Whether you can keep a U.S. LLC when you move abroad, what compliance continues and where local rules and banking can create problems.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/hsa-contributions-while-living-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>Can you still contribute to an HSA while living abroad in 2026?</h3>
+              <p>Whether you can contribute to an HSA while living abroad, what stays tax-free and why foreign insurance often ends eligibility.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/contribute-to-529-plan-while-living-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Family Relocation</span>
+              <h3>Can you keep contributing to a 529 plan while living abroad in 2026?</h3>
+              <p>Whether you can keep funding a 529 plan from abroad, how eligible foreign schools work and what tax caveats to check.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/how-much-money-do-you-need-to-retire-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Retirement Abroad</span>
+              <h3>How much money do you need to retire abroad in 2026?</h3>
+              <p>A four-step method to size your retirement savings for a specific destination, with a worked example and the budget lines most often missed.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/is-it-cheaper-to-retire-abroad-than-in-the-us-2026" className="blog-card">
+              <span className="blog-card-tag">Retirement Abroad</span>
+              <h3>Is it cheaper to retire abroad than in the US in 2026?</h3>
+              <p>How retirement costs abroad compare with the U.S., where savings are real, where they disappear and how to compare your own budget.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/how-much-does-it-cost-to-relocate-internationally-2026" className="blog-card">
+              <span className="blog-card-tag">Relocation Planning</span>
+              <h3>How much does it cost to relocate internationally in 2026?</h3>
+              <p>The cost categories of an international move, how to build an estimate from quotes and the expenses people most often forget.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/how-much-savings-before-moving-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Relocation Planning</span>
+              <h3>How much savings should you have before moving abroad in 2026?</h3>
+              <p>A practical method to size your savings before moving abroad: one-time costs, runway months and a reserve, with a worked example.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/how-long-does-it-take-to-get-a-digital-nomad-visa-2026" className="blog-card">
+              <span className="blog-card-tag">Visa and Residency</span>
+              <h3>How long does it take to get a digital nomad visa in 2026?</h3>
+              <p>What drives digital nomad visa timelines, a stage-by-stage planning view and why documents often take longer than the review.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/move-abroad-without-a-job-lined-up-2026" className="blog-card">
+              <span className="blog-card-tag">Visa and Residency</span>
+              <h3>Can you move abroad without a job lined up in 2026?</h3>
+              <p>Which visas let you move abroad without a local employer, what to prepare and the risks of arriving without a legal right to stay.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/us-credit-card-after-moving-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>Can you still get a US credit card after moving abroad in 2026?</h3>
+              <p>How to keep U.S. credit cards and credit history alive when you move abroad, what issuers ask for and what to do before you leave.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/keep-us-drivers-license-living-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Relocation Planning</span>
+              <h3>Can you keep your US driver&#39;s license while living abroad in 2026?</h3>
+              <p>Whether your U.S. license stays valid abroad, how international driving permits work and when to convert to a local license.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/how-long-can-americans-stay-abroad-without-a-visa-2026" className="blog-card">
+              <span className="blog-card-tag">Visa and Residency</span>
+              <h3>How long can Americans stay abroad without a visa in 2026?</h3>
+              <p>Common visa-free stay limits for Americans, how counting rules like Schengen 90/180 work and why repeated visits are not a residency plan.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/relocate-abroad-with-student-loan-debt-2026" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>Can you relocate abroad with student loan debt in 2026?</h3>
+              <p>How student loans work when you move abroad, what to tell your servicer and how to plan payments, currency and 2026 repayment changes.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/relocate-abroad-and-keep-us-citizenship-2026" className="blog-card">
+              <span className="blog-card-tag">Relocation Planning</span>
+              <h3>Can you relocate abroad and keep your US citizenship in 2026?</h3>
+              <p>Why moving abroad does not end U.S. citizenship, what stays the same, what changes and how dual citizenship works.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/private-health-insurance-cost-for-expats-2026" className="blog-card">
+              <span className="blog-card-tag">Healthcare Abroad</span>
+              <h3>How much does private health insurance cost for expats in 2026?</h3>
+              <p>What drives expat health insurance costs in 2026, the main plan options and how to compare quotes without relying on averages.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* SUBSCRIBE */}
       <section style={{background:'var(--primary)', padding:'80px 0'}}>
         <div className="container" style={{textAlign:'center'}}>
