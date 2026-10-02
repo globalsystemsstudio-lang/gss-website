@@ -42,6 +42,12 @@ export default function BlogPage() {
               <p>FBAR, FATCA, PFIC rules, banking strategy, Social Security, and the decisions that must be made before you leave.</p>
               <span className="blog-card-link">Read →</span>
             </Link>
+            <Link href="/blog/us-tax-playbook-americans-moving-abroad" className="blog-card">
+              <span className="blog-card-tag">Financial Planning</span>
+              <h3>The Tax Playbook for Americans Moving Abroad</h3>
+              <p>The FEIE, the Foreign Tax Credit, the Foreign Housing Exclusion, FBAR and FATCA. What works, what doesn't, and what to have ready before you go.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
             <Link href="/blog/find-financial-planning-services-moving-abroad" className="blog-card">
               <span className="blog-card-tag">Financial Planning</span>
               <h3>How to Find and Evaluate Financial Planning Services for Moving Abroad</h3>
@@ -123,6 +129,18 @@ export default function BlogPage() {
               <p>What consultancy covers, how it differs from a moving company or visa agency, and the methodology behind ROS™.</p>
               <span className="blog-card-link">Read →</span>
             </Link>
+            <Link href="/blog/four-layers-governed-international-relocation" className="blog-card">
+              <span className="blog-card-tag">Framework Education</span>
+              <h3>Everyone's Planning to Move Internationally. Almost Nobody's Ready.</h3>
+              <p>The four layers of a governed international relocation: legal, financial, operational and integration, in the right order.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/investor-tier-relocation-as-strategy" className="blog-card">
+              <span className="blog-card-tag">Framework Education</span>
+              <h3>The Investor Tier: When Relocation Becomes a Strategy, Not Just a Move</h3>
+              <p>The Investor tier isn't about how much money you have. It's about why you're moving, and why Panama keeps coming up.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
             <Link href="/blog/renting-abroad-as-foreigner" className="blog-card">
               <span className="blog-card-tag">Housing</span>
               <h3>What Nobody Told Me About Renting Abroad as a Foreigner</h3>
@@ -141,6 +159,12 @@ export default function BlogPage() {
               <p>Fact-checking the FEIE and Vanuatu citizenship claims going viral right now, plus the mail-forwarding gap nobody mentions.</p>
               <span className="blog-card-link">Read →</span>
             </Link>
+            <Link href="/blog/what-most-people-get-wrong-about-moving-abroad" className="blog-card">
+              <span className="blog-card-tag">Relocation Reality</span>
+              <h3>Here's What Most People Get Wrong About Moving Abroad</h3>
+              <p>The first question isn't where to go. It's in what order to make the decisions, and why the professionals helping relocators are running at full capacity.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -150,6 +174,48 @@ export default function BlogPage() {
         <div className="container">
           <h2>Destination Guides</h2>
           <div className="blog-grid" style={{marginTop:'32px'}}>
+            <Link href="/blog/barbados-welcome-stamp-relocation-guide" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Barbados Keeps Coming Up. Here's What the Welcome Stamp Solves, and What It Doesn't.</h3>
+              <p>The Welcome Stamp, the SERP long-stay route, the US tax reality, property paperwork and a real Barbados budget.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/ghana-right-of-abode-relocation-guide" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Ghana Is More Than a Destination. Here's What It Actually Takes to Relocate.</h3>
+              <p>The Right of Abode, the GIPC investor pathway, real Accra costs, and the risks to plan around.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/philippines-relocation-guide-srrv-land-rule" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>The Philippines Keeps Coming Up. Here's What's Real, and What's Missing.</h3>
+              <p>No Digital Nomad Visa, a constitutional land ban, and the SRRV most people miss.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/japan-not-closed-relocation-guide" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Japan Is Not Closed: The Real Relocation Guide for US Citizens</h3>
+              <p>Visa pathways, the worldwide tax picture, city costs, and the failure modes that catch US citizens out.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/dominican-republic-relocation-guide" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>The Dominican Republic Is the Caribbean's Most Underrated Relocation Market</h3>
+              <p>Territorial tax, accessible residency pathways, and a cost of living that works for a wide range of incomes.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/colombia-not-what-the-internet-sold-you" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Colombia Is Not What the Internet Sold You, and It's Still Worth Going</h3>
+              <p>The 183-day tax trap, visa pathways, healthcare, housing, and the banking sequence that catches people out.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/belize-full-financial-picture-before-you-land" className="blog-card">
+              <span className="blog-card-tag">Destination Guide</span>
+              <h3>Belize Goes Deeper: The Full Financial Picture Before You Land</h3>
+              <p>Real Belize costs, banking timelines, tax realities for US persons, and the five questions to answer before you move.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
             <Link href="/blog/paraguay-5500-residency-real-cost" className="blog-card">
               <span className="blog-card-tag">Destination Guide</span>
               <h3>Paraguay Keeps Coming Up. Let's Actually Talk About What It Takes.</h3>
