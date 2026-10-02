@@ -16,13 +16,58 @@ export default function WorkWithMePage() {
         </div>
       </section>
 
+      {/* FEATURED: CLARITY SESSION */}
+      <section style={{background:'var(--bg)', padding:'64px 0'}}>
+        <div className="container">
+          <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))', gap:'40px', alignItems:'start', maxWidth:'980px'}}>
+            <div style={{background:'var(--white)', border:'2px solid var(--primary)', borderRadius:'16px', padding:'36px'}}>
+              <span className="section-tag">Start Here</span>
+              <h2 style={{marginTop:'8px'}}>ROS™ Transition Clarity Session</h2>
+              <div style={{fontSize:'48px', fontWeight:'700', color:'var(--accent)', lineHeight:'1', margin:'16px 0 8px'}}>$497</div>
+              <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'24px'}}>45-Minute 1:1 Video Call with the founder</div>
+              <a href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Book a Clarity Session →</a>
+              <p style={{fontSize:'14px', color:'var(--text-light)', marginTop:'20px', marginBottom:0}}>Not ready to book? <a href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" target="_blank" rel="noopener noreferrer">Take the free 15-minute Discovery Call →</a></p>
+            </div>
+            <div>
+              <h3 style={{marginBottom:'16px'}}>What you receive</h3>
+              <ol style={{paddingLeft:'22px', display:'flex', flexDirection:'column', gap:'14px', color:'var(--text-light)'}}>
+                <li><strong style={{color:'var(--text)'}}>Before:</strong> You come with your specific situation and the questions you cannot resolve on your own. Reading <em>New Roots</em> first is optional, but it helps you ask more targeted questions.</li>
+                <li><strong style={{color:'var(--text)'}}>The call:</strong> A private 45-minute video call focused entirely on your situation. You leave with a clear picture of your next steps and in what order.</li>
+                <li><strong style={{color:'var(--text)'}}>After:</strong> A recording of the call and a written summary, delivered within 48 hours.</li>
+              </ol>
+              <p style={{fontSize:'14px', color:'var(--text-light)', marginTop:'20px'}}>This is strategic relocation guidance, not legal, tax or financial advice.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* THREE ROUTES */}
+      <section style={{background:'var(--white)', padding:'56px 0'}}>
+        <div className="container">
+          <h2>Choose Your Route</h2>
+          <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(240px, 1fr))', gap:'20px', marginTop:'28px'}}>
+            {[
+              { href: '#plan-with-me', title: 'Plan with me', desc: 'Work directly with the founder: the free Discovery Call, the Clarity Session, or a written Async Q&A.' },
+              { href: '#work-independently', title: 'Work independently', desc: 'Guides, workbooks and the ROS™ books, at your own pace, with no call required.' },
+              { href: '#get-ongoing-support', title: 'Get ongoing support', desc: 'Guided, full-service support through the ROS™ system with a Pathway built for your life situation.' },
+            ].map((r) => (
+              <a key={r.href} href={r.href} style={{display:'block', background:'var(--bg)', border:'1px solid var(--border)', borderRadius:'12px', padding:'24px', textDecoration:'none'}}>
+                <strong style={{color:'var(--primary)', display:'block', marginBottom:'8px', fontSize:'18px'}}>{r.title} →</strong>
+                <span style={{color:'var(--text-light)', fontSize:'15px'}}>{r.desc}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* OFFER 0: DISCOVERY CALL */}
       <section style={{background:'var(--white)', padding:'80px 0'}}>
         <div className="container">
           <div style={{background:'var(--bg)', border:'2px solid var(--accent)', borderRadius:'16px', padding:'48px', maxWidth:'820px'}}>
             <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:'16px', marginBottom:'24px'}}>
               <div>
-                <span className="section-tag">Start Here — It's Free</span>
+                <span className="section-tag">Prefer to Talk First? It's Free</span>
                 <h2 style={{marginTop:'8px'}}>Not Sure Where to Start? Let's Talk First.</h2>
               </div>
               <div style={{textAlign:'right'}}>
@@ -37,6 +82,14 @@ export default function WorkWithMePage() {
               <Link href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" className="btn btn-gold">Book Your Free Discovery Call →</Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ROUTE: Plan with me */}
+      <section id="plan-with-me" style={{background:'var(--white)', padding:'56px 0 0', scrollMarginTop:'80px'}}>
+        <div className="container">
+          <span className="section-tag">Route 1</span>
+          <h2 style={{marginTop:'8px'}}>Plan with me</h2>
         </div>
       </section>
 
@@ -96,6 +149,14 @@ export default function WorkWithMePage() {
               <a href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Submit Your Questions →</a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ROUTE: Work independently */}
+      <section id="work-independently" style={{background:'var(--white)', padding:'56px 0 0', scrollMarginTop:'80px'}}>
+        <div className="container">
+          <span className="section-tag">Route 2</span>
+          <h2 style={{marginTop:'8px'}}>Work independently</h2>
         </div>
       </section>
 
@@ -268,6 +329,14 @@ export default function WorkWithMePage() {
               <a href="https://www.paypal.com/ncp/payment/4T3LVJWPT2EFG" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Get the Full Library →</a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ROUTE: Get ongoing support */}
+      <section id="get-ongoing-support" style={{background:'var(--white)', padding:'56px 0 0', scrollMarginTop:'80px'}}>
+        <div className="container">
+          <span className="section-tag">Route 3</span>
+          <h2 style={{marginTop:'8px'}}>Get ongoing support</h2>
         </div>
       </section>
 
