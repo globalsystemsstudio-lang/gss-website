@@ -291,6 +291,24 @@ export default function BlogPage() {
               <p>Seven advisor types compared by the problem they solve: cross-border planning, U.S. taxes, IRS representation, investments, estate law and relocation preparation.</p>
               <span className="blog-card-link">Read →</span>
             </Link>
+            <Link href="/blog/best-golden-visa-programs-americans-relocating-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Legal &amp; Residency</span>
+              <h3>Best golden visa programs for Americans relocating abroad in 2026</h3>
+              <p>Greece, Portugal, Italy, Cyprus and Malta compared for Americans in 2026, what the Spain closure changes, and what to confirm before you invest.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/best-digital-nomad-visa-countries-for-americans-2026" className="blog-card">
+              <span className="blog-card-tag">Remote Work Abroad</span>
+              <h3>Best digital nomad visa countries for Americans in 2026</h3>
+              <p>Spain, Portugal, Greece, Costa Rica and Mexico compared for remote workers by income threshold, visa length, tax questions and what to confirm first.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/best-caribbean-countries-americans-retire-abroad-2026" className="blog-card">
+              <span className="blog-card-tag">Retirement Abroad</span>
+              <h3>Best Caribbean countries for Americans to retire abroad in 2026</h3>
+              <p>The Dominican Republic, Belize, the Bahamas and Barbados compared for American retirees by residence route, healthcare, tax and hurricane planning.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
           </div>
         </div>
       </section>
