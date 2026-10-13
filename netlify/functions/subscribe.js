@@ -1,5 +1,6 @@
-// GSS lead capture endpoint — used by the relocation readiness quiz and the
-// cost-of-living calculator to push leads into MailerLite server-side.
+// GSS lead capture endpoint — used by the relocation readiness quiz, the
+// cost-of-living calculator and the free guide form to push leads into
+// MailerLite server-side.
 // The MailerLite API key never reaches the browser: it lives only in this
 // function's environment (Netlify env var MAILERLITE_API_KEY).
 
@@ -60,7 +61,7 @@ exports.handler = async function (event) {
     };
   }
 
-  const apiKey = process.env.MAILERLITE_API_KEY;
+  const apiKey = process.env.MAILERLITE_API_KEY || process.env.Mailerlite_API_Key;
   if (!apiKey) {
     console.error('MAILERLITE_API_KEY is not set in the Netlify environment');
     return {
