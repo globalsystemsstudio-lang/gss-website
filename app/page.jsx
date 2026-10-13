@@ -277,32 +277,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PODCAST */}
-      <section style={{background:'var(--white)', padding:'80px 0'}}>
-        <div className="container">
-          <div style={{display:'flex', flexDirection:'row', gap:'60px', alignItems:'center', flexWrap:'wrap'}}>
-            <div style={{flexShrink:0}}>
-              <img
-                src="/podcast-cover.png"
-                alt="Beyond the Border: The Global Move Podcast"
-                style={{width:'260px', height:'260px', objectFit:'cover', borderRadius:'16px', display:'block', boxShadow:'0 8px 32px rgba(0,0,0,0.12)'}}
-              />
-            </div>
-            <div style={{flex:1, minWidth:'260px'}}>
-              <span className="section-tag">The Podcast</span>
-              <h2>Beyond the Border: The Global Move</h2>
-              <p style={{maxWidth:'560px', marginTop:'16px', color:'var(--text-light)'}}>
-                Real conversations about what it actually takes to leave the United States and build a life somewhere new. No highlight reel, just the questions, the answers, and the system behind the move.
-              </p>
-              <div style={{marginTop:'28px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-                <a href="https://open.spotify.com" className="btn btn-gold" target="_blank" rel="noopener noreferrer">Listen on Spotify →</a>
-                <a href="https://podcasts.apple.com" className="btn btn-outline-white" target="_blank" rel="noopener noreferrer">Apple Podcasts →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 09: THE FINAL MOMENT */}
       <section className="cta-section">
         <div className="container">

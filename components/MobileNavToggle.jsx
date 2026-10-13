@@ -28,7 +28,6 @@ export default function MobileNavToggle() {
           <li><Link href="/shop" onClick={() => setOpen(false)}>Guides &amp; Workbooks</Link></li>
           <li><Link href="/work-with-me" onClick={() => setOpen(false)}>Work With Me</Link></li>
           <li><Link href="/blog" onClick={() => setOpen(false)}>Blog</Link></li>
-          <li><Link href="/podcast" onClick={() => setOpen(false)}>Podcast</Link></li>
           <li><Link href="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
         </ul>
         <Link href="/shop/new-roots/" className="mobile-cta" onClick={() => setOpen(false)}>

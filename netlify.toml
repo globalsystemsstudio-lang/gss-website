@@ -19,3 +19,15 @@
   to = "/financial-planning-international-relocation/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/podcast"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/podcast/"
+  to = "/"
+  status = 301
+  force = true
