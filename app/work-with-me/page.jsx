@@ -148,7 +148,7 @@ export default function WorkWithMePage() {
             <div style={{background:'var(--bg)', border:'1px solid var(--border)', borderRadius:'16px', padding:'36px', textAlign:'center'}}>
               <div style={{fontSize:'14px', fontWeight:'700', textTransform:'uppercase', letterSpacing:'0.1em', color:'var(--text-light)', marginBottom:'12px'}}>Async Q&amp;A</div>
               <div style={{fontSize:'48px', fontWeight:'700', color:'var(--accent)', lineHeight:'1', marginBottom:'8px'}}>$97</div>
-              <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'28px'}}>Up to 3 questions · written reply within 5 business days</div>
+              <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'28px'}}>Up to 3 questions · written reply within 48 business hours</div>
               <a href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Submit Your Questions →</a>
               <SalesNotice />
             </div>

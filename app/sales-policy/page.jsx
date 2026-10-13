@@ -31,7 +31,7 @@ export default function SalesPolicyPage() {
           <p>Please give us 24 hours' notice to reschedule. If an emergency comes up, contact us and we'll work with you. A missed session with no contact is not refunded.</p>
 
           <h2 style={{marginTop:'40px'}}>Async Q&amp;A</h2>
-          <p>We reply within 5 business days. Questions outside our scope are redirected to a licensed professional.</p>
+          <p>We reply within 48 business hours. Questions outside our scope are redirected to a licensed professional.</p>
 
           <h2 style={{marginTop:'40px'}}>Questions about a purchase</h2>
           <p>Questions or concerns about a purchase? Contact us first at <a href="mailto:globalsystemsstudio@gmail.com">globalsystemsstudio@gmail.com</a> and we'll respond within 2 business days.</p>
