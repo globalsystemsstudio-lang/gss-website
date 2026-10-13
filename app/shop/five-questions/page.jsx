@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import FreeGuideForm from '../../../components/FreeGuideForm';
 
 export const metadata = {
   title: 'Five Questions Before Moving Abroad — Free Guide',
@@ -47,9 +48,7 @@ export default function FiveQuestionsPage() {
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>Free Guide</p>
           <h1>Five Questions Before Moving Abroad</h1>
           <p>A visa does not tell you whether your relocation will work. These five questions do.</p>
-          <div style={{marginTop:'24px'}}>
-            <a href="https://drive.google.com/uc?export=download&id=1C6iMQvEop3RwhXhZRigyTifCcYe61Mrn" className="btn btn-gold" target="_blank" rel="noopener noreferrer">Download the Free PDF →</a>
-          </div>
+          <FreeGuideForm />
         </div>
       </section>
 
