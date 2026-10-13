@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SalesNotice from '../../../components/SalesNotice';
 
 export const metadata = {
   title: 'Clarity Session — $497',
@@ -18,6 +19,7 @@ export default function ClaritySessionPage() {
             <Link href="/work-with-me" className="btn btn-gold">Book Your Clarity Session →</Link>
             <Link href="/services/discovery-call" className="btn btn-outline">Start With a Free Call First →</Link>
           </div>
+<SalesNotice />
         </div>
       </section>
 
@@ -61,6 +63,7 @@ export default function ClaritySessionPage() {
             <div style={{marginTop:'24px'}}>
               <Link href="/work-with-me" className="btn btn-gold">Book Your Clarity Session — $497 →</Link>
             </div>
+            <SalesNotice />
           </div>
         </div>
       </section>

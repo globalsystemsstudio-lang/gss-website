@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SalesNotice from '../../../components/SalesNotice';
 
 export const metadata = {
   title: 'Async Q&A — $97',
@@ -17,6 +18,7 @@ export default function AsyncQAPage() {
           <div style={{marginTop:'24px'}}>
             <Link href="/work-with-me" className="btn btn-gold">Get Written Answers — $97 →</Link>
           </div>
+          <SalesNotice />
         </div>
       </section>
 
@@ -57,6 +59,7 @@ export default function AsyncQAPage() {
               <Link href="/work-with-me" className="btn btn-gold">Get Written Answers — $97 →</Link>
               <Link href="/services" className="btn btn-outline">See All Services →</Link>
             </div>
+<SalesNotice />
           </div>
         </div>
       </section>

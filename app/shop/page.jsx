@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SalesNotice from '../../components/SalesNotice';
 
 export const metadata = {
   title: 'Guides & Planners',
@@ -36,6 +37,7 @@ function ProductCard({ p }) {
       ) : (
         <Link href={p.href} className="btn btn-gold">{p.cta}</Link>
       )}
+      {p.href.includes('paypal.com') && <SalesNotice />}
       {p.footnote && <p style={{fontSize:'12px', color:'var(--text-light)', marginTop:'12px'}}>{p.footnote}</p>}
     </div>
   );

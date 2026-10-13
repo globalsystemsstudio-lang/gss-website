@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SalesNotice from '../../../components/SalesNotice';
 
 export const metadata = {
   title: 'Digital Nomad Pathway — $897',
@@ -28,6 +29,7 @@ export default function DigitalNomadPathwayPage() {
             <Link href="/work-with-me" className="btn btn-gold">Get the Digital Nomad Pathway — $897 →</Link>
             <Link href="/services/discovery-call" className="btn btn-outline">Book a Free Call First →</Link>
           </div>
+<SalesNotice />
         </div>
       </section>
 
@@ -74,6 +76,7 @@ export default function DigitalNomadPathwayPage() {
               <Link href="/work-with-me" className="btn btn-gold">Get the Digital Nomad Pathway — $897 →</Link>
               <Link href="/services" className="btn btn-outline">Compare All Tiers →</Link>
             </div>
+<SalesNotice />
           </div>
         </div>
       </section>

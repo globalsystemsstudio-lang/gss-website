@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SalesNotice from '../../components/SalesNotice';
 
 export const metadata = {
   title: 'Relocation Coaching & Pricing',
@@ -26,6 +27,7 @@ export default function WorkWithMePage() {
               <div style={{fontSize:'48px', fontWeight:'700', color:'var(--accent)', lineHeight:'1', margin:'16px 0 8px'}}>$497</div>
               <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'24px'}}>45-Minute 1:1 Video Call with the founder · Personalized legal, financial and lifestyle relocation risk review</div>
               <a href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Book a Clarity Session →</a>
+              <SalesNotice />
               <p style={{fontSize:'14px', color:'var(--text-light)', marginTop:'20px', marginBottom:0}}>Not ready to book? <a href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" target="_blank" rel="noopener noreferrer">Take the free 15-minute Discovery Call →</a></p>
             </div>
             <div>
@@ -119,6 +121,7 @@ export default function WorkWithMePage() {
               <div style={{fontSize:'48px', fontWeight:'700', color:'var(--accent)', lineHeight:'1', marginBottom:'8px'}}>$497</div>
               <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'28px'}}>45-Minute 1:1 Video Call</div>
               <a href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Book a Clarity Session →</a>
+              <SalesNotice />
               <p style={{fontSize:'12px', color:'var(--text-light)', marginTop:'16px', marginBottom:0}}>Recording + written summary delivered within 48 hours</p>
             </div>
           </div>
@@ -147,6 +150,7 @@ export default function WorkWithMePage() {
               <div style={{fontSize:'48px', fontWeight:'700', color:'var(--accent)', lineHeight:'1', marginBottom:'8px'}}>$97</div>
               <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'28px'}}>Up to 3 questions · written reply within 5 business days</div>
               <a href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Submit Your Questions →</a>
+              <SalesNotice />
             </div>
           </div>
         </div>
@@ -280,6 +284,7 @@ export default function WorkWithMePage() {
               <div style={{fontSize:'48px', fontWeight:'700', color:'var(--accent)', lineHeight:'1', marginBottom:'8px'}}>$27</div>
               <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'28px'}}>Digital Download</div>
               <a href="https://www.paypal.com/ncp/payment/J3ZZAKPGCJACS" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Get New Roots →</a>
+              <SalesNotice />
             </div>
           </div>
         </div>
@@ -305,6 +310,7 @@ export default function WorkWithMePage() {
               <div style={{fontSize:'48px', fontWeight:'700', color:'var(--accent)', lineHeight:'1', marginBottom:'8px'}}>$47</div>
               <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'28px'}}>Digital Download</div>
               <a href="https://www.paypal.com/ncp/payment/PDCK6MLEFJG8W" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Get Across Streets &amp; Seas →</a>
+              <SalesNotice />
             </div>
           </div>
         </div>
@@ -327,6 +333,7 @@ export default function WorkWithMePage() {
               <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'4px'}}>Both books — digital download</div>
               <div style={{fontSize:'13px', color:'var(--accent)', fontWeight:'600', marginBottom:'28px'}}>Save $10 vs. buying separately</div>
               <a href="https://www.paypal.com/ncp/payment/4T3LVJWPT2EFG" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Get the Full Library →</a>
+              <SalesNotice />
             </div>
           </div>
         </div>
@@ -405,7 +412,7 @@ export default function WorkWithMePage() {
           <div style={{marginTop:'40px', background:'rgba(255,255,255,0.08)', border:'1px solid rgba(255,255,255,0.2)', borderRadius:'12px', padding:'28px', maxWidth:'760px'}}>
             <h3 style={{color:'var(--white)', marginBottom:'12px'}}>Optional dashboard renewal</h3>
             <p style={{color:'rgba(255,255,255,0.8)', fontSize:'15px', lineHeight:'1.6', marginBottom:'12px'}}>Each pathway includes dashboard access for the period shown above. When that period ends, renewal is optional and never required. Renewal pricing: Digital Nomad $197, Solo $247, Family $347, Entrepreneur $397, Legacy $497, Investor $597.</p>
-            <p style={{color:'rgba(255,255,255,0.6)', fontSize:'13px', lineHeight:'1.6', margin:0}}>All prices are in USD, one-time purchases, processed through PayPal. All sales are final and non-refundable. By purchasing, you acknowledge and agree to this policy. ROS™ provides educational and planning support and is not legal, immigration, tax, investment, or financial advice.</p>
+            <p style={{color:'rgba(255,255,255,0.6)', fontSize:'13px', lineHeight:'1.6', margin:0}}>All prices are in USD, one-time purchases, processed through PayPal. All sales are final and non-refundable (<Link href="/sales-policy" style={{color:'inherit', textDecoration:'underline'}}>see our sales policy</Link>). By purchasing, you acknowledge and agree to this policy. ROS™ provides educational and planning support and is not legal, immigration, tax, investment, or financial advice.</p>
           </div>
 
           <p style={{color:'rgba(255,255,255,0.5)', fontSize:'14px', marginTop:'32px'}}>Not sure which pathway fits? Book a free Discovery Call — we'll tell you honestly which tier applies to your situation.</p>

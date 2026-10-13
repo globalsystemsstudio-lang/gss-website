@@ -24,6 +24,7 @@ export default function Footer() {
                 <li><Link href="/shop">Guides &amp; Workbooks</Link></li>
                 <li><Link href="/tools">Free Tools</Link></li>
                 <li><Link href="/contact">Contact</Link></li>
+                <li><Link href="/sales-policy">Sales Policy</Link></li>
               </ul>
             </div>
             <div className="footer-col">

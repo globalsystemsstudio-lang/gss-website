@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SalesNotice from '../../../components/SalesNotice';
 
 export const metadata = {
   title: 'Legacy Pathway — $1997',
@@ -18,6 +19,7 @@ export default function LegacyPathwayPage() {
             <Link href="/work-with-me" className="btn btn-gold">Get the Legacy Pathway — $1,997 →</Link>
             <Link href="/services/discovery-call" className="btn btn-outline">Book a Free Call First →</Link>
           </div>
+<SalesNotice />
         </div>
       </section>
 
@@ -62,6 +64,7 @@ export default function LegacyPathwayPage() {
               <Link href="/work-with-me" className="btn btn-gold">Get the Legacy Pathway — $1,997 →</Link>
               <Link href="/services" className="btn btn-outline">Compare All Tiers →</Link>
             </div>
+<SalesNotice />
           </div>
         </div>
       </section>
