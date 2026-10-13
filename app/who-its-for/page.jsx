@@ -129,7 +129,7 @@ export default function WhoItsForPage() {
       <section style={{background:'var(--primary)', padding:'80px 0'}}>
         <div className="container">
           <h2 style={{color:'var(--white)'}}>Relocation Doesn't Only Happen in English. Neither Does ROS™.</h2>
-          <p style={{color:'rgba(255,255,255,0.82)', maxWidth:'720px', marginTop:'16px', fontSize:'17px'}}>The content, resources, and community within ROS™ are available in multiple languages so that language is never the barrier between you and the answers you need.</p>
+          <p style={{color:'rgba(255,255,255,0.82)', maxWidth:'720px', marginTop:'16px', fontSize:'17px'}}>The content and resources within ROS™ are available in multiple languages so that language is never the barrier between you and the answers you need.</p>
           <p style={{color:'rgba(255,255,255,0.7)', marginTop:'16px'}}>Currently available in: <strong style={{color:'var(--white)'}}>English, Spanish, French, Portuguese</strong></p>
           <p style={{color:'rgba(255,255,255,0.6)', fontSize:'14px', marginTop:'8px'}}>Additional languages in development — contact us if your language isn't listed.</p>
           <div style={{display:'flex', gap:'16px', marginTop:'36px', flexWrap:'wrap'}}>
