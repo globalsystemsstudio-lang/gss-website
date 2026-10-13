@@ -170,7 +170,7 @@ export default function CostOfLivingCalculator() {
       setCapStatus('success');
     } catch (err) {
       setCapStatus('error');
-      setCapError('Something went wrong — please try again, or email us directly at hello@globalsystemsstudio.com.');
+      setCapError('Something went wrong — please try again, or email us directly at globalsystemsstudio@gmail.com.');
     }
   };
 

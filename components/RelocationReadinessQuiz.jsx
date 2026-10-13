@@ -395,7 +395,7 @@ export default function RelocationReadinessQuiz() {
         setPhase('results');
       } catch (err) {
         setCaptureStatus('error');
-        setCaptureError("Something went wrong on our end — please try again, or email us directly at hello@globalsystemsstudio.com.");
+        setCaptureError("Something went wrong on our end — please try again, or email us directly at globalsystemsstudio@gmail.com.");
       }
     };
 
