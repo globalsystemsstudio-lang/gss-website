@@ -13,7 +13,7 @@ const consultations = [
 ];
 
 const pathways = [
-  { name: 'Digital Nomad Pathway', price: '$697', access: '6-Month Access', desc: 'Built for remote workers ready to live abroad legally and financially smart.', href: '/services/ros-digital-nomad-pathway' },
+  { name: 'Digital Nomad Pathway', price: '$897', access: '6-Month Access', desc: 'Built for remote workers ready to live abroad legally and financially smart.', href: '/services/ros-digital-nomad-pathway' },
   { name: 'Solo Relocator Pathway', price: '$897', access: '6-Month Access', desc: "You're making this move on your own. This pathway is built around that reality.", href: '/services/ros-solo-pathway' },
   { name: 'Family Edition Pathway', price: '$1,197', access: '9-Month Dual Access', desc: "Moving with people who depend on you. Getting it wrong isn't an option.", href: '/services/ros-family-edition-pathway' },
   { name: 'Entrepreneur Pathway', price: '$1,597', access: '9-Month Access', desc: 'Own a business or building one abroad? This covers the legal, tax, and operational structure across borders.', href: '/services/ros-entrepreneur-pathway' },

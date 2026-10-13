@@ -103,7 +103,7 @@ export default function WhoItsForPage() {
       <section style={{background:'var(--white)', padding:'80px 0'}}>
         <div className="container">
           <h2>Wherever You're Going, ROS™ Goes With You.</h2>
-          <p style={{maxWidth:'720px', marginTop:'16px', color:'var(--text-light)'}}>ROS™ is built for international relocation to destinations across the globe. The seven modules apply universally. The country-specific details are part of what your Clarity Session, the Community, and the ROS™ resource library help you navigate.</p>
+          <p style={{maxWidth:'720px', marginTop:'16px', color:'var(--text-light)'}}>ROS™ is built for international relocation to destinations across the globe. The seven modules apply universally. The country-specific details are part of what your Clarity Session and the ROS™ resource library help you navigate.</p>
           <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', gap:'20px', marginTop:'40px'}}>
             {[
               { flag: '🌴', region: 'The Caribbean', examples: 'Jamaica, Barbados, the Bahamas, St. Lucia, Grenada, Cayman Islands' },

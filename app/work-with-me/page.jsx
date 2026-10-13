@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Relocation Coaching & Pricing',
-  description: 'Ways to work with ROS™: Free Discovery Call, Clarity Session ($497), Async Q&A ($97), Guides & Workbooks from Free to $97, books from $27, and six Pathway tiers from $697 to $2,497.',
+  description: 'Ways to work with ROS™: Free Discovery Call, Clarity Session ($497), Async Q&A ($97), Guides & Workbooks from Free to $97, books from $27, and six Pathway tiers from $897 to $2,497.',
   alternates: { canonical: 'https://globalsystemsstudio.com/work-with-me/' },
 };
 
@@ -133,7 +133,7 @@ export default function WorkWithMePage() {
               <span className="section-tag">Flexible Support</span>
               <h2>ROS Async Q&amp;A</h2>
               <p>Not ready for a live call? Submit your questions and receive a detailed, personalized written response from the founder — on your schedule.</p>
-              <p>The Async Q&A is designed for people who have specific questions they need answered but prefer written guidance over a video call. Submit your situation and questions, and receive a thorough written response you can refer back to at any point in your process.</p>
+              <p>The Async Q&A is designed for people who have specific questions they need answered but prefer written guidance over a video call. Submit your situation and questions, and receive a thorough written response you can refer back to at any point in your process. Each Async Q&amp;A includes up to three questions, and you receive a detailed written reply within five business days.</p>
               <h3 style={{marginTop:'28px', marginBottom:'12px'}}>This is for you if:</h3>
               <ul style={{paddingLeft:'24px', display:'flex', flexDirection:'column', gap:'8px', color:'var(--text-light)'}}>
                 <li>You prefer written guidance you can review and share</li>
@@ -145,7 +145,7 @@ export default function WorkWithMePage() {
             <div style={{background:'var(--bg)', border:'1px solid var(--border)', borderRadius:'16px', padding:'36px', textAlign:'center'}}>
               <div style={{fontSize:'14px', fontWeight:'700', textTransform:'uppercase', letterSpacing:'0.1em', color:'var(--text-light)', marginBottom:'12px'}}>Async Q&amp;A</div>
               <div style={{fontSize:'48px', fontWeight:'700', color:'var(--accent)', lineHeight:'1', marginBottom:'8px'}}>$97</div>
-              <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'28px'}}>Written Response</div>
+              <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'28px'}}>Up to 3 questions · written reply within 5 business days</div>
               <a href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Submit Your Questions →</a>
             </div>
           </div>
@@ -351,7 +351,7 @@ export default function WorkWithMePage() {
             {[
               {
                 name: 'Digital Nomad Pathway',
-                price: '$697',
+                price: '$897',
                 duration: '6-month access',
                 description: 'For location-independent earners ready to make the move official — building the legal and logistical foundation to live and work abroad sustainably.',
                 link: 'https://www.paypal.com/ncp/payment/BRD4QKEHJHGZ2',
@@ -400,6 +400,12 @@ export default function WorkWithMePage() {
                 <a href={tier.link} className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Start the {tier.name.split(' ')[0]} Pathway →</a>
               </div>
             ))}
+          </div>
+
+          <div style={{marginTop:'40px', background:'rgba(255,255,255,0.08)', border:'1px solid rgba(255,255,255,0.2)', borderRadius:'12px', padding:'28px', maxWidth:'760px'}}>
+            <h3 style={{color:'var(--white)', marginBottom:'12px'}}>Optional dashboard renewal</h3>
+            <p style={{color:'rgba(255,255,255,0.8)', fontSize:'15px', lineHeight:'1.6', marginBottom:'12px'}}>Each pathway includes dashboard access for the period shown above. When that period ends, renewal is optional and never required. Renewal pricing: Digital Nomad $197, Solo $247, Family $347, Entrepreneur $397, Legacy $497, Investor $597.</p>
+            <p style={{color:'rgba(255,255,255,0.6)', fontSize:'13px', lineHeight:'1.6', margin:0}}>All prices are in USD, one-time purchases, processed through PayPal. All sales are final and non-refundable. By purchasing, you acknowledge and agree to this policy. ROS™ provides educational and planning support and is not legal, immigration, tax, investment, or financial advice.</p>
           </div>
 
           <p style={{color:'rgba(255,255,255,0.5)', fontSize:'14px', marginTop:'32px'}}>Not sure which pathway fits? Book a free Discovery Call — we'll tell you honestly which tier applies to your situation.</p>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Digital Nomad Pathway — $697',
+  title: 'Digital Nomad Pathway — $897',
   description: 'ROS™ Digital Nomad Pathway — 6 months of full-system access for U.S. remote workers relocating abroad, covering nomad visas, FBAR, banking, healthcare, and long-term residency strategy.',
   alternates: { canonical: 'https://globalsystemsstudio.com/services/ros-digital-nomad-pathway/' },
 };
@@ -21,11 +21,11 @@ export default function DigitalNomadPathwayPage() {
     <>
       <section className="page-hero">
         <div className="container">
-          <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>ROS™ Pathway · $697 · 6-Month Access</p>
+          <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>ROS™ Pathway · $897 · 6-Month Access</p>
           <h1>Digital Nomad Pathway</h1>
           <p>You work remotely and want the freedom to live anywhere — legally, financially smart, and without losing your mind in the process. ROS™ built this pathway for exactly that.</p>
           <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-            <Link href="/work-with-me" className="btn btn-gold">Get the Digital Nomad Pathway — $697 →</Link>
+            <Link href="/work-with-me" className="btn btn-gold">Get the Digital Nomad Pathway — $897 →</Link>
             <Link href="/services/discovery-call" className="btn btn-outline">Book a Free Call First →</Link>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function DigitalNomadPathwayPage() {
           <div style={{maxWidth:'760px', marginTop:'16px'}}>
             <p style={{color:'var(--text-light)'}}>Not sure this is the right tier? The <Link href="/services/discovery-call">free discovery call</Link> takes 15 minutes and will tell you exactly where to start.</p>
             <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-              <Link href="/work-with-me" className="btn btn-gold">Get the Digital Nomad Pathway — $697 →</Link>
+              <Link href="/work-with-me" className="btn btn-gold">Get the Digital Nomad Pathway — $897 →</Link>
               <Link href="/services" className="btn btn-outline">Compare All Tiers →</Link>
             </div>
           </div>
