@@ -6,6 +6,7 @@
 const GROUPS = {
   quiz: '197364302014842463',       // "Quiz Completed"
   calculator: '197364304761063011', // "Calculator Used"
+  guide: '201234817198589521',      // "Free Guide"
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
