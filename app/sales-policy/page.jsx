@@ -36,7 +36,7 @@ export default function SalesPolicyPage() {
           <h2 style={{marginTop:'40px'}}>Questions about a purchase</h2>
           <p>Questions or concerns about a purchase? Contact us first at <a href="mailto:globalsystemsstudio@gmail.com">globalsystemsstudio@gmail.com</a> and we'll respond within 2 business days.</p>
 
-          <p style={{marginTop:'40px', color:'var(--text-light)'}}>Operated by CC Transaction Services, LLC d/b/a Global Systems Studio.</p>
+          <p style={{marginTop:'40px', color:'var(--text-light)'}}>Operated by CC Transaction Service LLC d/b/a Global Systems Studio.</p>
         </div>
       </section>
     </>

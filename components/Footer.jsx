@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-brand">
               <span className="footer-logo-text">Global Systems Studio</span>
-              <p>CC Transaction Services, LLC</p>
+              <p>CC Transaction Service LLC</p>
               <p style={{marginTop:'12px', fontSize:'13px', color:'rgba(255,255,255,0.4)', lineHeight:'1.6'}}>
                 Real questions. Real answers. Built from a real journey.
               </p>
