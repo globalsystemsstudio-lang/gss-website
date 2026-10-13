@@ -24,7 +24,7 @@ export default function WorkWithMePage() {
               <span className="section-tag">Start Here</span>
               <h2 style={{marginTop:'8px'}}>ROS™ Transition Clarity Session</h2>
               <div style={{fontSize:'48px', fontWeight:'700', color:'var(--accent)', lineHeight:'1', margin:'16px 0 8px'}}>$497</div>
-              <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'24px'}}>45-Minute 1:1 Video Call with the founder</div>
+              <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'24px'}}>45-Minute 1:1 Video Call with the founder · Personalized legal, financial and lifestyle relocation risk review</div>
               <a href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Book a Clarity Session →</a>
               <p style={{fontSize:'14px', color:'var(--text-light)', marginTop:'20px', marginBottom:0}}>Not ready to book? <a href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" target="_blank" rel="noopener noreferrer">Take the free 15-minute Discovery Call →</a></p>
             </div>

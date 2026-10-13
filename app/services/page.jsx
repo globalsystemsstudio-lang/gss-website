@@ -8,7 +8,7 @@ export const metadata = {
 
 const consultations = [
   { name: 'Free Discovery Call', price: 'FREE', access: '15-Minute Video Call', desc: "Not sure where to start? Let's talk first. No pitch, no pressure — just clarity on whether ROS™ fits your situation.", href: '/services/discovery-call' },
-  { name: 'Clarity Session', price: '$497', access: '45-Minute 1:1 Call', desc: 'Your situation. Your questions. Your next steps. Walk away with a clear, prioritized picture of what to do and in what order.', href: '/services/clarity-session' },
+  { name: 'Clarity Session', price: '$497', access: '45-Minute 1:1 Call', desc: 'A personalized legal, financial and lifestyle relocation risk review in a 45-minute 1:1 call. Walk away with a clear, prioritized picture of what to do and in what order.', href: '/services/clarity-session' },
   { name: 'Async Q&A', price: '$97', access: 'Written Q&A Response', desc: 'Submit up to three relocation questions. Get a thorough written response — no scheduling required.', href: '/services/async-qa' },
 ];
 

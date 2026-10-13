@@ -13,7 +13,7 @@ export default function ClaritySessionPage() {
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>1:1 Consultation · $497</p>
           <h1>Clarity Session</h1>
-          <p>45 minutes. Your situation. Your questions. Your next steps — in order. Walk away knowing exactly what to do and where to start.</p>
+          <p>A personalized legal, financial and lifestyle relocation risk review, in a 45-minute 1:1 call. Your situation. Your questions. Your next steps, in order. Walk away knowing exactly what to do and where to start.</p>
           <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
             <Link href="/work-with-me" className="btn btn-gold">Book Your Clarity Session →</Link>
             <Link href="/services/discovery-call" className="btn btn-outline">Start With a Free Call First →</Link>
@@ -25,7 +25,7 @@ export default function ClaritySessionPage() {
         <div className="container">
           <h2>What You Get</h2>
           <div style={{maxWidth:'760px', marginTop:'16px'}}>
-            <p style={{color:'var(--text-light)'}}>A Clarity Session is 45 minutes of focused, 1:1 time built around your specific relocation situation. We cover:</p>
+            <p style={{color:'var(--text-light)'}}>A Clarity Session is your relocation risk review: 45 minutes of focused, 1:1 time built around your specific situation, looking at the legal, financial and lifestyle risks in your plan. We cover:</p>
             <ul style={{marginTop:'24px', paddingLeft:'20px', display:'flex', flexDirection:'column', gap:'12px'}}>
               <li style={{color:'var(--text)', lineHeight:'1.6'}}>Your top 3–5 relocation questions — answered with real specifics, not general advice</li>
               <li style={{color:'var(--text)', lineHeight:'1.6'}}>A prioritized sequence of what to handle first, second, and third</li>
