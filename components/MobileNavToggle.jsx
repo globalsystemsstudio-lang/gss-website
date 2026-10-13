@@ -17,18 +17,22 @@ export default function MobileNavToggle() {
       </button>
       <div className={`mobile-menu${open ? ' open' : ''}`}>
         <ul>
-          <li><Link href="/what-is-ros" onClick={() => setOpen(false)}>What is ROS™</Link></li>
-          <li><Link href="/our-story" onClick={() => setOpen(false)}>Our Story</Link></li>
-          <li><Link href="/who-its-for" onClick={() => setOpen(false)}>Who It's For</Link></li>
-          <li><Link href="/why-you-need-this" onClick={() => setOpen(false)}>Why You Need This</Link></li>
-          <li><Link href="/tools" onClick={() => setOpen(false)}>Free Tools</Link></li>
-          <li><Link href="/work-with-me" onClick={() => setOpen(false)}>Work With Me</Link></li>
+          <li><Link href="/" onClick={() => setOpen(false)}>Home</Link></li>
+          <li><Link href="/what-is-ros" onClick={() => setOpen(false)}>The System</Link></li>
+          <li><Link href="/who-its-for" onClick={() => setOpen(false)}>Pathways</Link></li>
+          <li><Link href="/#episodes" onClick={() => setOpen(false)}>Episodes 🎬</Link></li>
+          <li><Link href="/#destinations" onClick={() => setOpen(false)}>Destinations 🌍</Link></li>
+          <li><Link href="/#decision-room" onClick={() => setOpen(false)}>Decision Room 🎲</Link></li>
           <li><Link href="/resources" onClick={() => setOpen(false)}>Resources</Link></li>
+          <li><Link href="/tools" onClick={() => setOpen(false)}>Free Tools</Link></li>
+          <li><Link href="/shop" onClick={() => setOpen(false)}>Guides &amp; Workbooks</Link></li>
+          <li><Link href="/work-with-me" onClick={() => setOpen(false)}>Work With Me</Link></li>
           <li><Link href="/blog" onClick={() => setOpen(false)}>Blog</Link></li>
+          <li><Link href="/podcast" onClick={() => setOpen(false)}>Podcast</Link></li>
           <li><Link href="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
         </ul>
-        <Link href="/work-with-me" className="mobile-cta" onClick={() => setOpen(false)}>
-          Book a Call
+        <Link href="/shop/new-roots/" className="mobile-cta" onClick={() => setOpen(false)}>
+          Start Here
         </Link>
       </div>
     </>
