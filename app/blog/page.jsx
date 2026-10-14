@@ -309,6 +309,24 @@ export default function BlogPage() {
               <p>The Dominican Republic, Belize, the Bahamas and Barbados compared for American retirees by residence route, healthcare, tax and hurricane planning.</p>
               <span className="blog-card-link">Read →</span>
             </Link>
+            <Link href="/blog/best-international-health-insurance-plans-us-expats-2026" className="blog-card">
+              <span className="blog-card-tag">Healthcare Abroad</span>
+              <h3>Best international health insurance plans for US expats 2026</h3>
+              <p>Five plan types compared for American expats: international private medical, ex-US worldwide, local private, local public and employer plans, and what each leaves out.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/best-us-expat-tax-preparation-services-2026" className="blog-card">
+              <span className="blog-card-tag">Expat Taxes</span>
+              <h3>Best US expat tax preparation services in 2026</h3>
+              <p>Five types of expat tax help compared for Americans abroad: specialist firms, independent CPAs and enrolled agents, expat software, general preparers and tax attorneys.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
+            <Link href="/blog/best-banks-us-expats-opening-foreign-account-2026" className="blog-card">
+              <span className="blog-card-tag">Banking Abroad</span>
+              <h3>Best banks for US expats opening a foreign account in 2026</h3>
+              <p>Four account types compared for Americans moving abroad: a US account that travels, a global bank with expat tiers, a local bank and a multi-currency account.</p>
+              <span className="blog-card-link">Read →</span>
+            </Link>
           </div>
         </div>
       </section>
