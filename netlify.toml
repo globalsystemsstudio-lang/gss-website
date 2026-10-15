@@ -31,3 +31,101 @@
   to = "/"
   status = 301
   force = true
+
+# Old blog posts to closest live page (Search Console 404s, Oct 14 2026)
+[[redirects]]
+  from = "/blog/panama-relocation-guide/"
+  to = "/resources/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/panama-pensionado-legal-entity/"
+  to = "/resources/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/belize-relocation-guide/"
+  to = "/blog/belize-full-financial-picture-before-you-land/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/costa-rica-residency-pathways/"
+  to = "/blog/costa-rica-first-200-meters-beachfront/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/digital-nomads-permanent-move-abroad/"
+  to = "/services/ros-digital-nomad-pathway/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/structured-framework-family-relocation/"
+  to = "/services/ros-family-edition-pathway/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/cost-to-hire-a-relocation-consultant/"
+  to = "/blog/how-international-relocation-consultancy-works/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/best-relocation-consultant-for-americans-moving-abroad/"
+  to = "/international-relocation-consultancy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/company-coach-step-by-step-relocation-plan/"
+  to = "/blog/four-layers-governed-international-relocation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-to-plan-an-international-move-step-by-step/"
+  to = "/blog/four-layers-governed-international-relocation/"
+  status = 301
+  force = true
+
+# Old site structure
+[[redirects]]
+  from = "/about"
+  to = "/our-story/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ros-legacy"
+  to = "/services/ros-legacy-pathway/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dispatch/belize-qrp"
+  to = "/blog/belize-full-financial-picture-before-you-land/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/destinations/verify/costa-rica"
+  to = "/blog/costa-rica-first-200-meters-beachfront/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/destinations/verify/*"
+  to = "/resources/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/destinations"
+  to = "/resources/"
+  status = 301
+  force = true
