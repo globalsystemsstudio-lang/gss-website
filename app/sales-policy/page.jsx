@@ -29,7 +29,7 @@ export default function SalesPolicyPage() {
           <p>Renewals are optional. Each renewal adds 6 months of access at the price of your tier: $197, $247, $347, $397, $497, or $597. Renewals never auto-charge. Each one is a separate one-time PayPal purchase, and we'll send an email reminder before your access ends.</p>
 
           <h2 style={{marginTop:'40px'}}>Clarity Session</h2>
-          <p>Please give us 24 hours' notice to reschedule. If you miss your session without letting us know in advance, the session counts as used and the sale stays final. We may refund half of the session fee.</p>
+          <p>Please give us 24 hours' notice to reschedule. If you miss your session without letting us know in advance, the session counts as used and the sale stays final. We will refund half of the session fee.</p>
 
           <h2 style={{marginTop:'40px'}}>Async Q&amp;A</h2>
           <p>Send up to 3 questions. You will get a written reply within 5 business days. Questions outside our scope are redirected to a licensed professional.</p>
