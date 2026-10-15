@@ -42,7 +42,16 @@ export default function PrivacyPolicyPage() {
           </ul>
 
           <h2 style={{marginTop:'40px'}}>Who we share it with</h2>
-          <p>We do not sell your personal information. We share it only with service providers that help us run the business, and only what they need: payment processing (PayPal), website hosting, email delivery, scheduling, analytics (Google Analytics) and page translation (Google Translate). We may also disclose information if the law requires it or to protect our rights.</p>
+          <p>We do not sell your personal information. We share it only with service providers that help us run the business, and only what they need:</p>
+          <ul>
+            <li>PayPal, for payments</li>
+            <li>Netlify, for website hosting</li>
+            <li>Google Gmail, for email we send and receive</li>
+            <li>Google Calendar, for booking and running Discovery Calls and Clarity Sessions</li>
+            <li>Google Analytics, for understanding site traffic</li>
+            <li>Google Translate, for page translation</li>
+          </ul>
+          <p>We may also disclose information if the law requires it or to protect our rights.</p>
 
           <h2 style={{marginTop:'40px'}}>Cookies and analytics</h2>
           <p>We use cookies and similar tools to measure traffic and understand which pages help people. You can block or delete cookies in your browser settings, and you can opt out of Google Analytics with Google&apos;s browser add-on. Blocking cookies may affect some features.</p>
@@ -70,7 +79,7 @@ export default function PrivacyPolicyPage() {
 
           <p style={{marginTop:'40px'}}>See also our <Link href="/terms-of-use">Terms of Use</Link>, <Link href="/disclaimer">Disclaimer</Link> and <Link href="/refund-policy">Refund &amp; Sales Policy</Link>.</p>
 
-          <p style={{marginTop:'40px', color:'var(--text-light)'}}>CC Transaction Service LLC d/b/a Global Systems Studio<br />Last updated: October 14, 2026</p>
+          <p style={{marginTop:'40px', color:'var(--text-light)'}}>CC Transaction Service LLC d/b/a Global Systems Studio<br />Last updated: October 15, 2026</p>
         </div>
       </section>
     </>
