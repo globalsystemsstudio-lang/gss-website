@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-brand">
               <span className="footer-logo-text">Global Systems Studio</span>
-              <p>CC Transaction Service LLC</p>
+              <p>CC Transaction Service LLC d/b/a Global Systems Studio</p>
               <p style={{marginTop:'12px', fontSize:'13px', color:'rgba(255,255,255,0.4)', lineHeight:'1.6'}}>
                 Real questions. Real answers. Built from a real journey.
               </p>
@@ -24,7 +24,6 @@ export default function Footer() {
                 <li><Link href="/shop">Guides &amp; Workbooks</Link></li>
                 <li><Link href="/tools">Free Tools</Link></li>
                 <li><Link href="/contact">Contact</Link></li>
-                <li><Link href="/sales-policy">Sales Policy</Link></li>
               </ul>
             </div>
             <div className="footer-col">
@@ -36,7 +35,20 @@ export default function Footer() {
                 <li><Link href="/international-relocation-consultancy">Choosing a Consultancy</Link></li>
               </ul>
             </div>
+            <div className="footer-col">
+              <h4>Legal</h4>
+              <ul>
+                <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                <li><Link href="/terms-of-use">Terms of Use</Link></li>
+                <li><Link href="/refund-policy">Refund &amp; Sales Policy</Link></li>
+                <li><Link href="/sales-policy">Sales Policy</Link></li>
+                <li><Link href="/disclaimer">Disclaimer</Link></li>
+              </ul>
+            </div>
           </div>
+          <p style={{marginTop:'32px', fontSize:'13px', color:'rgba(255,255,255,0.5)', lineHeight:'1.6', maxWidth:'900px'}}>
+            <em>Disclaimer: I am not an international tax advisor or an international attorney. Always consult a licensed professional who specializes in your destination country before making any financial or legal decisions.</em>
+          </p>
         </div>
       </div>
       <div className="footer-bottom">

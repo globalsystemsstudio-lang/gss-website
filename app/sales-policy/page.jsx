@@ -12,7 +12,8 @@ export default function SalesPolicyPage() {
       <section className="page-hero">
         <div className="container">
           <h1>Sales Policy</h1>
-          <p>All sales are final. We don't offer refunds. Before you buy, you can try these for free: the <Link href="/relocation-readiness-quiz">Readiness Quiz</Link>, the <Link href="/shop/five-questions">Five Questions guide</Link>, and a free <Link href="/services/discovery-call">Discovery Call</Link>.</p>
+          <p>All sales are final. We don't offer refunds, with one small exception for missed Clarity Sessions. Before you buy, you can try these for free: the <Link href="/relocation-readiness-quiz">Readiness Quiz</Link>, the <Link href="/shop/five-questions">Five Questions guide</Link>, and a free <Link href="/services/discovery-call">Discovery Call</Link>.</p>
+          <p>This page is a short summary. The full policy is on our <Link href="/refund-policy">Refund &amp; Sales Policy</Link> page.</p>
         </div>
       </section>
 
@@ -28,10 +29,10 @@ export default function SalesPolicyPage() {
           <p>Renewals are optional. Each renewal adds 6 months of access at the price of your tier: $197, $247, $347, $397, $497, or $597. Renewals never auto-charge. Each one is a separate one-time PayPal purchase, and we'll send an email reminder before your access ends.</p>
 
           <h2 style={{marginTop:'40px'}}>Clarity Session</h2>
-          <p>Please give us 24 hours' notice to reschedule. If an emergency comes up, contact us and we'll work with you. A missed session with no contact is not refunded.</p>
+          <p>Please give us 24 hours' notice to reschedule. If you miss your session without letting us know in advance, the session counts as used and the sale stays final. We will refund half of the session fee.</p>
 
           <h2 style={{marginTop:'40px'}}>Async Q&amp;A</h2>
-          <p>We reply within 48 business hours. Questions outside our scope are redirected to a licensed professional.</p>
+          <p>Send up to 3 questions. You will get a written reply within 5 business days. Questions outside our scope are redirected to a licensed professional.</p>
 
           <h2 style={{marginTop:'40px'}}>Questions about a purchase</h2>
           <p>Questions or concerns about a purchase? Contact us first at <a href="mailto:globalsystemsstudio@gmail.com">globalsystemsstudio@gmail.com</a> and we'll respond within 2 business days.</p>
