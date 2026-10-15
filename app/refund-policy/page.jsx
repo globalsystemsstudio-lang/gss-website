@@ -55,7 +55,7 @@ export default function RefundPolicyPage() {
           <p>When your access ends, you can still export your dashboard data. Files you have already downloaded are yours to keep.</p>
 
           <h2 style={{marginTop:'40px'}}>Clarity Session</h2>
-          <p>The Clarity Session is a 45-minute one on one call. If you need to move it, tell us at least 24 hours before your session and we will reschedule it. If you miss your session without letting us know in advance, the session counts as used and the sale stays final. We may refund half of the session fee.</p>
+          <p>The Clarity Session is a 45-minute one on one call. If you need to move it, tell us at least 24 hours before your session and we will reschedule it. If you miss your session without letting us know in advance, the session counts as used and the sale stays final. We will refund half of the session fee.</p>
 
           <h2 style={{marginTop:'40px'}}>Async Q&amp;A</h2>
           <p>Send up to 3 questions. You will get a written reply within 5 business days.</p>
@@ -69,7 +69,7 @@ export default function RefundPolicyPage() {
           <h2 style={{marginTop:'40px'}}>Questions</h2>
           <p>Email <a href="mailto:globalsystemsstudio@gmail.com">globalsystemsstudio@gmail.com</a> and we will respond within 2 business days.</p>
 
-          <p style={{marginTop:'40px', color:'var(--text-light)'}}>CC Transaction Service LLC d/b/a Global Systems Studio<br />Last updated: October 14, 2026</p>
+          <p style={{marginTop:'40px', color:'var(--text-light)'}}>CC Transaction Service LLC d/b/a Global Systems Studio<br />Last updated: October 15, 2026</p>
         </div>
       </section>
     </>
