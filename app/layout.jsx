@@ -8,7 +8,7 @@ import BookingTracker from '../components/BookingTracker';
 export const metadata = {
   metadataBase: new URL('https://globalsystemsstudio.com'),
   title: {
-    default: 'Global Systems Studio | ROS™ — Relocation Operating System',
+    default: 'Global Systems Studio | Relocation Operating System (ROS™) for Americans Moving Abroad',
     template: '%s | Global Systems Studio',
   },
   description: 'The step-by-step infrastructure for U.S. persons relocating internationally. Seven modules. Six tiers. Real answers.',
@@ -22,13 +22,48 @@ export const metadata = {
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': 'https://globalsystemsstudio.com/#organization',
+  name: 'Global Systems Studio',
+  legalName: 'CC Transaction Service LLC',
+  alternateName: ['GSS', 'Relocation Operating System', 'ROS'],
+  url: 'https://globalsystemsstudio.com',
+  logo: 'https://globalsystemsstudio.com/founder.jpg',
+  description: 'Global Systems Studio is the home of the Relocation Operating System (ROS), step-by-step infrastructure for U.S. persons relocating internationally. It covers visas and residency, taxes, banking, healthcare and housing abroad.',
+  foundingDate: '2024-07',
+  email: 'globalsystemsstudio@gmail.com',
+  telephone: '+1-855-807-3253',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '227 W 4th St, Ste 3078',
+    addressLocality: 'Charlotte',
+    addressRegion: 'NC',
+    postalCode: '28202',
+    addressCountry: 'US',
+  },
+  areaServed: 'Worldwide',
+  audience: { '@type': 'Audience', audienceType: 'U.S. citizens and residents relocating internationally' },
+  knowsAbout: ['International relocation planning for Americans', 'Expat taxes', 'Residency and visa pathways', 'Expat banking', 'Healthcare abroad', 'Retiring abroad'],
+  founder: { '@id': 'https://globalsystemsstudio.com/#founder' },
+};
+
+const founderJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://globalsystemsstudio.com/#founder',
+  name: 'Charlene L. M. Cupidore Bynoe',
+  alternateName: 'Charchar',
+  jobTitle: 'Founder, Global Systems Studio',
+  url: 'https://globalsystemsstudio.com/our-story/',
+  worksFor: { '@id': 'https://globalsystemsstudio.com/#organization' },
+  description: 'Creator of the Relocation Operating System (ROS) and host of the podcast Beyond Borders: The Global Move.',
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
   name: 'Global Systems Studio',
   url: 'https://globalsystemsstudio.com',
-  description: 'Global Systems Studio is the home of ROS (Relocation Operating System), step-by-step infrastructure for U.S. persons relocating internationally.',
-  founder: {
-    '@type': 'Person',
-    name: 'Charlene L. M. Cupidore Bynoe',
-  },
+  publisher: { '@id': 'https://globalsystemsstudio.com/#organization' },
 };
 
 export default function RootLayout({ children }) {
@@ -41,6 +76,14 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(founderJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         {/* Google Translate styles override — hide the ugly top bar */}
         <style dangerouslySetInnerHTML={{__html:`
