@@ -34,7 +34,7 @@ export default function DominicanRepublicPage() {
               <p>The Dominican Republic operates on a territorial tax system.</p>
               <p>That means foreign-sourced income, money earned outside the DR, is not subject to Dominican income tax. For American expats who earn remotely, run a business from abroad, or have investment income from US accounts, this is a significant structural advantage.</p>
               <p>One important caveat: US citizens are still subject to US taxation on worldwide income regardless of where they live. The DR&#39;s territorial system doesn&#39;t eliminate your US tax obligation. It eliminates the Dominican layer on top of it. For high earners or those with complex income structures, that distinction still matters significantly, especially when combined with the Foreign Earned Income Exclusion (FEIE) or Foreign Tax Credit strategies.</p>
-              <p>If you&#39;re comparing this to Panama&#39;s approach, both operate territorial systems, but the DR&#39;s residency threshold is meaningfully more accessible for most income profiles. See our <a href="/blog/panama-relocation-guide/">Panama Relocation Guide</a> for a direct comparison.</p>
+              <p>If you are comparing the Dominican Republic with Panama, confirm each country's current residency requirements and treatment of your specific income with licensed local professionals. Start with our <a href="/visa-residency-pathways/">visa and residency pathways</a> to organize the questions for that review.</p>
               <p><em>Note: Tax law changes. This reflects the current structure as of July 2026. Verify with a licensed cross-border tax advisor before making any decisions based on this.</em></p>
 
               <h2>Residency Pathways</h2>

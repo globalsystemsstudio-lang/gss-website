@@ -37,7 +37,7 @@ export default function InvestorTierPage() {
               <h2>Why Panama keeps coming up</h2>
               <p>I&#39;ll be honest, this article is partly inspired by a conversation I&#39;ve been having this week. Panama is one of those places that shows up again and again for people on the Investor path, and for good reason. It has long-standing residency routes built around investment, a territorial tax approach that rewards how a lot of global earners actually structure their income, and a real estate and business environment that&#39;s genuinely open to foreigners rather than just tolerating them.</p>
               <p>But, and this is the whole point of the tier, none of that is automatic. The difference between Panama being a smart move and an expensive mistake usually comes down to the people advising you on the residency, the legal setup, the tax position, and the property itself. The country is the easy part. The execution is where it&#39;s won or lost.</p>
-              <p>For a closer look at the country itself, see our <a href="/blog/panama-relocation-guide/">Panama relocation guide</a>.</p>
+              <p>Before comparing countries, review the <a href="/visa-residency-pathways/">visa and residency pathways</a> and confirm your eligibility with a licensed professional in your destination.</p>
 
               <h2>The mindset shift</h2>
               <p>If there&#39;s one thing I&#39;d want someone on this path to take away, it&#39;s this: stop thinking of relocation as a destination and start thinking of it as a position. A position is something you take deliberately, with a reason, knowing what it gives you and what it costs you. You can hold it, adjust it, or exit it.</p>

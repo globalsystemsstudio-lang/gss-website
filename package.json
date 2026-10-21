@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prebuild": "node scripts/generate-sitemap.mjs"
+    "prebuild": "node scripts/generate-sitemap.mjs",
+    "postbuild": "node scripts/generate-ai-index.mjs"
   },
   "dependencies": {
     "next": "14.2.29",
