@@ -23,16 +23,18 @@ const pathwayWorkbooks = [
   { emoji: '📊', price: '$97', pathway: 'Investor Pathway', name: 'Investor Relocation Due-Diligence Workbook', desc: "A qualifying investment and a good investment are not the same thing. This workbook makes sure you're not confusing them. Covers ownership structure, tax, reporting, estate, and conflict-of-interest checks.", note: 'Workbook PDF — Investor Pathway', cta: 'Buy the Workbook →', href: 'https://www.paypal.com/ncp/payment/UKQ96QCDSH5F4', footnote: 'Next step: Investor Toolkit' },
 ];
 
+function productId(p) { return p.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+
 function ProductCard({ p }) {
   return (
-    <div style={{background:'var(--white)', border:'1px solid var(--border)', borderRadius:'12px', padding:'28px', display:'flex', flexDirection:'column'}}>
+    <div id={productId(p)} style={{scrollMarginTop:100, background:'var(--white)', border:'1px solid var(--border)', borderRadius:'12px', padding:'28px', display:'flex', flexDirection:'column'}}>
       <div style={{fontSize:'32px', marginBottom:'12px'}}>{p.emoji}</div>
       <div style={{color:'var(--accent)', fontWeight:'700', marginBottom:'4px'}}>{p.price}</div>
       {p.pathway && <div style={{fontSize:'13px', color:'var(--text-light)', textTransform:'uppercase', letterSpacing:'0.05em', marginBottom:'4px'}}>{p.pathway}</div>}
       <h3 style={{color:'var(--primary)', marginBottom:'12px'}}>{p.name}</h3>
       <p style={{color:'var(--text-light)', fontSize:'14px', flex:1, marginBottom:'12px'}}>{p.desc}</p>
       <p style={{fontSize:'12px', color:'var(--text-light)', fontStyle:'italic', marginBottom:'16px'}}>{p.note}</p>
-      {p.external ? (
+      {p.href.startsWith('https://') ? (
         <a href={p.href} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{textAlign:'center', display:'block'}}>{p.cta}</a>
       ) : (
         <Link href={p.href} className="btn btn-gold">{p.cta}</Link>
@@ -46,6 +48,17 @@ function ProductCard({ p }) {
 export default function ShopIndexPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'ItemList', name: 'Relocation guides and planners',
+        itemListElement: [...foundation, ...pathwayWorkbooks].map((p, i) => ({
+          '@type': 'ListItem', position: i + 1, item: {
+            '@type': 'Product', name: p.name, description: p.desc,
+            url: `https://globalsystemsstudio.com/shop/#${productId(p)}`,
+            brand: { '@type': 'Brand', name: 'Global Systems Studio' },
+            offers: { '@type': 'Offer', priceCurrency: 'USD', price: p.price === 'Free' ? '0' : p.price.replace('$', ''), url: p.href.startsWith('https://') ? p.href : `https://globalsystemsstudio.com${p.href}/` }
+          }
+        }))
+      }) }} />
       <section className="page-hero">
         <div className="container">
           <h1>Guides & Planners</h1>

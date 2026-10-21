@@ -2,18 +2,18 @@ import Link from 'next/link';
 import RelocationReadinessQuiz from '../components/RelocationReadinessQuiz';
 
 export const metadata = {
-  title: 'Global Systems Studio | ROS™: Relocation Operating System',
-  description: 'The step-by-step infrastructure for U.S. persons relocating internationally. Seven modules. Six tiers. Real answers.',
+  title: { absolute: 'Relocation Planning for Americans Moving Abroad | Global Systems Studio' },
+  description: 'Plan your move abroad with ROS™. Explore relocation guides from $19, six pathways for your situation, free planning tools, and personal guidance.',
   alternates: { canonical: 'https://globalsystemsstudio.com/' },
 };
 
 const PATHWAYS = [
-  { icon: '🌐', title: 'The Digital Nomad', desc: 'You work remotely and want the freedom to live anywhere, legally, financially smart, and without losing your mind in the process.', href: '/who-its-for' },
-  { icon: '🧳', title: 'The Solo Relocator', desc: "You're making this move on your own, by choice or by circumstance, and you're determined to get it right.", href: '/who-its-for' },
-  { icon: '👨‍👩‍👧', title: 'The Family', desc: "You're moving with people who depend on you and getting it wrong isn't an option.", href: '/who-its-for' },
-  { icon: '💼', title: 'The Entrepreneur', desc: 'You own a business or are building something new in a foreign market and need your legal and financial structure to work across borders.', href: '/who-its-for' },
-  { icon: '🏡', title: 'The Legacy Mover', desc: "You've worked your whole life for this. Now you want to spend your next chapter somewhere that gives you more, on a budget that actually works.", href: '/who-its-for' },
-  { icon: '📈', title: 'The Investor', desc: "You're moving capital, not just yourself, and you need the legal and financial infrastructure to do it right in a new country.", href: '/who-its-for' },
+  { icon: '🌐', title: 'The Digital Nomad', desc: 'You work remotely and want the freedom to live anywhere, legally, financially smart, and without losing your mind in the process.', href: '/services/ros-digital-nomad-pathway/' },
+  { icon: '🧳', title: 'The Solo Relocator', desc: "You're making this move on your own, by choice or by circumstance, and you're determined to get it right.", href: '/services/ros-solo-pathway/' },
+  { icon: '👨‍👩‍👧', title: 'The Family', desc: "You're moving with people who depend on you and getting it wrong isn't an option.", href: '/services/ros-family-edition-pathway/' },
+  { icon: '💼', title: 'The Entrepreneur', desc: 'You own a business or are building something new in a foreign market and need your legal and financial structure to work across borders.', href: '/services/ros-entrepreneur-pathway/' },
+  { icon: '🏡', title: 'The Legacy Mover', desc: "You've worked your whole life for this. Now you want to spend your next chapter somewhere that gives you more, on a budget that actually works.", href: '/services/ros-legacy-pathway/' },
+  { icon: '📈', title: 'The Investor', desc: "You're moving capital, not just yourself, and you need the legal and financial infrastructure to do it right in a new country.", href: '/services/ros-investor-pathway/' },
 ];
 
 const MODULES = [
@@ -50,11 +50,11 @@ export default function HomePage() {
         <div className="container">
           <h1>A Plane Ticket Is Not a Relocation Plan.</h1>
           <p className="answer-capsule">
-            You've made the decision. Now comes the part nobody warns you about: the legal standing, the financial structure, the thousand small questions that don't have a Google answer. ROS™ is the step-by-step infrastructure built for people who are serious about moving internationally and need real answers, not a highlight reel.
+            Global Systems Studio helps U.S. citizens and residents plan a move abroad with the Relocation Operating System™ (ROS™). Organize your residency, finances, healthcare, housing, income, and family decisions in sequence. Start with a digital guide or choose a pathway built for your situation.
           </p>
           <div className="hero-ctas">
             <Link href="/shop/new-roots/" className="btn btn-gold">Get New Roots: $27 →</Link>
-            <Link href="#episodes" className="btn btn-outline-white">Watch the Trailer →</Link>
+            <Link href="/services/" className="btn btn-outline-white">Compare Pathways &amp; Prices →</Link>
           </div>
         </div>
       </section>
@@ -161,7 +161,7 @@ export default function HomePage() {
             <div style={{marginTop:'20px'}}>
               <Link href="/shop/new-roots/" className="btn btn-gold">Get New Roots: $27 →</Link>
             </div>
-            <p style={{fontSize:'14px', color:'var(--text-light)', marginTop:'12px', marginBottom:'0'}}>The full ROS™ system, in reading order. See what's missing before you talk to anyone.</p>
+            <p style={{fontSize:'14px', color:'var(--text-light)', marginTop:'12px', marginBottom:'0'}}>A foundational digital guide to help you decide what to organize first.</p>
             <div style={{marginTop:'20px'}}>
               <Link href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" className="blog-card-link" style={{fontSize:'14px'}}>Already know your gaps? Book a free Discovery Call →</Link>
             </div>
@@ -230,9 +230,9 @@ export default function HomePage() {
           <div className="pricing-grid-4" style={{marginTop:'48px'}}>
             {[
               { name: '🟢 Explore Free', price: 'FREE', access: 'Assessments, Tools, Episodes', desc: 'The free 15-minute Discovery Call, the readiness quiz above, the cost calculator, and every episode.', cta: 'Book Your Free Call', href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA' },
-              { name: '🟡 Build Your Plan', price: 'From $27', access: 'New Roots & ROS™ Pathways', desc: 'New Roots ($27) gets you the full system in reading order. Six ROS™ Pathways from $897 for guided, done-with-you support.', cta: 'Get New Roots', href: '/shop/new-roots/' },
+              { name: '🟡 Build Your Plan', price: 'From $27', access: 'New Roots & ROS™ Pathways', desc: 'New Roots ($27) gives you a foundation for organizing your move. Six ROS™ Pathways from $897 for guided, done-with-you support.', cta: 'Get New Roots', href: '/shop/new-roots/' },
               { name: '🔵 Get Personal Guidance', price: '$497', access: '45-Minute 1:1 Call', desc: 'Your situation, your questions, your next steps. Walk away with a clear picture of what to do and in what order.', cta: 'Book a Clarity Session', href: 'https://calendar.app.google/GqshRNZbP1LTvwKJ9' },
-              { name: '🟣 Go Deeper', price: 'From $47', access: 'Destination Intelligence & Books', desc: 'Across Streets & Seas ($47), the full Relocation Library ($64), and the destination research behind every recommendation.', cta: 'Explore the Library', href: '/shop/new-roots/' },
+              { name: '🟣 Go Deeper', price: 'From $47', access: 'Destination Intelligence & Books', desc: 'Across Streets & Seas ($47), the full Relocation Library ($64), and the destination research behind every recommendation.', cta: 'Explore the Library', href: '/shop/relocation-library/' },
             ].map((offer) => (
               <div key={offer.name} className="pricing-card">
                 <div className="pricing-tier-name">{offer.name}</div>
@@ -252,13 +252,13 @@ export default function HomePage() {
           <span className="section-tag">From the Blog</span>
           <h2>Real Questions. Real Answers. No Highlight Reel.</h2>
           <div className="blog-grid">
-            <Link href="/blog/financial-considerations-us-persons-relocating-internationally" className="blog-card">
+            <Link href="/blog/social-security-while-living-abroad/" className="blog-card">
               <span className="blog-card-tag">Financial Planning</span>
               <h3>What Nobody Told Me About Social Security and Moving Abroad</h3>
-              <p>The age. The 2036 problem. The decisions that have permanent consequences either way.</p>
+              <p>What to check about eligibility, reporting, and receiving benefits while living abroad.</p>
               <span className="blog-card-link">Read →</span>
             </Link>
-            <Link href="/blog/find-financial-planning-services-moving-abroad" className="blog-card">
+            <Link href="/blog/finding-work-after-60-foreign-country/" className="blog-card">
               <span className="blog-card-tag">Career &amp; Income</span>
               <h3>Finding Work After 60 in a Foreign Country: Where Do You Even Begin?</h3>
               <p>Credential transferability, legal parameters, and the question nobody in the relocation space is talking about.</p>

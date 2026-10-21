@@ -27,9 +27,7 @@ const organizationJsonLd = {
   legalName: 'CC Transaction Service LLC',
   alternateName: ['GSS', 'Relocation Operating System', 'ROS'],
   url: 'https://globalsystemsstudio.com',
-  logo: 'https://globalsystemsstudio.com/founder.jpg',
   description: 'Global Systems Studio is the home of the Relocation Operating System (ROS), step-by-step infrastructure for U.S. persons relocating internationally. It covers visas and residency, taxes, banking, healthcare and housing abroad.',
-  foundingDate: '2024-07',
   email: 'globalsystemsstudio@gmail.com',
   telephone: '+1-855-807-3253',
   address: {
@@ -55,7 +53,7 @@ const founderJsonLd = {
   jobTitle: 'Founder, Global Systems Studio',
   url: 'https://globalsystemsstudio.com/our-story/',
   worksFor: { '@id': 'https://globalsystemsstudio.com/#organization' },
-  description: 'Creator of the Relocation Operating System (ROS) and host of the podcast Beyond Borders: The Global Move.',
+  description: 'Creator of the Relocation Operating System (ROS), a planning framework for U.S. persons moving abroad.',
 };
 
 const websiteJsonLd = {

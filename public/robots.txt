@@ -1,4 +1,17 @@
+# Public information may be indexed; delivery pages are excluded.
 User-agent: *
+Allow: /
+Disallow: /access/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /access/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /access/
+
+User-agent: Claude-SearchBot
 Allow: /
 Disallow: /access/
 

@@ -15,8 +15,18 @@ export default function BookingTracker() {
     window.__gssBookingTracker = true;
 
     const onClick = (e) => {
-      const a = e.target instanceof Element ? e.target.closest('a[href*="calendar.app.google/"]') : null;
+      const a = e.target instanceof Element ? e.target.closest('a[href]') : null;
       if (!a) return;
+      const href = a.getAttribute('href') || '';
+      if (/^https:\/\/www\.paypal\.com\/ncp\/payment\/[A-Z0-9]+(?:[/?#]|$)/.test(href)) {
+        if (typeof window.gtag === 'function') window.gtag('event', 'checkout_click', {
+          checkout_id: href.split('/payment/')[1].split(/[/?#]/)[0],
+          page_path: window.location.pathname,
+          button_label: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80),
+          transport_type: 'beacon',
+        });
+        return; // Outbound checkout interest, never a confirmed purchase.
+      }
       const id = (a.getAttribute('href') || '').split('calendar.app.google/')[1]?.split(/[?#/]/)[0];
       const offer = CALENDARS[id];
       if (!offer || typeof window.gtag !== 'function') return;

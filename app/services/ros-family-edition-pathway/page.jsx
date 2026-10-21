@@ -10,15 +10,17 @@ export const metadata = {
 export default function FamilyEditionPathwayPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"Service\", \"name\": \"Family Edition Pathway\", \"description\": \"ROS\\u2122 Family Edition Pathway \\u2014 9 months of dual-access, full-system relocation guidance built for families, covering school enrollment, family visas, healthcare, housing, and estate planning across borders.\", \"url\": \"https://globalsystemsstudio.com/services/ros-family-edition-pathway/\", \"provider\": {\"@id\": \"https://globalsystemsstudio.com/#organization\"}, \"offers\": {\"@type\": \"Offer\", \"price\": \"1197\", \"priceCurrency\": \"USD\", \"url\": \"https://www.paypal.com/ncp/payment/3GC8BCWM3US32\"}}" }} />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>ROS™ Pathway · $1,197 · 9-Month Dual Access</p>
           <h1>Family Edition Pathway</h1>
           <p>You're moving with people who depend on you. Missing a school enrollment deadline, signing the wrong lease, or arriving on the wrong visa type isn't a setback — it's a crisis. ROS™ Family Edition is built around that weight.</p>
           <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-            <Link href="/work-with-me" className="btn btn-gold">Get the Family Edition Pathway — $1,197 →</Link>
+            <Link href="https://www.paypal.com/ncp/payment/3GC8BCWM3US32" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get the Family Edition Pathway — $1,197 →</Link>
             <Link href="/services/discovery-call" className="btn btn-outline">Book a Free Call First →</Link>
           </div>
+<p style={{marginTop:12, fontSize:14}}>One-time payment in USD. Dashboard access is included for the period shown; renewal is optional. Planning and educational support; consult licensed professionals for legal, tax, immigration, and investment decisions.</p>
 <SalesNotice />
         </div>
       </section>
@@ -60,7 +62,7 @@ export default function FamilyEditionPathwayPage() {
           <div style={{maxWidth:'760px', marginTop:'16px'}}>
             <p style={{color:'var(--text-light)'}}>Not sure this is the right tier? The <Link href="/services/discovery-call">free discovery call</Link> takes 15 minutes and will tell you exactly where to start.</p>
             <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-              <Link href="/work-with-me" className="btn btn-gold">Get the Family Edition Pathway — $1,197 →</Link>
+              <Link href="https://www.paypal.com/ncp/payment/3GC8BCWM3US32" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get the Family Edition Pathway — $1,197 →</Link>
               <Link href="/services" className="btn btn-outline">Compare All Tiers →</Link>
             </div>
 <SalesNotice />

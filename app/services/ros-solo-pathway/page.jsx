@@ -10,15 +10,17 @@ export const metadata = {
 export default function SoloPathwayPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"Service\", \"name\": \"Solo Relocator Pathway\", \"description\": \"ROS\\u2122 Solo Relocator Pathway \\u2014 6 months of full-system access built around moving internationally on your own, covering legal, financial, housing, healthcare, income, and community for solo relocators.\", \"url\": \"https://globalsystemsstudio.com/services/ros-solo-pathway/\", \"provider\": {\"@id\": \"https://globalsystemsstudio.com/#organization\"}, \"offers\": {\"@type\": \"Offer\", \"price\": \"897\", \"priceCurrency\": \"USD\", \"url\": \"https://www.paypal.com/ncp/payment/LZG74BNVGZXAW\"}}" }} />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>ROS™ Pathway · $897 · 6-Month Access</p>
           <h1>Solo Relocator Pathway</h1>
           <p>You're making this move on your own — by choice or by circumstance — and you're determined to get it right. ROS™ built this pathway around that reality.</p>
           <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-            <Link href="/work-with-me" className="btn btn-gold">Get the Solo Relocator Pathway — $897 →</Link>
+            <Link href="https://www.paypal.com/ncp/payment/LZG74BNVGZXAW" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get the Solo Relocator Pathway — $897 →</Link>
             <Link href="/services/discovery-call" className="btn btn-outline">Book a Free Call First →</Link>
           </div>
+<p style={{marginTop:12, fontSize:14}}>One-time payment in USD. Dashboard access is included for the period shown; renewal is optional. Planning and educational support; consult licensed professionals for legal, tax, immigration, and investment decisions.</p>
 <SalesNotice />
         </div>
       </section>
@@ -60,7 +62,7 @@ export default function SoloPathwayPage() {
           <div style={{maxWidth:'760px', marginTop:'16px'}}>
             <p style={{color:'var(--text-light)'}}>Not sure this is the right tier? The <Link href="/services/discovery-call">free discovery call</Link> takes 15 minutes and will tell you exactly where to start.</p>
             <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-              <Link href="/work-with-me" className="btn btn-gold">Get the Solo Relocator Pathway — $897 →</Link>
+              <Link href="https://www.paypal.com/ncp/payment/LZG74BNVGZXAW" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get the Solo Relocator Pathway — $897 →</Link>
               <Link href="/services" className="btn btn-outline">Compare All Tiers →</Link>
             </div>
 <SalesNotice />

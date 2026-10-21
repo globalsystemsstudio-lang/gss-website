@@ -10,15 +10,17 @@ export const metadata = {
 export default function EntrepreneurPathwayPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"Service\", \"name\": \"Entrepreneur Pathway\", \"description\": \"ROS\\u2122 Entrepreneur Pathway \\u2014 9 months of full-system access for business owners relocating abroad, covering business visas, cross-border entity setup, tax strategy, and international banking.\", \"url\": \"https://globalsystemsstudio.com/services/ros-entrepreneur-pathway/\", \"provider\": {\"@id\": \"https://globalsystemsstudio.com/#organization\"}, \"offers\": {\"@type\": \"Offer\", \"price\": \"1597\", \"priceCurrency\": \"USD\", \"url\": \"https://www.paypal.com/ncp/payment/P3AMQZ5F9Q7RG\"}}" }} />
       <section className="page-hero">
         <div className="container">
           <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>ROS™ Pathway · $1,597 · 9-Month Access</p>
           <h1>Entrepreneur Pathway</h1>
           <p>You own a business or you're building something new in a foreign market. The legal, tax, and operational structure that works in the U.S. doesn't automatically work across a border — and building it wrong has consequences that follow you for years.</p>
           <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-            <Link href="/work-with-me" className="btn btn-gold">Get the Entrepreneur Pathway — $1,597 →</Link>
+            <Link href="https://www.paypal.com/ncp/payment/P3AMQZ5F9Q7RG" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get the Entrepreneur Pathway — $1,597 →</Link>
             <Link href="/services/discovery-call" className="btn btn-outline">Book a Free Call First →</Link>
           </div>
+<p style={{marginTop:12, fontSize:14}}>One-time payment in USD. Dashboard access is included for the period shown; renewal is optional. Planning and educational support; consult licensed professionals for legal, tax, immigration, and investment decisions.</p>
 <SalesNotice />
         </div>
       </section>
@@ -60,7 +62,7 @@ export default function EntrepreneurPathwayPage() {
           <div style={{maxWidth:'760px', marginTop:'16px'}}>
             <p style={{color:'var(--text-light)'}}>Not sure this is the right tier? The <Link href="/services/discovery-call">free discovery call</Link> takes 15 minutes and will tell you exactly where to start.</p>
             <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-              <Link href="/work-with-me" className="btn btn-gold">Get the Entrepreneur Pathway — $1,597 →</Link>
+              <Link href="https://www.paypal.com/ncp/payment/P3AMQZ5F9Q7RG" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get the Entrepreneur Pathway — $1,597 →</Link>
               <Link href="/services" className="btn btn-outline">Compare All Tiers →</Link>
             </div>
 <SalesNotice />
