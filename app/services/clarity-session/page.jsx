@@ -16,7 +16,7 @@ export default function ClaritySessionPage() {
           <h1>Clarity Session</h1>
           <p>A personalized legal, financial and lifestyle relocation risk review, in a 45-minute 1:1 call. Your situation. Your questions. Your next steps, in order. Walk away knowing exactly what to do and where to start.</p>
           <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-            <Link href="/work-with-me" className="btn btn-gold">Book Your Clarity Session →</Link>
+            <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book Your Clarity Session →</Link>
             <Link href="/services/discovery-call" className="btn btn-outline">Start With a Free Call First →</Link>
           </div>
 <SalesNotice />
@@ -61,7 +61,7 @@ export default function ClaritySessionPage() {
             <p style={{color:'var(--text-light)'}}>Book your session using the link below. You'll receive a short intake form before the call so we can make the 45 minutes as focused as possible. The session runs on video. Within 48 hours you'll receive a written summary of the key points and next steps discussed.</p>
             <p style={{marginTop:'16px', color:'var(--text-light)'}}>Not ready for a paid session yet? Start with the <Link href="/services/discovery-call">free 15-minute discovery call</Link> first.</p>
             <div style={{marginTop:'24px'}}>
-              <Link href="/work-with-me" className="btn btn-gold">Book Your Clarity Session — $497 →</Link>
+              <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book Your Clarity Session — $497 →</Link>
             </div>
             <SalesNotice />
           </div>

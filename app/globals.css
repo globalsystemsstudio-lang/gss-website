@@ -1310,3 +1310,15 @@ section { padding: 80px 0; }
   transition: border-color 0.15s;
 }
 .tool-card-link:hover .tool-card { border-color: var(--primary); }
+
+/* Sales paths: stack detail panels and keep mobile menus within reach. */
+@media (max-width: 768px) {
+  .sales-detail-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 32px !important; }
+  .sales-detail-grid > * { min-width: 0; }
+  .mobile-menu { max-height: calc(100dvh - 68px); overflow-y: auto; }
+  .btn { line-height: 1.35; max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .quiz-panel { padding: 24px 18px !important; }
+  .quiz-section-grid { grid-template-columns: minmax(0, 1fr) !important; }
+}

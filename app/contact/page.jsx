@@ -18,7 +18,7 @@ export default function ContactPage() {
 
       <section style={{background:'var(--white)', padding:'80px 0'}}>
         <div className="container">
-          <div style={{display:'grid', gridTemplateColumns:'1fr 340px', gap:'64px', alignItems:'start'}}>
+          <div className="sales-detail-grid" style={{display:'grid', gridTemplateColumns:'1fr 340px', gap:'64px', alignItems:'start'}}>
 
             {/* FORM */}
             <div>
@@ -104,15 +104,11 @@ export default function ContactPage() {
                     <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" style={{fontSize:'14px', color:'var(--primary)', fontWeight:'600'}}>Book Now — $497 →</Link>
                   </div>
                   <div style={{borderTop:'1px solid var(--border)', paddingTop:'16px'}}>
-                    <strong style={{display:'block', color:'var(--primary)', marginBottom:'6px'}}>Get the ROS™ Book</strong>
-                    <p style={{fontSize:'14px', color:'var(--text-light)', margin:'0 0 10px'}}>If you want the full system in your hands before we talk — start here.</p>
-                    <Link href="/work-with-me" style={{fontSize:'14px', color:'var(--primary)', fontWeight:'600'}}>Get the Book — $47 →</Link>
+                    <strong style={{display:'block', color:'var(--primary)', marginBottom:'6px'}}>Get New Roots</strong>
+                    <p style={{fontSize:'14px', color:'var(--text-light)', margin:'0 0 10px'}}>Start with a foundational guide to organizing your move.</p>
+                    <Link href="/shop/new-roots/" style={{fontSize:'14px', color:'var(--primary)', fontWeight:'600'}}>Get New Roots — $27 →</Link>
                   </div>
-                  <div style={{borderTop:'1px solid var(--border)', paddingTop:'16px'}}>
-                    <strong style={{display:'block', color:'var(--primary)', marginBottom:'6px'}}>Join the Community</strong>
-                    <p style={{fontSize:'14px', color:'var(--text-light)', margin:'0 0 10px'}}>Ongoing support and a group of people navigating the same decisions alongside you.</p>
-                    <Link href="/work-with-me" style={{fontSize:'14px', color:'var(--primary)', fontWeight:'600'}}>Join — $97/month →</Link>
-                  </div>
+
                 </div>
               </div>
 

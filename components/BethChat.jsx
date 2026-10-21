@@ -12,161 +12,52 @@ const QUICK_REPLIES = [
 
 function getBethResponse(input) {
   const q = input.toLowerCase().trim();
-
-  // What is ROS
-  if (q.match(/what is ros|what('s| is) the ros|tell me about ros|explain ros/)) {
-    return {
-      text: "ROS™ stands for the **Relocation Operating System** — a structured, step-by-step infrastructure built for people who are serious about moving internationally.\n\nThink of what an operating system does for a computer — it runs everything. ROS™ does that for your relocation. Seven modules. Six tiers built around your life stage. Real answers to the questions that keep you up at night.\n\n👉 Legal, financial, housing, healthcare, business, family, and long-term stability — all in one organized system.",
-      link: { href: '/what-is-ros', label: 'Learn more about ROS™ →' },
-    };
-  }
-
-  // 7 modules
-  if (q.match(/7 module|seven module|modules?|what does ros cover|what('s| is) covered/)) {
-    return {
-      text: "ROS™ covers seven modules — the exact areas where international relocations fail:\n\n**01 Legal & Documentation** — visas, residency, apostilles, citizenship pathways\n**02 Financial Structure** — FBAR, cross-border banking, Social Security strategy, foreign taxes\n**03 Housing & Lifestyle** — finding a home, lease terms, sell vs. rent your U.S. property\n**04 Healthcare & Wellness** — insurance abroad, prescriptions, specialist access\n**05 Business & Income** — working remotely, local job search, opening a business abroad\n**06 Family & Social Integration** — school enrollment, cultural adjustment, community building\n**07 Long-Term Stability** — estate planning, re-entry options, retirement income across borders",
-      link: { href: '/what-is-ros', label: 'See all 7 modules in detail →' },
-    };
-  }
-
-  // Pricing / cost
-  if (q.match(/cost|price|how much|pricing|pay|afford|expensive/)) {
-    return {
-      text: "We have four ways to work with us — something for every stage:\n\n🆓 **Free 15-Min Discovery Call** — Not sure if ROS™ is right for you? Let's talk first, no obligation.\n\n📞 **Clarity Session — $497** — 45 minutes, your specific situation, real answers and a next-step plan.\n\n📖 **The ROS™ Book — $47** — The complete system in written form. Every module, every tier, at your own pace.\n\n💬 **The Departure Lounge — $97/month** — Our Discord community with monthly Q&A and ongoing support.",
-      link: { href: '/work-with-me', label: 'See all options →' },
-    };
-  }
-
-  // How to get started
-  if (q.match(/get started|start|begin|first step|where do i start|how do i/)) {
-    return {
-      text: "The best first step depends on where you are in your journey:\n\n**Just starting out?** Book a free 15-minute discovery call — we'll tell you exactly what makes sense for your situation.\n\n**Ready to dig in?** The ROS™ Book ($47) gives you the full system to work through at your own pace.\n\n**Need specific answers fast?** A Clarity Session ($497) is 45 minutes focused entirely on your situation.\n\n**Want ongoing community?** Join The Departure Lounge ($97/mo) for monthly Q&A and peer support.",
-      link: { href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA', label: 'Book a free call →', external: true },
-    };
-  }
-
-  // Is this right for me / who is it for
-  if (q.match(/right for me|is this for me|who is this for|who('s| is) it for|my situation|qualify|fit/)) {
-    return {
-      text: "ROS™ was built for anyone seriously planning an international relocation from the U.S. We have six tiers based on your life stage:\n\n🌍 **Solo Relocator** — Moving alone, building a new independent life abroad\n👨‍👩‍👧 **Relocating Family** — Managing a move with dependents, schools, and multiple schedules\n🏖️ **Nomad/Remote Worker** — Working remotely while living internationally\n🎯 **New Roots** — Returning to a birth country after years in the U.S.\n👵 **Legacy Relocator** — Retiring or semi-retiring abroad, 55+\n🏢 **Across Streets** — Dual-country living, maintaining ties in both places\n\nNot sure which one fits? The discovery call is the fastest way to figure it out.",
-      link: { href: '/who-its-for', label: 'Find your tier →' },
-    };
-  }
-
-  // Legal / documents / visa
-  if (q.match(/legal|visa|document|passport|apostille|residency|citizenship/)) {
-    return {
-      text: "Module 01 of ROS™ covers Legal & Documentation — the paperwork that makes your move legal and keeps it that way.\n\nThis includes: visas, residency permits, citizenship pathways, the difference between arriving legally and staying legally, document authentication (notary vs. apostille vs. embassy authentication), certified translation requirements, and what happens if you miss the residency conversion window.\n\nMost people discover these requirements at the moment they need to submit something. ROS™ maps every document, every step, and every timeline in advance.",
-      link: { href: '/what-is-ros', label: 'See the full Legal module →' },
-    };
-  }
-
-  // Finance / money / taxes / social security / FBAR
-  if (q.match(/financ|money|tax|social security|fbar|bank|invest|capital gain|currency|income/)) {
-    return {
-      text: "Module 02 of ROS™ covers Financial Structure — the money decisions that have permanent consequences.\n\nThis includes: cross-border banking, FBAR compliance for foreign accounts, capital gains timing when selling U.S. property, the Foreign Earned Income Exclusion, Social Security strategy (when to claim, how working abroad affects your benefit, and the 2036 funding projections), wire transfer compliance, and currency exchange tax implications.\n\n⚠️ Most domestic CPAs are not equipped to navigate this. ROS™ helps you ask the right questions and find the right professionals.",
-      link: { href: '/relocation-financial-planning', label: 'Learn about financial planning →' },
-    };
-  }
-
-  // Healthcare
-  if (q.match(/health|medical|doctor|insurance|prescription|medication|hospital|care/)) {
-    return {
-      text: "Module 04 of ROS™ covers Healthcare & Wellness — the questions that must be answered before you need the answers.\n\nThis covers: whether your U.S. insurance works abroad, whether your prescriptions are available in your destination country, what specialist care looks like (cardiologists, oncologists, neurologists), what a medical emergency costs without U.S. coverage, and how to evaluate healthcare quality in your destination.\n\nThis module is especially critical for anyone over 60, anyone with ongoing medical needs, or anyone moving with a family member who requires specialized care.",
-      link: { href: '/what-is-ros', label: 'See all 7 modules →' },
-    };
-  }
-
-  // Business / work / job / income
-  if (q.match(/business|work|job|income|employ|remote|freelanc|career|profession/)) {
-    return {
-      text: "Module 05 of ROS™ covers Business & Income — how you earn and keep earning across international borders.\n\nThis includes: working remotely for a U.S. employer while living abroad, finding local employment in your destination country, whether your professional credentials transfer, platforms to find international work (and which ones cost money before you can even apply), opening a business in a foreign country (legal registration, licensing, tax structure), and freelancing internationally.",
-      link: { href: '/what-is-ros', label: 'See the full Business module →' },
-    };
-  }
-
-  // Housing / home / rent / property
-  if (q.match(/hous|home|rent|apartment|property|sell|buy|mortgage|lease/)) {
-    return {
-      text: "Module 03 of ROS™ covers Housing & Lifestyle — finding and securing a home in a market you don't know yet.\n\nThis covers: rental pricing opacity abroad, lease terms in another language, deposit structures that work differently than U.S. tenant law, short-term vs. long-term rental rules, the premium landlords charge foreign renters, and the big question every relocator faces: **sell your home before you go, or rent it out and manage it from abroad?**",
-      link: { href: '/what-is-ros', label: 'See the full Housing module →' },
-    };
-  }
-
-  // Family / kids / school / community / connection
-  if (q.match(/family|kids?|children|school|community|friends|connect|lonely|miss|grief|emotion/)) {
-    return {
-      text: "Module 06 of ROS™ covers Family & Social Integration — the human dimensions of a move that numbers alone can't capture.\n\nThis includes: school enrollment timelines (which are nothing like what you know in the U.S.), cultural adjustment for children and adults, building community in a new place, the grief of leaving people you love, the daily reality of disconnection when your family network is thousands of miles away, and the relationship dynamics that shift when two people navigate an enormous change from different emotional angles.",
-      link: { href: '/what-is-ros', label: 'See all 7 modules →' },
-    };
-  }
-
-  // Long term / estate / retirement / re-entry
-  if (q.match(/long.?term|estate|retire|pension|re.?entry|return|beneficiar|will|trust/)) {
-    return {
-      text: "Module 07 of ROS™ covers Long-Term Stability — what sustainable life abroad looks like beyond year one.\n\nThis covers: estate planning across borders, beneficiary designations that work internationally, re-entry options if circumstances change and you need to return to the U.S., Social Security strategy for the long term, and retirement income planning when your cost of living is in one currency and your income is in another.",
-      link: { href: '/what-is-ros', label: 'See the full Long-Term module →' },
-    };
-  }
-
-  // The book
-  if (q.match(/book|across streets|written|download|read/)) {
-    return {
-      text: "The ROS™ Book is the complete system in written form — every module, every tier, every question organized so you can work through it at your own pace.\n\n📖 **Price: $47** (digital download)\n\nIt covers all seven modules and six tiers, and it's designed to be a working document — something you return to at each stage of your planning, not just read once.",
-      link: { href: '/work-with-me', label: 'Get the ROS™ Book →' },
-    };
-  }
-
-  // Clarity session / call / coaching
-  if (q.match(/clarity|session|call|consult|coach|appointment|1.?1|one.on.one/)) {
-    return {
-      text: "The Clarity Session is a 45-minute 1:1 call focused entirely on your specific situation.\n\n📞 **Price: $497**\n\nYou bring your questions — where you are, what you're trying to figure out, what's blocking you. We build a clear next-step plan around your actual circumstances. No generic advice. No scripts.\n\nIf you're not sure if it's the right fit, start with the free 15-minute discovery call first.",
-      link: { href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA', label: 'Book a free discovery call first →', external: true },
-    };
-  }
-
-  // Community / departure lounge / discord
-  if (q.match(/community|depart|lounge|discord|group|member|monthly|ongoing/)) {
-    return {
-      text: "The Departure Lounge is our private Discord community for people actively planning or navigating an international relocation.\n\n💬 **Price: $97/month**\n\nYou get ongoing peer support, a community of people navigating the same decisions alongside you, and monthly live Q&A with our team.\n\nIt's not just a forum — it's an ongoing resource for the questions that don't stop once you've started planning.",
-      link: { href: '/work-with-me', label: 'Join The Departure Lounge →' },
-    };
-  }
-
-  // Cost of living calculator
-  if (q.match(/cost.?of.?living|calculator|how much.*(live|cost|afford).*abroad|compare.*cost|living.*(cheap|expens|afford)/)) {
-    return {
-      text: "We have a free Cost of Living Calculator that shows you exactly how far your U.S. income goes in 90+ countries.\n\nEnter your monthly budget, pick a destination, and you'll see:\n\n💰 **Estimated monthly cost** in your destination\n📈 **Monthly surplus** (what's left over)\n🌍 **Purchasing power equivalent** (what that income feels like locally)\n📊 **Category breakdown** — housing, food, healthcare, transport, and more\n\nIt takes about 30 seconds and gives you real numbers to work with instead of guesses.",
-      link: { href: '/cost-of-living-calculator', label: 'Try the calculator →' },
-    };
-  }
-
-  // Readiness quiz
-  if (q.match(/quiz|readiness|ready|am i ready|how prepared|prepared to (move|relocate)|should i (go|move|leave)/)) {
-    return {
-      text: "The Relocation Readiness Quiz is a free 3-minute assessment across the two areas where most people discover they're less prepared than they thought: **Financial & Compliance** and **Practical Logistics**.\n\n12 questions. Topics include FEIE eligibility, FBAR-compliant banking, visa pathways, healthcare coverage abroad, medication availability, and your 90-day housing plan.\n\nAt the end, you get a score out of 24 and a recommendation for exactly which ROS™ resource matches where you are right now.",
-      link: { href: '/relocation-readiness-quiz', label: 'Take the quiz →' },
-    };
-  }
-
-  // Greetings
-  if (q.match(/^(hi|hello|hey|good morning|good afternoon|good evening|howdy|sup)\b/)) {
-    return {
-      text: "Hi there! 👋 I'm Beth, Global Systems Studio's guide to everything ROS™.\n\nI can answer questions about the Relocation Operating System, our seven modules, who it's for, pricing, and how to get started. What's on your mind?",
-    };
-  }
-
-  // Thanks
-  if (q.match(/thank|thanks|great|perfect|awesome|helpful/)) {
-    return {
-      text: "You're welcome! That's what I'm here for. 😊\n\nIs there anything else you'd like to know about ROS™, our services, or international relocation? I'm happy to help.",
-    };
-  }
-
-  // Default fallback
+  if (/cost.?of.?living|calculator|compare.*cost/.test(q)) return {
+    text: "Use our free Cost of Living Calculator to compare estimated living costs. These are planning estimates; confirm your own housing, healthcare, and other costs before committing to a move.",
+    link: { href: '/cost-of-living-calculator/', label: 'Try the free calculator →' },
+  };
+  if (/quiz|readiness|am i ready|prepared/.test(q)) return {
+    text: "The free Relocation Readiness Quiz asks 12 questions about financial compliance and practical logistics. You can see your score after the questions; an email address is required for the full breakdown and recommendation.",
+    link: { href: '/relocation-readiness-quiz/', label: 'Take the free quiz →' },
+  };
+  if (/price|cost|how much|pricing|pay|afford|expensive/.test(q)) return {
+    text: "Current options include:\n\n**Free Discovery Call** — 15 minutes.\n**New Roots — $27** — foundational digital guide.\n**Across Streets & Seas — $47** — companion guide.\n**Both books — $64** — Relocation Library.\n**Async Q&A — $97** — up to three written questions.\n**Clarity Session — $497** — 45-minute call.\n\nROS™ Pathways: **Solo $897**, **Digital Nomad $897**, **Family $1,197**, **Entrepreneur $1,597**, **Legacy $1,997**, **Investor $2,497**. Pathways are one-time purchases with a stated access period; renewals are optional.",
+    link: { href: '/services/', label: 'Compare pathways and prices →' },
+  };
+  if (/right for me|who.*for|tier|pathway|my situation|qualify|fit/.test(q)) return {
+    text: "ROS™ has six pathways: **Solo Relocator**, **Family Edition**, **Digital Nomad**, **Entrepreneur**, **Legacy**, and **Investor**. Each organizes relocation decisions around that situation. New Roots and Across Streets & Seas are books, separate from the six pathways.",
+    link: { href: '/services/', label: 'Find your pathway →' },
+  };
+  if (/new roots|book|across streets|download|written|library/.test(q)) return {
+    text: "**New Roots — $27** is the foundational guide for deciding what to organize first. **Across Streets & Seas — $47** is the deeper companion. The **Relocation Library — $64** includes both books as digital downloads.",
+    link: { href: '/shop/', label: 'Browse guides and workbooks →' },
+  };
+  if (/clarity|session|1.?1|one.on.one/.test(q)) return {
+    text: "The **Clarity Session is $497 for 45 minutes** focused on your situation and next steps. If you are unsure whether it fits, start with the free 15-minute Discovery Call.",
+    link: { href: '/services/clarity-session/', label: 'See the Clarity Session →' },
+  };
+  if (/start|begin|call|consult|appointment|coach/.test(q)) return {
+    text: "Start with **New Roots ($27)** for a foundational guide, or book a **free 15-minute Discovery Call** to discuss which available option fits your move. Calls are scheduled through Google Calendar.",
+    link: { href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA', label: 'Book a free Discovery Call →', external: true },
+  };
+  if (/legal|visa|document|passport|apostille|residency|citizenship/.test(q)) return {
+    text: "ROS™ helps organize visa, residency, and documentation questions in sequence. Requirements depend on your destination and situation. Confirm legal and immigration decisions with a licensed professional.",
+    link: { href: '/visa-residency-pathways/', label: 'Explore visa and residency planning →' },
+  };
+  if (/financ|money|tax|social security|fbar|bank|invest|income/.test(q)) return {
+    text: "ROS™ helps you organize banking, income continuity, and cross-border reporting questions before you move. It provides planning and educational support; consult a qualified tax or financial professional for advice about your situation.",
+    link: { href: '/relocation-financial-planning/', label: 'Explore financial planning →' },
+  };
+  if (/what is ros|module|system|health|hous|family|retire|business|work|remote/.test(q)) return {
+    text: "ROS™ is the **Relocation Operating System**: seven planning areas covering legal and documentation, finances, housing, healthcare, business and income, family, and long-term stability. Six pathways organize those decisions around your move. It is educational and planning support, not legal, tax, immigration, investment, or medical advice.",
+    link: { href: '/what-is-ros/', label: 'Explore the system →' },
+  };
+  if (/^(hi|hello|hey|good morning|good afternoon|good evening)\b/.test(q)) return {
+    text: "Hi! I'm Beth, Global Systems Studio's guide to ROS™. I can help you find current pathways, prices, guides, free tools, and a Discovery Call. What are you looking for?",
+  };
   return {
-    text: "That's a great question — and it's exactly the kind of thing ROS™ was built to address.\n\nFor the most specific answer to your situation, the best next step is a free 15-minute discovery call with our team. They can point you to exactly the right resource or module.\n\nOr if you'd like to explore the system on your own first, the ROS™ Book ($47) covers all seven modules in full.",
-    link: { href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA', label: 'Book a free call →', external: true },
+    text: "For a question specific to your move, a free 15-minute Discovery Call can help identify your next step. You can also explore our current pathways, guides, and free tools.",
+    link: { href: '/services/discovery-call/', label: 'See the free Discovery Call →' },
   };
 }
 

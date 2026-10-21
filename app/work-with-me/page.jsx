@@ -98,7 +98,7 @@ export default function WorkWithMePage() {
       {/* OFFER 1: CLARITY SESSION */}
       <section style={{background:'var(--bg)', padding:'80px 0'}}>
         <div className="container">
-          <div style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'64px', alignItems:'start', maxWidth:'900px'}}>
+          <div className="sales-detail-grid" style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'64px', alignItems:'start', maxWidth:'900px'}}>
             <div>
               <span className="section-tag">Most Popular</span>
               <h2>ROS Transition Clarity Session</h2>
@@ -131,7 +131,7 @@ export default function WorkWithMePage() {
       {/* OFFER 2: ASYNC Q&A */}
       <section style={{background:'var(--white)', padding:'80px 0'}}>
         <div className="container">
-          <div style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'64px', alignItems:'start', maxWidth:'900px'}}>
+          <div className="sales-detail-grid" style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'64px', alignItems:'start', maxWidth:'900px'}}>
             <div>
               <span className="section-tag">Flexible Support</span>
               <h2>ROS Async Q&amp;A</h2>
@@ -267,7 +267,7 @@ export default function WorkWithMePage() {
       {/* BOOK 1: NEW ROOTS */}
       <section style={{background:'var(--bg)', padding:'48px 0'}}>
         <div className="container">
-          <div style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'64px', alignItems:'start', maxWidth:'900px'}}>
+          <div className="sales-detail-grid" style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'64px', alignItems:'start', maxWidth:'900px'}}>
             <div>
               <h3 style={{fontSize:'24px', marginBottom:'16px'}}>New Roots — A Confidence Guide for Anyone Ready to Leave the U.S.</h3>
               <p>The practical, no-nonsense infrastructure guide that walks you through every dimension of international relocation: legal, financial, housing, healthcare, business, family, and long-term stability — organized around the full ROS™ framework.</p>
@@ -293,7 +293,7 @@ export default function WorkWithMePage() {
       {/* BOOK 2: ACROSS STREETS & SEAS */}
       <section style={{background:'var(--bg)', padding:'48px 0'}}>
         <div className="container">
-          <div style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'64px', alignItems:'start', maxWidth:'900px'}}>
+          <div className="sales-detail-grid" style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'64px', alignItems:'start', maxWidth:'900px'}}>
             <div>
               <h3 style={{fontSize:'24px', marginBottom:'16px'}}>Across Streets &amp; Seas — A Modern Guide to Moving Your Life</h3>
               <p>The human side of international relocation — the decisions that don't fit on a checklist, the mindset shifts that make the difference, and the real story of what this process looks like from the inside.</p>
@@ -319,7 +319,7 @@ export default function WorkWithMePage() {
       {/* BOOK BUNDLE */}
       <section style={{background:'var(--bg)', padding:'48px 0 80px'}}>
         <div className="container">
-          <div style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'64px', alignItems:'start', maxWidth:'900px'}}>
+          <div className="sales-detail-grid" style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'64px', alignItems:'start', maxWidth:'900px'}}>
             <div>
               <span style={{display:'inline-block', background:'var(--accent)', color:'var(--white)', fontSize:'12px', fontWeight:'700', textTransform:'uppercase', letterSpacing:'0.08em', padding:'4px 12px', borderRadius:'4px', marginBottom:'16px'}}>Best Value</span>
               <h3 style={{fontSize:'24px', marginBottom:'16px'}}>The Relocation Library — Both Books Together</h3>

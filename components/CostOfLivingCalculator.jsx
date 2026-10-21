@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { trackEvent } from '../lib/analytics';
 
 const REGIONS = [
   {
@@ -167,6 +168,7 @@ export default function CostOfLivingCalculator() {
         }),
       });
       if (!res.ok) throw new Error('Request failed');
+      trackEvent('generate_lead', { lead_source: 'calculator' });
       setCapStatus('success');
     } catch (err) {
       setCapStatus('error');

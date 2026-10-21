@@ -20,7 +20,6 @@ export default function MobileNavToggle() {
           <li><Link href="/" onClick={() => setOpen(false)}>Home</Link></li>
           <li><Link href="/what-is-ros" onClick={() => setOpen(false)}>The System</Link></li>
           <li><Link href="/services/" onClick={() => setOpen(false)}>Pathways &amp; Prices</Link></li>
-          <li><Link href="/#episodes" onClick={() => setOpen(false)}>Episodes 🎬</Link></li>
           <li><Link href="/#destinations" onClick={() => setOpen(false)}>Destinations 🌍</Link></li>
           <li><Link href="/#decision-room" onClick={() => setOpen(false)}>Decision Room 🎲</Link></li>
           <li><Link href="/resources" onClick={() => setOpen(false)}>Resources</Link></li>

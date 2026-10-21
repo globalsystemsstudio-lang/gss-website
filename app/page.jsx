@@ -35,12 +35,6 @@ const DESTINATIONS = [
   { name: 'Mexico', tag: 'Which City', desc: "Mexico isn't one relocation decision. It's dozens of different ones depending on the city. Here's how to actually choose.", href: '/blog/mexico-relocation-guide-which-city' },
 ];
 
-const EPISODES = [
-  { ep: 'EP.01', title: 'Not Another List', desc: "Why another checklist won't save you from the questions that actually derail a move." },
-  { ep: 'EP.02', title: 'A Checklist Is Not a Plan', desc: 'The difference between knowing what to do and knowing what order to do it in.' },
-  { ep: 'EP.03', title: 'The Undo Button', desc: "What happens when you find out, after you've already moved, that a decision can't be reversed." },
-  { ep: 'EP.04', title: 'Where Do I Even Start?', desc: 'The honest answer to the question everyone asks first, in the order that actually works.' },
-];
 
 export default function HomePage() {
   return (
@@ -139,36 +133,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 04: BEFORE YOU BOARD */}
-      <section id="episodes" style={{background:'var(--white)', padding:'80px 0'}}>
-        <div className="container">
-          <span className="section-tag">Before You Board 🎬</span>
-          <h2>The Questions Everyone Asks: Answered on Camera</h2>
-          <p className="section-intro">Four short episodes. The same questions that come up on every discovery call, answered before you have to ask them.</p>
-          <div className="blog-grid" style={{gridTemplateColumns:'repeat(4, 1fr)', marginTop:'40px'}}>
-            {EPISODES.map((e) => (
-              <div key={e.ep} className="blog-card" style={{cursor:'default'}}>
-                <span className="blog-card-tag">{e.ep}</span>
-                <h3>{e.title}</h3>
-                <p>{e.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Episode CTA panel: on-site only, video narration itself stays untouched and closes on /tools/ */}
-          <div style={{marginTop:'48px', background:'var(--bg)', border:'1px solid var(--border)', borderRadius:'14px', padding:'40px', textAlign:'center'}}>
-            <h3 style={{fontSize:'24px', marginBottom:'12px'}}>Know What's Actually Missing? Start Here.</h3>
-            <div style={{marginTop:'20px'}}>
-              <Link href="/shop/new-roots/" className="btn btn-gold">Get New Roots: $27 →</Link>
-            </div>
-            <p style={{fontSize:'14px', color:'var(--text-light)', marginTop:'12px', marginBottom:'0'}}>A foundational digital guide to help you decide what to organize first.</p>
-            <div style={{marginTop:'20px'}}>
-              <Link href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" className="blog-card-link" style={{fontSize:'14px'}}>Already know your gaps? Book a free Discovery Call →</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 05: DESTINATION INTELLIGENCE */}
       <section id="destinations" style={{background:'var(--bg)', padding:'80px 0'}}>
         <div className="container">
@@ -229,7 +193,7 @@ export default function HomePage() {
           <p style={{maxWidth:'640px', marginTop:'16px', color:'var(--text-light)'}}>A plan that actually works for your situation. Start wherever makes sense right now.</p>
           <div className="pricing-grid-4" style={{marginTop:'48px'}}>
             {[
-              { name: '🟢 Explore Free', price: 'FREE', access: 'Assessments, Tools, Episodes', desc: 'The free 15-minute Discovery Call, the readiness quiz above, the cost calculator, and every episode.', cta: 'Book Your Free Call', href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA' },
+              { name: '🟢 Explore Free', price: 'FREE', access: 'Assessments & Tools', desc: 'The free 15-minute Discovery Call, the readiness quiz above, and the cost calculator.', cta: 'Book Your Free Call', href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA' },
               { name: '🟡 Build Your Plan', price: 'From $27', access: 'New Roots & ROS™ Pathways', desc: 'New Roots ($27) gives you a foundation for organizing your move. Six ROS™ Pathways from $897 for guided, done-with-you support.', cta: 'Get New Roots', href: '/shop/new-roots/' },
               { name: '🔵 Get Personal Guidance', price: '$497', access: '45-Minute 1:1 Call', desc: 'Your situation, your questions, your next steps. Walk away with a clear picture of what to do and in what order.', cta: 'Book a Clarity Session', href: 'https://calendar.app.google/GqshRNZbP1LTvwKJ9' },
               { name: '🟣 Go Deeper', price: 'From $47', access: 'Destination Intelligence & Books', desc: 'Across Streets & Seas ($47), the full Relocation Library ($64), and the destination research behind every recommendation.', cta: 'Explore the Library', href: '/shop/relocation-library/' },

@@ -16,7 +16,7 @@ export default function AsyncQAPage() {
           <h1>Async Q&A</h1>
           <p>Submit up to three relocation questions. Get a thorough, written response built around your specific situation — no scheduling, no waiting for a calendar slot.</p>
           <div style={{marginTop:'24px'}}>
-            <Link href="/work-with-me" className="btn btn-gold">Get Written Answers — $97 →</Link>
+            <Link href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get Written Answers — $97 →</Link>
           </div>
           <SalesNotice />
         </div>
@@ -56,7 +56,7 @@ export default function AsyncQAPage() {
             <p style={{color:'var(--text-light)'}}>Complete your payment below. You'll be directed to a short form where you submit your questions and any context we need to give you a useful answer. We'll respond in writing within 48 business hours.</p>
             <p style={{marginTop:'16px', color:'var(--text-light)'}}>Need more than three questions, or have a complex situation that deserves a real conversation? The <Link href="/services/clarity-session">45-minute Clarity Session ($497)</Link> is a better fit.</p>
             <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-              <Link href="/work-with-me" className="btn btn-gold">Get Written Answers — $97 →</Link>
+              <Link href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get Written Answers — $97 →</Link>
               <Link href="/services" className="btn btn-outline">See All Services →</Link>
             </div>
 <SalesNotice />

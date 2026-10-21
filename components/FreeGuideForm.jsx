@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { trackEvent } from '../lib/analytics';
 
 const DOWNLOAD_URL = 'https://drive.google.com/uc?export=download&id=1C6iMQvEop3RwhXhZRigyTifCcYe61Mrn';
 
@@ -28,6 +29,7 @@ export default function FreeGuideForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, name, source: 'guide' }),
       });
+      if (res.ok) trackEvent('generate_lead', { lead_source: 'guide' });
       setStatus(res.ok ? 'done' : 'error');
     } catch (err) {
       setStatus('error');

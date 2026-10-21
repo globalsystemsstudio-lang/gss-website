@@ -98,8 +98,7 @@ export default function WhyYouNeedThisPage() {
 
               <div style={{display:'flex', flexDirection:'column', gap:'12px', marginTop:'48px'}}>
                 <Link href="https://calendar.app.google/5GiW8EZKoyB7SqEKA" className="btn btn-gold" style={{display:'inline-block', alignSelf:'flex-start'}}>Book a Free 15-Minute Discovery Call →</Link>
-                <Link href="/work-with-me" className="btn btn-gold" style={{display:'inline-block', alignSelf:'flex-start'}}>Get the Book — the complete system, every module →</Link>
-                <Link href="/work-with-me" className="btn btn-gold" style={{display:'inline-block', alignSelf:'flex-start'}}>Join The Departure Lounge →</Link>
+                <Link href="/shop/new-roots/" className="btn btn-gold" style={{display:'inline-block', alignSelf:'flex-start'}}>Explore New Roots — $27 →</Link>
               </div>
 
             </div>

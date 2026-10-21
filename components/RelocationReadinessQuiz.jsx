@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { trackEvent } from '../lib/analytics';
 
 const SECTIONS = [
   {
@@ -94,9 +95,9 @@ function getBucket(score) {
       color: '#C0392B',
       bg: '#FFF5F5',
       message:
-        "You're in the early stages — which is exactly the right time to build a solid foundation. The ROS™ Book walks you through every major decision area before your move, so you stop guessing and start building.",
-      cta: 'Get the ROS™ Book — $47',
-      href: '/work-with-me',
+        "You're in the early stages — which is exactly the right time to build a solid foundation. New Roots is a foundational guide to organizing your move and deciding what to prioritize first.",
+      cta: 'Explore New Roots — $27',
+      href: '/shop/new-roots/',
     };
   if (score <= 16)
     return {
@@ -104,9 +105,9 @@ function getBucket(score) {
       color: '#C8A832',
       bg: '#FFFBEE',
       message:
-        "You've made meaningful progress, but there are gaps that could cost you. The Departure Lounge gives you community, accountability, and structured guidance to close those gaps before they become problems.",
-      cta: 'Join the Departure Lounge — $97/mo',
-      href: '/work-with-me',
+        "You've made meaningful progress, but there are gaps that could cost you. Compare the six ROS™ Pathways to find planning support built around your situation. You can start with a free Discovery Call if you need help choosing.",
+      cta: 'Compare the Six Pathways',
+      href: '/services/',
     };
   return {
     label: 'Almost Launch-Ready',
@@ -115,7 +116,7 @@ function getBucket(score) {
     message:
       "You've done serious preparation work. A 1:1 Clarity Session with our team will identify any remaining blind spots and give you a personalized roadmap for your final launch phase.",
     cta: 'Book a Clarity Session — $497',
-    href: '/work-with-me',
+    href: '/services/clarity-session/',
   };
 }
 
@@ -139,6 +140,7 @@ export default function RelocationReadinessQuiz() {
     if (currentQ < TOTAL - 1) {
       setCurrentQ(currentQ + 1);
     } else {
+      trackEvent('quiz_complete');
       setPhase('capture');
     }
   };
@@ -166,7 +168,7 @@ export default function RelocationReadinessQuiz() {
   if (phase === 'intro') {
     return (
       <div style={{ maxWidth: '680px' }}>
-        <div
+        <div className="quiz-panel"
           style={{
             background: '#fff',
             border: '2px solid var(--border)',
@@ -193,7 +195,7 @@ export default function RelocationReadinessQuiz() {
             personalized results and section-by-section breakdown at the end.
           </p>
 
-          <div
+          <div className="quiz-section-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
@@ -230,7 +232,7 @@ export default function RelocationReadinessQuiz() {
           </div>
 
           <button
-            onClick={() => setPhase('quiz')}
+            onClick={() => { trackEvent('quiz_start'); setPhase('quiz'); }}
             className="btn btn-gold"
             style={{ fontSize: '17px', padding: '14px 36px', cursor: 'pointer', border: 'none' }}
           >
@@ -279,7 +281,7 @@ export default function RelocationReadinessQuiz() {
         </div>
 
         {/* Question */}
-        <div
+        <div className="quiz-panel"
           style={{
             background: '#fff',
             border: '2px solid var(--border)',
@@ -392,6 +394,7 @@ export default function RelocationReadinessQuiz() {
           }),
         });
         if (!res.ok) throw new Error('Request failed');
+        trackEvent('generate_lead', { lead_source: 'quiz' });
         setPhase('results');
       } catch (err) {
         setCaptureStatus('error');
@@ -401,7 +404,7 @@ export default function RelocationReadinessQuiz() {
 
     return (
       <div style={{ maxWidth: '560px' }}>
-        <div
+        <div className="quiz-panel"
           style={{
             background: bucket.bg,
             border: `2px solid ${bucket.color}`,
@@ -506,7 +509,7 @@ export default function RelocationReadinessQuiz() {
   return (
     <div style={{ maxWidth: '720px' }}>
       {/* Score header */}
-      <div
+      <div className="quiz-panel"
         style={{
           background: bucket.bg,
           border: `2px solid ${bucket.color}`,
@@ -561,7 +564,7 @@ export default function RelocationReadinessQuiz() {
       </div>
 
       {/* Section scores */}
-      <div
+      <div className="quiz-section-grid"
         style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
