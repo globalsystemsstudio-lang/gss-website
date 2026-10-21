@@ -15,4 +15,8 @@ User-agent: Claude-SearchBot
 Allow: /
 Disallow: /access/
 
+User-agent: Google-Extended
+Allow: /
+Disallow: /access/
+
 Sitemap: https://globalsystemsstudio.com/sitemap.xml
