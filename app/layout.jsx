@@ -11,7 +11,7 @@ export const metadata = {
     default: 'Global Systems Studio | Relocation Operating System (ROS™) for Americans Moving Abroad',
     template: '%s | Global Systems Studio',
   },
-  description: 'The step-by-step infrastructure for U.S. persons relocating internationally. Seven modules. Six tiers. Real answers.',
+  description: 'The step-by-step infrastructure for U.S. persons relocating internationally. Seven workflow stages. Six pathways. Free tools, paid guides and planning support.',
   openGraph: {
     siteName: 'Global Systems Studio',
     type: 'website',
@@ -29,7 +29,6 @@ const organizationJsonLd = {
   url: 'https://globalsystemsstudio.com',
   description: 'Global Systems Studio is the home of the Relocation Operating System (ROS), step-by-step infrastructure for U.S. persons relocating internationally. It covers visas and residency, taxes, banking, healthcare and housing abroad.',
   email: 'globalsystemsstudio@gmail.com',
-  telephone: '+1-855-807-3253',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '227 W 4th St, Ste 3078',
@@ -38,6 +37,7 @@ const organizationJsonLd = {
     postalCode: '28202',
     addressCountry: 'US',
   },
+  sameAs: ['https://www.facebook.com/profile.php?id=61591287402624', 'https://www.instagram.com/globalsystemsstudio/', 'https://www.linkedin.com/in/globalsystemsstudio/', 'https://www.tiktok.com/@globalsystemsstudio0', 'https://www.youtube.com/@GlobalSystemsStudio-CCB'],
   areaServed: 'Worldwide',
   audience: { '@type': 'Audience', audienceType: 'U.S. citizens and residents relocating internationally' },
   knowsAbout: ['International relocation planning for Americans', 'Expat taxes', 'Residency and visa pathways', 'Expat banking', 'Healthcare abroad', 'Retiring abroad'],
@@ -111,10 +111,12 @@ export default function RootLayout({ children }) {
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-7440CGNDDQ');
+            if (['globalsystemsstudio.com', 'www.globalsystemsstudio.com'].includes(window.location.hostname)) {
+              window.dataLayer = window.dataLayer || [];
+              window.gtag = function(){window.dataLayer.push(arguments);};
+              window.gtag('js', new Date());
+              window.gtag('config', 'G-7440CGNDDQ');
+            }
           `}
         </Script>
 
@@ -136,8 +138,9 @@ export default function RootLayout({ children }) {
           strategy="afterInteractive"
         />
 
+        <a className="skip-link" href="#main-content">Skip to content</a>
         <Nav />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <BethChat />
         <BookingTracker />

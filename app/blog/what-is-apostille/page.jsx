@@ -125,7 +125,7 @@ export default function ApostillePage() {
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Document authentication is one of the first things ROS™ covers.</h2>
-                <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>Module 3 — Legal &amp; Documentation — walks you through exactly which documents you need, in what order, and how long to allow for each step before your move date.</p>
+                <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>The Legal &amp; Structural Foundations stage — walks you through exactly which documents you need, in what order, and how long to allow for each step before your move date.</p>
                 <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Clarity Session →</Link>
               </div>
 

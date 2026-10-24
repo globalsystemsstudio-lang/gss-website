@@ -71,7 +71,7 @@ export default function InternationalRelocationConsultancyPage() {
                       ['Housing & area orientation', '✗', '✓', '✓'],
                       ['Cultural integration framework', '✗', 'Partial', '✓'],
                       ['Estate planning guidance', '✗', '✗', '✓'],
-                      ['132-country destination coverage', '✗', 'City-specific', '✓'],
+                      ['Destination research resources', '✗', 'City-specific', '✓'],
                       ['Structured framework vs. ad hoc advice', 'Process-driven', 'Ad hoc', 'Structured (ROS™)'],
                       ['Designed for individuals (not employers)', '✗', '✓', '✓'],
                     ].map(([area, rmc, dsp, gss]) => (
@@ -91,11 +91,11 @@ export default function InternationalRelocationConsultancyPage() {
               <p><strong>Do you specifically serve U.S. citizens and permanent residents, or is your service country-agnostic?</strong> A country-agnostic service won't address FBAR, FATCA, or PFIC. These are not standard parts of the expat landscape — they are specific to U.S. persons.</p>
               <p><strong>Is your compliance guidance integrated with your relocation process, or referred out separately?</strong> If the compliance work is referred to a separate tax advisor who doesn't communicate with the relocation team, you will fall through the gaps between those two disciplines. Pre-departure compliance preparation requires coordination, not referral.</p>
               <p><strong>Does your framework include a sequenced order of operations?</strong> The order in which you take steps during an international relocation matters significantly. A provider with no structured sequence is providing advice, not a system.</p>
-              <p><strong>How many destination countries does your framework cover?</strong> Generic expat advice is not destination-specific guidance. Coverage for 132 countries, with module-level content for each, is what ROS™ provides. Ask specifically how many countries are actively supported, not just listed.</p>
+              <p><strong>How many destination countries does your framework cover?</strong> Generic expat advice is not destination-specific guidance. Ask which destination resources are available for your situation, when they were reviewed, and what must be confirmed with local authorities. ROS™ includes destination research resources; confirm your specific destination before purchasing.</p>
 
               <h2 id="ros-framework">The ROS™ Framework: A Different Architecture</h2>
               <p>ROS™ — the Relocation Operating System™ — is a 7-module framework built specifically for U.S. persons relocating internationally. Rather than providing ad hoc advice on individual questions, ROS™ moves through a defined sequence that addresses each layer of an international relocation in the correct order.</p>
-              <p>The seven modules are: Visa &amp; Residency, Legal &amp; Administrative Foundations, Financial Infrastructure, Healthcare &amp; Insurance, Housing &amp; Physical Arrival, Cultural Integration, and Ongoing Compliance. Each module has destination-specific content for all 132 covered countries, integrated with U.S. compliance requirements throughout.</p>
+              <p>The seven workflow stages are Strategic Alignment &amp; Jurisdiction Selection; Legal &amp; Structural Foundations; Financial &amp; Infrastructure Deployment; Asset Transition &amp; Physical Relocation; Governance &amp; Systems Control; Deployment, Stabilization &amp; Continuity; and Income Continuity &amp; Financial Sustainability. <Link href="/what-is-ros/">See how the workflow relates to the planning areas.</Link></p>
               <p>The framework exists because the most common reason U.S. persons encounter problems after relocating is not that they made bad choices — it's that they made choices in the wrong order, or didn't know what they didn't know until after the problem was already created.</p>
 
               <h2 id="faq">Frequently Asked Questions</h2>
@@ -115,7 +115,7 @@ export default function InternationalRelocationConsultancyPage() {
                   },
                   {
                     q: 'What makes Global Systems Studio different from other relocation consultancies?',
-                    a: 'Global Systems Studio is built specifically for U.S. persons — citizens and permanent residents — who face unique compliance obligations that most relocation firms don\'t address. The ROS™ framework covers 132 destinations and integrates legal residency, financial compliance (FBAR, FATCA, PFIC, FEIE), banking, healthcare, housing, and cultural orientation into a single structured system.'
+                    a: 'Global Systems Studio is built specifically for U.S. persons — citizens and permanent residents — who face unique compliance obligations that most relocation firms don\'t address. The ROS™ framework includes destination research resources and integrates legal residency, financial compliance (FBAR, FATCA, PFIC, FEIE), banking, healthcare, housing, and cultural orientation into a single structured system.'
                   },
                   {
                     q: 'Do I need an international relocation consultancy or can I do it myself?',

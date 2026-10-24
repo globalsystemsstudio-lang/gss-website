@@ -53,7 +53,7 @@ export default function IrelandPage() {
               <h2>The Bottom Line</h2>
               <p>Ireland is not the easiest destination on this list. Dublin is expensive, the tax structure rewards people who plan it correctly, and the non-dom position is not a form you fill out — it's a legal status you have to be able to defend. But for the right person, structured correctly, it's one of the most sophisticated residency positions available in the English-speaking world.</p>
               <p><em>I am not an international tax advisor or an international attorney. Always consult a licensed professional who specializes in your destination country before making any financial or legal decisions. Irish immigration programme requirements are subject to change — verify current thresholds and programme status directly with Irish Immigration Service Delivery or a licensed Irish immigration attorney before applying. Ireland's Immigrant Investor Programme (IIP) is closed to new applicants as of 2023 — verify current status before any planning.</em></p>
-              <p><strong>Ready to check your relocation readiness?</strong> <a href="https://calendar.app.google/kQpLotoqdgpLqHR88">Book a Discovery Call →</a></p>
+              <p><strong>Ready to check your relocation readiness?</strong> <a href="https://calendar.app.google/5GiW8EZKoyB7SqEKA">Book a Discovery Call →</a></p>
 
             </div>
           </div>

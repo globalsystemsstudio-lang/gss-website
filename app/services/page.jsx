@@ -1,90 +1,19 @@
 import Link from 'next/link';
-
+import PathwayComparison from '../../components/PathwayComparison';
+import { freeOffers } from '../../lib/ros-data';
 export const metadata = {
-  title: 'Work With Us | Services & Offerings',
-  description: 'Every way to work with Global Systems Studio — from a free discovery call to full ROS™ Pathway system access. Find the entry point built for where you are right now.',
+  title: 'ROS™ Pathways, Prices & Free Starting Points',
+  description: 'Compare all six ROS™ pathways: current prices, dashboard access, optional renewal, personas and complete inclusions. Explore free tools, paid guides and personal support.',
   alternates: { canonical: 'https://globalsystemsstudio.com/services/' },
 };
-
-const consultations = [
-  { name: 'Free Discovery Call', price: 'FREE', access: '15-Minute Video Call', desc: "Not sure where to start? Let's talk first. No pitch, no pressure — just clarity on whether ROS™ fits your situation.", href: '/services/discovery-call' },
-  { name: 'Clarity Session', price: '$497', access: '45-Minute 1:1 Call', desc: 'A personalized legal, financial and lifestyle relocation risk review in a 45-minute 1:1 call. Walk away with a clear, prioritized picture of what to do and in what order.', href: '/services/clarity-session' },
-  { name: 'Async Q&A', price: '$97', access: 'Written Q&A Response', desc: 'Submit up to three relocation questions. Get a thorough written response — no scheduling required.', href: '/services/async-qa' },
-];
-
-const pathways = [
-  { name: 'Digital Nomad Pathway', price: '$897', access: '6-Month Access', desc: 'Built for remote workers ready to live abroad legally and financially smart.', href: '/services/ros-digital-nomad-pathway' },
-  { name: 'Solo Relocator Pathway', price: '$897', access: '6-Month Access', desc: "You're making this move on your own. This pathway is built around that reality.", href: '/services/ros-solo-pathway' },
-  { name: 'Family Edition Pathway', price: '$1,197', access: '9-Month Dual Access', desc: "Moving with people who depend on you. Getting it wrong isn't an option.", href: '/services/ros-family-edition-pathway' },
-  { name: 'Entrepreneur Pathway', price: '$1,597', access: '9-Month Access', desc: 'Own a business or building one abroad? This covers the legal, tax, and operational structure across borders.', href: '/services/ros-entrepreneur-pathway' },
-  { name: 'Legacy Pathway', price: '$1,997', access: '12-Month Access', desc: "You've built something. Now you're ready to spend the next chapter somewhere that gives you more.", href: '/services/ros-legacy-pathway' },
-  { name: 'Investor Pathway', price: '$2,497', access: '12-Month Access', desc: 'Moving capital, not just yourself. Built for those who need legal and financial infrastructure across borders.', href: '/services/ros-investor-pathway' },
-];
-
-const books = [
-  { name: 'New Roots', price: '$27', access: 'Digital Download', desc: 'The foundational guide for anyone beginning the international relocation journey.', href: '/shop/new-roots' },
-  { name: 'Across Streets & Seas', price: '$47', access: 'Digital Download', desc: 'The deeper companion — logistics, legal, and life abroad for serious movers.', href: '/shop/across-streets-and-seas' },
-  { name: 'Relocation Library Bundle', price: '$64', access: 'Both Books — Digital Download', desc: 'New Roots + Across Streets & Seas together at a bundled price.', href: '/shop/relocation-library' },
-];
-
-function OfferGrid({ items }) {
-  return (
-    <div className="pricing-grid-4" style={{marginTop:'32px'}}>
-      {items.map((offer) => (
-        <div key={offer.name} className="pricing-card">
-          <div className="pricing-tier-name">{offer.name}</div>
-          <div className="pricing-price">{offer.price}</div>
-          <div className="pricing-access">{offer.access}</div>
-          <p style={{fontSize:'14px', color:'var(--text-light)', flex:1, marginBottom:'24px'}}>{offer.desc}</p>
-          <Link href={offer.href} className="btn btn-gold">Learn More →</Link>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export default function ServicesIndexPage() {
-  return (
-    <>
-      <section className="page-hero">
-        <div className="container">
-          <h1>Every Way to Work With Us</h1>
-          <p>Whether you want to start with a free call, get a specific question answered, or go all-in on the full ROS™ system — there is an entry point built for where you are right now.</p>
-        </div>
-      </section>
-
-      <section style={{background:'var(--white)', padding:'80px 0'}}>
-        <div className="container">
-          <span className="section-tag">Consultations</span>
-          <OfferGrid items={consultations} />
-        </div>
-      </section>
-
-      <section style={{background:'var(--bg)', padding:'80px 0'}}>
-        <div className="container">
-          <span className="section-tag">ROS™ Pathways — Full System Access</span>
-          <OfferGrid items={pathways} />
-        </div>
-      </section>
-
-      <section style={{background:'var(--white)', padding:'80px 0'}}>
-        <div className="container">
-          <span className="section-tag">Books & Guides</span>
-          <OfferGrid items={books} />
-        </div>
-      </section>
-
-      <section style={{background:'var(--bg)', padding:'80px 0'}}>
-        <div className="container">
-          <h2>Not Sure Where to Start?</h2>
-          <div style={{maxWidth:'760px', marginTop:'16px'}}>
-            <p style={{color:'var(--text-light)'}}>The free discovery call exists exactly for this moment. Fifteen minutes. No obligation. Just a real conversation.</p>
-            <div style={{marginTop:'24px'}}>
-              <Link href="/services/discovery-call" className="btn btn-gold">Book Your Free Call →</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
+export default function ServicesPage() { return <>
+  <section className="page-hero"><div className="container"><p className="eyebrow">Choose your starting point</p><h1>A clearer plan for your move abroad.</h1><p>ROS™ is Global Systems Studio’s Relocation Operating System: educational planning resources that help U.S. citizens and residents organize a move abroad. Choose a free starting point, a focused paid resource, personal support, or a pathway with dashboard access.</p><div className="action-row"><a href="#pathways" className="btn btn-gold">Compare the six pathways</a><a href="#free" className="btn btn-outline">Start free</a></div></div></section>
+  <section id="free"><div className="container"><p className="eyebrow">Free · no purchase required</p><h2>Get a useful first step.</h2><div className="offer-grid">{freeOffers.map(o => <article className="feature-card" key={o.name}><p className="offer-label">FREE · {o.label}</p><h3>{o.name}</h3><p>{o.description}</p><Link className="btn btn-outline" href={o.url}>{o.cta} →</Link></article>)}</div></div></section>
+  <section className="section-ivory" id="pathways"><div className="container"><p className="eyebrow">Paid · full ROS™ pathways</p><h2>Find the pathway that fits your move.</h2><p className="section-intro">Each tier includes the ROS™ foundation. Choose by your main planning need and compare the additional resources below. A higher price does not automatically include Family Edition’s shared access.</p><PathwayComparison /><p><Link href="/services/discovery-call/">Have more than one priority? Ask on a free 15-minute Discovery Call.</Link></p></div></section>
+  <section id="personal-support"><div className="container"><p className="eyebrow">Paid · focused personal support</p><h2>Work through a specific question or plan.</h2><div className="offer-grid">
+    <article className="feature-card"><h3>Async Q&amp;A</h3><p className="pathway-price">$97 <span>USD once</span></p><p>Up to three relocation questions, answered in writing within five business days after your questions are received. No live call.</p><Link className="btn btn-gold" href="/services/async-qa/">See how written Q&amp;A works →</Link></article>
+    <article className="feature-card"><h3>Clarity Session</h3><p className="pathway-price">$497 <span>USD once · 45 minutes</span></p><p>A personalized legal, financial and lifestyle relocation risk review. Identify priorities and questions to confirm with licensed professionals.</p><Link className="btn btn-gold" href="/services/clarity-session/">Explore the Clarity Session →</Link></article>
+  </div></div></section>
+  <section className="section-ivory"><div className="container"><p className="eyebrow">Paid · standalone digital downloads</p><h2>Prefer to work at your own pace?</h2><p>Guides, planners and workbooks start at $19. New Roots is $27, Across Streets &amp; Seas is $47, or get both books for $64. These are separate purchases from a pathway; buying a standalone PDF does not activate dashboard access.</p><div className="action-row"><Link className="btn btn-gold" href="/shop/">Browse guides, planners and books →</Link><Link href="/sales-policy/">Read delivery and sales terms</Link></div></div></section>
+  <section><div className="container content-narrow"><h2>Before you choose</h2><details className="comparison-details"><summary>Is this professional legal, tax or immigration advice?</summary><p>ROS™ provides educational resources and planning support. Confirm legal, tax, immigration, investment and medical decisions with qualified, licensed professionals. Government fees, professional fees and relocation expenses are separate.</p></details><details className="comparison-details"><summary>What happens after I pay?</summary><p>Digital purchase follow-up goes to the email address on your PayPal order. Pathways require a signed agreement and dashboard setup; the initial access period begins after completed purchase and a signed agreement. If you cannot find your delivery email, check spam, then contact <a href="mailto:globalsystemsstudio@gmail.com">globalsystemsstudio@gmail.com</a> with your order reference.</p></details><details className="comparison-details"><summary>Do I have to renew?</summary><p>No. Pathways are one-time purchases for the initial access period shown. Dashboard renewal is optional. Confirm its duration and terms before purchasing. Standalone PDFs are yours to keep.</p></details><p>All sales are final. Review the full inclusions and <Link href="/sales-policy/">sales policy</Link> before you buy.</p></div></section>
+</>; }

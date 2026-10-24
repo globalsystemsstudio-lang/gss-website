@@ -1,118 +1,42 @@
-// GSS lead capture endpoint — used by the relocation readiness quiz, the
-// cost-of-living calculator and the free guide form to push leads into
-// MailerLite server-side.
-// The MailerLite API key never reaches the browser: it lives only in this
-// function's environment (Netlify env var MAILERLITE_API_KEY).
-
-const GROUPS = {
-  quiz: '197364302014842463',       // "Quiz Completed"
-  calculator: '197364304761063011', // "Calculator Used"
-  guide: '201234817198589521',      // "Free Guide"
-};
-
+// MailerLite credentials stay server-side. Accept only the fields used by GSS forms.
+const GROUPS = { quiz: '197364302014842463', calculator: '197364304761063011', guide: '201234817198589521' };
+const ALLOWED_FIELDS = { quiz: ['quiz_score'], calculator: ['calculator_country'], guide: [] };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-const CORS_HEADERS = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'Content-Type',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-};
-
+const ORIGINS = new Set(['https://globalsystemsstudio.com', 'https://www.globalsystemsstudio.com']);
 exports.handler = async function (event) {
-  if (event.httpMethod === 'OPTIONS') {
-    return { statusCode: 204, headers: CORS_HEADERS, body: '' };
-  }
-
-  if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      headers: CORS_HEADERS,
-      body: JSON.stringify({ error: 'Method not allowed' }),
-    };
-  }
-
+  const origin = event.headers?.origin || event.headers?.Origin;
+  const headers = { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', Vary: 'Origin',
+    'Access-Control-Allow-Origin': ORIGINS.has(origin) ? origin : 'https://globalsystemsstudio.com',
+    'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Allow-Methods': 'POST, OPTIONS' };
+  const respond = (statusCode, body) => ({ statusCode, headers, body: JSON.stringify(body) });
+  if (origin && !ORIGINS.has(origin)) return respond(403, { error: 'Origin not allowed' });
+  if (event.httpMethod === 'OPTIONS') return { statusCode: 204, headers, body: '' };
+  if (event.httpMethod !== 'POST') return respond(405, { error: 'Method not allowed' });
+  if ((event.body || '').length > 4096) return respond(413, { error: 'Request is too large' });
   let payload;
-  try {
-    payload = JSON.parse(event.body || '{}');
-  } catch (err) {
-    return {
-      statusCode: 400,
-      headers: CORS_HEADERS,
-      body: JSON.stringify({ error: 'Invalid JSON body' }),
-    };
-  }
-
+  try { payload = JSON.parse(event.body || '{}'); } catch { return respond(400, { error: 'Invalid JSON body' }); }
+  if (!payload || typeof payload !== 'object' || Array.isArray(payload)) return respond(400, { error: 'Invalid request' });
   const { email, name, source, fields } = payload;
-
-  if (!email || !EMAIL_RE.test(email)) {
-    return {
-      statusCode: 400,
-      headers: CORS_HEADERS,
-      body: JSON.stringify({ error: 'A valid email address is required' }),
-    };
-  }
-
-  const groupId = GROUPS[source];
-  if (!groupId) {
-    return {
-      statusCode: 400,
-      headers: CORS_HEADERS,
-      body: JSON.stringify({ error: 'Unknown or missing source' }),
-    };
-  }
-
-  const apiKey = process.env.MAILERLITE_API_KEY || process.env.Mailerlite_API_Key;
-  if (!apiKey) {
-    console.error('MAILERLITE_API_KEY is not set in the Netlify environment');
-    return {
-      statusCode: 500,
-      headers: CORS_HEADERS,
-      body: JSON.stringify({ error: 'Server is not configured for email capture' }),
-    };
-  }
-
-  const mailerLiteBody = {
-    email: email.trim().toLowerCase(),
-    fields: {
-      ...(name ? { name } : {}),
-      ...(fields || {}),
-    },
-    groups: [groupId],
-  };
-
-  try {
-    const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify(mailerLiteBody),
-    });
-
-    const data = await res.json().catch(() => ({}));
-
-    if (!res.ok) {
-      console.error('MailerLite error', res.status, JSON.stringify(data));
-      return {
-        statusCode: 502,
-        headers: CORS_HEADERS,
-        body: JSON.stringify({ error: 'MailerLite rejected the request', detail: data }),
-      };
+  if (typeof email !== 'string' || email.trim().length > 254 || !EMAIL_RE.test(email.trim())) return respond(400, { error: 'A valid email address is required' });
+  if (!Object.hasOwn(GROUPS, source)) return respond(400, { error: 'Unknown or missing source' });
+  if (name != null && (typeof name !== 'string' || name.length > 100)) return respond(400, { error: 'Please enter a shorter first name' });
+  if (fields != null && (typeof fields !== 'object' || Array.isArray(fields))) return respond(400, { error: 'Invalid form fields' });
+  const safeFields = name?.trim() ? { name: name.trim() } : {};
+  for (const key of ALLOWED_FIELDS[source]) {
+    if (fields?.[key] != null) {
+      if (typeof fields[key] !== 'string' || fields[key].length > 200) return respond(400, { error: 'Invalid form fields' });
+      safeFields[key] = fields[key];
     }
-
-    return {
-      statusCode: 200,
-      headers: CORS_HEADERS,
-      body: JSON.stringify({ ok: true }),
-    };
-  } catch (err) {
-    console.error('Subscribe function failed', err);
-    return {
-      statusCode: 500,
-      headers: CORS_HEADERS,
-      body: JSON.stringify({ error: 'Unexpected server error' }),
-    };
   }
+  const apiKey = process.env.MAILERLITE_API_KEY || process.env.Mailerlite_API_Key;
+  if (!apiKey) { console.error('Email capture configuration missing'); return respond(503, { error: 'Email delivery is temporarily unavailable. Please use the direct download or contact us.' }); }
+  try {
+    const result = await fetch('https://connect.mailerlite.com/api/subscribers', {
+      method: 'POST', headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ email: email.trim().toLowerCase(), fields: safeFields, groups: [GROUPS[source]] }),
+      signal: AbortSignal.timeout(10000),
+    });
+    if (!result.ok) { console.error('Email capture provider rejected request', result.status); return respond(502, { error: 'Email delivery is temporarily unavailable. Please try again or contact us.' }); }
+    return respond(200, { ok: true });
+  } catch { console.error('Email capture provider unavailable'); return respond(502, { error: 'Email delivery is temporarily unavailable. Please try again or contact us.' }); }
 };

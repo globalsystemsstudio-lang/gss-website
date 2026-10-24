@@ -57,7 +57,7 @@ export default function NewRootsPage() {
         <div className="container">
           <h2>Ready to Start?</h2>
           <div style={{maxWidth:'760px', marginTop:'16px'}}>
-            <p style={{color:'var(--text-light)'}}>Digital download — delivered immediately after purchase. Or get both books bundled at <Link href="/shop/relocation-library">$64 in the Relocation Library</Link>.</p>
+            <p style={{color:'var(--text-light)'}}>Digital download — delivery follow-up goes to the email on your completed PayPal order. Or get both books bundled at <Link href="/shop/relocation-library">$64 in the Relocation Library</Link>.</p>
             <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
               <Link href="https://www.paypal.com/ncp/payment/J3ZZAKPGCJACS" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get New Roots — $27 →</Link>
               <Link href="/shop" className="btn btn-outline">See All Books →</Link>

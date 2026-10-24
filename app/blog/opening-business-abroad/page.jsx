@@ -122,7 +122,7 @@ export default function OpeningBusinessAbroadPage() {
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Business formation is one of the most legally complex parts of international relocation.</h2>
-                <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>ROS™ Module 5 — Business &amp; Income — covers entity structure, banking, tax positioning, and how your business decisions interact with your visa and residency strategy.</p>
+                <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>ROS™ business and income planning — covers entity structure, banking, tax positioning, and how your business decisions interact with your visa and residency strategy.</p>
                 <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Clarity Session →</Link>
               </div>
 

@@ -53,7 +53,7 @@ export default function ParaguayPage() {
               <h2>The Bottom Line</h2>
               <p>When you add it up — legal fees, apostilles, temporary housing, IPMI for year one, banking setup, and the emergency reserve you should never leave home without — your realistic move budget is $15,000–$20,000, with the $5,500 sitting inside that number as working capital. Still an exceptional deal for permanent residency in a country with this tax profile. But the move has to be planned, not improvised.</p>
               <p><em>Research current as of July 2026. As always, verify all details with a licensed attorney and international tax professional before any capital commitment.</em></p>
-              <p><strong>Ready to check your relocation readiness?</strong> <a href="https://calendar.app.google/kQpLotoqdgpLqHR88">Book a Discovery Call →</a></p>
+              <p><strong>Ready to check your relocation readiness?</strong> <a href="https://calendar.app.google/5GiW8EZKoyB7SqEKA">Book a Discovery Call →</a></p>
 
             </div>
           </div>

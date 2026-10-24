@@ -79,7 +79,7 @@ export default function SpainRelocationPage() {
               <p>Spain still works well for a specific profile: people with either genuinely remote, portable income or a viable business plan, who are prepared to treat the 183-day rule and the Beckham Law window as hard deadlines rather than suggestions. It stops working the moment a plan is built around the program that closed in April 2025.</p>
               <p>If you're not sure which tier or visa pathway actually fits your situation, the <Link href="/relocation-readiness-quiz/">Relocation Readiness Quiz</Link> is a faster way to find out than another round of searching. And if Spain is genuinely on your shortlist, the next right step is a conversation, not more research — you can see what that looks like on the <Link href="/work-with-me/">Work With Me</Link> page.</p>
               <p style={{fontStyle:'italic', color:'var(--text-light)'}}>I am not an international tax advisor or an international attorney. Always consult a licensed professional in the relevant jurisdiction before making a relocation, tax, or immigration decision.</p>
-              <p>If Spain is on your shortlist, the next right step isn't more research — it's a conversation about whether it actually fits your specific situation. <a href="https://calendar.app.google/kQpLotoqdgpLqHR88">Book a free Discovery Call</a>.</p>
+              <p>If Spain is on your shortlist, the next right step isn't more research — it's a conversation about whether it actually fits your specific situation. <a href="https://calendar.app.google/5GiW8EZKoyB7SqEKA">Book a free Discovery Call</a>.</p>
 
             </div>
           </div>

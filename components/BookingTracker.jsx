@@ -1,11 +1,11 @@
 'use client';
 import { useEffect } from 'react';
+import { trackEvent } from '../lib/analytics';
 
 // Calendar destinations -> offer type. A click here is booking INTEREST only,
 // not a confirmed booking or purchase. No personal data is sent.
 const CALENDARS = {
   '5GiW8EZKoyB7SqEKA': 'discovery_call',   // free 15-minute Discovery Call
-  'kQpLotoqdgpLqHR88': 'discovery_call',   // second calendar used on articles labelled "Discovery Call"
   'GqshRNZbP1LTvwKJ9': 'clarity_session',  // paid $497 45-minute Clarity Session
 };
 
@@ -19,7 +19,7 @@ export default function BookingTracker() {
       if (!a) return;
       const href = a.getAttribute('href') || '';
       if (/^https:\/\/www\.paypal\.com\/ncp\/payment\/[A-Z0-9]+(?:[/?#]|$)/.test(href)) {
-        if (typeof window.gtag === 'function') window.gtag('event', 'checkout_click', {
+        trackEvent('checkout_click', {
           checkout_id: href.split('/payment/')[1].split(/[/?#]/)[0],
           page_path: window.location.pathname,
           button_label: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80),
@@ -29,8 +29,8 @@ export default function BookingTracker() {
       }
       const id = (a.getAttribute('href') || '').split('calendar.app.google/')[1]?.split(/[?#/]/)[0];
       const offer = CALENDARS[id];
-      if (!offer || typeof window.gtag !== 'function') return;
-      window.gtag('event', 'booking_start', {
+      if (!offer) return;
+      trackEvent('booking_start', {
         offer_type: offer,
         page_path: window.location.pathname,
         button_label: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80),

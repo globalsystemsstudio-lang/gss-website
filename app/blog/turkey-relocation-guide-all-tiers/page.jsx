@@ -54,7 +54,7 @@ export default function TurkeyPage() {
               <h2>The Bottom Line</h2>
               <p>Turkey is a high-reward destination that requires high-quality preparation. The purchasing power advantage is real, private healthcare is excellent, the Digital Nomad Certificate is live, and the CBI pathway is one of the most straightforward in the world — but none of it matters without the right structure around it before the move.</p>
               <p><em>This is broad educational context, not legal, tax, or immigration advice. Verify all program details, thresholds, and the pending tax proposal's status directly with a licensed Turkish immigration attorney and an international tax advisor before making any financial or relocation decision.</em></p>
-              <p><strong>Ready to check your relocation readiness?</strong> <a href="https://calendar.app.google/kQpLotoqdgpLqHR88">Book a Discovery Call →</a></p>
+              <p><strong>Ready to check your relocation readiness?</strong> <a href="https://calendar.app.google/5GiW8EZKoyB7SqEKA">Book a Discovery Call →</a></p>
 
             </div>
           </div>

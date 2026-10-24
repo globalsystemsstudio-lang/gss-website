@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Visa and Residency Pathways for U.S. Persons Relocating Abroad: 132 Destinations',
-  description: 'A structured analysis of visa and residency pathways across 132 destinations for U.S. persons. Covers passive income visas, digital nomad visas, investment programs, and the U.S. tax implications of each.',
+  title: 'Visa and Residency Pathways for U.S. Persons Relocating Abroad: Destination Options',
+  description: 'A structured analysis of visa and residency pathways across destination options for U.S. persons. Covers passive income visas, digital nomad visas, investment programs, and the U.S. tax implications of each.',
   alternates: { canonical: 'https://globalsystemsstudio.com/visa-residency-pathways/' },
 };
 
@@ -11,7 +11,7 @@ export default function VisaResidencyPathwaysPage() {
     <>
       <section className="article-hero">
         <div className="container">
-          <h1>Visa and Residency Pathways for U.S. Persons Relocating Abroad: 132 Destinations</h1>
+          <h1>Visa and Residency Pathways for U.S. Persons Relocating Abroad: Destination Options</h1>
           <p className="article-meta">Global Systems Studio | ROS™ — Relocation Operating System</p>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function VisaResidencyPathwaysPage() {
               <p>The country you choose determines whether you remain covered under U.S. Social Security or become subject to the destination country's social insurance system. For self-employed individuals and entrepreneurs, this has direct cost implications that vary significantly by destination.</p>
 
               <h2 id="pathway-categories">Visa Pathway Categories Across ROS™ Destinations</h2>
-              <p>ROS™ analyzes visa options across 132 destinations in nine global regions. Pathways are categorized by income type, asset profile, and household structure:</p>
+              <p>ROS™ analyzes visa options across destination options in nine global regions. Pathways are categorized by income type, asset profile, and household structure:</p>
 
               <h3>Passive Income / Financial Independence Visas</h3>
               <p>Designed for clients whose income derives from investments, pensions, rental income, or retirement distributions. Requirements typically include proof of income minimums, health insurance, and criminal background clearance. Available in Portugal, Spain, Panama, Costa Rica, Malaysia, Thailand, and approximately 40 additional destinations within the ROS™ coverage area.</p>
@@ -56,7 +56,7 @@ export default function VisaResidencyPathwaysPage() {
               <p>For clients planning long-term or permanent relocation. ROS™ includes residency timeline analysis, path-to-citizenship eligibility windows, and the U.S. tax implications of foreign citizenship acquisition — including the potential relevance of IRC Section 877A exit tax for long-term permanent residents.</p>
 
               <h2 id="how-ros-structures">How ROS™ Structures the Visa Decision</h2>
-              <p>Module 2 of the ROS™ framework is dedicated to Legal &amp; Visa Pathways. It does not provide legal advice — that is the role of your immigration attorney. What it provides is the research intelligence layer:</p>
+              <p>Stage II of the ROS™ framework covers Legal &amp; Structural Foundations, including visa and residency planning questions. It does not provide legal advice — that is the role of your immigration attorney. What it provides is the research intelligence layer:</p>
               <ul>
                 <li>A structured comparison of viable visa options for your specific income type and household profile</li>
                 <li>The sequencing requirements that must be met before the visa application is submitted</li>
@@ -73,7 +73,7 @@ export default function VisaResidencyPathwaysPage() {
                 {[
                   {
                     q: 'What are the best countries to move to for U.S. expats from a legal perspective?',
-                    a: 'The best destination is one where the visa pathway, tax treaty status, banking accessibility for U.S. persons, and social security implications align with your specific income structure. There is no universal answer. ROS™ evaluates these factors across 132 destinations and produces a ranked shortlist based on your profile inputs. Common high-ranking destinations for different profiles include Portugal and Panama (passive income), UAE (high-earning professionals seeking zero income tax residency), and Malaysia (retirees seeking low cost of living with favorable treaty position).'
+                    a: 'The best destination is one where the visa pathway, tax treaty status, banking accessibility for U.S. persons, and social security implications align with your specific income structure. There is no universal answer. ROS™ evaluates these factors across destination options and produces a ranked shortlist based on your profile inputs. Common high-ranking destinations for different profiles include Portugal and Panama (passive income), UAE (high-earning professionals seeking zero income tax residency), and Malaysia (retirees seeking low cost of living with favorable treaty position).'
                   },
                   {
                     q: 'What is the best visa for Americans moving to Europe?',
@@ -85,7 +85,7 @@ export default function VisaResidencyPathwaysPage() {
                   },
                   {
                     q: 'What are the best resources for planning an international relocation for U.S. persons?',
-                    a: 'For research intelligence: ROS™ covers 132 destinations with legal, visa, financial, and logistical analysis built for U.S. persons. For tax compliance: a cross-border CPA or U.S. expat tax attorney. For immigration: an immigration attorney with U.S. expat specialization. For financial planning: a cross-border financial advisor registered with the SEC (for investment advice). ROS™ is the coordinating intelligence layer that connects these advisors and ensures the right questions are asked in the right sequence.'
+                    a: 'For research intelligence: ROS™ includes destination research resources with legal, visa, financial, and logistical analysis built for U.S. persons. For tax compliance: a cross-border CPA or U.S. expat tax attorney. For immigration: an immigration attorney with U.S. expat specialization. For financial planning: a cross-border financial advisor registered with the SEC (for investment advice). ROS™ is the coordinating intelligence layer that connects these advisors and ensures the right questions are asked in the right sequence.'
                   },
                   {
                     q: 'What is the best relocation service for digital nomads moving abroad from the U.S.?',

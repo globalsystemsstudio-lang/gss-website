@@ -19,22 +19,22 @@ export default function SalesPolicyPage() {
       <section style={{background:'var(--white)', padding:'80px 0'}}>
         <div className="container" style={{maxWidth:'760px'}}>
           <h2>Digital downloads</h2>
-          <p>Guides and workbooks are delivered instantly and are final. They're yours to keep, even after any access period ends.</p>
+          <p>Paid guides, books and workbooks are digital downloads, with delivery follow-up sent to the email on your PayPal order after completed payment. Check spam if you do not see it. Contact us with your order reference for delivery help. Standalone PDFs are yours to keep and do not include dashboard access.</p>
 
           <h2 style={{marginTop:'40px'}}>Pathways and dashboard access</h2>
-          <p>Pathway and dashboard access is governed by the agreement you accept at purchase. After your access ends, you can still export your dashboard data.</p>
+          <p>Initial dashboard access begins after completed purchase and a signed agreement, with setup coordinated by Global Systems Studio. Solo and Digital Nomad include 6 months; Family Edition and Entrepreneur include 9 months; Legacy and Investor include 12 months. Family Edition includes two users. Review your agreement for access and data terms.</p>
 
           <h2 style={{marginTop:'40px'}}>Renewals</h2>
-          <p>Renewals are optional. Each renewal adds 6 months of access at the price of your tier: $197, $247, $347, $397, $497, or $597. Renewals never auto-charge. Each one is a separate one-time PayPal purchase, and we'll send an email reminder before your access ends.</p>
+          <p>Dashboard renewals are optional, with no mandatory subscription. Current renewal prices in USD are: Digital Nomad $197, Solo $247, Family Edition $347, Entrepreneur $397, Legacy $497, and Investor $597. Confirm the renewal access period and terms with us before purchasing.</p>
 
           <h2 style={{marginTop:'40px'}}>Clarity Session</h2>
           <p>Please give us 24 hours' notice to reschedule. If an emergency comes up, contact us and we'll work with you. A missed session with no contact is not refunded.</p>
 
           <h2 style={{marginTop:'40px'}}>Async Q&amp;A</h2>
-          <p>We reply within 48 business hours. Questions outside our scope are redirected to a licensed professional.</p>
+          <p>The $97 Async Q&A covers up to three written relocation questions. After payment, reply to your purchase follow-up or email your questions and order reference to globalsystemsstudio@gmail.com. We respond within 5 business days after receiving your questions. Questions requiring professional advice should be confirmed with an appropriately licensed professional.</p>
 
           <h2 style={{marginTop:'40px'}}>Questions about a purchase</h2>
-          <p>Questions or concerns about a purchase? Contact us first at <a href="mailto:globalsystemsstudio@gmail.com">globalsystemsstudio@gmail.com</a> and we'll respond within 2 business days.</p>
+          <p>Questions or concerns about a purchase? Contact us first at <a href="mailto:globalsystemsstudio@gmail.com">globalsystemsstudio@gmail.com</a> with your order reference. Please do not send passports, financial statements or other sensitive documents by email.</p>
 
           <p style={{marginTop:'40px', color:'var(--text-light)'}}>Operated by CC Transaction Service LLC d/b/a Global Systems Studio.</p>
         </div>

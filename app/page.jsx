@@ -16,12 +16,12 @@ const PATHWAYS = [
   { icon: '📈', title: 'The Investor', desc: "You're moving capital, not just yourself, and you need the legal and financial infrastructure to do it right in a new country.", href: '/services/ros-investor-pathway/' },
 ];
 
-const MODULES = [
+const AREAS = [
   { num: '1', name: 'Legal', desc: 'Visas, residency permits, apostilles, citizenship pathways. Your legal standing, secured before you need it.' },
   { num: '2', name: 'Financial', desc: 'Banking, FBAR compliance, capital gains timing, Social Security strategy. The money decisions that must be made before you leave.' },
   { num: '3', name: 'Healthcare', desc: 'Insurance abroad, prescription continuity, specialist access, answered before an emergency forces the question.' },
   { num: '4', name: 'Housing & Logistics', desc: "Finding and securing housing without overpaying or signing the wrong lease. And the physical move itself: customs, shipping, getting everything you own to where you're actually going." },
-  { num: '5', name: 'Business & Income', desc: "Your income keeps working, even when you don't live where you earn it. Verified income, compliant work status, and a business structure built to survive the move." },
+  { num: '5', name: 'Business & Income', desc: "Your income keeps working, even when you don't live where you earn it. Income planning, work authorization questions, and a business structure built to survive the move." },
   { num: '6', name: 'Family & Legacy', desc: 'School enrollment, cultural adjustment, estate and capital continuity for the retiree tier. The people who depend on you, accounted for.' },
   { num: '7', name: 'Life After Arrival', desc: 'Establishment, integration, and what sustainable life abroad actually requires beyond year one.' },
 ];
@@ -90,10 +90,10 @@ export default function HomePage() {
       <section className="modules">
         <div className="container">
           <span className="section-tag">The System</span>
-          <h2>Seven Systems. One Seamless Plan.</h2>
+          <h2>Seven Planning Areas. One Connected Plan.</h2>
           <p className="modules-intro">ROS™ walks you through seven areas, the same seven areas where international relocations fall apart when there's no system in place.</p>
           <div className="icon-cards" style={{gridTemplateColumns:'repeat(4, 1fr)'}}>
-            {MODULES.map((mod) => (
+            {AREAS.map((mod) => (
               <div key={mod.num} className="icon-card">
                 <div className="icon-card-num">{mod.num}</div>
                 <h3>{mod.name}</h3>

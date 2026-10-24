@@ -49,7 +49,7 @@ export default function MalaysiaPage() {
               <h2>The Bottom Line</h2>
               <p>Malaysia is a first-world relocation destination at a price point that doesn't exist in the West. The infrastructure is real, the healthcare is real, the tax position is real, and two visa programs provide a structured path for every ROS™ tier — but which program, which tier, and which sequencing decisions still have to be made deliberately, not assumed.</p>
               <p><em>I am not an international tax advisor or an international attorney. Always consult a licensed professional who specializes in your destination country before making any financial or legal decisions. MM2H and PVIP program requirements are subject to change — verify current thresholds directly with Malaysian immigration or a licensed immigration attorney before applying.</em></p>
-              <p><strong>Ready to check your relocation readiness?</strong> <a href="https://calendar.app.google/kQpLotoqdgpLqHR88">Book a Discovery Call →</a></p>
+              <p><strong>Ready to check your relocation readiness?</strong> <a href="https://calendar.app.google/5GiW8EZKoyB7SqEKA">Book a Discovery Call →</a></p>
 
             </div>
           </div>

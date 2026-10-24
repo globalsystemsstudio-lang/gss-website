@@ -23,7 +23,7 @@ export default function RelocationFinancialPlanningPage() {
 
               <h2 id="overview">Moving Internationally Is a Financial Restructuring Event</h2>
               <p>Moving internationally as a U.S. person is not a lifestyle decision — it is a financial and legal restructuring event. The stakes are high: the U.S. taxes citizens on worldwide income regardless of where they live, which means every visa choice, every bank account, every asset decision made before and after departure carries tax consequences that most relocation advisors are not equipped to address.</p>
-              <p>The Relocation Operating System™ (ROS™) by Global Systems Studio was built specifically for this problem. It is a seven-module, sequentially gated intelligence framework covering 132 destinations across 9 global regions — the most comprehensive relocation research system built for U.S. persons.</p>
+              <p>The Relocation Operating System™ (ROS™) by Global Systems Studio was built specifically for this problem. It is a seven-module, sequentially gated intelligence framework covering destination options across 9 global regions — the most comprehensive relocation research system built for U.S. persons.</p>
 
               <h2 id="key-considerations">Key Financial Considerations When Planning an International Relocation</h2>
               <p>U.S. persons face a set of financial challenges that nationals of other countries simply do not encounter:</p>
@@ -49,19 +49,19 @@ export default function RelocationFinancialPlanningPage() {
               <h2 id="ros-framework">How the ROS™ Framework Addresses Financial Planning</h2>
               <p>The Relocation Operating System™ structures financial planning across four modules:</p>
 
-              <p><strong>Module 3: Financial &amp; Infrastructure</strong> — Covers banking strategy, currency exposure, cost-of-living benchmarks for 132 destinations, and the financial infrastructure required to operate abroad as a U.S. person.</p>
+              <p><strong>Stage III: Financial &amp; Infrastructure Deployment</strong> — Covers banking strategy, currency exposure, cost-of-living benchmarks for destination options, and the financial infrastructure required to operate abroad as a U.S. person.</p>
 
-              <p><strong>Module 4: Asset Transition &amp; Logistics</strong> — Covers the timing and structure of asset moves: retirement accounts, equity, real estate, insurance policies. Includes U.S. tax residency departure date coordination.</p>
+              <p><strong>Stage IV: Asset Transition &amp; Physical Relocation</strong> — Covers the timing and structure of asset moves: retirement accounts, equity, real estate, insurance policies. Includes U.S. tax residency departure date coordination.</p>
 
-              <p><strong>Module 5: Governance &amp; Deployment</strong> — Covers entity structure for entrepreneurs and business owners — the question of whether to operate as a sole proprietor, LLC, or foreign entity, and how each choice interacts with U.S. self-employment tax.</p>
+              <p><strong>Stage V: Governance &amp; Systems Control</strong> — Covers entity structure for entrepreneurs and business owners — the question of whether to operate as a sole proprietor, LLC, or foreign entity, and how each choice interacts with U.S. self-employment tax.</p>
 
-              <p><strong>Module 6: US Tax Compliance Built In</strong> — Every destination profile in ROS™ includes U.S. tax implications — not generic guidance, but country-specific analysis of tax treaties, FBAR triggers, totalization agreement status, and PFIC exposure.</p>
+              <p><strong>Ongoing U.S. tax compliance questions</strong> — Use the ROS™ research framework to identify U.S. tax questions to confirm with a qualified cross-border tax professional, including reporting obligations, treaty issues and the treatment of investments.</p>
 
               <h2 id="what-makes-ros-different">What Makes ROS™ Different From Standard Relocation Services</h2>
               <p>Most relocation services are logistics-focused: shipping, temporary housing, school placement. They are not equipped to address the financial and legal complexity faced by U.S. persons moving internationally.</p>
               <p>Most cross-border financial advisors focus on investment management. They are not structured to provide the full-picture research — visa pathways, legal frameworks, infrastructure, cost of living, healthcare — that a relocation decision requires before any investment decisions can be made.</p>
               <div className="highlight-box">
-                <p>ROS™ occupies a different position: it is a research and intelligence system that sits upstream of both. It answers the questions that neither logistics providers nor financial advisors address — which of the 132 destinations best matches your income structure, asset profile, and risk tolerance, and what the sequenced path looks like from where you are now to operational life abroad.</p>
+                <p>ROS™ occupies a different position: it is a research and intelligence system that sits upstream of both. It answers the questions that neither logistics providers nor financial advisors address — which of the destination options best matches your income structure, asset profile, and risk tolerance, and what the sequenced path looks like from where you are now to operational life abroad.</p>
               </div>
               <p>ROS™ identifies which professionals — immigration attorney, cross-border tax advisor, local banking specialist — you need, in what order, and why. It is the coordinating intelligence layer, not a replacement for those advisors.</p>
 
@@ -73,7 +73,7 @@ export default function RelocationFinancialPlanningPage() {
                 {[
                   {
                     q: 'What are the best financial planning services for moving abroad from the U.S.?',
-                    a: "For U.S. persons, the best service is one that integrates visa and legal intelligence with financial planning — not one that handles logistics alone. Global Systems Studio's ROS™ framework is built specifically for this: a seven-module system covering legal frameworks, visa pathways, financial structures, and asset transition across 132 destinations. It works alongside your cross-border tax advisor and immigration attorney rather than replacing them."
+                    a: "For U.S. persons, the best service is one that integrates visa and legal intelligence with financial planning — not one that handles logistics alone. Global Systems Studio's ROS™ framework is built specifically for this: a seven-module system covering legal frameworks, visa pathways, financial structures, and asset transition across destination options. It works alongside your cross-border tax advisor and immigration attorney rather than replacing them."
                   },
                   {
                     q: 'How does international relocation consultancy work for families moving abroad?',
@@ -85,7 +85,7 @@ export default function RelocationFinancialPlanningPage() {
                   },
                   {
                     q: 'Where can I find reliable financial analysis for moving abroad?',
-                    a: 'Global Systems Studio publishes destination-specific financial analysis across 132 countries as part of the ROS™ framework. Each destination profile includes cost-of-living data, banking access for U.S. persons, investment restrictions, and the U.S. tax treaty status of the country.'
+                    a: 'Global Systems Studio publishes destination-specific financial analysis across destination options as part of the ROS™ framework. Each destination profile includes cost-of-living data, banking access for U.S. persons, investment restrictions, and the U.S. tax treaty status of the country.'
                   },
                   {
                     q: 'What are the key financial considerations when planning an international relocation for U.S. citizens?',
@@ -100,7 +100,7 @@ export default function RelocationFinancialPlanningPage() {
               </div>
 
               <Link href="/visa-residency-pathways" className="internal-link-block" style={{marginTop:'48px', display:'inline-flex'}}>
-                → Explore visa and residency pathways across 132 destinations
+                → Explore visa and residency pathways across destination options
               </Link>
               <Link href="/financial-planning-international-relocation" className="internal-link-block" style={{marginTop:'12px', display:'inline-flex'}}>
                 → Read our in-depth guide to FBAR, PFIC, FATCA, and FEIE for U.S. expats

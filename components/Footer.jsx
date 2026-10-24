@@ -10,8 +10,8 @@ export default function Footer() {
               <span className="footer-logo-text">Global Systems Studio</span>
               <p>CC Transaction Service LLC</p>
               <p style={{marginTop:'12px', fontSize:'13px', color:'rgba(255,255,255,0.4)', lineHeight:'1.6'}}>
-                Real questions. Real answers. Built from a real journey.
-              </p>
+                Educational relocation planning for U.S. citizens and residents.
+              </p><p style={{marginTop:16, fontSize:14}}><a href="mailto:globalsystemsstudio@gmail.com" style={{color:'white'}}>globalsystemsstudio@gmail.com</a></p><p style={{marginTop:12, fontSize:13, color:'rgba(255,255,255,.8)'}}>Created by Charlene L. M. Cupidore Bynoe. Confirm legal, tax, immigration, investment and medical decisions with licensed professionals.</p>
             </div>
             <div className="footer-col">
               <h4>Navigation</h4>
@@ -24,7 +24,7 @@ export default function Footer() {
                 <li><Link href="/shop">Guides &amp; Workbooks</Link></li>
                 <li><Link href="/tools">Free Tools</Link></li>
                 <li><Link href="/contact">Contact</Link></li>
-                <li><Link href="/sales-policy">Sales Policy</Link></li>
+                <li><Link href="/sales-policy">Sales Policy</Link></li><li><Link href="/privacy/">Privacy &amp; Website Data</Link></li>
               </ul>
             </div>
             <div className="footer-col">
@@ -34,6 +34,7 @@ export default function Footer() {
                 <li><Link href="/visa-residency-pathways">Visa &amp; Residency Pathways</Link></li>
                 <li><Link href="/financial-planning-international-relocation">FBAR &amp; Financial Guide</Link></li>
                 <li><Link href="/international-relocation-consultancy">Choosing a Consultancy</Link></li>
+                <li><a href="https://www.linkedin.com/in/globalsystemsstudio/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://www.instagram.com/globalsystemsstudio/" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="https://www.youtube.com/@GlobalSystemsStudio-CCB" target="_blank" rel="noopener noreferrer">YouTube</a></li>
               </ul>
             </div>
           </div>

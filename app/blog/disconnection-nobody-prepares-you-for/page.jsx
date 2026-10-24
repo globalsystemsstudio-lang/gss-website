@@ -71,7 +71,7 @@ export default function DisconnectionPage() {
 
               <div style={{background:'var(--bg)', border:'1px solid var(--border)', borderRadius:'12px', padding:'32px', marginTop:'48px', marginBottom:'16px'}}>
                 <h3 style={{marginBottom:'12px'}}>This is why ROS™ exists — the whole picture, not just the logistics</h3>
-                <p style={{color:'var(--text-light)', marginBottom:0}}>The system I built for international relocation covers seven modules: legal, financial, housing, healthcare, business, family, and long-term stability. Module 6 — Family &amp; Support Systems — exists because the human side of this process is not peripheral to the plan. It is the plan. The logistics serve the life. And the life includes the people you're leaving behind and the ones you're building something new for.</p>
+                <p style={{color:'var(--text-light)', marginBottom:0}}>The system I built for international relocation covers seven planning areas: legal, financial, housing, healthcare, business, family, and long-term stability. Family and support planning exists because the human side of this process is not peripheral to the plan. It is the plan. The logistics serve the life. And the life includes the people you're leaving behind and the ones you're building something new for.</p>
               </div>
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'40px', textAlign:'center'}}>

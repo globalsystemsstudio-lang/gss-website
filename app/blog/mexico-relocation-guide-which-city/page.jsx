@@ -62,7 +62,7 @@ export default function MexicoPage() {
               </ol>
               <h2>What to Do With This</h2>
               <p><strong>New to the Mexico question?</strong> Check Your Relocation Readiness — grab the free guide, <a href="https://globalsystemsstudio.com/shop/five-questions/">5 Questions to Ask Before You Relocate</a>, before you lock in a pathway.</p>
-              <p><strong>Already know Mexico is real for you?</strong> Request a ROS™ Risk Audit — <a href="https://calendar.app.google/kQpLotoqdgpLqHR88">book a free Discovery Call</a> and find out where your gaps are.</p>
+              <p><strong>Already know Mexico is real for you?</strong> Request a ROS™ Risk Audit — <a href="https://calendar.app.google/5GiW8EZKoyB7SqEKA">book a free Discovery Call</a> and find out where your gaps are.</p>
               <p><em>Research current as of August 2026. As always, verify all details with a licensed attorney and international tax professional before any capital commitment.</em></p>
 
             </div>

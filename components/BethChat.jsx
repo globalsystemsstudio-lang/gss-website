@@ -12,6 +12,30 @@ const QUICK_REPLIES = [
 
 function getBethResponse(input) {
   const q = input.toLowerCase().trim();
+  if (/community|membership|podcast|episode/.test(q)) return {
+    text: "The community is not open for enrollment. The current free starting points are the Discovery Call, Readiness Quiz, Cost of Living Calculator, and Five Questions Before Moving Abroad guide.",
+    link: { href: '/services/#free', label: 'Explore the free starting points →' },
+  };
+  if (/support|missing|receipt|order|delivery|did.*receive/.test(q)) return {
+    text: "Purchase follow-up goes to the email on your PayPal order. Check spam, then email globalsystemsstudio@gmail.com with your order reference. Please do not email passports or financial statements. Pathway dashboard setup follows completed purchase and a signed agreement.",
+    link: { href: '/contact/', label: 'Contact Global Systems Studio →' },
+  };
+  if (/renew|access|dashboard/.test(q)) return {
+    text: "Initial access: Solo and Digital Nomad 6 months; Family Edition and Entrepreneur 9 months; Legacy and Investor 12 months. Family includes 2 users. Access starts after completed purchase and a signed agreement. Dashboard renewals are optional; confirm duration and terms before paying.",
+    link: { href: '/services/#pathways', label: 'Compare access and renewal prices →' },
+  };
+  if (/async|q&a|written questions/.test(q)) return {
+    text: "Async Q&A is $97 for up to three written relocation questions, with a response within five business days after your questions are received. After payment, reply to your purchase follow-up or email your questions and order reference to globalsystemsstudio@gmail.com.",
+    link: { href: '/services/async-qa/', label: 'See Async Q&A details →' },
+  };
+  if (/workbook|planner|organizer|matrix/.test(q)) return {
+    text: "Standalone tools: Readiness Workbook $27; 90-Day Planner $47; Document Organizer $19; Country Comparison Matrix $19. Pathway-specific workbooks range from $37 to $97. These PDFs are separate from pathway dashboard access.",
+    link: { href: '/shop/', label: 'Browse the paid tools →' },
+  };
+  if (/free guide|five questions|^free$|what.*free|free (offer|tool)/.test(q)) return {
+    text: "Five Questions Before Moving Abroad is free. Read or download it without an email address, or request optional email delivery.",
+    link: { href: '/shop/five-questions/', label: 'Read the free guide →' },
+  };
   if (/cost.?of.?living|calculator|compare.*cost/.test(q)) return {
     text: "Use our free Cost of Living Calculator to compare estimated living costs. These are planning estimates; confirm your own housing, healthcare, and other costs before committing to a move.",
     link: { href: '/cost-of-living-calculator/', label: 'Try the free calculator →' },
@@ -21,7 +45,7 @@ function getBethResponse(input) {
     link: { href: '/relocation-readiness-quiz/', label: 'Take the free quiz →' },
   };
   if (/price|cost|how much|pricing|pay|afford|expensive/.test(q)) return {
-    text: "Current options include:\n\n**Free Discovery Call** — 15 minutes.\n**New Roots — $27** — foundational digital guide.\n**Across Streets & Seas — $47** — companion guide.\n**Both books — $64** — Relocation Library.\n**Async Q&A — $97** — up to three written questions.\n**Clarity Session — $497** — 45-minute call.\n\nROS™ Pathways: **Solo $897**, **Digital Nomad $897**, **Family $1,197**, **Entrepreneur $1,597**, **Legacy $1,997**, **Investor $2,497**. Pathways are one-time purchases with a stated access period; renewals are optional.",
+    text: "Current options include:\n\n**Free:** Discovery Call, quiz, calculator and Five Questions guide.\n**New Roots — $27** — foundational digital guide.\n**Across Streets & Seas — $47** — companion guide.\n**Both books — $64** — Relocation Library.\n**Async Q&A — $97** — up to three written questions, answered within five business days.\n**Clarity Session — $497** — 45-minute call.\n\nROS™ Pathways: **Solo $897**, **Digital Nomad $897**, **Family $1,197**, **Entrepreneur $1,597**, **Legacy $1,997**, **Investor $2,497**. Pathways are one-time purchases with a stated access period; renewals are optional.",
     link: { href: '/services/', label: 'Compare pathways and prices →' },
   };
   if (/right for me|who.*for|tier|pathway|my situation|qualify|fit/.test(q)) return {
@@ -136,6 +160,7 @@ export default function BethChat() {
           width: '360px',
           maxWidth: 'calc(100vw - 48px)',
           height: '520px',
+          maxHeight: 'calc(100dvh - 112px)',
           background: 'var(--white, #fff)',
           borderRadius: '16px',
           boxShadow: '0 8px 40px rgba(0,0,0,0.18)',
@@ -168,7 +193,7 @@ export default function BethChat() {
             }}>B</div>
             <div style={{ flex: 1 }}>
               <div style={{ color: '#fff', fontWeight: '700', fontSize: '15px', lineHeight: 1.2 }}>Beth</div>
-              <div style={{ color: 'rgba(255,255,255,0.75)', fontSize: '12px' }}>ROS™ Guide · Global Systems Studio</div>
+              <div style={{ color: 'rgba(255,255,255,0.75)', fontSize: '12px' }}>Automated ROS™ guide</div>
             </div>
             <button
               onClick={() => setIsOpen(false)}

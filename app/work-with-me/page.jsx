@@ -148,8 +148,8 @@ export default function WorkWithMePage() {
             <div style={{background:'var(--bg)', border:'1px solid var(--border)', borderRadius:'16px', padding:'36px', textAlign:'center'}}>
               <div style={{fontSize:'14px', fontWeight:'700', textTransform:'uppercase', letterSpacing:'0.1em', color:'var(--text-light)', marginBottom:'12px'}}>Async Q&amp;A</div>
               <div style={{fontSize:'48px', fontWeight:'700', color:'var(--accent)', lineHeight:'1', marginBottom:'8px'}}>$97</div>
-              <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'28px'}}>Up to 3 questions · written reply within 48 business hours</div>
-              <a href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Submit Your Questions →</a>
+              <div style={{fontSize:'14px', color:'var(--text-light)', marginBottom:'28px'}}>Up to 3 questions · written reply within 5 business days</div>
+              <a href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" className="btn btn-gold" style={{display:'block', textAlign:'center'}} target="_blank" rel="noopener noreferrer">Buy Async Q&A — $97 →</a>
               <SalesNotice />
             </div>
           </div>
@@ -184,7 +184,7 @@ export default function WorkWithMePage() {
                 name: 'ROS™ Relocation Readiness Workbook',
                 price: '$27',
                 description: 'Stop collecting relocation information. Start making an organized decision.',
-                link: 'https://www.paypal.com/ncp/payment/BMFEB6UBQLQR6',
+                link: 'https://www.paypal.com/ncp/payment/CJKF6VV2P7SV8',
                 cta: 'Get the Workbook',
               },
               {
@@ -411,7 +411,7 @@ export default function WorkWithMePage() {
 
           <div style={{marginTop:'40px', background:'rgba(255,255,255,0.08)', border:'1px solid rgba(255,255,255,0.2)', borderRadius:'12px', padding:'28px', maxWidth:'760px'}}>
             <h3 style={{color:'var(--white)', marginBottom:'12px'}}>Optional dashboard renewal</h3>
-            <p style={{color:'rgba(255,255,255,0.8)', fontSize:'15px', lineHeight:'1.6', marginBottom:'12px'}}>Each pathway includes dashboard access for the period shown above. When that period ends, renewal is optional and never required. Renewal pricing: Digital Nomad $197, Solo $247, Family $347, Entrepreneur $397, Legacy $497, Investor $597.</p>
+            <p style={{color:'rgba(255,255,255,0.8)', fontSize:'15px', lineHeight:'1.6', marginBottom:'12px'}}>Initial dashboard access starts after completed purchase and a signed agreement, for the period shown above. When that period ends, renewal is optional and never required. Renewal pricing: Digital Nomad $197, Solo $247, Family $347, Entrepreneur $397, Legacy $497, Investor $597.</p>
             <p style={{color:'rgba(255,255,255,0.6)', fontSize:'13px', lineHeight:'1.6', margin:0}}>All prices are in USD, one-time purchases, processed through PayPal. All sales are final and non-refundable (<Link href="/sales-policy" style={{color:'inherit', textDecoration:'underline'}}>see our sales policy</Link>). By purchasing, you acknowledge and agree to this policy. ROS™ provides educational and planning support and is not legal, immigration, tax, investment, or financial advice.</p>
           </div>
 

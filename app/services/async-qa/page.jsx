@@ -3,7 +3,7 @@ import SalesNotice from '../../../components/SalesNotice';
 
 export const metadata = {
   title: 'Async Q&A — $97',
-  description: 'Submit up to three relocation questions and get a thorough written response built around your specific situation — delivered within 48 business hours, no scheduling required.',
+  description: 'Submit up to three relocation questions and get a thorough written response built around your specific situation — delivered within 5 business days, no scheduling required.',
   alternates: { canonical: 'https://globalsystemsstudio.com/services/async-qa/' },
 };
 
@@ -28,7 +28,7 @@ export default function AsyncQAPage() {
           <ul style={{maxWidth:'760px', marginTop:'24px', paddingLeft:'20px', display:'flex', flexDirection:'column', gap:'12px'}}>
             <li style={{color:'var(--text)', lineHeight:'1.6'}}>Up to 3 international relocation questions submitted in writing</li>
             <li style={{color:'var(--text)', lineHeight:'1.6'}}>A thorough written response addressed to your specific situation — not generic advice</li>
-            <li style={{color:'var(--text)', lineHeight:'1.6'}}>Delivered within 48 business hours</li>
+            <li style={{color:'var(--text)', lineHeight:'1.6'}}>Delivered within 5 business days</li>
             <li style={{color:'var(--text)', lineHeight:'1.6'}}>No live call required — no scheduling needed</li>
           </ul>
         </div>
@@ -53,7 +53,7 @@ export default function AsyncQAPage() {
         <div className="container">
           <h2>How It Works</h2>
           <div style={{maxWidth:'760px', marginTop:'16px'}}>
-            <p style={{color:'var(--text-light)'}}>Complete your payment below. You'll be directed to a short form where you submit your questions and any context we need to give you a useful answer. We'll respond in writing within 48 business hours.</p>
+            <p style={{color:'var(--text-light)'}}>Complete your payment through PayPal. Then email up to three questions and your order reference to globalsystemsstudio@gmail.com, or reply to your purchase follow-up email. We respond within 5 business days after receiving your questions. Please do not send sensitive documents by email.</p>
             <p style={{marginTop:'16px', color:'var(--text-light)'}}>Need more than three questions, or have a complex situation that deserves a real conversation? The <Link href="/services/clarity-session">45-minute Clarity Session ($497)</Link> is a better fit.</p>
             <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
               <Link href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get Written Answers — $97 →</Link>

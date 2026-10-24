@@ -506,11 +506,7 @@ export default function BlogPage() {
       <section style={{background:'var(--primary)', padding:'80px 0'}}>
         <div className="container" style={{textAlign:'center'}}>
           <h2 style={{color:'var(--white)'}}>New posts go out when there are real answers to share — not on a content calendar.</h2>
-          <p style={{color:'rgba(255,255,255,0.8)', maxWidth:'560px', margin:'16px auto 32px'}}>Drop your email below and we'll send you new posts as they publish, along with resources from the ROS™ community.</p>
-          <form style={{display:'flex', gap:'12px', justifyContent:'center', flexWrap:'wrap', maxWidth:'480px', margin:'0 auto'}}>
-            <input type="email" placeholder="Your email address" style={{flex:1, minWidth:'220px', padding:'14px 20px', borderRadius:'8px', border:'none', fontSize:'16px', fontFamily:'inherit'}} />
-            <button type="submit" className="btn btn-gold">Subscribe →</button>
-          </form>
+          <p style={{color:'rgba(255,255,255,0.9)', maxWidth:'560px', margin:'16px auto 32px'}}>Start with Five Questions Before Moving Abroad. Read or download it free, or choose optional email delivery and occasional planning tips.</p><Link href="/shop/five-questions/" className="btn btn-gold">Get the free guide →</Link>
         </div>
       </section>
     </>

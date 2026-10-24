@@ -49,7 +49,7 @@ export default function FindFinancialPlanningServicesPage() {
               <h3>Cross-border financial planners</h3>
               <p>Specialists with active registration to advise clients in both the U.S. and the destination country. Typically credentialed as CFP (U.S.) or equivalent, often with additional cross-border qualifications.</p>
               <p><strong>Best for:</strong> Comprehensive financial planning integrating both countries — tax optimization, investment management, retirement planning, insurance, estate coordination.</p>
-              <p><strong>Directories:</strong> ExpertsForExpats.com; AAFMAA Wealth Management; FAFSA-participating advisors for families with college-bound children abroad.</p>
+              <p><strong>Check an investment professional’s background:</strong> Use <a href="https://www.investor.gov/introduction-investing/getting-started/working-investment-professional/check-out-your-investment-professional" target="_blank" rel="noopener noreferrer">Investor.gov’s investment professional search</a> and the <a href="https://adviserinfo.sec.gov/" target="_blank" rel="noopener noreferrer">SEC’s Investment Adviser Public Disclosure database</a> to review registration and disclosures. Ask separately about experience serving clients resident in your destination. A directory listing does not establish suitability for your move.</p>
 
               <h3>Expat tax advisors</h3>
               <p>CPAs and tax professionals specializing in dual-filer returns: Form 2555 (FEIE), Form 8938 (FATCA), FinCEN 114 (FBAR), Form 8621 (PFIC), and applicable treaty elections. Distinct from a financial planner — a tax advisor handles compliance; a financial planner handles strategy and portfolio management.</p>
@@ -159,7 +159,7 @@ export default function FindFinancialPlanningServicesPage() {
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Ready to plan your international move?</h2>
-                <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>The ROS™ framework covers 132 destinations — with financial, legal, and visa intelligence built in at every stage.</p>
+                <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>The ROS™ framework includes destination research resources — with financial, legal, and visa intelligence built in at every stage.</p>
                 <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Transition Clarity Session →</Link>
               </div>
 

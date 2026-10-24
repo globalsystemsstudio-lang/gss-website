@@ -31,8 +31,8 @@ export default function ResourcesPage() {
               {
                 href: '/visa-residency-pathways',
                 tag: 'Legal & Residency',
-                title: 'Visa and Residency Pathways for U.S. Persons Relocating Abroad: 132 Destinations',
-                desc: 'A structured analysis of visa and residency pathways across 132 destinations for U.S. persons. Covers passive income visas, digital nomad visas, investment programs, and the U.S. tax implications of each.',
+                title: 'Visa and Residency Pathways for U.S. Persons Relocating Abroad: Destination Options',
+                desc: 'A structured analysis of visa and residency pathways across destination options for U.S. persons. Covers passive income visas, digital nomad visas, investment programs, and the U.S. tax implications of each.',
               },
               {
                 href: '/international-relocation-consultancy',

@@ -51,7 +51,7 @@ export default function FreeGuideForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginTop: '24px', maxWidth: '520px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    <div><p style={{ marginTop: 24 }}><a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" className="btn btn-outline">Download the free PDF — no email required</a></p><p>Prefer a copy in your inbox? Email delivery is optional.</p><form onSubmit={handleSubmit} style={{ marginTop: '24px', maxWidth: '520px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
       <label htmlFor="guide-name" style={{ fontWeight: '600' }}>First name</label>
       <input
         id="guide-name"
@@ -83,6 +83,6 @@ export default function FreeGuideForm() {
         </p>
       )}
       <p style={{ fontSize: '13px' }}>We will email you the guide and occasional relocation planning tips. Unsubscribe any time.</p>
-    </form>
+    </form></div>
   );
 }

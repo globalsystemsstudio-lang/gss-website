@@ -59,7 +59,7 @@ export default function CostaRicaBeachfrontPage() {
               <li>Budget honestly — include rainy-season reality, import costs, vehicle costs, and the private-insurance bridge period.</li>
               <li>Retain professional help — a Costa Rican immigration attorney and a US expat tax advisor before you sign anything.</li>
               </ol>
-              <p>If Costa Rica is on your shortlist, the next right step isn't more research — it's a conversation about whether it actually fits your specific situation. <a href="https://calendar.app.google/kQpLotoqdgpLqHR88">Book a free Discovery Call</a>.</p>
+              <p>If Costa Rica is on your shortlist, the next right step isn't more research — it's a conversation about whether it actually fits your specific situation. <a href="https://calendar.app.google/5GiW8EZKoyB7SqEKA">Book a free Discovery Call</a>.</p>
 
             </div>
           </div>

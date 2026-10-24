@@ -31,3 +31,15 @@
   to = "/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/episodes"
+  to = "/tools/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/episodes/*"
+  to = "/tools/"
+  status = 301
+  force = true

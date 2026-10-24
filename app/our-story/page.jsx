@@ -25,7 +25,7 @@ export default function OurStoryPage() {
 
               <p>Global Systems Studio didn't start with a business plan. It started with a problem we couldn't solve — and a refusal to stop looking until we could.</p>
 
-              <p>Our founder spent decades building expertise in how complex systems work — professionally, financially, operationally. A career built on figuring things out. On becoming the person others called when the path forward wasn't clear.</p>
+              <p>Our founder, <strong>Charlene L. M. Cupidore Bynoe</strong>, created the Relocation Operating System™ (ROS™). She spent decades building expertise in how complex systems work — professionally, financially, operationally. A career built on figuring things out. On becoming the person others called when the path forward wasn't clear.</p>
 
               <p>Then came the decision to relocate internationally. Not a vague someday idea. A real, committed, irreversible decision. And what followed was a masterclass in everything the relocation industry leaves out.</p>
 

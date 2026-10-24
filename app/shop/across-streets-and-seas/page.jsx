@@ -58,7 +58,7 @@ export default function AcrossStreetsPage() {
         <div className="container">
           <h2>Ready to Go Deeper?</h2>
           <div style={{maxWidth:'760px', marginTop:'16px'}}>
-            <p style={{color:'var(--text-light)'}}>Digital download — delivered immediately after purchase. Or get both books bundled at <Link href="/shop/relocation-library">$64 in the Relocation Library</Link> and save $10.</p>
+            <p style={{color:'var(--text-light)'}}>Digital download — delivery follow-up goes to the email on your completed PayPal order. Or get both books bundled at <Link href="/shop/relocation-library">$64 in the Relocation Library</Link> and save $10.</p>
             <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
               <Link href="https://www.paypal.com/ncp/payment/PDCK6MLEFJG8W" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get Across Streets & Seas — $47 →</Link>
               <Link href="/shop" className="btn btn-outline">See All Books →</Link>

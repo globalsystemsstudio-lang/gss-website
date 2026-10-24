@@ -114,7 +114,7 @@ export default function FiveQuestionsPage() {
           <div style={{maxWidth:'760px', marginTop:'16px'}}>
             <p style={{color:'var(--text-light)'}}>The ROS™ Relocation Readiness Workbook turns your answers into a structured research and preparation plan — seven modules, one readiness score, and a clear picture of what needs professional confirmation before you move.</p>
             <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-              <Link href="https://www.paypal.com/ncp/payment/BMFEB6UBQLQR6" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get the Readiness Workbook — $27 →</Link>
+              <Link href="https://www.paypal.com/ncp/payment/CJKF6VV2P7SV8" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get the Readiness Workbook — $27 →</Link>
               <Link href="/shop" className="btn btn-outline">Or browse all guides and planners →</Link>
             </div>
           </div>

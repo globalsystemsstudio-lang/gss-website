@@ -189,7 +189,7 @@ export default function FinancialConsiderationsPage() {
 
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Ready to plan your international move?</h2>
-                <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>The ROS™ framework covers 132 destinations — with financial, legal, and visa intelligence built in at every stage.</p>
+                <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>The ROS™ framework includes destination research resources — with financial, legal, and visa intelligence built in at every stage.</p>
                 <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Transition Clarity Session →</Link>
               </div>
 

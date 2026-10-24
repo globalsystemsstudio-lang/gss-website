@@ -8,14 +8,11 @@ export default function Nav() {
         <div className="nav-inner">
           <Link href="/" className="nav-logo">Global Systems Studio</Link>
           <ul className="nav-links">
-            <li><Link href="/">Home</Link></li>
             <li><Link href="/what-is-ros">The System</Link></li>
             <li><Link href="/services/">Pathways &amp; Prices</Link></li>
             <li><Link href="/shop/">Shop Guides</Link></li>
-            <li><Link href="/#destinations">Destinations 🌍</Link></li>
-            <li><Link href="/#decision-room">Decision Room 🎲</Link></li>
             <li><Link href="/resources">Resources</Link></li>
-            <li><Link href="/shop/new-roots/" className="nav-cta-link">Start Here</Link></li>
+            <li><Link href="/shop/five-questions/" className="nav-cta-link">Start Free</Link></li>
           </ul>
           <MobileNavToggle />
         </div>

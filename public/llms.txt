@@ -1,6 +1,6 @@
 # Global Systems Studio
 
-> Global Systems Studio is the home of ROS (Relocation Operating System), step-by-step infrastructure for U.S. persons relocating internationally. Seven modules. Six tiers. Real answers. Founded by Charlene L. M. Cupidore Bynoe.
+> Global Systems Studio is the home of ROS (Relocation Operating System), step-by-step infrastructure for U.S. persons relocating internationally. Seven workflow stages. Six tiers. Real answers. Founded by Charlene L. M. Cupidore Bynoe.
 
 ## Main pages
 
