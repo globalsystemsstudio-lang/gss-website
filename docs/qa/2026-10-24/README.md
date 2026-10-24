@@ -6,7 +6,7 @@ Free tools and the free introductory guide are separate from paid downloads, per
 
 ## Validation
 
-- Production static build, Next.js 14.2.35: passed.
+- Production static build, Next.js 14.2.35 on Node.js 24.22.1: passed. Netlify build and function runtime are aligned to Node.js 24.
 - Crawl of 104 exported HTML documents and 223 distinct internal link/anchor targets: no broken targets or invalid JSON-LD.
 - All six prices, access periods, renewal prices, checkout IDs, common foundation resources and signed-agreement activation terms: passed against the approved catalog.
 - Three server-function tests cover malformed data, correct MailerLite groups and allowed fields, and safe provider errors. External provider responses were mocked; no subscriber was created.
@@ -20,5 +20,7 @@ Free tools and the free introductory guide are separate from paid downloads, per
 A genuine completed purchase and actual booking were not made. Paid pathways still require a signed agreement and manual dashboard setup; service orders generate owner fulfillment notifications. Unknown or mismatched paid orders go to manual review, never price-only fulfillment. Sent-mail checks suppress already-sent captures, but are not an atomic lock against simultaneous duplicate webhooks.
 
 Renewal duration has not been established by the approved tier guide, so the website asks customers to confirm it before purchasing renewal. Completed purchases and completed bookings are not inferred from outbound clicks. GA4 conversion configuration and end-to-end sale/booking attribution still require appropriate account permission and provider integration. This release is not a claim that every destination-specific legal or financial statement in the article archive has been independently re-verified.
+
+The desktop screenshot shows the live public comparison after deployment; the mobile screenshot shows the tested 390px and 360px layouts.
 
 Screenshots: [desktop](desktop.jpg), [mobile](mobile.jpg).
