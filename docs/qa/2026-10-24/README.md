@@ -6,7 +6,7 @@ Free tools and the free introductory guide are separate from paid downloads, per
 
 ## Validation
 
-- Production static build, Next.js 14.2.35 on Node.js 24.22.1: passed. Netlify build and function runtime are aligned to Node.js 24.
+- Production static build, Next.js 14.2.35 on Node.js 24.22.1: passed. Netlify uses Node.js 24 for builds, with the production AWS_LAMBDA_JS_RUNTIME override explicitly set to nodejs24.x for the subscribe function.
 - Crawl of 104 exported HTML documents and 223 distinct internal link/anchor targets: no broken targets or invalid JSON-LD.
 - All six prices, access periods, renewal prices, checkout IDs, common foundation resources and signed-agreement activation terms: passed against the approved catalog.
 - Three server-function tests cover malformed data, correct MailerLite groups and allowed fields, and safe provider errors. External provider responses were mocked; no subscriber was created.
