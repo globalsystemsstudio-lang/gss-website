@@ -10,7 +10,7 @@ export const metadata = {
 const PATHWAYS = [
   { icon: '🌐', title: 'The Digital Nomad', desc: 'You work remotely and want the freedom to live anywhere, legally, financially smart, and without losing your mind in the process.', href: '/services/ros-digital-nomad-pathway/' },
   { icon: '🧳', title: 'The Solo Relocator', desc: "You're making this move on your own, by choice or by circumstance, and you're determined to get it right.", href: '/services/ros-solo-pathway/' },
-  { icon: '👨‍👩‍👧', title: 'The Family', desc: "You're moving with people who depend on you and getting it wrong isn't an option.", href: '/services/ros-family-edition-pathway/' },
+  { icon: '👨‍👩‍👧', title: 'The Family', desc: 'Coordinate schools, housing, healthcare and timing together. Family Edition includes nine months of dashboard access for two users.', href: '/family-relocation/' },
   { icon: '💼', title: 'The Entrepreneur', desc: 'You own a business or are building something new in a foreign market and need your legal and financial structure to work across borders.', href: '/services/ros-entrepreneur-pathway/' },
   { icon: '🏡', title: 'The Legacy Mover', desc: "You've worked your whole life for this. Now you want to spend your next chapter somewhere that gives you more, on a budget that actually works.", href: '/services/ros-legacy-pathway/' },
   { icon: '📈', title: 'The Investor', desc: "You're moving capital, not just yourself, and you need the legal and financial infrastructure to do it right in a new country.", href: '/services/ros-investor-pathway/' },
