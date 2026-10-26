@@ -1,68 +1,7 @@
 import Link from 'next/link';
 import SalesNotice from '../../../components/SalesNotice';
-
-export const metadata = {
-  title: 'Async Q&A — $97',
-  description: 'Submit up to three relocation questions and get a thorough written response built around your specific situation — delivered within 5 business days, no scheduling required.',
-  alternates: { canonical: 'https://globalsystemsstudio.com/services/async-qa/' },
-};
-
-export default function AsyncQAPage() {
-  return (
-    <>
-      <section className="page-hero">
-        <div className="container">
-          <p style={{color:'var(--accent)', fontWeight:'600', marginBottom:'8px'}}>Written Response · $97</p>
-          <h1>Async Q&A</h1>
-          <p>Submit up to three relocation questions. Get a thorough, written response built around your specific situation — no scheduling, no waiting for a calendar slot.</p>
-          <div style={{marginTop:'24px'}}>
-            <Link href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get Written Answers — $97 →</Link>
-          </div>
-          <SalesNotice />
-        </div>
-      </section>
-
-      <section style={{background:'var(--white)', padding:'80px 0'}}>
-        <div className="container">
-          <h2>What's Included</h2>
-          <ul style={{maxWidth:'760px', marginTop:'24px', paddingLeft:'20px', display:'flex', flexDirection:'column', gap:'12px'}}>
-            <li style={{color:'var(--text)', lineHeight:'1.6'}}>Up to 3 international relocation questions submitted in writing</li>
-            <li style={{color:'var(--text)', lineHeight:'1.6'}}>A thorough written response addressed to your specific situation — not generic advice</li>
-            <li style={{color:'var(--text)', lineHeight:'1.6'}}>Delivered within 5 business days</li>
-            <li style={{color:'var(--text)', lineHeight:'1.6'}}>No live call required — no scheduling needed</li>
-          </ul>
-        </div>
-      </section>
-
-      <section style={{background:'var(--bg)', padding:'80px 0'}}>
-        <div className="container">
-          <h2>Best For</h2>
-          <div style={{maxWidth:'760px', marginTop:'16px'}}>
-            <p style={{color:'var(--text-light)'}}>The Async Q&A is the right option when:</p>
-            <ul style={{marginTop:'24px', paddingLeft:'20px', display:'flex', flexDirection:'column', gap:'12px'}}>
-              <li style={{color:'var(--text)', lineHeight:'1.6'}}>You have a specific question that is blocking your progress and you just need an answer</li>
-              <li style={{color:'var(--text)', lineHeight:'1.6'}}>You prefer written information you can reference later</li>
-              <li style={{color:'var(--text)', lineHeight:'1.6'}}>Your schedule makes booking a live call difficult</li>
-              <li style={{color:'var(--text)', lineHeight:'1.6'}}>You've already done significant research and need targeted clarification, not a full session</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section style={{background:'var(--white)', padding:'80px 0'}}>
-        <div className="container">
-          <h2>How It Works</h2>
-          <div style={{maxWidth:'760px', marginTop:'16px'}}>
-            <p style={{color:'var(--text-light)'}}>Complete your payment through PayPal. Then email up to three questions and your order reference to globalsystemsstudio@gmail.com, or reply to your purchase follow-up email. We respond within 5 business days after receiving your questions. Please do not send sensitive documents by email.</p>
-            <p style={{marginTop:'16px', color:'var(--text-light)'}}>Need more than three questions, or have a complex situation that deserves a real conversation? The <Link href="/services/clarity-session">45-minute Clarity Session ($497)</Link> is a better fit.</p>
-            <div style={{marginTop:'24px', display:'flex', gap:'16px', flexWrap:'wrap'}}>
-              <Link href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" target="_blank" rel="noopener noreferrer" className="btn btn-gold">Get Written Answers — $97 →</Link>
-              <Link href="/services" className="btn btn-outline">See All Services →</Link>
-            </div>
-<SalesNotice />
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
+export const metadata={title:'Written Relocation Answers — $97',description:'Send up to three relocation questions. Get a written reply within five business days after your questions arrive. No call needed.',alternates:{canonical:'https://globalsystemsstudio.com/services/async-qa/'}};
+export default function Page(){return <>
+<section className="page-hero"><div className="container"><p className="eyebrow">Written Q&amp;A · also called Async Q&amp;A</p><h1>Ask up to three questions. Get written answers.</h1><p>$97 USD, paid once. No call needed.</p><p>Send Charlene your relocation questions. Receive a written reply within five business days after your questions arrive.</p><a className="btn btn-gold" href="https://www.paypal.com/ncp/payment/DSZUNS6QPXGQU" target="_blank" rel="noopener noreferrer">Buy written Q&amp;A — $97 →</a><SalesNotice /></div></section>
+<section><div className="container content-narrow"><h2>How it works</h2><ol className="clear-list"><li>Pay through PayPal.</li><li>Reply to your purchase email, or email <a href="mailto:globalsystemsstudio@gmail.com">globalsystemsstudio@gmail.com</a> with up to three questions and your order reference.</li><li>Receive your written answers within five business days after we receive the questions.</li></ol><p>Include a short description of your move so the questions make sense. Please do not email passports, financial statements or other sensitive documents.</p><h2 style={{marginTop:32}}>What can I ask?</h2><p>Ask about planning your move, which tools to use or what to research next. For legal, tax, immigration, investment or medical advice, use a licensed professional.</p><p>This purchase does not include a call or access to an online ROS™ plan.</p><Link href="/services/discovery-call/" className="btn btn-outline">Unsure? Start with a free call →</Link></div></section>
+</>}

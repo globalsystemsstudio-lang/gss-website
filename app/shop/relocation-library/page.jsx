@@ -26,7 +26,7 @@ export default function RelocationLibraryPage() {
           <div style={{maxWidth:'760px', marginTop:'24px', display:'flex', flexDirection:'column', gap:'24px'}}>
             <div style={{background:'var(--bg)', border:'1px solid var(--border)', borderRadius:'12px', padding:'24px'}}>
               <h3 style={{color:'var(--primary)'}}>New Roots — $27 value</h3>
-              <p style={{color:'var(--text)', lineHeight:'1.7'}}>The foundational guide for anyone beginning the international relocation journey. Where to start, what to prioritize, and how to think about the move before you can know what to ask next.</p>
+              <p style={{color:'var(--text)', lineHeight:'1.7'}}>The starting guide for anyone beginning the international relocation journey. Where to start, what to prioritize, and how to think about the move before you can know what to ask next.</p>
               <Link href="/shop/new-roots" style={{color:'var(--accent)', fontWeight:'600'}}>Learn more about New Roots →</Link>
             </div>
             <div style={{background:'var(--bg)', border:'1px solid var(--border)', borderRadius:'12px', padding:'24px'}}>

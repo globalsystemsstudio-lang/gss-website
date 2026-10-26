@@ -13,74 +13,82 @@ const QUICK_REPLIES = [
 function getBethResponse(input) {
   const q = input.toLowerCase().trim();
   if (/community|membership|podcast|episode/.test(q)) return {
-    text: "The community is not open for enrollment. The current free starting points are the Discovery Call, Readiness Quiz, Cost of Living Calculator, and Five Questions Before Moving Abroad guide.",
+    text: "The community is not open. You can use the free call, quiz, cost calculator or Five Questions guide.",
     link: { href: '/services/#free', label: 'Explore the free starting points →' },
   };
   if (/support|missing|receipt|order|delivery|did.*receive/.test(q)) return {
-    text: "Purchase follow-up goes to the email on your PayPal order. Check spam, then email globalsystemsstudio@gmail.com with your order reference. Please do not email passports or financial statements. Pathway dashboard setup follows completed purchase and a signed agreement.",
+    text: "Check the email address on your PayPal order, including spam. Still missing your purchase email? Contact globalsystemsstudio@gmail.com with your order reference. Please do not email passports or financial statements.",
     link: { href: '/contact/', label: 'Contact Global Systems Studio →' },
   };
+  if (/family|couple|children|kids/.test(q)) return {
+    text: "Family Edition costs $1,197 USD once. You get nine months of online access for two people, guides and checklists for family moves, email support and one written Q&A. You do the research and carry out the move using the tools.",
+    link: { href: '/family-relocation/', label: 'See Family Edition →' },
+  };
+  if (/how.*(use|work)|what.*(get|buy|receive)|included/.test(q)) return {
+    text: "An online plan gives you a planning space in Notion, guides and checklists. Start with the guide, work through the checklist and research the questions for your move. The extras and access period depend on the plan you choose.",
+    link: { href: '/services/', label: 'See what each plan includes →' },
+  };
   if (/renew|access|dashboard/.test(q)) return {
-    text: "Initial access: Solo and Digital Nomad 6 months; Family Edition and Entrepreneur 9 months; Legacy and Investor 12 months. Family includes 2 users. Access starts after completed purchase and a signed agreement. Dashboard renewals are optional; confirm duration and terms before paying.",
+    text: "The dashboard is your online planning space in Notion. Solo and Digital Nomad: 6 months. Family and Entrepreneur: 9 months. Legacy and Investor: 12 months. Family includes two users. Access starts after you pay and sign the agreement. Renewal is optional.",
     link: { href: '/services/#pathways', label: 'Compare access and renewal prices →' },
   };
   if (/async|q&a|written questions/.test(q)) return {
-    text: "Async Q&A is $97 for up to three written relocation questions, with a response within five business days after your questions are received. After payment, reply to your purchase follow-up or email your questions and order reference to globalsystemsstudio@gmail.com.",
+    text: "Written Q&A costs $97. Send up to three relocation questions. Get a written reply within five business days after we receive them. No call needed.",
     link: { href: '/services/async-qa/', label: 'See Async Q&A details →' },
   };
   if (/workbook|planner|organizer|matrix/.test(q)) return {
-    text: "Standalone tools: Readiness Workbook $27; 90-Day Planner $47; Document Organizer $19; Country Comparison Matrix $19. Pathway-specific workbooks range from $37 to $97. These PDFs are separate from pathway dashboard access.",
+    text: "Workbooks and planners are PDF files you download and use yourself. They start at $19. They do not include access to an online ROS™ plan.",
     link: { href: '/shop/', label: 'Browse the paid tools →' },
   };
   if (/free guide|five questions|^free$|what.*free|free (offer|tool)/.test(q)) return {
-    text: "Five Questions Before Moving Abroad is free. Read or download it without an email address, or request optional email delivery.",
+    text: "Five Questions Before Moving Abroad is free. Read or download it without giving an email address. Email delivery is optional.",
     link: { href: '/shop/five-questions/', label: 'Read the free guide →' },
   };
   if (/cost.?of.?living|calculator|compare.*cost/.test(q)) return {
-    text: "Use our free Cost of Living Calculator to compare estimated living costs. These are planning estimates; confirm your own housing, healthcare, and other costs before committing to a move.",
+    text: "The free calculator helps you compare estimated living costs. Use it as a starting point, then check real costs for your own move.",
     link: { href: '/cost-of-living-calculator/', label: 'Try the free calculator →' },
   };
   if (/quiz|readiness|am i ready|prepared/.test(q)) return {
-    text: "The free Relocation Readiness Quiz asks 12 questions about financial compliance and practical logistics. You can see your score after the questions; an email address is required for the full breakdown and recommendation.",
+    text: "Take the free 12-question quiz to see which parts of your move need more work. You can see your score first. An email address is needed for the full breakdown.",
     link: { href: '/relocation-readiness-quiz/', label: 'Take the free quiz →' },
   };
   if (/price|cost|how much|pricing|pay|afford|expensive/.test(q)) return {
-    text: "Current options include:\n\n**Free:** Discovery Call, quiz, calculator and Five Questions guide.\n**New Roots — $27** — foundational digital guide.\n**Across Streets & Seas — $47** — companion guide.\n**Both books — $64** — Relocation Library.\n**Async Q&A — $97** — up to three written questions, answered within five business days.\n**Clarity Session — $497** — 45-minute call.\n\nROS™ Pathways: **Solo $897**, **Digital Nomad $897**, **Family $1,197**, **Entrepreneur $1,597**, **Legacy $1,997**, **Investor $2,497**. Pathways are one-time purchases with a stated access period; renewals are optional.",
-    link: { href: '/services/', label: 'Compare pathways and prices →' },
+    text: "Online plans, paid once in USD: Solo $897; Digital Nomad $897; Family $1,197; Entrepreneur $1,597; Legacy $1,997; Investor $2,497. Each includes a set access period. Books and workbooks start at $19. The Discovery Call is free.",
+    link: { href: '/services/', label: 'See plans and prices →' },
   };
   if (/right for me|who.*for|tier|pathway|my situation|qualify|fit/.test(q)) return {
-    text: "ROS™ has six pathways: **Solo Relocator**, **Family Edition**, **Digital Nomad**, **Entrepreneur**, **Legacy**, and **Investor**. Each organizes relocation decisions around that situation. New Roots and Across Streets & Seas are books, separate from the six pathways.",
-    link: { href: '/services/', label: 'Find your pathway →' },
+    text: "Choose by your situation: Solo for moving alone; Family for moving together; Digital Nomad for remote work; Entrepreneur for business owners; Legacy for long-term plans; Investor for investment and property research. See what each includes below.",
+    link: { href: '/services/', label: 'Compare the online plans →' },
   };
   if (/new roots|book|across streets|download|written|library/.test(q)) return {
-    text: "**New Roots — $27** is the foundational guide for deciding what to organize first. **Across Streets & Seas — $47** is the deeper companion. The **Relocation Library — $64** includes both books as digital downloads.",
+    text: "New Roots is $27. Across Streets & Seas is $47. Both together cost $64. These are books you download, separate from the online plans.",
     link: { href: '/shop/', label: 'Browse guides and workbooks →' },
   };
   if (/clarity|session|1.?1|one.on.one/.test(q)) return {
-    text: "The **Clarity Session is $497 for 45 minutes** focused on your situation and next steps. If you are unsure whether it fits, start with the free 15-minute Discovery Call.",
+    text: "The Clarity Session is a private 45-minute call with Charlene for $497. Talk through your move and next steps. A recording and written summary follow within 48 hours. Unsure? Start with the free 15-minute call.",
     link: { href: '/services/clarity-session/', label: 'See the Clarity Session →' },
   };
   if (/start|begin|call|consult|appointment|coach/.test(q)) return {
-    text: "Start with **New Roots ($27)** for a foundational guide, or book a **free 15-minute Discovery Call** to discuss which available option fits your move. Calls are scheduled through Google Calendar.",
+    text: "Book a free 15-minute call to talk about your move and whether ROS™ can help. No pressure to buy.",
     link: { href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA', label: 'Book a free Discovery Call →', external: true },
   };
   if (/legal|visa|document|passport|apostille|residency|citizenship/.test(q)) return {
-    text: "ROS™ helps organize visa, residency, and documentation questions in sequence. Requirements depend on your destination and situation. Confirm legal and immigration decisions with a licensed professional.",
+    text: "ROS™ has guides to help you research visa and moving requirements. A licensed professional must confirm the rules for your country and situation.",
     link: { href: '/visa-residency-pathways/', label: 'Explore visa and residency planning →' },
   };
   if (/financ|money|tax|social security|fbar|bank|invest|income/.test(q)) return {
-    text: "ROS™ helps you organize banking, income continuity, and cross-border reporting questions before you move. It provides planning and educational support; consult a qualified tax or financial professional for advice about your situation.",
+    text: "ROS™ helps you organize questions about banking, taxes and keeping your income going. Ask a qualified professional for advice before making legal, tax or investment decisions.",
     link: { href: '/relocation-financial-planning/', label: 'Explore financial planning →' },
   };
   if (/what is ros|module|system|health|hous|family|retire|business|work|remote/.test(q)) return {
-    text: "ROS™ is the **Relocation Operating System**: seven planning areas covering legal and documentation, finances, housing, healthcare, business and income, family, and long-term stability. Six pathways organize those decisions around your move. It is educational and planning support, not legal, tax, immigration, investment, or medical advice.",
-    link: { href: '/what-is-ros/', label: 'Explore the system →' },
+    text: "ROS™ is a set of guides, checklists and online planning tools for moving abroad. Use it to organize questions about where to live, money, housing, healthcare, work and family. Choose the plan that fits your move.",
+    link: { href: '/what-is-ros/', label: 'See what you get →' },
   };
   if (/^(hi|hello|hey|good morning|good afternoon|good evening)\b/.test(q)) return {
-    text: "Hi! I'm Beth, Global Systems Studio's guide to ROS™. I can help you find current pathways, prices, guides, free tools, and a Discovery Call. What are you looking for?",
+    text: "Hi! I’m Beth. I can help you find ROS™ prices, tools and the free call. What would you like to know?",
   };
   return {
-    text: "For a question specific to your move, a free 15-minute Discovery Call can help identify your next step. You can also explore our current pathways, guides, and free tools.",
+    text: "I can help with ROS™ prices, what is included and how to start. For questions about your own move, book a free 15-minute call.",
     link: { href: '/services/discovery-call/', label: 'See the free Discovery Call →' },
   };
 }

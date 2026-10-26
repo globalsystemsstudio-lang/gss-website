@@ -12,9 +12,15 @@ export default function BlogPage() {
       <section className="page-hero">
         <div className="container">
           <h1>Real Questions. Real Answers. No Highlight Reel.</h1>
-          <p>This blog exists because the questions people have about international relocation deserve honest, specific, useful answers — not inspiration content designed to make the move look effortless. Everything here is written from the inside of the process, not the outside looking back.</p>
+          <p>Find answers to common questions about moving abroad. Start with the short answer, then read the steps and sources when you need more detail.</p>
         </div>
       </section>
+
+      <section className="section-ivory"><div className="container"><h2>New practical guides</h2><p>Quick answers first, with steps you can use.</p><div className="blog-grid">{[
+        ['is-ros-worth-it-2026','Is ROS™ worth it?','See what you get, what it costs and when a smaller option may be enough.'],
+        ['cost-of-living-calculator-moving-abroad-budget','Turn an estimate into a moving budget','Add moving costs, deposits and a buffer to your monthly estimate.'],
+        ['international-relocation-planning-single-parents','Moving abroad as a single parent','Start with permissions, documents and a workable daily-life plan.'],
+      ].map(([slug,title,description])=><Link key={slug} href={'/blog/'+slug+'/'} className="blog-card"><h3>{title}</h3><p>{description}</p><span className="blog-card-link">Read the guide →</span></Link>)}</div></div></section>
 
       {/* FEATURED POST */}
       <section style={{background:'var(--white)', padding:'80px 0'}}>

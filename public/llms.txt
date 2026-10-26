@@ -1,14 +1,16 @@
 # Global Systems Studio
 
-> Global Systems Studio is the home of ROS (Relocation Operating System), step-by-step infrastructure for U.S. persons relocating internationally. Seven workflow stages. Six tiers. Real answers. Founded by Charlene L. M. Cupidore Bynoe.
+> Global Systems Studio is the home of ROS (Relocation Operating System), guides, checklists and online planning tools for Americans moving abroad. Six plans for different situations. Founded by Charlene L. M. Cupidore Bynoe.
 
 ## Main pages
 
 - [Home](https://globalsystemsstudio.com/): Overview of ROS and the Global Systems Studio approach.
-- [Work With Me](https://globalsystemsstudio.com/work-with-me/): Advisory services plus Guides & Workbooks, ten entry-level digital products for people planning an international move.
+- [Work With Me](https://globalsystemsstudio.com/work-with-me/): Free and paid calls, written answers, downloads and online plans for people moving abroad.
 - [Free guide: Five Questions Before Moving Abroad](https://globalsystemsstudio.com/shop/five-questions/): Free download for anyone deciding whether a relocation will work.
 - [Blog](https://globalsystemsstudio.com/blog/): Country relocation guides, tax and residency explainers, and answers to common expat questions.
 - [Tools](https://globalsystemsstudio.com/tools/): Planning tools for relocation.
+
+- [Family planning](https://globalsystemsstudio.com/family-relocation/): What Family Edition includes and how to use it.
 
 ## Offers and pricing
 
@@ -65,12 +67,15 @@ Full article text: https://globalsystemsstudio.com/llms-full.txt
 - [How much money do you need to retire abroad in 2026?](https://globalsystemsstudio.com/blog/how-much-money-do-you-need-to-retire-abroad-2026/): There is no single number to retire abroad. Build one from your destination budget, healthcare, taxes and a cushion. See a step-by-step method and worked example.
 - [How much savings should you have before moving abroad in 2026?](https://globalsystemsstudio.com/blog/how-much-savings-before-moving-abroad-2026/): There is no universal savings target for moving abroad. Size yours from your destination budget, runway months and visa requirements. See a practical method for 2026.
 - [How to Find and Evaluate Financial Planning Services for Moving Abroad](https://globalsystemsstudio.com/blog/find-financial-planning-services-moving-abroad/): Cross-border financial planning for U.S. persons is a specialized niche. Here are the types of advisors, the six questions to ask before hiring anyone, and where to find reliable reviews.
+- [How to turn a cost-of-living estimate into your moving-abroad budget](https://globalsystemsstudio.com/blog/cost-of-living-calculator-moving-abroad-budget/): Start with monthly living costs, then add moving costs, deposits, overlapping bills and a buffer. Use a simple worked example to build your own budget.
 - [Ireland Is One of the Most Sophisticated Tax Positions in the English-Speaking World](https://globalsystemsstudio.com/blog/ireland-non-dom-tax-position-guide/): Ireland's non-dom tax regime and STEP entrepreneur pathway make it one of the most structured relocation options in the English-speaking world, if set up correctly.
 - [Is it cheaper to retire abroad than in the US in 2026?](https://globalsystemsstudio.com/blog/is-it-cheaper-to-retire-abroad-than-in-the-us-2026/): Often, but not always. Housing and daily costs can be lower abroad, while healthcare, flights and taxes can offset the savings. See how to compare your real numbers.
 - [Is it harder to get life insurance after you move abroad?](https://globalsystemsstudio.com/blog/life-insurance-after-moving-abroad/): Getting new life insurance can be harder after you move abroad. Learn how residency affects eligibility, what to disclose before departure and what to ask insurers.
+- [Is ROS™ worth it? What you get, what it costs and who it helps](https://globalsystemsstudio.com/blog/is-ros-worth-it-2026/): An honest guide from Global Systems Studio: what ROS™ includes, how you use it, prices and when a free tool or smaller purchase may be enough.
 - [Japan Is Not Closed: The Real Relocation Guide for US Citizens](https://globalsystemsstudio.com/blog/japan-not-closed-relocation-guide/): Japan's visa pathways, the worldwide tax picture, city costs, and the failure modes that catch US citizens out. What is actually possible, tier by tier.
 - [Key Financial Considerations for U.S. Persons Relocating Internationally](https://globalsystemsstudio.com/blog/financial-considerations-us-persons-relocating-internationally/): FBAR, FATCA, PFIC rules, retirement accounts, banking strategy, cost of living, and estate planning — the essential financial checklist for U.S. persons moving abroad.
 - [Malaysia Is One of the Most Underrated Relocation Markets in Southeast Asia](https://globalsystemsstudio.com/blog/malaysia-relocation-guide-mm2h-pvip/): Malaysia's MM2H and PVIP visas cover every ROS™ tier, with a tax exemption on foreign income locked in through 2036. What a real Malaysia relocation costs.
+- [Moving abroad as a single parent: what to plan first](https://globalsystemsstudio.com/blog/international-relocation-planning-single-parents/): A practical starting checklist for single parents: permissions, documents, housing, schools, income, healthcare and backup help. Know what to verify before booking.
 - [Opening a Business Abroad: What You Need to Know Before You Start](https://globalsystemsstudio.com/blog/opening-business-abroad/): Legal registration requirements, tax structure, banking, and what operating as a foreign national business owner actually looks like in practice.
 - [Paraguay Keeps Coming Up. Let's Actually Talk About What It Takes.](https://globalsystemsstudio.com/blog/paraguay-5500-residency-real-cost/): Paraguay's $5,500 residency deposit is real, but it's working capital, not the full move budget. What Paraguay relocation actually costs, by ROS™ tier.
 - [Should you buy or rent when you first relocate abroad?](https://globalsystemsstudio.com/blog/buy-or-rent-when-you-first-relocate-abroad/): Rent first when residence approval or neighborhood fit is unresolved. See how to review leases, property purchases and exit terms before committing abroad.

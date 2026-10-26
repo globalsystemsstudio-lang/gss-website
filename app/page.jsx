@@ -8,12 +8,12 @@ export const metadata = {
 };
 
 const PATHWAYS = [
-  { icon: '🌐', title: 'The Digital Nomad', desc: 'You work remotely and want the freedom to live anywhere, legally, financially smart, and without losing your mind in the process.', href: '/services/ros-digital-nomad-pathway/' },
+  { icon: '🌐', title: 'The Digital Nomad', desc: 'You work remotely or freelance and want help planning a move abroad.', href: '/services/ros-digital-nomad-pathway/' },
   { icon: '🧳', title: 'The Solo Relocator', desc: "You're making this move on your own, by choice or by circumstance, and you're determined to get it right.", href: '/services/ros-solo-pathway/' },
   { icon: '👨‍👩‍👧', title: 'The Family', desc: 'Coordinate schools, housing, healthcare and timing together. Family Edition includes nine months of dashboard access for two users.', href: '/family-relocation/' },
-  { icon: '💼', title: 'The Entrepreneur', desc: 'You own a business or are building something new in a foreign market and need your legal and financial structure to work across borders.', href: '/services/ros-entrepreneur-pathway/' },
+  { icon: '💼', title: 'The Entrepreneur', desc: 'You want to move abroad while running or starting a business.', href: '/services/ros-entrepreneur-pathway/' },
   { icon: '🏡', title: 'The Legacy Mover', desc: "You've worked your whole life for this. Now you want to spend your next chapter somewhere that gives you more, on a budget that actually works.", href: '/services/ros-legacy-pathway/' },
-  { icon: '📈', title: 'The Investor', desc: "You're moving capital, not just yourself, and you need the legal and financial infrastructure to do it right in a new country.", href: '/services/ros-investor-pathway/' },
+  { icon: '📈', title: 'The Investor', desc: "You are researching property, investments or investment-related residency abroad.", href: '/services/ros-investor-pathway/' },
 ];
 
 const AREAS = [
@@ -42,13 +42,13 @@ export default function HomePage() {
       {/* 01: HERO */}
       <section className="hero">
         <div className="container">
-          <h1>A Plane Ticket Is Not a Relocation Plan.</h1>
+          <h1>Moving abroad? Know what to do next.</h1>
           <p className="answer-capsule">
-            Global Systems Studio helps U.S. citizens and residents plan a move abroad with the Relocation Operating System™ (ROS™). Organize your residency, finances, healthcare, housing, income, and family decisions in sequence. Start with a digital guide or choose a pathway built for your situation.
+            Global Systems Studio helps Americans plan a move abroad. ROS™ brings guides, checklists and planning tools together so you can work through the next steps. Start with a book, use a free tool or choose an online plan for your situation.
           </p>
           <div className="hero-ctas">
             <Link href="/shop/new-roots/" className="btn btn-gold">Get New Roots: $27 →</Link>
-            <Link href="/services/" className="btn btn-outline-white">Compare Pathways &amp; Prices →</Link>
+            <Link href="/services/" className="btn btn-outline-white">Compare Online Plans &amp; Prices →</Link>
           </div>
         </div>
       </section>
@@ -58,7 +58,7 @@ export default function HomePage() {
         <div className="container">
           <span className="section-tag">Who It's For</span>
           <h2>What Kind of Mover Are You?</h2>
-          <p className="section-intro">Six doors. Find yours, and everything past it is built around your specific situation, not a generic relocator's.</p>
+          <p className="section-intro">Choose the description that sounds like you. See what you get, what it costs and how to use it.</p>
           <div className="profiles-grid">
             {PATHWAYS.map((tier) => (
               <Link key={tier.title} href={tier.href} className="tool-card-link">
@@ -91,7 +91,7 @@ export default function HomePage() {
         <div className="container">
           <span className="section-tag">The System</span>
           <h2>Seven Planning Areas. One Connected Plan.</h2>
-          <p className="modules-intro">ROS™ walks you through seven areas, the same seven areas where international relocations fall apart when there's no system in place.</p>
+          <p className="modules-intro">Work through questions about visas, money, healthcare, housing, work, family and life after arrival.</p>
           <div className="icon-cards" style={{gridTemplateColumns:'repeat(4, 1fr)'}}>
             {AREAS.map((mod) => (
               <div key={mod.num} className="icon-card">
@@ -102,7 +102,7 @@ export default function HomePage() {
             ))}
           </div>
           <div style={{marginTop:'32px'}}>
-            <Link href="/what-is-ros" className="btn btn-gold">Learn exactly how ROS™ works →</Link>
+            <Link href="/what-is-ros" className="btn btn-gold">See what ROS™ is and how to use it →</Link>
           </div>
         </div>
       </section>
