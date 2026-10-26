@@ -4,70 +4,80 @@ import { featureGroups } from '../../lib/ros-data';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Family Relocation Planning — ROS™ Family Edition',
-  description: 'Plan your family’s move abroad together. ROS™ Family Edition includes nine months of dashboard access for two users for $1,197 USD. Start with a free Discovery Call.',
+  title: 'Plan Your Family’s Move Abroad — ROS™ Family Edition',
+  description: 'An online planning space with guides and checklists for your family’s move abroad. $1,197 USD once. Nine months of access for two people. Ask questions on a free call.',
   alternates: { canonical: 'https://globalsystemsstudio.com/family-relocation/' },
 };
 const booking = 'https://calendar.app.google/5GiW8EZKoyB7SqEKA';
 const faqs = [
-  ['Is the Discovery Call free?', 'Yes. It is a free 15-minute conversation to discuss your move and whether ROS™ fits, with no pressure, no pitch and no obligation to purchase. It is not a full relocation plan.'],
-  ['Is $1,197 a subscription?', 'No. It is a one-time USD payment for nine months of initial dashboard access for two users.'],
-  ['When does access start?', 'After completed purchase and a signed agreement. Dashboard setup requires follow-up from Global Systems Studio.'],
-  ['Can we renew?', 'Optional renewal is $347 USD. Confirm the renewal access period and terms before purchasing renewal. There is no mandatory subscription.'],
-  ['What is the refund policy?', 'All sales are final; no refunds. Review the scope and sales policy before purchasing.'],
-  ['Does this replace professional advice?', 'No. ROS™ offers educational relocation planning resources and support. Licensed professionals handle destination-specific legal, tax, immigration, financial and medical advice. Approvals, school placements and move dates are not guaranteed.'],
+  ['What am I buying?', 'An online planning space in Notion with guides, checklists and a family timeline. It helps you organize the work of moving abroad. Two people can use it for nine months.'],
+  ['How do I use it?', 'Read the starting guide, review the checklist, and work through the planning steps. Use the guides to research questions about where to live, schools, housing, healthcare and money.'],
+  ['Can I ask for help?', 'Yes. Email support is included. You also get one written Q&A: send up to three relocation questions and receive a written response within five business days after we receive them.'],
+  ['When do I get access?', 'After you pay and sign the agreement, Global Systems Studio follows up to set up your online planning space. Your nine months of access starts after completed payment and a signed agreement.'],
+  ['Do you arrange the whole move for me?', 'No. You do the research and make the decisions, using our planning tools and support. The price does not include booking movers, finding a home for you, school placement or government fees.'],
+  ['Is this a monthly payment?', 'No. Pay $1,197 USD once for the first nine months. There is no required subscription. An optional renewal is $347 USD; ask us how long it lasts and check the terms before renewing.'],
+  ['Can I get a refund?', 'All sales are final. There are no refunds. Read the full details and sales policy before paying.'],
 ];
-function CallButton() { return <a className="btn btn-gold" href={booking}>Book a free 15-minute Discovery Call →</a>; }
+function CallButton() { return <a className="btn btn-gold" href={booking}>Book a free 15-minute call →</a>; }
 
 export default function FamilyRelocationPage() {
   return <div className={styles.campaign}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
-      '@context': 'https://schema.org', '@type': 'Service', name: 'ROS™ Family Edition',
-      description: 'Educational relocation planning resources for couples and families. Nine months of dashboard access for two users.',
-      url: 'https://globalsystemsstudio.com/family-relocation/', provider: {'@id':'https://globalsystemsstudio.com/#organization'},
-      offers: {'@type':'Offer', price:1197, priceCurrency:'USD', url:'https://globalsystemsstudio.com/services/ros-family-edition-pathway/'},
+      '@context':'https://schema.org', '@type':'Service', name:'ROS™ Family Edition',
+      description:'Online relocation planning guides, checklists and support for couples and families. Nine months of access for two people.',
+      url:'https://globalsystemsstudio.com/family-relocation/', provider:{'@id':'https://globalsystemsstudio.com/#organization'},
+      offers:{'@type':'Offer', price:1197, priceCurrency:'USD', url:'https://globalsystemsstudio.com/services/ros-family-edition-pathway/'},
     })}} />
     <section className={`page-hero ${styles.hero}`}><div className="container">
       <p className={styles.kicker}>ROS™ FAMILY EDITION · GLOBAL SYSTEMS STUDIO</p>
-      <h1>Plan your family’s move abroad with everyone in view.</h1>
-      <p>Schools. Housing. Healthcare. Income. Timing. A family move means making connected decisions for more than one person.</p>
-      <p>ROS™ Family Edition brings family relocation planning into a structured system, with resources for household priorities, destination research and the steps before and after arrival.</p>
-      <p className={styles.price}>$1,197 USD one time · Nine months · Two users</p>
+      <h1>Moving abroad with your family? Know what to do next.</h1>
+      <p>Get one online place with guides, checklists and a timeline to help you plan your move together.</p>
+      <p>Use it to work through questions about where to live, schools, housing, healthcare and money.</p>
+      <p className={styles.price}>$1,197 USD, paid once.<br/>Nine months of access for two people.</p>
       <CallButton />
-      <p className={styles.small}>No pressure, no pitch. Talk through where you are and whether ROS™ fits your family’s move.</p>
+      <p className={styles.small}>Ask whether this is right for your family. The call is free. No pressure to buy.</p>
     </div></section>
     <section className="section-ivory"><div className="container">
-      <p className="eyebrow">A shared move deserves a shared plan</p>
-      <h2>Every decision has company.</h2>
-      <p className="section-intro">You may have a country in mind and still be unsure how to coordinate school research, housing, healthcare and timing. You and your partner may also be working from different assumptions.</p>
+      <h2>What does the $1,197 pay for?</h2>
+      <p className="section-intro">You get a place to plan, tools to help you research, and support when you have questions.</p>
       <div className={styles.grid}>{[
-        ['01', 'Start with your household', 'Record each person’s priorities, the needs that must remain stable and the questions you have not answered.'],
-        ['02', 'Connect the decisions', 'School research can affect neighborhood options. Housing can affect budget and timing. Identify what depends on what.'],
-        ['03', 'Research before committing', 'Use structured resources to organize the work, and confirm destination-specific requirements with qualified professionals.'],
+        ['01','Your shared planning space','You and one other person get access to the same online planning space in Notion for nine months.'],
+        ['02','Guides and checklists','A family timeline and checklists help you organize the work. Guides help you research schools, childcare, housing, healthcare, banking and moving requirements.'],
+        ['03','Help with your questions','You get email support and one written Q&A for up to three relocation questions. You also get resources for managing the stress of the move.'],
       ].map(([n,title,body])=><article className={styles.card} key={n}><span className={styles.number}>{n}</span><h3>{title}</h3><p>{body}</p></article>)}</div>
     </div></section>
     <section><div className="container">
-      <h2>What you receive with Family Edition</h2>
-      <p className="section-intro">Nine months of dashboard access for two users, family-specific planning resources, and the Solo resources carried forward below.</p>
-      <div className="feature-grid">{featureGroups('family').map(g=><article className="feature-card" key={g.title}><h3>{g.title}</h3><ul>{g.features.map(f=><li key={f}>{f}</li>)}</ul></article>)}</div>
-      <p><Link href="/services/ros-family-edition-pathway/">Review the Family Edition purchase details →</Link></p>
+      <h2>How you use it</h2>
+      <div className={styles.grid}>{[
+        ['1','Start with your family','Read the starting guide. Write down who is moving, where you are considering and what each person needs.'],
+        ['2','Work through the plan','Use the timeline and checklists to organize your next steps. Read the guides as you research your options.'],
+        ['3','Make decisions together','Compare what you find, discuss your choices and use the included support when you need help.'],
+      ].map(([n,title,body])=><article className={styles.card} key={n}><span className={styles.number}>{n}</span><h3>{title}</h3><p>{body}</p></article>)}</div>
+      <p className="help-note"><strong>Example:</strong> If your family needs to research schools, use the school guide to gather information. Then use the housing checklist to compare places to live. This is an example of using the tools, not a promise of a school place or a home.</p>
     </div></section>
     <section className="section-ivory"><div className="container content-narrow">
-      <p className="eyebrow">Try this together</p><h2>Are you planning the same move?</h2>
-      <p>Each adult writes down three must-haves, three open questions and one concern. Compare your answers before adding more tasks. Differences can show you where you need a conversation or more research.</p>
-      <div className={styles.exercise}><p><strong>3 must-haves</strong><br/>What needs to stay stable for you?</p><p><strong>3 open questions</strong><br/>What could change your decision?</p><p><strong>1 concern</strong><br/>What deserves attention now?</p></div>
-      <p>This is an introductory planning exercise, not an assessment of destination eligibility or a personalized relocation recommendation.</p>
+      <h2>What happens after you buy?</h2>
+      <ol className="clear-list">
+        <li><strong>Pay $1,197 USD and sign the agreement.</strong></li>
+        <li><strong>We follow up to set up access for two people.</strong></li>
+        <li><strong>Open your planning space and start with the guide.</strong> You have nine months of access after completed payment and a signed agreement.</li>
+      </ol>
+      <p>This is planning help. You still carry out your move. Lawyers, tax advisers, movers, school fees and other moving costs are paid separately.</p>
+      <details className={styles.faq}><summary>See the full list of included tools</summary>
+        <div className="feature-grid">{featureGroups('family').map(g=><article className="feature-card" key={g.title}><h3>{g.title}</h3><ul>{g.features.map(f=><li key={f}>{f}</li>)}</ul></article>)}</div>
+      </details>
+      <p><Link href="/services/ros-family-edition-pathway/">See all Family Edition details and the payment option →</Link></p>
     </div></section>
-    <section><div className="container content-narrow"><h2>Is this the right fit?</h2>
-      <p>Family Edition is designed for couples and families planning an international relocation who want a structured way to coordinate the work. It supports planning and research; it does not provide a done-for-you move or licensed professional services.</p>
-      <h3>Bring your questions to a short conversation.</h3>
-      <p>Bring your destination or shortlist, approximate timeline, and the family planning question you most want to resolve. No sensitive documents are needed for this introductory call.</p>
-      <CallButton />
+    <section><div className="container content-narrow">
+      <h2>Not sure yet? Talk with Charlene first.</h2>
+      <p>Tell me where you want to move, who is coming with you and what feels confusing. We will talk about whether Family Edition fits what you need.</p>
+      <CallButton /><p className={styles.small}>Free. 15 minutes. No pressure to buy.</p>
     </div></section>
-    <section className="section-ivory"><div className="container content-narrow"><h2>Questions before you decide</h2>
+    <section className="section-ivory"><div className="container content-narrow">
+      <h2>A few questions before you decide</h2>
       {faqs.map(([q,a])=><details className={styles.faq} key={q}><summary>{q}</summary><p>{a}</p></details>)}
-      <SalesNotice />
-      <p>Professional fees, government fees and relocation expenses are separate. <Link href="/sales-policy/">Read the sales policy</Link>.</p>
+      <p>ROS™ helps you plan and research. Ask licensed professionals for legal, tax, immigration, investment or medical advice. Visa approval, a school place and a move date are not guaranteed.</p>
+      <SalesNotice /><p><Link href="/sales-policy/">Read the sales policy</Link>.</p>
       <CallButton />
     </div></section>
   </div>;
