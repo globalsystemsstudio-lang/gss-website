@@ -127,7 +127,7 @@ export default function RentingAbroadPage() {
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Housing is a planning area in ROS™ — and one of the most underplanned parts of the move.</h2>
                 <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>A Clarity Session can help you build a realistic housing strategy for your specific destination before you arrive — not after.</p>
-                <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Clarity Session →</Link>
+                <Link href="/services/clarity-session/" className="btn btn-gold">Book a Clarity Session →</Link>
               </div>
 
             </div>

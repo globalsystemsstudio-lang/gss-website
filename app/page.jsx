@@ -69,6 +69,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="questions-section" id="questions">
+        <div className="container">
+          <span className="section-tag">Start with a question</span>
+          <h2>Moving abroad? Let’s make the next step clearer.</h2>
+          <div className="questions-grid">
+            <article><h3>What should I do first?</h3><p>List where you may go, who is moving, and your questions about visas, money, housing and healthcare.</p><Link href="/shop/five-questions/">Read the free Five Questions guide →</Link><br /><Link href="/shop/#ros-90-day-relocation-action-planner">See the 90-Day Planner · $47 →</Link></article>
+            <article><h3>How much money will I need?</h3><p>Estimate monthly costs, moving expenses, deposits and a reserve for unexpected costs. Check actual prices for your situation.</p><Link href="/cost-of-living-calculator/">Try the free cost calculator →</Link></article>
+            <article><h3>How do I choose a country?</h3><p>Compare visa options, living costs, healthcare, work and the everyday life you want. Check current rules before deciding.</p><Link href="/shop/#country-comparison-decision-matrix">See the Country Comparison Matrix · $19 →</Link></article>
+            <article><h3>Which ROS™ plan is right for me?</h3><p>Choose based on your situation, such as moving alone, with family, or while running a business. Compare what each plan includes.</p><Link href="/services/">Compare the six plans · from $897 →</Link></article>
+            <article><h3>Can I ask before buying?</h3><p>Yes. Talk with Charlene on a free 15-minute Discovery Call. There is no pressure to buy.</p><Link href="/services/discovery-call/">See the free Discovery Call →</Link></article>
+            <article><h3>Can I get help with a specific decision?</h3><p>The Clarity Session is a private 45-minute call for $497. After payment, you receive an email with a link to choose a time.</p><Link href="/services/clarity-session/">See the Clarity Session · $497 →</Link></article>
+          </div>
+        </div>
+      </section>
+
       {/* 02: WHAT KIND OF MOVER ARE YOU */}
       <section className="who-its-for">
         <div className="container">

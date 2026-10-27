@@ -124,7 +124,7 @@ export default function VisasResidencyPage() {
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Your visa and residency timeline is the backbone of your entire relocation plan.</h2>
                 <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>ROS™ The Legal &amp; Structural Foundations stage — maps the sequence of legal steps for your specific destination and situation, starting from where you are now.</p>
-                <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Clarity Session →</Link>
+                <Link href="/services/clarity-session/" className="btn btn-gold">Book a Clarity Session →</Link>
               </div>
 
             </div>

@@ -101,7 +101,7 @@ export default function ContactPage() {
                   <div>
                     <strong style={{display:'block', color:'var(--primary)', marginBottom:'6px'}}>Book a Clarity Session</strong>
                     <p style={{fontSize:'14px', color:'var(--text-light)', margin:'0 0 10px'}}>If you're ready to stop researching and start getting specific answers — a 45-minute 1:1 call is the fastest path there.</p>
-                    <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" style={{fontSize:'14px', color:'var(--primary)', fontWeight:'600'}}>Book Now — $497 →</Link>
+                    <Link href="/services/clarity-session/" style={{fontSize:'14px', color:'var(--primary)', fontWeight:'600'}}>Book Now — $497 →</Link>
                   </div>
                   <div style={{borderTop:'1px solid var(--border)', paddingTop:'16px'}}>
                     <strong style={{display:'block', color:'var(--primary)', marginBottom:'6px'}}>Get New Roots</strong>

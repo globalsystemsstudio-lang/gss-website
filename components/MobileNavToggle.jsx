@@ -23,6 +23,9 @@ export default function MobileNavToggle() {
           <li><Link href="/#destinations" onClick={() => setOpen(false)}>Destinations 🌍</Link></li>
           <li><Link href="/#decision-room" onClick={() => setOpen(false)}>Decision Room 🎲</Link></li>
           <li><Link href="/resources" onClick={() => setOpen(false)}>Resources</Link></li>
+          <li><Link href="/search/" onClick={() => setOpen(false)}>Search</Link></li>
+          <li><Link href="/services/discovery-call/" onClick={() => setOpen(false)}>Free Discovery Call</Link></li>
+          <li><Link href="/services/clarity-session/" onClick={() => setOpen(false)}>Clarity Session · $497</Link></li>
           <li><Link href="/tools" onClick={() => setOpen(false)}>Free Tools</Link></li>
           <li><Link href="/shop" onClick={() => setOpen(false)}>Guides &amp; Workbooks</Link></li>
           <li><Link href="/work-with-me" onClick={() => setOpen(false)}>Work With Me</Link></li>

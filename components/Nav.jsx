@@ -12,6 +12,7 @@ export default function Nav() {
             <li><Link href="/services/">Pathways &amp; Prices</Link></li>
             <li><Link href="/shop/">Shop Guides</Link></li>
             <li><Link href="/resources">Resources</Link></li>
+            <li><Link href="/search/">Search</Link></li>
             <li><Link href="/shop/five-questions/" className="nav-cta-link">Start Free</Link></li>
           </ul>
           <MobileNavToggle />

@@ -12,6 +12,14 @@ const QUICK_REPLIES = [
 
 function getBethResponse(input) {
   const q = input.toLowerCase().trim();
+  if (/choose.*country|which country|compare.*countr/.test(q)) return {
+    text: "Compare visa options, costs, healthcare, work and the everyday life you want. Check current rules before deciding. The Country Comparison Matrix costs $19.",
+    link: { href: '/shop/#country-comparison-decision-matrix', label: 'See the Country Comparison Matrix →' },
+  };
+  if (/how much.*(save|money|move)|moving budget|cost.*move/.test(q)) return {
+    text: "Estimate monthly costs, moving expenses, deposits and a reserve for unexpected costs. Check actual prices for your situation. The cost calculator is free.",
+    link: { href: '/cost-of-living-calculator/', label: 'Try the free cost calculator →' },
+  };
   if (/community|membership|podcast|episode/.test(q)) return {
     text: "You can start with the free call, quiz, cost calculator or Five Questions guide.",
     link: { href: '/services/#free', label: 'Explore the free starting points →' },

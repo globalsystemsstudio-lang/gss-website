@@ -1388,3 +1388,20 @@ section { padding: 80px 0; }
 .journey-card h3 { color: #1E5B99; font-size: 1.2rem; margin-bottom: 12px; }
 .journey-card p { font-size: 1rem; }
 @media (max-width: 700px) { .journey-grid { grid-template-columns: 1fr; } .journey-section { padding: 56px 0; } }
+
+/* Relocation image and practical answers */
+.hero { background: linear-gradient(90deg, rgba(14,51,88,.97) 0%, rgba(18,65,109,.88) 52%, rgba(18,65,109,.48) 100%), url('/relocation-coastal-hero.webp') center / cover no-repeat; }
+.questions-section { background: #fff; }
+.questions-section h2 { color: var(--primary); max-width: 800px; }
+.questions-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; margin-top:32px; }
+.questions-grid article { background:var(--bg); padding:24px; border:1px solid var(--border); border-radius:14px; }
+.questions-grid h3 { font-size:1.15rem; color:var(--primary); margin-bottom:12px; }
+.questions-grid p { font-size:1rem; }
+.questions-grid a { font-size:.95rem; font-weight:700; }
+.site-search { max-width: 760px; }
+.site-search label { display:block; font-weight:700; margin-bottom:8px; }
+.site-search input { width:100%; border:2px solid var(--primary); border-radius:8px; padding:14px; font:inherit; }
+.site-search p { margin:14px 0; }
+.site-search ul { list-style:none; padding:0; }
+.site-search li { padding:12px 0; border-bottom:1px solid var(--border); }
+@media(max-width:760px) { .questions-grid { grid-template-columns:1fr; } .questions-section { padding:56px 0; } .hero { background-position: 60% center; } }
