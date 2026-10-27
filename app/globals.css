@@ -537,7 +537,7 @@ section { padding: 80px 0; }
 /* ================================================================
    FOOTER
    ================================================================ */
-.site-footer { background: var(--dark); color: rgba(255,255,255,0.72); }
+.site-footer { background: var(--bg); color: var(--text); }
 
 .footer-main { padding: 64px 0 48px; }
 
@@ -550,14 +550,14 @@ section { padding: 80px 0; }
 .footer-logo-text {
   font-size: 17px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--primary);
   display: block;
   margin-bottom: 8px;
 }
 
 .footer-brand p {
   font-size: 13px;
-  color: rgba(255,255,255,0.4);
+  color: var(--text);
   margin: 0;
 }
 
@@ -566,7 +566,7 @@ section { padding: 80px 0; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: rgba(255,255,255,0.38);
+  color: var(--primary);
   margin-bottom: 16px;
 }
 
@@ -578,22 +578,22 @@ section { padding: 80px 0; }
 }
 
 .footer-col ul a {
-  color: rgba(255,255,255,0.62);
+  color: var(--primary);
   text-decoration: none;
   font-size: 14px;
   transition: color 0.15s;
 }
-.footer-col ul a:hover { color: var(--white); }
+.footer-col ul a:hover { color: #173f69; text-decoration: underline; }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid var(--border);
   padding: 20px 0;
   text-align: center;
 }
 
 .footer-bottom p {
   font-size: 13px;
-  color: rgba(255,255,255,0.32);
+  color: var(--text);
   margin: 0;
 }
 
@@ -1405,3 +1405,6 @@ section { padding: 80px 0; }
 .site-search ul { list-style:none; padding:0; }
 .site-search li { padding:12px 0; border-bottom:1px solid var(--border); }
 @media(max-width:760px) { .questions-grid { grid-template-columns:1fr; } .questions-section { padding:56px 0; } .hero { background-position: 60% center; } }
+
+.site-footer .goog-te-gadget .goog-te-gadget-simple { border-color: #1E5B99 !important; }
+.site-footer .goog-te-gadget .goog-te-gadget-simple span, .site-footer .goog-te-gadget .goog-te-gadget-simple .goog-te-menu-value span { color: #1E5B99 !important; }
