@@ -15,6 +15,16 @@ const examples = {
   investor: { question: 'What should I research before investing abroad?', tasks: ['List property and ownership questions', 'Research investment-related residency', 'Prepare questions about banking and assets'], next: 'Discuss your questions with qualified legal and financial professionals.' },
 };
 
+// These samples are shortened, plain-language adaptations of GSS Notion planning pages.
+const excerpts = {
+  solo: { title: 'Solo pre-departure checklist', items: ['Confirm your arrival accommodation', 'Decide what to ship, sell, donate, or discard', 'Arrange shipping insurance'] },
+  family: { title: 'Family readiness check', items: ['Money and budget', 'Housing and property', 'Healthcare coverage', 'Family needs'], detail: 'Two people review each area, compare their answers, and discuss any differences.' },
+  legacy: { title: 'Legacy financial planning', items: ['Document your income sources', 'Estimate moving costs, including travel and deposits', 'Review retirement income questions', 'Plan a separate budget for property or other major commitments'] },
+  nomad: { title: 'Japan Digital Nomad research hub', items: ['Visa and eligibility research', 'Health insurance questions', 'Internet, banking, and working arrangements'], detail: 'This destination research page brings together questions to check before working abroad.' },
+  entrepreneur: { title: 'Jamaica Entrepreneur research hub', items: ['Business registration research', 'Business tax and work permit questions', 'Authorities that handle company formation and tax'], detail: 'This destination research page organizes business setup topics and official contacts.' },
+  investor: { title: 'Georgia Investor research hub', items: ['Investment benchmarks', 'Visa and residency questions', 'Property, business structures, and banking research'], detail: 'This destination research page brings investment research topics together for review with qualified professionals.' },
+};
+
 export default function ROSPreview() {
   const [selected, setSelected] = useState('solo');
   useEffect(() => { trackEvent('ros_preview_view'); }, []);
@@ -31,7 +41,7 @@ export default function ROSPreview() {
       <div className={styles.choices} aria-label="Choose a plan">{tiers.map(item => <button key={item.id} type="button" aria-pressed={selected === item.id} onClick={() => choose(item.id)}>{item.fullName || item.name}</button>)}</div>
       <div className={styles.card} aria-live="polite">
         <div className={styles.cardHead}><div><span>EXAMPLE · {tier.fullName || tier.name.toUpperCase()}</span><h2>{example.question}</h2></div><div className={styles.price}>{money(tier.price)} <small>USD once<br />{tier.months} months{tier.id === 'family' ? ' · 2 people' : ''}</small></div></div>
-        <div className={styles.content}><h3>Questions to work through</h3><ul>{example.tasks.map(task => <li key={task}><span aria-hidden="true">□</span>{task}</li>)}</ul><div className={styles.next}><strong>Example next step</strong><p>{example.next}</p></div><h3>What this plan includes</h3><ul>{tier.highlights.map(item => <li key={item}><span aria-hidden="true">✓</span>{item}</li>)}</ul></div>
+        <div className={styles.content}><h3>Questions to work through</h3><ul>{example.tasks.map(task => <li key={task}><span aria-hidden="true">□</span>{task}</li>)}</ul><div className={styles.next}><strong>Example next step</strong><p>{example.next}</p></div>{excerpts[selected] && <><h3>Sample from the planning materials</h3><p>Shortened and rewritten for clarity from the {excerpts[selected].title}. This is a sample, not the full dashboard.</p>{excerpts[selected].detail && <p>{excerpts[selected].detail}</p>}<ul>{excerpts[selected].items.map(item => <li key={item}><span aria-hidden="true">□</span>{item}</li>)}</ul></>}<h3>What this plan includes</h3><ul>{tier.highlights.map(item => <li key={item}><span aria-hidden="true">✓</span>{item}</li>)}</ul></div>
         <div className={styles.actions}><Link href={tier.url} onClick={() => action('plan_details')}>See {tier.name} details →</Link><Link href="/services/discovery-call/" onClick={() => action('free_call')}>Explore a free 15-minute call →</Link></div>
       </div>
       <p className={styles.foot}>ROS offers planning and educational resources. For legal, tax, immigration, investment, and medical decisions, consult qualified professionals. Online plan access starts after payment and a signed agreement; GSS follows up to set up access.</p>
