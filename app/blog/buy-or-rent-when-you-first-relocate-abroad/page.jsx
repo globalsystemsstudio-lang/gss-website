@@ -182,7 +182,7 @@ export default function BuyOrRentWhenYouFirstRelocateAbroadPage() {
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Want your relocation steps in the right order?</h2>
                 <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>A Clarity Session with ROS™ helps you sequence the decisions that need to be made before you leave.</p>
-                <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Clarity Session →</Link>
+                <Link href="/services/clarity-session/" className="btn btn-gold">Book a Clarity Session →</Link>
               </div>
 
             </div>

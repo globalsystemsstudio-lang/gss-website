@@ -42,13 +42,44 @@ export default function HomePage() {
       {/* 01: HERO */}
       <section className="hero">
         <div className="container">
-          <h1>Moving abroad? Know what to do next.</h1>
+          <p className="gss-hero-kicker">YOUR NEXT CHAPTER STARTS HERE</p>
+          <h1>Dreaming of life abroad? Let’s make a plan.</h1>
           <p className="answer-capsule">
-            Global Systems Studio helps Americans plan a move abroad. ROS™ brings guides, checklists and planning tools together so you can work through the next steps. Start with a book, use a free tool or choose an online plan for your situation.
+            From choosing a country to figuring out visas, housing and healthcare, moving abroad brings a lot of questions. Global Systems Studio gives you guides, checklists and planning tools to help you take your next step with confidence.
           </p>
           <div className="hero-ctas">
-            <Link href="/shop/new-roots/" className="btn btn-gold">Get New Roots: $27 →</Link>
+            <Link href="/services/discovery-call/" className="btn btn-gold">Book a Free Discovery Call · 15 min →</Link>
+            <Link href="/services/clarity-session/" className="btn btn-outline-white">Clarity Session · $497 · 45 min →</Link>
             <Link href="/services/" className="btn btn-outline-white">Compare Online Plans &amp; Prices →</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="journey-section">
+        <div className="container">
+          <span className="section-tag">Your move, one step at a time</span>
+          <h2>A new life starts with a few clear steps.</h2>
+          <p className="section-intro">You bring the dream. We help you organize the questions, choices and tasks that come next.</p>
+          <div className="journey-grid">
+            <article className="journey-card"><span aria-hidden="true">🌍</span><h3>Picture your new life</h3><p>Compare places and think about the everyday life you want.</p></article>
+            <article className="journey-card"><span aria-hidden="true">📋</span><h3>Make your plan</h3><p>Work through questions about visas, money, housing and healthcare.</p></article>
+            <article className="journey-card"><span aria-hidden="true">🧳</span><h3>Prepare for your move</h3><p>Keep your next steps together and check what still needs attention.</p></article>
+          </div>
+          <Link href="/what-is-ros/" className="btn btn-outline">See how ROS™ helps →</Link>
+        </div>
+      </section>
+
+      <section className="questions-section" id="questions">
+        <div className="container">
+          <span className="section-tag">Start with a question</span>
+          <h2>Moving abroad? Let’s make the next step clearer.</h2>
+          <div className="questions-grid">
+            <article><h3>What should I do first?</h3><p>List where you may go, who is moving, and your questions about visas, money, housing and healthcare.</p><Link href="/shop/five-questions/">Read the free Five Questions guide →</Link><br /><Link href="/shop/#ros-90-day-relocation-action-planner">See the 90-Day Planner · $47 →</Link></article>
+            <article><h3>How much money will I need?</h3><p>Estimate monthly costs, moving expenses, deposits and a reserve for unexpected costs. Check actual prices for your situation.</p><Link href="/cost-of-living-calculator/">Try the free cost calculator →</Link></article>
+            <article><h3>How do I choose a country?</h3><p>Compare visa options, living costs, healthcare, work and the everyday life you want. Check current rules before deciding.</p><Link href="/shop/#country-comparison-decision-matrix">See the Country Comparison Matrix · $19 →</Link></article>
+            <article><h3>Which ROS™ plan is right for me?</h3><p>Choose based on your situation, such as moving alone, with family, or while running a business. Compare what each plan includes.</p><Link href="/services/">Compare the six plans · from $897 →</Link></article>
+            <article><h3>Can I ask before buying?</h3><p>Yes. Talk with Charlene on a free 15-minute Discovery Call. There is no pressure to buy.</p><Link href="/services/discovery-call/">See the free Discovery Call →</Link></article>
+            <article><h3>Can I get help with a specific decision?</h3><p>The Clarity Session is a private 45-minute call for $497. After payment, you receive an email with a link to choose a time.</p><Link href="/services/clarity-session/">See the Clarity Session · $497 →</Link></article>
           </div>
         </div>
       </section>
@@ -195,7 +226,7 @@ export default function HomePage() {
             {[
               { name: '🟢 Explore Free', price: 'FREE', access: 'Assessments & Tools', desc: 'The free 15-minute Discovery Call, the readiness quiz above, and the cost calculator.', cta: 'Book Your Free Call', href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA' },
               { name: '🟡 Build Your Plan', price: 'From $27', access: 'New Roots & ROS™ Pathways', desc: 'New Roots ($27) gives you a foundation for organizing your move. Six ROS™ Pathways from $897 for guided, done-with-you support.', cta: 'Get New Roots', href: '/shop/new-roots/' },
-              { name: '🔵 Get Personal Guidance', price: '$497', access: '45-Minute 1:1 Call', desc: 'Your situation, your questions, your next steps. Walk away with a clear picture of what to do and in what order.', cta: 'Book a Clarity Session', href: 'https://calendar.app.google/GqshRNZbP1LTvwKJ9' },
+              { name: '🔵 Get Personal Guidance', price: '$497', access: '45-Minute 1:1 Call', desc: 'Your situation, your questions, your next steps. Walk away with a clear picture of what to do and in what order.', cta: 'See the Clarity Session', href: '/services/clarity-session/' },
               { name: '🟣 Go Deeper', price: 'From $47', access: 'Destination Intelligence & Books', desc: 'Across Streets & Seas ($47), the full Relocation Library ($64), and the destination research behind every recommendation.', cta: 'Explore the Library', href: '/shop/relocation-library/' },
             ].map((offer) => (
               <div key={offer.name} className="pricing-card">

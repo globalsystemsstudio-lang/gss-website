@@ -101,7 +101,7 @@ export default function FindingWorkAfter60Page() {
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>Your income strategy is part of your relocation plan.</h2>
                 <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>ROS™ covers business and income planning — including how to evaluate your options before you move, not after.</p>
-                <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Clarity Session →</Link>
+                <Link href="/services/clarity-session/" className="btn btn-gold">Book a Clarity Session →</Link>
               </div>
 
             </div>

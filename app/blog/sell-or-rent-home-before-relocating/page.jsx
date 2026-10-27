@@ -135,7 +135,7 @@ export default function SellOrRentPage() {
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'56px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>This decision has long-term tax consequences either way.</h2>
                 <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>A Clarity Session with ROS™ helps you map the financial decisions that need to be made before you leave — including this one.</p>
-                <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Clarity Session →</Link>
+                <Link href="/services/clarity-session/" className="btn btn-gold">Book a Clarity Session →</Link>
               </div>
 
             </div>

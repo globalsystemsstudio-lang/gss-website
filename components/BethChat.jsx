@@ -12,8 +12,16 @@ const QUICK_REPLIES = [
 
 function getBethResponse(input) {
   const q = input.toLowerCase().trim();
+  if (/choose.*country|which country|compare.*countr/.test(q)) return {
+    text: "Compare visa options, costs, healthcare, work and the everyday life you want. Check current rules before deciding. The Country Comparison Matrix costs $19.",
+    link: { href: '/shop/#country-comparison-decision-matrix', label: 'See the Country Comparison Matrix →' },
+  };
+  if (/how much.*(save|money|move)|moving budget|cost.*move/.test(q)) return {
+    text: "Estimate monthly costs, moving expenses, deposits and a reserve for unexpected costs. Check actual prices for your situation. The cost calculator is free.",
+    link: { href: '/cost-of-living-calculator/', label: 'Try the free cost calculator →' },
+  };
   if (/community|membership|podcast|episode/.test(q)) return {
-    text: "The community is not open. You can use the free call, quiz, cost calculator or Five Questions guide.",
+    text: "You can start with the free call, quiz, cost calculator or Five Questions guide.",
     link: { href: '/services/#free', label: 'Explore the free starting points →' },
   };
   if (/support|missing|receipt|order|delivery|did.*receive/.test(q)) return {
@@ -52,6 +60,10 @@ function getBethResponse(input) {
     text: "Take the free 12-question quiz to see which parts of your move need more work. You can see your score first. An email address is needed for the full breakdown.",
     link: { href: '/relocation-readiness-quiz/', label: 'Take the free quiz →' },
   };
+  if (/clarity|transition call|1.?1|one.on.one/.test(q)) return {
+    text: "The Clarity Session is a 45-minute call for $497. After payment, look for an email with a link to choose your time. Google Calendar will send your meeting link after booking. You also receive a recording and written summary within 48 hours.",
+    link: { href: '/services/clarity-session/', label: 'See the Clarity Session →' },
+  };
   if (/price|cost|how much|pricing|pay|afford|expensive/.test(q)) return {
     text: "Online plans, paid once in USD: Solo $897; Digital Nomad $897; Family $1,197; Entrepreneur $1,597; Legacy $1,997; Investor $2,497. Each includes a set access period. Books and workbooks start at $19. The Discovery Call is free.",
     link: { href: '/services/', label: 'See plans and prices →' },
@@ -63,10 +75,6 @@ function getBethResponse(input) {
   if (/new roots|book|across streets|download|written|library/.test(q)) return {
     text: "New Roots is $27. Across Streets & Seas is $47. Both together cost $64. These are books you download, separate from the online plans.",
     link: { href: '/shop/', label: 'Browse guides and workbooks →' },
-  };
-  if (/clarity|session|1.?1|one.on.one/.test(q)) return {
-    text: "The Clarity Session is a private 45-minute call with Charlene for $497. Talk through your move and next steps. A recording and written summary follow within 48 hours. Unsure? Start with the free 15-minute call.",
-    link: { href: '/services/clarity-session/', label: 'See the Clarity Session →' },
   };
   if (/start|begin|call|consult|appointment|coach/.test(q)) return {
     text: "Book a free 15-minute call to talk about your move and whether ROS™ can help. No pressure to buy.",

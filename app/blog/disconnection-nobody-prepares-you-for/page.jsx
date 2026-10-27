@@ -77,7 +77,7 @@ export default function DisconnectionPage() {
               <div style={{background:'var(--primary)', borderRadius:'12px', padding:'36px 40px', marginTop:'40px', textAlign:'center'}}>
                 <h2 style={{color:'var(--white)', fontSize:'22px', marginBottom:'10px'}}>The questions that keep you up at night deserve real answers.</h2>
                 <p style={{color:'rgba(255,255,255,0.8)', marginBottom:'24px'}}>Not inspiration content. Not a highlight reel. A real conversation about your specific situation — including the parts that are hard to say out loud.</p>
-                <Link href="https://calendar.app.google/GqshRNZbP1LTvwKJ9" className="btn btn-gold">Book a Clarity Session →</Link>
+                <Link href="/services/clarity-session/" className="btn btn-gold">Book a Clarity Session →</Link>
               </div>
 
             </div>

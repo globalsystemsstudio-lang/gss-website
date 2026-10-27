@@ -9,9 +9,9 @@ export default function Footer() {
             <div className="footer-brand">
               <span className="footer-logo-text">Global Systems Studio</span>
               <p>CC Transaction Service LLC</p>
-              <p style={{marginTop:'12px', fontSize:'13px', color:'rgba(255,255,255,0.4)', lineHeight:'1.6'}}>
+              <p style={{marginTop:'12px', fontSize:'13px', color:'var(--text)' , lineHeight:'1.6'}}>
                 Educational relocation planning for U.S. citizens and residents.
-              </p><p style={{marginTop:16, fontSize:14}}><a href="mailto:globalsystemsstudio@gmail.com" style={{color:'white'}}>globalsystemsstudio@gmail.com</a></p><p style={{marginTop:12, fontSize:13, color:'rgba(255,255,255,.8)'}}>Created by Charlene L. M. Cupidore Bynoe. Confirm legal, tax, immigration, investment and medical decisions with licensed professionals.</p>
+              </p><p style={{marginTop:16, fontSize:14}}><a href="mailto:globalsystemsstudio@gmail.com" style={{color:'var(--primary)'}}>globalsystemsstudio@gmail.com</a></p><p style={{marginTop:12, fontSize:13, color:'var(--text)' }}>Created by Charlene L. M. Cupidore Bynoe. Confirm legal, tax, immigration, investment and medical decisions with licensed professionals.</p>
             </div>
             <div className="footer-col">
               <h4>Navigation</h4>
