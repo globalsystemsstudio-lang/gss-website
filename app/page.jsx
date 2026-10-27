@@ -47,7 +47,8 @@ export default function HomePage() {
             Global Systems Studio helps Americans plan a move abroad. ROS™ brings guides, checklists and planning tools together so you can work through the next steps. Start with a book, use a free tool or choose an online plan for your situation.
           </p>
           <div className="hero-ctas">
-            <Link href="/shop/new-roots/" className="btn btn-gold">Get New Roots: $27 →</Link>
+            <Link href="/services/discovery-call/" className="btn btn-gold">Book a Free Discovery Call · 15 min →</Link>
+            <Link href="/services/clarity-session/" className="btn btn-outline-white">Clarity Session · $497 · 45 min →</Link>
             <Link href="/services/" className="btn btn-outline-white">Compare Online Plans &amp; Prices →</Link>
           </div>
         </div>
