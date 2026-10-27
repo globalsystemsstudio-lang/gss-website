@@ -196,7 +196,7 @@ export default function HomePage() {
             {[
               { name: '🟢 Explore Free', price: 'FREE', access: 'Assessments & Tools', desc: 'The free 15-minute Discovery Call, the readiness quiz above, and the cost calculator.', cta: 'Book Your Free Call', href: 'https://calendar.app.google/5GiW8EZKoyB7SqEKA' },
               { name: '🟡 Build Your Plan', price: 'From $27', access: 'New Roots & ROS™ Pathways', desc: 'New Roots ($27) gives you a foundation for organizing your move. Six ROS™ Pathways from $897 for guided, done-with-you support.', cta: 'Get New Roots', href: '/shop/new-roots/' },
-              { name: '🔵 Get Personal Guidance', price: '$497', access: '45-Minute 1:1 Call', desc: 'Your situation, your questions, your next steps. Walk away with a clear picture of what to do and in what order.', cta: 'Book a Clarity Session', href: 'https://calendar.app.google/GqshRNZbP1LTvwKJ9' },
+              { name: '🔵 Get Personal Guidance', price: '$497', access: '45-Minute 1:1 Call', desc: 'Your situation, your questions, your next steps. Walk away with a clear picture of what to do and in what order.', cta: 'See the Clarity Session', href: '/services/clarity-session/' },
               { name: '🟣 Go Deeper', price: 'From $47', access: 'Destination Intelligence & Books', desc: 'Across Streets & Seas ($47), the full Relocation Library ($64), and the destination research behind every recommendation.', cta: 'Explore the Library', href: '/shop/relocation-library/' },
             ].map((offer) => (
               <div key={offer.name} className="pricing-card">
