@@ -42,15 +42,30 @@ export default function HomePage() {
       {/* 01: HERO */}
       <section className="hero">
         <div className="container">
-          <h1>Moving abroad? Know what to do next.</h1>
+          <p className="gss-hero-kicker">YOUR NEXT CHAPTER STARTS HERE</p>
+          <h1>Dreaming of life abroad? Let’s make a plan.</h1>
           <p className="answer-capsule">
-            Global Systems Studio helps Americans plan a move abroad. ROS™ brings guides, checklists and planning tools together so you can work through the next steps. Start with a book, use a free tool or choose an online plan for your situation.
+            From choosing a country to figuring out visas, housing and healthcare, moving abroad brings a lot of questions. Global Systems Studio gives you guides, checklists and planning tools to help you take your next step with confidence.
           </p>
           <div className="hero-ctas">
             <Link href="/services/discovery-call/" className="btn btn-gold">Book a Free Discovery Call · 15 min →</Link>
             <Link href="/services/clarity-session/" className="btn btn-outline-white">Clarity Session · $497 · 45 min →</Link>
             <Link href="/services/" className="btn btn-outline-white">Compare Online Plans &amp; Prices →</Link>
           </div>
+        </div>
+      </section>
+
+      <section className="journey-section">
+        <div className="container">
+          <span className="section-tag">Your move, one step at a time</span>
+          <h2>A new life starts with a few clear steps.</h2>
+          <p className="section-intro">You bring the dream. We help you organize the questions, choices and tasks that come next.</p>
+          <div className="journey-grid">
+            <article className="journey-card"><span aria-hidden="true">🌍</span><h3>Picture your new life</h3><p>Compare places and think about the everyday life you want.</p></article>
+            <article className="journey-card"><span aria-hidden="true">📋</span><h3>Make your plan</h3><p>Work through questions about visas, money, housing and healthcare.</p></article>
+            <article className="journey-card"><span aria-hidden="true">🧳</span><h3>Prepare for your move</h3><p>Keep your next steps together and check what still needs attention.</p></article>
+          </div>
+          <Link href="/what-is-ros/" className="btn btn-outline">See how ROS™ helps →</Link>
         </div>
       </section>
 
