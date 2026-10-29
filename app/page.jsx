@@ -126,7 +126,7 @@ export default function HomePage() {
           <span className="section-tag">The System</span>
           <h2>Seven Planning Areas. One Connected Plan.</h2>
           <p className="modules-intro">Work through questions about visas, money, healthcare, housing, work, family and life after arrival.</p>
-          <div className="icon-cards" style={{gridTemplateColumns:'repeat(4, 1fr)'}}>
+          <div className="icon-cards">
             {AREAS.map((mod) => (
               <div key={mod.num} className="icon-card">
                 <div className="icon-card-num">{mod.num}</div>
