@@ -1408,3 +1408,18 @@ section { padding: 80px 0; }
 
 .site-footer .goog-te-gadget .goog-te-gadget-simple { border-color: #1E5B99 !important; }
 .site-footer .goog-te-gadget .goog-te-gadget-simple span, .site-footer .goog-te-gadget .goog-te-gadget-simple .goog-te-menu-value span { color: #1E5B99 !important; }
+
+/* Approved October 2026 GSS planning campaign. */
+.gss-quiz-detail { margin:20px 0 12px; color:var(--white); font-size:15px; }
+.gss-hero-support { color:var(--white); font-size:15px; margin:0; }
+.gss-hero-support a { color:var(--white); text-underline-offset:4px; }
+.gss-planning-resources { padding:64px 0; background:var(--bg); }
+.gss-planning-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; margin-top:32px; }
+.gss-planning-grid figure { margin:0; min-width:0; }
+.gss-planning-grid img { display:block; width:100%; height:auto; border-radius:12px; }
+.gss-planning-grid figcaption, .gss-story-portrait figcaption { margin-top:12px; font-size:15px; color:var(--text); }
+.gss-quiz-promo { display:grid; grid-template-columns:minmax(0,280px) minmax(0,1fr); gap:40px; align-items:center; margin-top:48px; background:var(--white); padding:28px; border-radius:16px; }
+.gss-quiz-promo img { width:100%; height:auto; display:block; border-radius:8px; }
+.gss-story-portrait { max-width:380px; margin:0 0 32px; }
+.gss-story-portrait img { width:100%; height:auto; display:block; border-radius:16px; }
+@media(max-width:640px) { .gss-planning-grid,.gss-quiz-promo { grid-template-columns:minmax(0,1fr); gap:24px; } .gss-quiz-promo { padding:20px; } .gss-quiz-promo img { max-width:320px; margin:auto; } }

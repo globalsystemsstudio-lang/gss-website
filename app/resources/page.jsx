@@ -16,6 +16,28 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      <section className="gss-planning-resources" aria-labelledby="planning-graphics-title">
+        <div className="container">
+          <span className="section-tag">Start with a clear plan</span>
+          <h2 id="planning-graphics-title">A few questions to guide your next step</h2>
+          <p className="section-intro">Use these free planning graphics to organize your thoughts. Open either image to save it for your next planning session.</p>
+          <div className="gss-planning-grid">
+            <figure>
+              <a href="/images/gss/country-checklist.webp"><img src="/images/gss/country-checklist.webp" width="1122" height="1402" loading="lazy" alt="Before you choose a country: define your move; research official visa requirements; budget for moving and ongoing costs; consider housing, healthcare and schooling." /></a>
+              <figcaption>Before you choose a country: four areas to research.</figcaption>
+            </figure>
+            <figure>
+              <a href="/images/gss/planning-notebook.webp"><img src="/images/gss/planning-notebook.webp" width="1122" height="1402" loading="lazy" alt="My move abroad starts here: Why do I want to move? What can I afford each month? Which visa routes should I research? What needs to happen before I leave?" /></a>
+              <figcaption>Write down your priorities, budget and next action.</figcaption>
+            </figure>
+          </div>
+          <div className="gss-quiz-promo">
+            <Link href="/relocation-readiness-quiz/" aria-label="Take the free Relocation Readiness Quiz"><img src="/images/gss/readiness-quiz.webp" width="1122" height="1402" loading="lazy" alt="Thinking about moving abroad? Start with the free Relocation Readiness Quiz." /></Link>
+            <div><h3>Find your starting point</h3><p>Take the free Relocation Readiness Quiz, then explore Solo, Family, Legacy, Digital Nomad, Entrepreneur and Investor pathways.</p><p>About 3 minutes. Email required for your full breakdown.</p><Link href="/relocation-readiness-quiz/" className="btn btn-gold">Take the Free Quiz →</Link></div>
+          </div>
+        </div>
+      </section>
+
       {/* SEO ARTICLES */}
       <section style={{background:'var(--white)', padding:'80px 0'}}>
         <div className="container">

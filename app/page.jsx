@@ -5,6 +5,7 @@ export const metadata = {
   title: { absolute: 'Relocation Planning for Americans Moving Abroad | Global Systems Studio' },
   description: 'Plan your move abroad with ROS™. Explore relocation guides from $19, six pathways for your situation, free planning tools, and personal guidance.',
   alternates: { canonical: 'https://globalsystemsstudio.com/' },
+  openGraph: { title: 'Plan your move abroad with a clearer starting point.', description: 'Start with the free Relocation Readiness Quiz. Explore six ROS™ pathways for your situation.', images: [{ url: '/images/gss/planning-cover.webp', width: 1122, height: 1402, alt: 'A move abroad starts with a plan — Global Systems Studio' }] },
 };
 
 const PATHWAYS = [
@@ -43,15 +44,16 @@ export default function HomePage() {
       <section className="hero">
         <div className="container">
           <p className="gss-hero-kicker">YOUR NEXT CHAPTER STARTS HERE</p>
-          <h1>Dreaming of life abroad? Let’s make a plan.</h1>
+          <h1>Plan your move abroad with a clearer starting point.</h1>
           <p className="answer-capsule">
-            From choosing a country to figuring out visas, housing and healthcare, moving abroad brings a lot of questions. Global Systems Studio gives you guides, checklists and planning tools to help you take your next step with confidence.
+            Too many saved posts and still unsure where to start? Global Systems Studio helps you organize your research and next steps through the Relocation Operating System™ (ROS™). Begin with your readiness, then explore the pathway that fits your situation.
           </p>
           <div className="hero-ctas">
-            <Link href="/services/discovery-call/" className="btn btn-gold">Book a Free Discovery Call · 15 min →</Link>
-            <Link href="/services/clarity-session/" className="btn btn-outline-white">Clarity Session · $497 · 45 min →</Link>
-            <Link href="/services/" className="btn btn-outline-white">Compare Online Plans &amp; Prices →</Link>
+            <Link href="/relocation-readiness-quiz/" className="btn btn-gold">Take the Free Relocation Readiness Quiz →</Link>
+            <Link href="/services/" className="btn btn-outline-white">Compare the Six ROS™ Pathways →</Link>
           </div>
+          <p className="gss-quiz-detail">About 3 minutes. Email required for your full breakdown.</p>
+          <p className="gss-hero-support">Prefer to talk first? <Link href="/services/discovery-call/">Book a free 15-minute Discovery Call →</Link></p>
         </div>
       </section>
 
@@ -66,6 +68,7 @@ export default function HomePage() {
             <article className="journey-card"><span aria-hidden="true">🧳</span><h3>Prepare for your move</h3><p>Keep your next steps together and check what still needs attention.</p></article>
           </div>
           <Link href="/what-is-ros/" className="btn btn-outline">See how ROS™ helps →</Link>
+          <p style={{marginTop:24}}><Link href="/resources/#planning-graphics-title">Save the free relocation planning checklists →</Link></p>
         </div>
       </section>
 
@@ -148,16 +151,17 @@ export default function HomePage() {
               <p>I built a decades-long career, and after a layoff I made the decision most people only dream about: I was leaving the United States.</p>
               <p>What I found was that being accomplished, resourceful, and experienced was not the same as being prepared. The questions flooded in and didn't stop. The finances. The vehicles we couldn't take. My husband's heart condition. His plans to open a business. My own question of where a woman over 60 even begins to look for work in a country she hasn't lived in for decades.</p>
               <p>I built ROS™ because I needed it. And I'm still building it, because every conversation opens new questions, and I don't stop until I have the answers.</p>
-              <p className="about-attribution">Our Team, Global Systems Studio</p>
+              <p className="about-attribution">Charlene L. M. Cupidore Bynoe · Founder, Global Systems Studio</p>
               <div style={{marginTop:'28px'}}>
                 <Link href="/our-story" className="btn btn-gold">Read the full story →</Link>
               </div>
             </div>
             <div className="about-photo">
               <img
-                src="/founder.jpg"
-                alt="Founder of Global Systems Studio"
-                style={{width:'100%', aspectRatio:'3/4', objectFit:'cover', objectPosition:'center top', borderRadius:'16px', display:'block'}}
+                src="/images/gss/charlene-portrait.webp"
+                width="1122" height="1402" loading="lazy"
+                alt="Charlene L. M. Cupidore Bynoe, founder of Global Systems Studio, in Coastal Blue"
+                style={{width:'100%', aspectRatio:'4/5', objectFit:'cover', objectPosition:'center top', borderRadius:'16px', display:'block'}}
               />
             </div>
           </div>
@@ -275,11 +279,11 @@ export default function HomePage() {
       {/* 09: THE FINAL MOMENT */}
       <section className="cta-section">
         <div className="container">
-          <h2>Your Move. Your Life. Your System.</h2>
-          <p>The questions are real. The stakes are real. And the answers exist. You just need the right system to find them.</p>
+          <h2>Your next step can be a simple one.</h2>
+          <p>Start with the free Relocation Readiness Quiz, then use your breakdown to organize the questions you need to research next.</p>
           <div style={{display:'flex', gap:'20px', justifyContent:'center', flexWrap:'wrap'}}>
-            <Link href="/shop/new-roots/" className="btn btn-gold">Get New Roots: $27 →</Link>
-            <Link href="/what-is-ros" className="btn btn-outline-white">Explore the System →</Link>
+            <Link href="/relocation-readiness-quiz/" className="btn btn-gold">Take the Free Quiz →</Link>
+            <Link href="/services/" className="btn btn-outline-white">Compare ROS™ Pathways →</Link>
           </div>
         </div>
       </section>

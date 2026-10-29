@@ -23,6 +23,11 @@ export default function OurStoryPage() {
           <div style={{maxWidth:'760px'}}>
             <div className="article-body">
 
+              <figure className="gss-story-portrait">
+                <img src="/images/gss/charlene-portrait.webp" width="1122" height="1402" alt="Charlene L. M. Cupidore Bynoe, founder of Global Systems Studio" />
+                <figcaption>Charlene L. M. Cupidore Bynoe · Founder, Global Systems Studio</figcaption>
+              </figure>
+
               <p>Global Systems Studio didn't start with a business plan. It started with a problem we couldn't solve — and a refusal to stop looking until we could.</p>
 
               <p>Our founder, <strong>Charlene L. M. Cupidore Bynoe</strong>, created the Relocation Operating System™ (ROS™). She spent decades building expertise in how complex systems work — professionally, financially, operationally. A career built on figuring things out. On becoming the person others called when the path forward wasn't clear.</p>
