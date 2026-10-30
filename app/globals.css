@@ -1423,3 +1423,18 @@ section { padding: 80px 0; }
 .gss-story-portrait { max-width:380px; margin:0 0 32px; }
 .gss-story-portrait img { width:100%; height:auto; display:block; border-radius:16px; }
 @media(max-width:640px) { .gss-planning-grid,.gss-quiz-promo { grid-template-columns:minmax(0,1fr); gap:24px; } .gss-quiz-promo { padding:20px; } .gss-quiz-promo img { max-width:320px; margin:auto; } }
+
+/* Customer agreement: readable terms, accessible fields and saved copies. */
+.gss-agreement { padding:40px 0 64px; overflow-wrap:anywhere; }
+.gss-agreement-section { padding:0; margin:32px 0; }
+.gss-agreement-section h2 { font-size:1.4rem; }
+.gss-agreement form { border:1px solid var(--border); border-radius:14px; padding:28px; background:var(--bg); margin-top:40px; }
+.gss-agreement form > label:not(.gss-agreement-check) { display:block; font-weight:700; margin:20px 0 8px; }
+.gss-agreement form > input:not([type=hidden]),.gss-agreement select { display:block; width:100%; box-sizing:border-box; font:inherit; color:var(--text); background:white; padding:12px; border:1px solid var(--primary); border-radius:6px; }
+.gss-agreement-check { display:flex; gap:12px; align-items:flex-start; margin:24px 0; cursor:pointer; }
+.gss-agreement-check input { width:20px; height:20px; min-width:20px; margin-top:4px; }
+.gss-agreement-summary,.gss-agreement-result { padding:24px; border:1px solid var(--primary); border-radius:10px; margin:24px 0; background:var(--white); }
+.gss-agreement-error { color:#8a2424; font-weight:700; }
+.gss-agreement .btn { margin-top:16px; }
+@media(max-width:600px){.gss-agreement form { padding:20px 16px; }.gss-agreement-summary { padding:16px; }}
+@media print { .site-nav,.site-footer,.gss-agreement button {display:none!important;} .gss-agreement {padding:0;} .gss-agreement-section {break-inside:avoid;} }
