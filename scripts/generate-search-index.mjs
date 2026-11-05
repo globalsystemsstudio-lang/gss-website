@@ -14,7 +14,8 @@ function walk(dir) {
       if (!parts.length || parts[0] === 'search') continue;
       const match = source.match(/(?:const title\s*=\s*|title:\s*)(['"`])([^'"`]+)\1/);
       const title = match?.[2] || parts[parts.length-1].replaceAll('-', ' ');
-      pages.push({title, path: '/' + parts.join('/') + '/'});
+      pages.push(
+  {title:'ROS™ Pricing Explorer — compare six relocation pathways', path:'/pricing-explorer/'},{title, path: '/' + parts.join('/') + '/'});
     }
   }
 }

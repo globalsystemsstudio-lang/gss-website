@@ -16,6 +16,7 @@ function walk(dir) {
   }
 }
 walk(root);
+routes.push('https://globalsystemsstudio.com/pricing-explorer/');
 routes.sort();
 fs.writeFileSync('public/sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + routes.map(url => `  <url><loc>${url}</loc></url>`).join('\n') + '\n</urlset>\n');
 console.log(`Sitemap: ${routes.length} public pages`);

@@ -10,6 +10,7 @@ export default function Nav() {
           <ul className="nav-links">
             <li><Link href="/what-is-ros">The System</Link></li>
             <li><Link href="/services/">Pathways &amp; Prices</Link></li>
+            <li><a href="/pricing-explorer/">Pricing Explorer</a></li>
             <li><Link href="/shop/">Shop Guides</Link></li>
             <li><Link href="/resources">Resources</Link></li>
             <li><Link href="/search/">Search</Link></li>

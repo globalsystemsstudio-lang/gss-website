@@ -14,6 +14,8 @@
 
 ## Offers and pricing
 
+- [Interactive ROS pricing explorer](https://globalsystemsstudio.com/pricing-explorer/): Find a pathway by relocation need and compare USD prices, initial dashboard access and included resources.
+
 - [Guides and planners](https://globalsystemsstudio.com/shop/): Current product descriptions, USD prices, and purchase links.
 - [Compare all six ROS pathways](https://globalsystemsstudio.com/services/): Digital Nomad, Solo, Family, Entrepreneur, Legacy, and Investor offers with included access periods.
 - [Sales policy](https://globalsystemsstudio.com/sales-policy/): Purchase and renewal terms.

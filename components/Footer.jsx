@@ -30,6 +30,7 @@ export default function Footer() {
             <div className="footer-col">
               <h4>Resources</h4>
               <ul>
+                <li><a href="/pricing-explorer/">ROS™ Pricing Explorer</a></li>
                 <li><Link href="/relocation-financial-planning">Relocation Financial Planning</Link></li>
                 <li><Link href="/visa-residency-pathways">Visa &amp; Residency Pathways</Link></li>
                 <li><Link href="/financial-planning-international-relocation">FBAR &amp; Financial Guide</Link></li>
