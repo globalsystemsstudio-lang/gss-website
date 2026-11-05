@@ -14,18 +14,19 @@ function walk(dir) {
       if (!parts.length || parts[0] === 'search') continue;
       const match = source.match(/(?:const title\s*=\s*|title:\s*)(['"`])([^'"`]+)\1/);
       const title = match?.[2] || parts[parts.length-1].replaceAll('-', ' ');
-      pages.push(
-  {title:'ROS™ Pricing Explorer — compare six relocation pathways', path:'/pricing-explorer/'},{title, path: '/' + parts.join('/') + '/'});
+      pages.push({title, path: '/' + parts.join('/') + '/'});
     }
   }
 }
 walk(root);
 pages.push(
+  {title:'ROS™ Pricing Explorer — compare six relocation pathways', path:'/pricing-explorer/'},
   {title:'ROS 90-Day Relocation Action Planner · $47', path:'/shop/#ros-90-day-relocation-action-planner'},
   {title:'Country Comparison Decision Matrix · $19', path:'/shop/#country-comparison-decision-matrix'},
   {title:'Relocation Readiness Workbook · $27', path:'/shop/#ros-relocation-readiness-workbook'},
   {title:'Family Relocation Planning Workbook · $47', path:'/shop/#family-relocation-planning-workbook'},
   {title:'International Relocation Document Organizer · $19', path:'/shop/#international-relocation-document-organizer'}
 );
+if (new Set(pages.map(page => page.path)).size !== pages.length) throw new Error('Duplicate paths in search index');
 fs.writeFileSync('public/search-index.json', JSON.stringify(pages));
 console.log(`Search index: ${pages.length} public pages`);
