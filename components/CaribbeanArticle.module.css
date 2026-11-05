@@ -1,0 +1,39 @@
+.article { overflow-wrap: anywhere; }
+.hero h1 { max-width: 940px; color: var(--primary); }
+.back { display: inline-block; margin-bottom: 24px; font-size: 14px; font-weight: 600; }
+.tag { color: var(--accent-text); font-size: 13px; font-weight: 700; margin-bottom: 14px; }
+.checked { max-width: 780px; color: var(--text-light); font-size: 14px; margin-top: 16px; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 64px; align-items: start; }
+.body { min-width: 0; }
+.body h2 { scroll-margin-top: 110px; }
+.body a { text-underline-offset: 3px; }
+.body :global(.citation) { white-space: nowrap; font-size: 0.85em; }
+.body :global(.table-scroll) { border: 1px solid var(--border); border-radius: 8px; }
+.body table { min-width: 620px; }
+.body th { vertical-align: top; }
+.body th:first-child { width: 26%; }
+.body :global(.article-sources) { padding-left: 25px; }
+.body :global(.article-sources) li { font-size: 14px; line-height: 1.7; scroll-margin-top: 110px; margin-bottom: 14px; }
+.body :global(.source-note) { padding: 20px; background: var(--bg); border-left: 4px solid var(--accent); }
+.sidebar { position: sticky; top: 110px; }
+.sidebar h2 { font-size: 18px; color: var(--primary); margin-bottom: 14px; }
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar li { margin-bottom: 13px; line-height: 1.45; font-size: 14px; }
+.next { padding: 22px; border-top: 4px solid var(--accent); background: var(--bg); border-radius: 8px; margin-top: 28px; }
+.next p { font-size: 14px; }
+.next :global(.btn) { display: block; text-align: center; font-size: 14px; padding: 12px; }
+.related { margin-top: 72px; padding-top: 40px; border-top: 1px solid var(--border); }
+.related h2 { color: var(--primary); margin-bottom: 24px; }
+.related h3 { font-size: 18px; }
+@media (max-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .sidebar { position: static; grid-row: 1; border: 1px solid var(--border); border-radius: 8px; padding: 22px; }
+  .sidebar ul { columns: 2; column-gap: 28px; }
+  .next { margin-top: 20px; }
+}
+@media (max-width: 560px) {
+  .sidebar ul { columns: 1; }
+  .hero { padding-top: 40px; }
+  .hero h1 { font-size: 32px; }
+  .body h2 { font-size: 25px; }
+}

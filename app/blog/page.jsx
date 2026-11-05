@@ -16,6 +16,41 @@ export default function BlogPage() {
         </div>
       </section>
 
+      <section id="caribbean-guides" className="section-ivory" style={{padding:'64px 0',scrollMarginTop:'100px'}}>
+        <div className="container">
+          <p className="section-tag">Caribbean relocation</p>
+          <h2>Five guides for your next chapter</h2>
+          <p>Published November 5, 2026. Compare independent Caribbean countries, then check the requirements for your citizenship, household and plans.</p>
+          <div className="blog-grid">{[
+  {
+    "path": "/blog/caribbean-islands-by-relocation-pathway/",
+    "title": "Which Caribbean island is best for your kind of move?",
+    "description": "Compare independent Caribbean countries for retirement, solo moves, remote work, families, property and business. Match the destination to your needs."
+  },
+  {
+    "path": "/blog/barbados-dominica-remote-work-families/",
+    "title": "Barbados or Dominica: which fits remote work and family life?",
+    "description": "Compare Barbados and Dominica for remote work and family life. Check stay periods, program fees, work limits, school places, insurance and household costs."
+  },
+  {
+    "path": "/blog/caribbean-property-business-islands-compared/",
+    "title": "Where should Caribbean property investors and entrepreneurs start their research?",
+    "description": "Compare the Dominican Republic, Antigua and Barbuda, Jamaica and Barbados for property or business plans. Separate ownership, residency, citizenship and work permits."
+  },
+  {
+    "path": "/blog/moving-to-trinidad-returning-citizens-foreigners/",
+    "title": "Moving to Trinidad: what changes for returning citizens and foreigners?",
+    "description": "Moving to Trinidad? Compare returning-citizen and foreign-applicant requirements for documents, residence, work, household shipping and property."
+  },
+  {
+    "path": "/blog/moving-to-tobago-returning-citizens-foreigners/",
+    "title": "Moving to Tobago: returning citizens, foreign residents and property buyers",
+    "description": "Plan a Tobago move as a returning citizen or foreign applicant. Compare national immigration and customs rules with Tobago’s property-licensing requirements."
+  }
+].map(post => <Link key={post.path} href={post.path} className="blog-card"><h3>{post.title}</h3><p>{post.description}</p><span className="blog-card-link">Read the guide →</span></Link>)}</div>
+        </div>
+      </section>
+
       <section className="section-ivory"><div className="container"><h2>New practical guides</h2><p>Quick answers first, with steps you can use.</p><div className="blog-grid">{[
         ['is-ros-worth-it-2026','Is ROS™ worth it?','See what you get, what it costs and when a smaller option may be enough.'],
         ['cost-of-living-calculator-moving-abroad-budget','Turn an estimate into a moving budget','Add moving costs, deposits and a buffer to your monthly estimate.'],
